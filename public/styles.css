@@ -1,3 +1,10 @@
+/*
+ *	github.com/mightbesimon | Auckland, NZ
+ */
+
+/**************************************************************
+ *****              declare global variables              *****
+ **************************************************************/
 :root {
 	/* colour palette */
 	--marina0: #23282f;
@@ -28,6 +35,10 @@
 	--button: var(--mint);
 	--button-hover: var(--blue);
 }
+
+/**************************************************************
+ *****             override unhelpful presets             *****
+ **************************************************************/
 [onClick] {
 	cursor: pointer;
 }
@@ -35,16 +46,38 @@
 	box-sizing: border-box;
 }
 html, body {
-	margin: 0;
+	margin: 0rem;
 	background: var(--body);
 	font-family: sans-serif;
 	color: var(--text);
-	transition: all .5s ease;
 }
 a {
 	color: inherit;
 	text-decoration: inherit;
 }
+table, tr, td {
+	border-collapse: collapse;
+}
+table.hashtag tr:first-child td {
+	border-top: none;
+}
+table.hashtag tr:last-child td {
+	border-bottom: none;
+}
+table.hashtag tr td:first-child {
+	border-left: none;
+}
+table.hashtag tr td:last-child {
+	border-right: none;
+}
+div.flex {
+	display: flex;
+	align-items: center;
+}
+
+/**************************************************************
+ *****                  MAIN STARTS HERE                  *****
+ **************************************************************/
 main {
 	min-height: calc(100vh - 2rem);
 	width: max-content;
@@ -58,20 +91,69 @@ main {
 	flex-direction: column;
 }
 main h1 {
-	margin: .2rem 0;
+	margin: .2rem 0rem;
 	padding-left: 1rem;
 	font-weight: normal;
 	border-bottom: var(--border-title);
 	color: var(--header);
 	transition: color .5s, text-shadow .5s;
 }
-div.flex {
-	display: flex;
-	align-items: center;
-}
-main div.flex a {
+main > div.flex > a {
 	margin-left: 1rem;
 }
 main img {
 	max-width: calc(100vw - 2rem);
+}
+
+main > div.ox {
+	margin: 3rem auto 0rem auto;
+}
+main > div.ox > table {
+	font-size: 2.5rem;
+	line-height: 2.5rem;
+	text-align: center;
+}
+main > div.ox > table > tbody > tr > td {
+	width: 4rem;
+	height: 4rem;
+	padding: .25rem;
+	border: 2px solid var(--text);
+}
+main > div.ox > table > tbody > tr > td > div {
+	width: 100%;
+	height: 100%;
+	border-radius: .5rem;
+	transition: all 500ms ease;
+}
+main > div.ox > table > tbody > tr > td > div.empty:hover {
+	background: var(--body);
+}
+main > div.ox > table > tbody > tr > td > div > img {
+	width: 100%;
+	height: 100%;
+}
+main > div.ox > div.result {
+	display: none;
+	margin: 1rem auto 0rem auto;
+}
+main > div.ox > div.result > div.title {
+	padding: .5rem;
+	border-radius: .5rem;
+	text-align: center;
+	font-size: 1.5rem;
+	color: var(--mint);
+	background: var(--body);
+}
+main > div.ox > div.result > div.restart {
+	margin: .5rem 0rem 0rem 0rem;
+	padding: .5rem;
+	border-radius: .5rem;
+	text-align: center;
+	color: var(--body);
+	background: var(--orange);
+	transition: all 200ms ease;
+}
+main > div.ox > div.result > div.restart:hover {
+	padding: .6rem .5rem .4rem .5rem;
+	box-shadow: inset 0rem .2rem .3rem 0rem hsla(0, 0%, 0%, 0.25);;
 }
