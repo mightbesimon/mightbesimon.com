@@ -1,0 +1,77 @@
+:root {
+	/* colour palette */
+	--marina0: #23282f;
+	--marina1: #303841;
+	--marina2: #4f5b69;
+	--marina3: #d8dee9;
+	--purple : #c695c6;
+	--blue   : #6699cc;
+	--teal   : #5fb4b4;
+	--mint   : #99c794;
+	--orange : #f9ae58;
+
+	/* borders */
+	--border-title: 2px solid var(--marina2);
+
+	/* transitions */
+
+	/* themes */
+	--body:   var(--marina0);
+	--main:   var(--marina1);
+	--text:   var(--marina3);
+	--footer: var(--marina2);
+	--arrow:  var(--blue);
+	--header: var(--purple);
+	--arrow-down: var(--teal);
+	--card:   var(--marina2);
+	--link:   var(--teal);
+	--button: var(--mint);
+	--button-hover: var(--blue);
+}
+[onClick] {
+	cursor: pointer;
+}
+* {
+	box-sizing: border-box;
+}
+html, body {
+	margin: 0;
+	background: var(--body);
+	font-family: sans-serif;
+	color: var(--text);
+	transition: all .5s ease;
+}
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+main {
+	min-height: calc(100vh - 2rem);
+	width: max-content;
+	min-width: 50vw;
+	padding: 1rem;
+	margin: 1rem auto;
+	border-radius: 1rem;
+	background: var(--main);
+
+	display: flex;
+	flex-direction: column;
+}
+main h1 {
+	margin: .2rem 0;
+	padding-left: 1rem;
+	font-weight: normal;
+	border-bottom: var(--border-title);
+	color: var(--header);
+	transition: color .5s, text-shadow .5s;
+}
+div.flex {
+	display: flex;
+	align-items: center;
+}
+main div.flex a {
+	margin-left: 1rem;
+}
+main img {
+	max-width: calc(100vw - 2rem);
+}
