@@ -1,0 +1,47 @@
+name: deploy
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+env:
+  PROJECT_ID: mightbesimon-root
+  PAGES_REPO: mightbesimon/mightbesimon.github.io
+  PAGES_BRANCH: main
+
+jobs:
+  build:
+    uses: ./.github/workflows/build.yml
+
+  deploy-pages:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: build
+          path: .
+      - uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          repository-name: ${{ env.PAGES_REPO }}
+          branch: ${{ env.PAGES_BRANCH }}
+          commit-message: deploy react build
+          token: ${{ secrets.DEPLOY_PAGES_TOKEN }}
+          folder: build
+
+  deploy-firebase:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: build
+          path: .
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MIGHTBESIMON_ROOT }}
+          channelId: live
+          projectId: ${{ env.PROJECT_ID }}
