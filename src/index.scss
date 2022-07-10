@@ -73,20 +73,22 @@ td {
 /**************************************************************
  *****                      presets                       *****
  **************************************************************/
-table.hashtag tr:first-child td {
-  border-top: none;
-}
+table.hashtag {
+  tr:first-child>td {
+    border-top: none;
+  }
 
-table.hashtag tr:last-child td {
-  border-bottom: none;
-}
+  tr:last-child>td {
+    border-bottom: none;
+  }
 
-table.hashtag tr td:first-child {
-  border-left: none;
-}
+  tr>td:first-child {
+    border-left: none;
+  }
 
-table.hashtag tr td:last-child {
-  border-right: none;
+  tr>td:last-child {
+    border-right: none;
+  }
 }
 
 pre {

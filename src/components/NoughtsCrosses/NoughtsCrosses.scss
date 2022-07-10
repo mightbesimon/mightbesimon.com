@@ -1,0 +1,86 @@
+div.game {
+	margin: 3rem auto;
+	align-items: center;
+
+	>table {
+		font-size: 2.5rem;
+		line-height: 2.5rem;
+		text-align: center;
+
+		tr>td {
+			width: 4rem;
+			height: 4rem;
+			padding: .25rem;
+			border: 2px solid var(--text);
+
+			div {
+				width: 100%;
+				height: 100%;
+				border-radius: .5rem;
+				transition: all 500ms ease;
+
+				&:empty:hover {
+					cursor: pointer;
+					background: var(--body);
+					opacity: 50%;
+				}
+
+				>img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+
+	>div.result {
+		width: 100%;
+		margin: 1rem auto 0rem auto;
+
+		>div.title {
+			padding: .5rem;
+			border-radius: .5rem;
+			text-align: center;
+			font-size: 1.5rem;
+			color: var(--mint);
+			background: var(--body);
+		}
+
+		>div.buttons {
+			margin: .5rem 0rem 0rem 0rem;
+
+			>div {
+				flex: 1;
+				padding: .5rem;
+				font-size: 1.1rem;
+				text-align: center;
+				color: var(--body);
+				transition: all 200ms ease;
+
+				&:hover {
+					cursor: pointer;
+					padding: .6rem .5rem .4rem .5rem;
+					opacity: 90%;
+					box-shadow: inset 0rem .2rem .3rem 0rem hsla(0, 0%, 0%, 0.25);
+				}
+			}
+
+			>div.minus {
+				flex: 1;
+				border-radius: .5rem 0rem 0rem .5rem;
+				background: var(--teal);
+			}
+
+			>div.plus {
+				flex: 1;
+				border-radius: 0rem .5rem .5rem 0rem;
+				background: var(--orange);
+			}
+
+			>div.restart {
+				flex: 4;
+				background: var(--marina3);
+			}
+		}
+	}
+}
