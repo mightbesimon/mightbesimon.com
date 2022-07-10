@@ -18,7 +18,7 @@ function HiImSimon(): JSX.Element {
 🇨🇳 嗨, 我叫单泉`;
 
 	return (
-		<main className='flex column'>
+		<>
 			<header className='flex wrap'>
 				<a href='https://mightbesimon.com'>
 					<img src={Simon} alt='simon' />
@@ -67,7 +67,7 @@ function HiImSimon(): JSX.Element {
 					Copyright © 2022 <a href='https://mightbesimon.com'>mightbesimon.com</a>
 				</div>
 			</footer>
-		</main>
+		</>
 	)
 }
 

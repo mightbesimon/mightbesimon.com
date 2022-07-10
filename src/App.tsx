@@ -1,9 +1,11 @@
-import './App.css';
+import './App.scss';
 import HiImSimon from './views/unauthenticated/HiImSimon/HiImSimon';
 
 function App() {
   return (
-    <HiImSimon />
+    <main className='flex column'>
+      <HiImSimon />
+    </main>
   );
 }
 
