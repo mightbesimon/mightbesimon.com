@@ -2,6 +2,9 @@ name: production
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 env:
   PROJECT_ID: mightbesimon-root

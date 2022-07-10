@@ -2,14 +2,9 @@ name: development
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
 
 env:
   PROJECT_ID: mightbesimon-root
-  PAGES_REPO: mightbesimon/mightbesimon.github.io
-  PAGES_BRANCH: main
 
 jobs:
   test:
