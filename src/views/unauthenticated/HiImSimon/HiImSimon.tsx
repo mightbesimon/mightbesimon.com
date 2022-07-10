@@ -1,4 +1,4 @@
-import './HiImSimon.css';
+import './HiImSimon.scss';
 import Simon from 'assets/simon.png';
 import NoughtsCrosses from 'components/NoughtsCrosses/NoughtsCrosses';
 
