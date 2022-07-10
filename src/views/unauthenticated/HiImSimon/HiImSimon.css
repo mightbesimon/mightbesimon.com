@@ -1,0 +1,82 @@
+/**************************************************************
+ *****                  MAIN STARTS HERE                  *****
+ **************************************************************/
+main {
+	min-height: calc(100vh - 2rem);
+	width: max-content;
+	min-width: 50vw;
+	max-width: 100vw;
+	margin: 1rem auto;
+	border-radius: 1rem;
+	background: var(--main);
+}
+
+main h1 {
+	margin: .2rem 0rem;
+	padding-left: 1rem;
+	font-weight: normal;
+	border-bottom: var(--border-title);
+	color: var(--header);
+}
+
+main img {
+	max-width: calc(100vw - 2rem);
+}
+
+/*************************   header   *************************/
+main>header {
+	width: 100%;
+	padding: 1rem 1rem 0rem 1rem;
+	border-radius: 1rem 1rem 0rem 0rem;
+	background: var(--mint);
+	align-items: flex-end;
+}
+
+main>header>a>img {
+	max-width: 16rem;
+	transition: all 500ms ease;
+}
+
+main>header>a>img:hover {
+	padding: 1rem .5rem 0rem .5rem;
+}
+
+main>header>h1 {
+	padding: 0rem 0rem 1rem 0rem;
+	font: normal 3rem monospace;
+	text-align: center;
+	border: none;
+	color: var(--body);
+}
+
+/************************   section   *************************/
+main>section {
+	padding: 1rem;
+}
+
+main>section>div.hello>div.left {
+	flex: 1;
+}
+
+main>section>div.hello>a {
+	flex: 0;
+	margin: 2rem 1rem 0rem 1rem;
+}
+
+main>section>div.hello>div.left>div.flex.wrap {
+	align-items: center;
+}
+
+main>section>div.hello>div.left>div.flex.wrap>div.flex.wrap>a {
+	margin-left: 1rem;
+}
+
+/*************************   footer   *************************/
+main>footer {
+	margin: auto 1rem 1rem 1rem;
+	padding: .5rem 2rem .5rem 2rem;
+	border-radius: .5rem;
+	font: .8rem monospace;
+	text-align: right;
+	background: var(--body);
+}

@@ -1,7 +1,7 @@
 {
   "hosting": {
-    "site": "mightbesimon-site",
-    "public": "public",
+    "site": "mightbesimon-root",
+    "public": "build",
     "ignore": [
       "firebase.json",
       "**/.*",

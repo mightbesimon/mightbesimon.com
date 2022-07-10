@@ -3,18 +3,20 @@
 
 name: Firebase preview on PR
 
-'on': pull_request
+'on':
+  pull_request:
+    branches:
+        - main
 
 jobs:
   build-and-preview:
     name: deploy preview
-    if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      # - run: npm ci && CI=false npm run build
+      - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MIGHTBESIMON_SITE }}'
-          projectId: mightbesimon-site
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MIGHTBESIMON_ROOT }}'
+          projectId: mightbesimon-root
