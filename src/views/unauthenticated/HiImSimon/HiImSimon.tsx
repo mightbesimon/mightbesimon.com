@@ -54,8 +54,18 @@ function HiImSimon(): JSX.Element {
 			</section>
 
 
-			<footer>
-				Copyright © 2022 <a href='https://mightbesimon.com'>mightbesimon.com</a>
+			<footer className='flex wrap'>
+				<div className='deployment flex wrap'>
+					<a href='https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-development.yml'>
+						<img alt='development' src='https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-development.yml/badge.svg' />
+					</a>
+					<a href='https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-production.yml'>
+						<img alt='production' src='https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-production.yml/badge.svg' />
+					</a>
+				</div>
+				<div className='copyright'>
+					Copyright © 2022 <a href='https://mightbesimon.com'>mightbesimon.com</a>
+				</div>
 			</footer>
 		</main>
 	)

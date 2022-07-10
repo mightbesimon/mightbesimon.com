@@ -13,7 +13,7 @@ main {
 
 main h1 {
 	margin: .2rem 0rem;
-	padding-left: 1rem;
+	padding: 0rem 1rem;
 	font-weight: normal;
 	border-bottom: var(--border-title);
 	color: var(--header);
@@ -68,15 +68,23 @@ main>section>div.hello>div.left>div.flex.wrap {
 }
 
 main>section>div.hello>div.left>div.flex.wrap>div.flex.wrap>a {
-	margin-left: 1rem;
+	margin: 0rem 1rem;
 }
 
 /*************************   footer   *************************/
 main>footer {
 	margin: auto 1rem 1rem 1rem;
-	padding: .5rem 2rem .5rem 2rem;
 	border-radius: .5rem;
 	font: .8rem monospace;
 	text-align: right;
 	background: var(--body);
+	align-items: center;
+}
+
+main>footer>* {
+	margin: .5rem 0rem;
+}
+
+main>footer>div.deployment>a {
+	margin: 0rem .5rem;
 }

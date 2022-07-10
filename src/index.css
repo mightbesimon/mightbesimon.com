@@ -105,7 +105,7 @@ pre {
 
 .wrap {
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .center {
