@@ -1,4 +1,4 @@
-name: deploy
+name: development
 
 on:
   workflow_dispatch:
@@ -12,24 +12,12 @@ env:
   PAGES_BRANCH: main
 
 jobs:
-  build:
-    uses: ./.github/workflows/build.yml
+  test:
+    uses: ./.github/workflows/test.yml
 
-  deploy-pages:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/download-artifact@v3
-        with:
-          name: build
-          path: .
-      - uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          repository-name: ${{ env.PAGES_REPO }}
-          branch: ${{ env.PAGES_BRANCH }}
-          commit-message: deploy react build
-          token: ${{ secrets.DEPLOY_PAGES_TOKEN }}
-          folder: build
+  build:
+    needs: test
+    uses: ./.github/workflows/build.yml
 
   deploy-firebase:
     needs: build
@@ -43,5 +31,4 @@ jobs:
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MIGHTBESIMON_ROOT }}
-          channelId: live
           projectId: ${{ env.PROJECT_ID }}
