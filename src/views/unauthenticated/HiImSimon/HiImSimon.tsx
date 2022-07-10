@@ -1,6 +1,7 @@
 import './HiImSimon.scss';
 import Simon from 'assets/simon.png';
 import Instagram from 'assets/SocialMedia/instagram.svg';
+import Github from 'assets/SocialMedia/github.svg';
 import NoughtsCrosses from 'components/NoughtsCrosses/NoughtsCrosses';
 import ImageLink from 'components/ImageLink';
 
@@ -10,6 +11,11 @@ const socials = [
 		icon: Instagram,
 		url: 'https://www.instagram.com/definitely.not_simon',
 	},
+	{
+		name: 'github',
+		icon: Github,
+		url: 'https://github.com/mightbesimon'
+	}
 ];
 
 const deployments = [
@@ -38,7 +44,7 @@ function HiImSimon(): JSX.Element {
 				<ImageLink
 					name='simon'
 					icon={Simon}
-					url='https://mightbesimon.com'
+					url='https://github.com/mightbesimon'
 				/>
 				<h1>SIMON</h1>
 			</header>
