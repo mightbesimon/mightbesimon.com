@@ -8,7 +8,7 @@ header {
 	background: var(--mint);
 	align-items: flex-end;
 
-	>a>img {
+	>a.image-link>img {
 		max-width: 16rem;
 		transition: all 500ms ease;
 
@@ -43,13 +43,19 @@ section {
 			>div.flex.wrap {
 				align-items: center;
 
-				>div.flex.wrap>a {
-					margin: 0rem 1rem;
+				>p {
+					margin: .5rem .5rem;
+				}
+
+				>div.flex.wrap>a.image-link>img {
+					margin: 0rem .25rem;
+					width: 1.5rem;
+					height: 1.5rem;
 				}
 			}
 		}
 
-		>a {
+		>a.image-link {
 			flex: 0;
 			margin: 2rem 1rem 0rem 1rem;
 		}
@@ -75,7 +81,7 @@ footer {
 		margin: .5rem 0rem;
 	}
 
-	>div.deployment>a {
+	>div.deployment>a.image-link {
 		margin: 0rem .5rem;
 	}
 }

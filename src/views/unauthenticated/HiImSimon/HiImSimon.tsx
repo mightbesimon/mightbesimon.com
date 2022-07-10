@@ -1,12 +1,39 @@
 import './HiImSimon.scss';
 import Simon from 'assets/simon.png';
+import Instagram from 'assets/SocialMedia/instagram.svg';
+import Github from 'assets/SocialMedia/github.svg';
+import LinkedIn from 'assets/SocialMedia/linkedin.svg';
 import NoughtsCrosses from 'components/NoughtsCrosses/NoughtsCrosses';
+import ImageLink from 'components/ImageLink';
 
 const socials = [
 	{
 		name: 'instagram',
-		icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/24px-Instagram_logo_2016.svg.png',
+		icon: Instagram,
 		url: 'https://www.instagram.com/definitely.not_simon',
+	},
+	{
+		name: 'github',
+		icon: Github,
+		url: 'https://github.com/mightbesimon',
+	},
+	{
+		name: 'LinkedIn',
+		icon: LinkedIn,
+		url: 'https://www.linkedin.com/in/mightbesimon',
+	},
+];
+
+const deployments = [
+	{
+		name: 'development',
+		icon: 'https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-development.yml/badge.svg',
+		url: 'https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-development.yml',
+	},
+	{
+		name: 'production',
+		icon: 'https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-production.yml/badge.svg',
+		url: 'https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-production.yml',
 	},
 ];
 
@@ -20,12 +47,13 @@ function HiImSimon(): JSX.Element {
 	return (
 		<>
 			<header className='flex wrap'>
-				<a href='https://mightbesimon.com'>
-					<img src={Simon} alt='simon' />
-				</a>
+				<ImageLink
+					name='simon'
+					icon={Simon}
+					url='https://github.com/mightbesimon'
+				/>
 				<h1>SIMON</h1>
 			</header>
-
 
 			<section className='flex column'>
 				<div className='hello flex wrap'>
@@ -37,31 +65,25 @@ function HiImSimon(): JSX.Element {
 							<p>Auckland, NZ 🛫 San Jose, CA</p>
 							<div className='flex wrap'>
 								{
-									socials.map(data =>
-										<a href={data.url} key={data.name}>
-											<img alt={data.name} src={data.icon} />
-										</a>
-									)
+									socials.map(data => ImageLink(data))
 								}
 							</div>
 						</div>
 					</div>
-					<a href='https://github.com/mightbesimon'>
-						<img alt='github stats' src='https://github-readme-stats.vercel.app/api?username=mightbesimon&show_icons=true&theme=dracula' />
-					</a>
+					<ImageLink
+						name='github stats'
+						icon='https://github-readme-stats.vercel.app/api?username=mightbesimon&show_icons=true&theme=dracula'
+						url='https://github.com/mightbesimon'
+					/>
 				</div>
 				<NoughtsCrosses />
 			</section>
 
-
 			<footer className='flex wrap'>
 				<div className='deployment flex wrap'>
-					<a href='https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-development.yml'>
-						<img alt='development' src='https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-development.yml/badge.svg' />
-					</a>
-					<a href='https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-production.yml'>
-						<img alt='production' src='https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-production.yml/badge.svg' />
-					</a>
+					{
+						deployments.map(data => ImageLink(data))
+					}
 				</div>
 				<div className='copyright'>
 					Copyright © 2022 <a href='https://mightbesimon.com'>mightbesimon.com</a>

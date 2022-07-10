@@ -45,6 +45,7 @@
 
 * {
   box-sizing: border-box;
+  border-collapse: collapse;
 }
 
 html,
@@ -62,12 +63,6 @@ a {
 
 img {
   display: block;
-}
-
-table,
-tr,
-td {
-  border-collapse: collapse;
 }
 
 /**************************************************************
