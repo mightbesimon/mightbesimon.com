@@ -1,4 +1,4 @@
-import ImageLinkType from "types/ImageLink";
+import ImageLinkType from "types/ImageLinkType";
 
 function ImageLink({ name, icon, url }: ImageLinkType) {
 	return (

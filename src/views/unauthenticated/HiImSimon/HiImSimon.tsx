@@ -1,10 +1,11 @@
 import './HiImSimon.scss';
-import Simon from 'assets/simon.png';
 import Instagram from 'assets/SocialMedia/instagram.svg';
 import Github from 'assets/SocialMedia/github.svg';
 import LinkedIn from 'assets/SocialMedia/linkedin.svg';
 import NoughtsCrosses from 'components/NoughtsCrosses/NoughtsCrosses';
 import ImageLink from 'components/ImageLink';
+import Header from 'components/Header/Header';
+import Footer from 'components/Footer/Footer';
 
 const socials = [
 	{
@@ -24,19 +25,6 @@ const socials = [
 	},
 ];
 
-const deployments = [
-	{
-		name: 'development',
-		icon: 'https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-development.yml/badge.svg',
-		url: 'https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-development.yml',
-	},
-	{
-		name: 'production',
-		icon: 'https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-production.yml/badge.svg',
-		url: 'https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-production.yml',
-	},
-];
-
 function HiImSimon(): JSX.Element {
 	const languages = `🇳🇿 Kia ora,
 🇩🇪 Hallo, ich heiße Simon 😎
@@ -46,14 +34,7 @@ function HiImSimon(): JSX.Element {
 
 	return (
 		<>
-			<header className='flex wrap'>
-				<ImageLink
-					name='simon'
-					icon={Simon}
-					url='https://github.com/mightbesimon'
-				/>
-				<h1>SIMON</h1>
-			</header>
+			<Header />
 
 			<section className='flex column'>
 				<div className='hello flex wrap'>
@@ -76,19 +57,13 @@ function HiImSimon(): JSX.Element {
 						url='https://github.com/mightbesimon'
 					/>
 				</div>
+			</section>
+
+			<section className='flex column'>
 				<NoughtsCrosses />
 			</section>
 
-			<footer className='flex wrap'>
-				<div className='deployment flex wrap'>
-					{
-						deployments.map(data => ImageLink(data))
-					}
-				</div>
-				<div className='copyright'>
-					Copyright © 2022 <a href='https://mightbesimon.com'>mightbesimon.com</a>
-				</div>
-			</footer>
+			<Footer />
 		</>
 	)
 }

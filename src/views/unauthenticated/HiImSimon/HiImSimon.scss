@@ -1,32 +1,4 @@
 /**************************************************************
- *****                 HEADER STARTS HERE                 *****
- **************************************************************/
-header {
-	width: 100%;
-	padding: 1rem 1rem 0rem 1rem;
-	border-radius: 1rem 1rem 0rem 0rem;
-	background: var(--mint);
-	align-items: flex-end;
-
-	>a.image-link>img {
-		max-width: 16rem;
-		transition: all 500ms ease;
-
-		&:hover {
-			padding: 1rem .5rem 0rem .5rem;
-		}
-	}
-
-	>h1 {
-		padding: 0rem 0rem 1rem 0rem;
-		font: normal 3rem monospace;
-		text-align: center;
-		border: none;
-		color: var(--body);
-	}
-}
-
-/**************************************************************
  *****                SECTION STARTS HERE                 *****
  **************************************************************/
 section {
@@ -59,29 +31,5 @@ section {
 			flex: 0;
 			margin: 2rem 1rem 0rem 1rem;
 		}
-	}
-}
-
-/**************************************************************
- *****                 FOOTER STARTS HERE                 *****
- **************************************************************/
-footer {
-	margin: auto 1rem 1rem 1rem;
-	border-radius: .5rem;
-	font: .8rem monospace;
-	text-align: right;
-	background: var(--body);
-	align-items: center;
-
-	* {
-		max-width: calc(100vw - 2rem);
-	}
-
-	>* {
-		margin: .5rem 0rem;
-	}
-
-	>div.deployment>a.image-link {
-		margin: 0rem .5rem;
 	}
 }
