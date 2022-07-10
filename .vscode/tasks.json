@@ -6,10 +6,18 @@
 			"script": "test",
 			"group": {
 				"kind": "test",
-				"isDefault": true,
+				"isDefault": true
 			},
-			"problemMatcher": [],
-			"label": "npm test",
+			"label": "npm test"
+		},
+		{
+			"type": "npm",
+			"script": "build",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"label": "npm build"
 		},
 	]
 }
