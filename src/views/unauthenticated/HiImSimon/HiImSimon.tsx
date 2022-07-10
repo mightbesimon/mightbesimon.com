@@ -59,9 +59,7 @@ function HiImSimon(): JSX.Element {
 				</div>
 			</section>
 
-			<section className='flex column'>
-				<NoughtsCrosses />
-			</section>
+			<NoughtsCrosses />
 
 			<Footer />
 		</>
