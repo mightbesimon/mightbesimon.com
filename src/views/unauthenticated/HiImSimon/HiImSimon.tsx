@@ -1,12 +1,13 @@
 import './HiImSimon.scss';
 import Simon from 'assets/simon.png';
+import Instagram from 'assets/SocialMedia/instagram.svg';
 import NoughtsCrosses from 'components/NoughtsCrosses/NoughtsCrosses';
 import ImageLink from 'components/ImageLink';
 
 const socials = [
 	{
 		name: 'instagram',
-		icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/24px-Instagram_logo_2016.svg.png',
+		icon: Instagram,
 		url: 'https://www.instagram.com/definitely.not_simon',
 	},
 ];

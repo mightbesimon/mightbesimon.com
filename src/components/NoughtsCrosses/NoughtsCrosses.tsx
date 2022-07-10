@@ -1,8 +1,8 @@
 import './NoughtsCrosses.scss';
 import { useState } from 'react';
 import { range } from 'utils/extensions/Functions';
-import Nought from 'assets/nought.svg';
-import Cross from 'assets/cross.svg';
+import Nought from 'assets/NoughtsCrosses/nought.svg';
+import Cross from 'assets/NoughtsCrosses/cross.svg';
 
 export enum Mark {
 	Empty = '',
