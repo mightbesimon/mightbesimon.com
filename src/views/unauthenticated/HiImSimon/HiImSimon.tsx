@@ -2,6 +2,7 @@ import './HiImSimon.scss';
 import Simon from 'assets/simon.png';
 import Instagram from 'assets/SocialMedia/instagram.svg';
 import Github from 'assets/SocialMedia/github.svg';
+import LinkedIn from 'assets/SocialMedia/linkedin.svg';
 import NoughtsCrosses from 'components/NoughtsCrosses/NoughtsCrosses';
 import ImageLink from 'components/ImageLink';
 
@@ -14,8 +15,13 @@ const socials = [
 	{
 		name: 'github',
 		icon: Github,
-		url: 'https://github.com/mightbesimon'
-	}
+		url: 'https://github.com/mightbesimon',
+	},
+	{
+		name: 'LinkedIn',
+		icon: LinkedIn,
+		url: 'https://www.linkedin.com/in/mightbesimon',
+	},
 ];
 
 const deployments = [
