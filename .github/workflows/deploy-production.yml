@@ -1,4 +1,4 @@
-name: deploy
+name: production
 
 on:
   workflow_dispatch:
@@ -12,11 +12,16 @@ env:
   PAGES_BRANCH: main
 
 jobs:
+  test:
+    uses: ./.github/workflows/test.yml
+
   build:
+    needs: test
     uses: ./.github/workflows/build.yml
 
   deploy-pages:
     needs: build
+    concurrency: deploy-pages
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v3
@@ -33,6 +38,7 @@ jobs:
 
   deploy-firebase:
     needs: build
+    concurrency: deploy-firebase
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v3

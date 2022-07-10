@@ -1,0 +1,29 @@
+name: development
+
+on:
+  workflow_dispatch:
+
+env:
+  PROJECT_ID: mightbesimon-root
+
+jobs:
+  test:
+    uses: ./.github/workflows/test.yml
+
+  build:
+    needs: test
+    uses: ./.github/workflows/build.yml
+
+  deploy-firebase:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: build
+          path: .
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MIGHTBESIMON_ROOT }}
+          projectId: ${{ env.PROJECT_ID }}
