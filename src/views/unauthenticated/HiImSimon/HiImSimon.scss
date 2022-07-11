@@ -74,6 +74,8 @@ section.HiImSimon {
 
 	>div.showcase {
 		padding: 0rem 1rem;
+		justify-content: flex-start;
+		max-width: 56rem;
 
 		>a {
 			flex: 1 1 50%;
