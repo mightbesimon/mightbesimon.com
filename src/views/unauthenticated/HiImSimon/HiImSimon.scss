@@ -12,12 +12,12 @@ section.HiImSimon {
 			margin: 0rem 1rem;
 
 			>h1 {
-				transition: all 200ms ease;
+				transition: var(--transition);
 
-				&:hover {
-					color: white;
-					filter: drop-shadow(0rem 0rem .5rem yellow)
-				}
+				// &:hover {
+				// 	color: white;
+				// 	filter: drop-shadow(0rem 0rem .5rem yellow)
+				// }
 			}
 
 			>p {
@@ -36,12 +36,12 @@ section.HiImSimon {
 					margin: 0rem .5rem;
 					padding: .25rem;
 					border-radius: .5rem;
-					transition: all 200ms ease;
+					transition: var(--transition);
 
 					>svg {
 						width: 1.5rem;
 						height: 1.5rem;
-						transition: all 200ms ease;
+						transition: var(--transition);
 						fill: var(--text)
 					}
 
@@ -62,7 +62,7 @@ section.HiImSimon {
 
 						&>svg {
 							fill: white !important;
-							filter: drop-shadow(0rem 0rem .3rem var(--orange));
+							filter: drop-shadow(0rem 0rem .3rem yellow);
 						}
 					}
 				}

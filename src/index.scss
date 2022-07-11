@@ -23,6 +23,10 @@
   /* shadow */
   --shadow: 0rem .2rem .3rem 0rem hsla(0, 0%, 0%, 25%);
 
+  /* transition */
+  --transition: all 200ms ease;
+  --transition5: all 500ms ease;
+
   /* themes */
   --body: var(--marina0);
   --main: var(--marina1);

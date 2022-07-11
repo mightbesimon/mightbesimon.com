@@ -17,7 +17,7 @@ div.game {
 				height: 90%;
 				margin: 5%;
 				border-radius: .5rem;
-				transition: all 500ms ease;
+				transition: var(--transition5);
 
 				&:empty:hover {
 					cursor: pointer;
@@ -55,7 +55,7 @@ div.game {
 				font-size: 1.1rem;
 				text-align: center;
 				color: var(--body);
-				transition: all 200ms ease;
+				transition: var(--transition);
 
 				&:hover {
 					cursor: pointer;
