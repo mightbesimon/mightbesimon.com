@@ -1,24 +1,24 @@
 import './HiImSimon.scss';
-import Instagram from 'assets/SocialMedia/instagram.svg';
-import Github from 'assets/SocialMedia/github.svg';
-import LinkedIn from 'assets/SocialMedia/linkedin.svg';
-import ImageLink from 'components/ImageLink';
+import { ReactComponent as Instagram } from 'assets/SocialMedia/instagram.svg';
+import { ReactComponent as Github } from 'assets/SocialMedia/github.svg';
+import { ReactComponent as LinkedIn } from 'assets/SocialMedia/linkedin.svg';
+import { SvgLink } from 'components/ImageLink';
 import SimonWrapper from 'components/SimonWrapper/SimonWrapper';
 
 const socials = [
 	{
 		name: 'instagram',
-		image: Instagram,
+		svg: Instagram,
 		url: 'https://www.instagram.com/definitely.not_simon',
 	},
 	{
 		name: 'github',
-		image: Github,
+		svg: Github,
 		url: 'https://github.com/mightbesimon',
 	},
 	{
 		name: 'LinkedIn',
-		image: LinkedIn,
+		svg: LinkedIn,
 		url: 'https://www.linkedin.com/in/mightbesimon',
 	},
 ];
@@ -35,21 +35,17 @@ function HiImSimon(): JSX.Element {
 			<div className='hello flex wrap'>
 				<pre>{languages}</pre>
 				<div className='right'>
-					<h1 className='flex wrap'>
-						<span>Hi,</span>
-						<span>I'm Simon</span>
-						<span>👋</span>
-					</h1>
-					<div className='flex wrap'>
-						{
-							socials.map(data => ImageLink(data))
-						}
-					</div>
+					<h1>Hi, I'm Simon 👋</h1>
 					<p className='flex wrap'>
 						<span>Auckland, NZ</span>
 						<span>🛫</span>
 						<span>San Jose, CA</span>
 					</p>
+					<div className='flex wrap'>
+						{
+							socials.map(data => SvgLink(data))
+						}
+					</div>
 				</div>
 			</div>
 			{/* <ImageLink

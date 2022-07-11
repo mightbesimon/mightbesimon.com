@@ -7,10 +7,10 @@
  **************************************************************/
 :root {
   /* colour palette */
-  --marina0: hsla(215, 15%, 16%, 100%);
-  --marina1: hsla(212, 15%, 22%, 100%);
-  --marina2: hsla(212, 14%, 36%, 100%);
-  --marina3: hsla(219, 28%, 88%, 100%);
+  --mariana0: hsla(215, 15%, 16%, 100%);
+  --mariana1: hsla(212, 15%, 22%, 100%);
+  --mariana2: hsla(212, 14%, 36%, 100%);
+  --mariana3: hsla(219, 28%, 88%, 100%);
   --purple: hsla(300, 30%, 68%, 100%);
   --blue: hsla(210, 50%, 60%, 100%);
   --teal: hsla(180, 36%, 54%, 100%);
@@ -18,20 +18,24 @@
   --orange: hsla(32, 93%, 66%, 100%);
 
   /* borders */
-  --border-title: 2px solid var(--marina2);
+  --border-title: 2px solid var(--mariana2);
 
   /* shadow */
-  --shadow: 0rem .2rem .3rem 0rem hsla(0, 0%, 0%, 0.25);
+  --shadow: 0rem .2rem .3rem 0rem hsla(0, 0%, 0%, 25%);
+
+  /* transition */
+  --transition: all 200ms ease;
+  --transition5: all 500ms ease;
 
   /* themes */
-  --body: var(--marina0);
-  --main: var(--marina1);
-  --text: var(--marina3);
-  --footer: var(--marina2);
+  --body: var(--mariana0);
+  --main: var(--mariana1);
+  --text: var(--mariana3);
+  --footer: var(--mariana2);
   --arrow: var(--blue);
   --header: var(--purple);
   --arrow-down: var(--teal);
-  --card: var(--marina2);
+  --card: var(--mariana2);
   --link: var(--teal);
   --button: var(--mint);
   --button-hover: var(--blue);

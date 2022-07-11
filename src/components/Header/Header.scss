@@ -8,6 +8,17 @@ header {
 	background: var(--mint);
 	align-items: flex-end;
 	justify-content: center !important;
+	transition: var(--transition5);
+
+	&.lights-out {
+		background: var(--body);
+
+		>h1 {
+			color: white;
+			font-weight: 100;
+			filter: drop-shadow(0rem 0rem .5rem yellow);
+		}
+	}
 
 	>h1 {
 		padding: 0rem 0rem 1rem 0rem;
@@ -15,5 +26,7 @@ header {
 		text-align: center;
 		border: none;
 		color: var(--body);
+		transition: var(--transition);
+		cursor: default;
 	}
 }
