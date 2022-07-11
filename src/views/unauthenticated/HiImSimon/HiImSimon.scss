@@ -1,29 +1,35 @@
 section.HiImSimon {
 	>div.hello {
-		flex: 1;
+		justify-content: center;
 
-		// >pre {
-		// 	margin: 1rem auto;
-		// 	max-width: 30rem;
-		// }
+		>pre {
+			flex: 1;
+			margin: 1rem 1rem 0rem 1rem;
+		}
 
-		>div.flex.wrap {
-			align-items: center;
+		>div.right {
+			flex: 1;
+			margin: 0rem 1rem;
 
 			>p {
 				margin: .5rem .5rem;
+				text-align: center;
+				align-items: baseline;
 			}
 
-			>div.flex.wrap>a.image.link>img {
-				margin: 0rem .25rem;
-				width: 1.5rem;
-				height: 1.5rem;
+			>div.flex.wrap {
+				justify-content: center;
+
+				>a.image.link>img {
+					margin: 0rem .5rem;
+					width: 1.5rem;
+					height: 1.5rem;
+				}
 			}
 		}
 	}
 
 	>a.image.link {
-		flex: 0;
 		margin: 1rem auto 0rem auto;
 	}
 }

@@ -163,7 +163,7 @@ function NoughtsCrosses(): JSX.Element {
 			}
 			{
 				(D.rows * D.cols > 0) || (
-					<p className='center'>you got too curious and now the game is gone ☹️</p>
+					<p>you got too curious and now the game is gone ☹️</p>
 				)
 			}
 		</div>
