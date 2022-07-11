@@ -1,16 +1,21 @@
-import { Route } from "react-location";
-import AuthPage from "./AuthPage/AuthPage";
-import HiImSimon from "./HiImSimon/HiImSimon";
-import NotFound from "./NotFound/NotFound";
+import { Route } from 'react-location';
+import AuthPage from './AuthPage/AuthPage';
+import HiImSimon from './HiImSimon/HiImSimon';
+import LoadingPage from './LoadingPage/LoadingPage';
+import NotFound from './NotFound/NotFound';
 
 const unauthenticatedContent: Route[] = [
 	{
-		path: "/",
+		path: '/',
 		element: <HiImSimon />,
 	},
 	{
-		path: "/auth",
+		path: '/auth',
 		element: <AuthPage />,
+	},
+	{
+		path: '/loading',
+		element: <LoadingPage />
 	},
 	{
 		// NotFound must be last in routes array
