@@ -1,25 +1,13 @@
 import './Footer.scss';
-import ImageLink from "components/ImageLink";
-
-const deployments = [
-	{
-		name: 'development',
-		image: 'https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-development.yml/badge.svg',
-		url: 'https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-development.yml',
-	},
-	{
-		name: 'production',
-		image: 'https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-production.yml/badge.svg',
-		url: 'https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-production.yml',
-	},
-];
+import Deployments from 'utils/data/Deployments.json';
+import ImageLink from 'components/ImageLink';
 
 function Footer() {
 	return (
 		<footer className='flex wrap'>
 			<div className='deployment flex wrap'>
 				{
-					deployments.map(data => ImageLink(data))
+					Deployments.map(data => ImageLink(data))
 				}
 			</div>
 			<div className='copyright'>
