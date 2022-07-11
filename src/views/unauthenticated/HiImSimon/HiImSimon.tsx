@@ -2,6 +2,7 @@ import './HiImSimon.scss';
 import { ReactComponent as Instagram } from 'assets/SocialMedia/instagram.svg';
 import { ReactComponent as Github } from 'assets/SocialMedia/github.svg';
 import { ReactComponent as LinkedIn } from 'assets/SocialMedia/linkedin.svg';
+import EllipsisLoader from 'components/Loader/EllipsisLoader';
 import { ImageLink, SvgLink } from 'components/ImageLink';
 import SimonWrapper from 'components/SimonWrapper/SimonWrapper';
 import getRepos, { RepositoryResponse } from 'utils/api/github/getRepos';
@@ -76,7 +77,7 @@ function HiImSimon(): JSX.Element {
 									<div>🍴 {repo.forks_count}</div>
 								</div>
 							</a>
-						)) : <></>
+						)) : <EllipsisLoader text='🌵' />
 				}
 			</div>
 			<h2>Pages to check out</h2>
@@ -92,6 +93,7 @@ function HiImSimon(): JSX.Element {
 						))
 				}
 			</div>
+			<h2>My Github stats</h2>
 			<ImageLink
 				name='github stats'
 				image='https://github-readme-stats.vercel.app/api?username=mightbesimon&show_icons=true&theme=dracula'
