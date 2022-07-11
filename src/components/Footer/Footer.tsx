@@ -4,12 +4,12 @@ import ImageLink from "components/ImageLink";
 const deployments = [
 	{
 		name: 'development',
-		icon: 'https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-development.yml/badge.svg',
+		image: 'https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-development.yml/badge.svg',
 		url: 'https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-development.yml',
 	},
 	{
 		name: 'production',
-		icon: 'https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-production.yml/badge.svg',
+		image: 'https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-production.yml/badge.svg',
 		url: 'https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-production.yml',
 	},
 ];

@@ -8,17 +8,17 @@ import SimonWrapper from 'components/SimonWrapper/SimonWrapper';
 const socials = [
 	{
 		name: 'instagram',
-		icon: Instagram,
+		image: Instagram,
 		url: 'https://www.instagram.com/definitely.not_simon',
 	},
 	{
 		name: 'github',
-		icon: Github,
+		image: Github,
 		url: 'https://github.com/mightbesimon',
 	},
 	{
 		name: 'LinkedIn',
-		icon: LinkedIn,
+		image: LinkedIn,
 		url: 'https://www.linkedin.com/in/mightbesimon',
 	},
 ];
@@ -48,7 +48,7 @@ function HiImSimon(): JSX.Element {
 				</div>
 				<ImageLink
 					name='github stats'
-					icon='https://github-readme-stats.vercel.app/api?username=mightbesimon&show_icons=true&theme=dracula'
+					image='https://github-readme-stats.vercel.app/api?username=mightbesimon&show_icons=true&theme=dracula'
 					url='https://github.com/mightbesimon'
 				/>
 			</div>

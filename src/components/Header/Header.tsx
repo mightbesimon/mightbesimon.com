@@ -1,13 +1,13 @@
 import './Header.scss';
-import Simon from 'assets/simon.png';
-import ImageLink from "components/ImageLink";
+import { ReactComponent as Simon } from 'assets/simon.svg';
+import { SvgLink } from "components/ImageLink";
 
 function Header() {
 	return (
 		<header className='flex wrap'>
-			<ImageLink
+			<SvgLink
 				name='simon'
-				icon={Simon}
+				svg={Simon}
 				url='https://github.com/mightbesimon'
 			/>
 			<h1>SIMON</h1>

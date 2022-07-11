@@ -8,13 +8,21 @@ header {
 	background: var(--mint);
 	align-items: flex-end;
 
-	>a.image-link>img {
+	>a.svg.image.link>svg {
 		max-width: 16rem;
-		transition: all 500ms ease;
 
-		&:hover {
-			padding: 1rem .5rem 0rem .5rem;
+		>g>* {
+			transition: all 500ms ease;
 		}
+
+		>g:hover>.arms,
+		>g:hover>.chest {
+			transform: translateY(-2rem);
+		}
+
+		// >g:hover>.eyes {
+		// 	opacity: 0;
+		// }
 	}
 
 	>h1 {
