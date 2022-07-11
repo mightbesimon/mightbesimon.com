@@ -92,6 +92,11 @@ function HiImSimon(): JSX.Element {
 							</Link>
 						))
 				}
+				<Link key='notfound' to='/notfound'>
+					<div className='title'>
+						<h3>page not found</h3>
+					</div>
+				</Link>
 			</div>
 			<h2>My Github stats</h2>
 			<ImageLink
