@@ -1,7 +1,7 @@
 // import { useContext } from "react";
 import { Outlet, ReactLocation, Router, Navigate } from "react-location";
 import unauthenticatedContent from "./unauthenticated/UnauthenticatedContent";
-import authenticatedContent from "./unauthenticated/UnauthenticatedContent";
+import authenticatedContent from "./authenticated/AuthenticatedContent";
 
 const location = new ReactLocation();
 
@@ -25,11 +25,11 @@ const ContentRouter = () => {
 				{
 					path: "/user",
 					element: <AuthCheck authenticationRequired={true} />,
-					children: authenticatedContent(),
+					children: authenticatedContent,
 				},
 				{
 					element: <AuthCheck authenticationRequired={false} />,
-					children: unauthenticatedContent(),
+					children: unauthenticatedContent,
 				},
 			]}
 		>
