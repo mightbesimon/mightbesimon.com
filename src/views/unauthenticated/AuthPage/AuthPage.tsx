@@ -9,7 +9,7 @@ function AuthPage() {
 				<h1>WHO ARE YOU?</h1>
 			</header>
 			<section>
-
+				<p style={{ padding: '1rem', textAlign: 'center' }}>you know this is a website about Simon, right?</p>
 			</section>
 			<Footer />
 		</>
