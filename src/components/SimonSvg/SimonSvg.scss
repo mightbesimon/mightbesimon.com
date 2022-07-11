@@ -1,0 +1,30 @@
+svg {
+	max-width: 16rem;
+
+	>g>* {
+		transition: all 200ms ease;
+	}
+
+	>g:hover>.arms,
+	>g:hover>.chest {
+		transform: translateY(-2rem);
+	}
+
+	>g>.eyes {
+		animation: blink 5s ease infinite;
+
+		@keyframes blink {
+			90% {
+				opacity: 1;
+			}
+
+			95% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+	}
+}
