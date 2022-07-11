@@ -1,5 +1,5 @@
 import './NoughtsCrosses.scss';
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import { range } from 'utils/extension/Functions';
 import Nought from 'assets/NoughtsCrosses/nought.svg';
 import Cross from 'assets/NoughtsCrosses/cross.svg';
