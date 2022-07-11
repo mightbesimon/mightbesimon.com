@@ -1,0 +1,12 @@
+section.LoadingPage {
+	margin: auto;
+
+	>div {
+		display: flex;
+		align-items: center;
+
+		>div:first-child {
+			width: 7.5rem;
+		}
+	}
+}
