@@ -1,0 +1,17 @@
+[
+	{
+		"name": "instagram",
+		"svg": "Instagram",
+		"url": "https://www.instagram.com/definitely.not_simon"
+	},
+	{
+		"name": "github",
+		"svg": "Github",
+		"url": "https://github.com/mightbesimon"
+	},
+	{
+		"name": "LinkedIn",
+		"svg": "LinkedIn",
+		"url": "https://www.linkedin.com/in/mightbesimon"
+	}
+]

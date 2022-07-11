@@ -1,0 +1,12 @@
+[
+	{
+		"name": "development",
+		"image": "https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-development.yml/badge.svg",
+		"url": "https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-development.yml"
+	},
+	{
+		"name": "production",
+		"image": "https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-production.yml/badge.svg",
+		"url": "https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-production.yml"
+	}
+]
