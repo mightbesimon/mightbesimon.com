@@ -35,11 +35,7 @@ function HiImSimon(): JSX.Element {
 			<div className='hello flex wrap'>
 				<pre>{languages}</pre>
 				<div className='right'>
-					<h1 className='flex wrap'>
-						<span>Hi,</span>
-						<span>I'm Simon</span>
-						<span>👋</span>
-					</h1>
+					<h1>Hi, I'm Simon 👋</h1>
 					<p className='flex wrap'>
 						<span>Auckland, NZ</span>
 						<span>🛫</span>

@@ -10,6 +10,7 @@ section.HiImSimon {
 		>div.right {
 			flex: 1;
 			margin: 0rem 1rem;
+			min-width: 16rem;
 
 			>h1 {
 				transition: var(--transition);
