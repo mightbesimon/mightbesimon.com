@@ -5,13 +5,14 @@ import Footer from "components/Footer/Footer"
 
 type SimonWrapperProps = {
 	children: JSX.Element | JSX.Element[],
+	view?: string,
 }
 
-function SimonWrapper({ children }: SimonWrapperProps) {
+function SimonWrapper({ children, view }: SimonWrapperProps) {
 	return (
 		<>
 			<Header />
-			<section className='flex column'>
+			<section className={view ? `flex column ${view}` : 'flex column'}>
 				{children}
 			</section>
 			<NoughtsCrosses />

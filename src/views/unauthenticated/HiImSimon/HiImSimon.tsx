@@ -31,27 +31,25 @@ function HiImSimon(): JSX.Element {
 🇨🇳 嗨, 我叫单泉`;
 
 	return (
-		<SimonWrapper>
-			<div className='hello flex wrap'>
-				<div className='left'>
-					<h2>Hi, I'm Simon 👋</h2>
-					<pre>{languages}</pre>
+		<SimonWrapper view='HiImSimon'>
+			<div className='hello'>
+				<h1>Hi, I'm Simon 👋</h1>
+				<pre>{languages}</pre>
 
+				<div className='flex wrap'>
+					<p>Auckland, NZ 🛫 San Jose, CA</p>
 					<div className='flex wrap'>
-						<p>Auckland, NZ 🛫 San Jose, CA</p>
-						<div className='flex wrap'>
-							{
-								socials.map(data => ImageLink(data))
-							}
-						</div>
+						{
+							socials.map(data => ImageLink(data))
+						}
 					</div>
 				</div>
-				<ImageLink
-					name='github stats'
-					image='https://github-readme-stats.vercel.app/api?username=mightbesimon&show_icons=true&theme=dracula'
-					url='https://github.com/mightbesimon'
-				/>
 			</div>
+			<ImageLink
+				name='github stats'
+				image='https://github-readme-stats.vercel.app/api?username=mightbesimon&show_icons=true&theme=dracula'
+				url='https://github.com/mightbesimon'
+			/>
 		</SimonWrapper>
 	)
 }
