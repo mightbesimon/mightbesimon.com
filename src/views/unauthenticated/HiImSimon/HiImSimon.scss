@@ -84,9 +84,15 @@ section.HiImSimon {
 			transition: var(--transition);
 			background: var(--mariana2);
 			justify-content: space-between;
+			transition: var(--transition);
 
 			&:hover {
+				background: hsla(32, 100%, 66%, 67%);
 				box-shadow: var(--shadow-card);
+
+				>div.title>div.description {
+					opacity: 100%;
+				}
 			}
 
 			>div.title {
@@ -118,5 +124,10 @@ section.HiImSimon {
 
 	>a.image.link {
 		margin: 1rem auto 0rem auto;
+		max-width: calc(100vw - 2rem);
+
+		>img {
+			max-width: inherit;
+		}
 	}
 }
