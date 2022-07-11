@@ -2,16 +2,22 @@ name: development
 
 on:
   workflow_dispatch:
+    inputs:
+      test:
+        description: 'Run tests'
+        required: false
+        type: boolean
 
 env:
   PROJECT_ID: mightbesimon-root
 
 jobs:
   test:
+    if: ${{ inputs.test }}
     uses: ./.github/workflows/test.yml
 
   build:
-    needs: test
+    # needs: test
     uses: ./.github/workflows/build.yml
 
   deploy-firebase:
