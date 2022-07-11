@@ -11,6 +11,15 @@ section.HiImSimon {
 			flex: 1;
 			margin: 0rem 1rem;
 
+			>h1 {
+				transition: all 200ms ease;
+
+				&:hover {
+					color: white;
+					filter: drop-shadow(0rem 0rem .5rem yellow)
+				}
+			}
+
 			>p {
 				margin: .5rem .5rem;
 				text-align: center;
@@ -19,11 +28,43 @@ section.HiImSimon {
 
 			>div.flex.wrap {
 				justify-content: center;
+				padding: .25rem;
+				border-radius: .5rem;
+				// background: var(--orange);
 
-				>a.image.link>img {
+				>a.svg.image.link {
 					margin: 0rem .5rem;
-					width: 1.5rem;
-					height: 1.5rem;
+					padding: .25rem;
+					border-radius: .5rem;
+					transition: all 200ms ease;
+
+					>svg {
+						width: 1.5rem;
+						height: 1.5rem;
+						transition: all 200ms ease;
+						fill: var(--text)
+					}
+
+					>svg.instagram.logo {
+						fill: var(--purple);
+					}
+
+					>svg.github.logo {
+						fill: var(--text)
+					}
+
+					>svg.linkedin.logo {
+						fill: var(--blue)
+					}
+
+					&:hover {
+						// box-shadow: inset 0rem .2rem .5rem .2rem hsla(0, 0%, 0%, 33%);
+
+						&>svg {
+							fill: white !important;
+							filter: drop-shadow(0rem 0rem .3rem var(--orange));
+						}
+					}
 				}
 			}
 		}
