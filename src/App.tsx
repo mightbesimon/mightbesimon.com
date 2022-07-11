@@ -1,10 +1,10 @@
 import './App.scss';
-import HiImSimon from './views/unauthenticated/HiImSimon/HiImSimon';
+import ContentRouter from 'views/ContentRouter';
 
 function App() {
   return (
     <main className='flex column'>
-      <HiImSimon />
+      <ContentRouter />
     </main>
   );
 }

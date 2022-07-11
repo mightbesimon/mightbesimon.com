@@ -1,8 +1,9 @@
 import './NoughtsCrosses.scss';
-import { useState } from 'react';
-import { range } from 'utils/extensions/Functions';
+import { useMemo, useState } from 'react';
+import { range } from 'utils/extension/Functions';
 import Nought from 'assets/NoughtsCrosses/nought.svg';
 import Cross from 'assets/NoughtsCrosses/cross.svg';
+import useRem from 'utils/hooks/useRem';
 
 export enum Mark {
 	Empty = '',
@@ -22,6 +23,7 @@ type Cell = {
 }
 
 function NoughtsCrosses(): JSX.Element {
+	const rem = useRem();
 	const [D] = useState({ rows: 3, cols: 3 });
 
 	const calcRing = (cell: Cell) => {
@@ -58,8 +60,14 @@ function NoughtsCrosses(): JSX.Element {
 			.concat(diagonalLines);
 	};
 
+	const resetTileSize = () => {
+		const size = Math.min(4 * rem, window.innerWidth / D.rows);
+		return { width: size, height: size };
+	}
+
 	const [tiles, setTiles] = useState<Tile[][]>(resetTiles());
 	const [lines, setLines] = useState<Cell[][]>(resetLines());
+	const [tileSize, setTileSize] = useState(resetTileSize());
 	const [game] = useState({
 		over: false,
 		message: '',
@@ -103,6 +111,13 @@ function NoughtsCrosses(): JSX.Element {
 		}
 	};
 
+	const deltaD = (delta: { rows: number, cols: number }) => () => {
+		D.rows += delta.rows;
+		D.cols += delta.cols;
+		setTileSize(resetTileSize());
+		restart();
+	};
+
 	const endGame = (winner: Mark) => {
 		game.over = true;
 		game.message = winner === Mark.Empty ? 'draw' : `${winner} win`;
@@ -132,6 +147,7 @@ function NoughtsCrosses(): JSX.Element {
 									range(D.cols).map(col =>
 										<td key={col}
 											onClick={cross(row, col)}
+											style={tileSize}
 										>
 											<div>
 												{
@@ -154,16 +170,16 @@ function NoughtsCrosses(): JSX.Element {
 					<div className='result'>
 						<div className='title'>{game.message}</div>
 						<div className='buttons flex'>
-							<div className='minus' onClick={() => { D.rows--; D.cols--; restart(); }}>&ndash;</div>
+							<div className='minus' onClick={deltaD({ rows: -1, cols: -1 })}>&ndash;</div>
 							<div className='restart' onClick={restart}>restart</div>
-							<div className='plus' onClick={() => { D.rows++; D.cols++; restart(); }}>+</div>
+							<div className='plus' onClick={deltaD({ rows: +1, cols: +1 })}>+</div>
 						</div>
 					</div>
 				)
 			}
 			{
 				(D.rows * D.cols > 0) || (
-					<p className='center'>you got too curious and now the game is gone ☹️</p>
+					<p>you got too curious and now the game is gone ☹️</p>
 				)
 			}
 		</div>

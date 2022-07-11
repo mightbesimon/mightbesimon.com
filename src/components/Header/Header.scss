@@ -1,0 +1,19 @@
+/**************************************************************
+ *****                 HEADER STARTS HERE                 *****
+ **************************************************************/
+header {
+	width: 100%;
+	padding: 1rem 1rem 0rem 1rem;
+	border-radius: 1rem 1rem 0rem 0rem;
+	background: var(--mint);
+	align-items: flex-end;
+	justify-content: center !important;
+
+	>h1 {
+		padding: 0rem 0rem 1rem 0rem;
+		font: normal 3rem monospace;
+		text-align: center;
+		border: none;
+		color: var(--body);
+	}
+}

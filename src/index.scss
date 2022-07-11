@@ -20,7 +20,8 @@
   /* borders */
   --border-title: 2px solid var(--marina2);
 
-  /* transitions */
+  /* shadow */
+  --shadow: 0rem .2rem .3rem 0rem hsla(0, 0%, 0%, 0.25);
 
   /* themes */
   --body: var(--marina0);
@@ -61,7 +62,8 @@ a {
   text-decoration: inherit;
 }
 
-img {
+img,
+svg {
   display: block;
 }
 
@@ -103,8 +105,4 @@ pre {
 .wrap {
   flex-wrap: wrap;
   justify-content: space-evenly;
-}
-
-.center {
-  text-align: center;
 }
