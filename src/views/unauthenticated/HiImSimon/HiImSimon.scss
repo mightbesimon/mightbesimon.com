@@ -71,6 +71,37 @@ section.HiImSimon {
 		}
 	}
 
+	>div.showcase {
+		padding: 0rem 1rem;
+
+		>a {
+			flex: 1;
+			margin: 1rem;
+			padding: 1rem;
+			max-width: 25rem;
+			border-radius: .5rem;
+			transition: var(--transition);
+
+			&:hover {
+				box-shadow: var(--shadow-card);
+			}
+		}
+	}
+
+	>div.showcase.repos {
+		>a {
+			color: var(--mariana0);
+			background: var(--orange);
+		}
+	}
+
+	>div.showcase.pages {
+		>a {
+			color: var(--mariana0);
+			background: var(--mint);
+		}
+	}
+
 	>a.image.link {
 		margin: 1rem auto 0rem auto;
 	}

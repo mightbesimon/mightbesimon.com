@@ -2,8 +2,14 @@ import './HiImSimon.scss';
 import { ReactComponent as Instagram } from 'assets/SocialMedia/instagram.svg';
 import { ReactComponent as Github } from 'assets/SocialMedia/github.svg';
 import { ReactComponent as LinkedIn } from 'assets/SocialMedia/linkedin.svg';
-import { SvgLink } from 'components/ImageLink';
+import { ImageLink, SvgLink } from 'components/ImageLink';
 import SimonWrapper from 'components/SimonWrapper/SimonWrapper';
+import getRepos, { RepositoryResponse } from 'utils/api/github/getRepos';
+import greetings from 'utils/data/greetings.json';
+import repositories from 'utils/data/repositories.json';
+import unauthenticatedContent from "views/unauthenticated/UnauthenticatedContent";
+import { Link } from 'react-location';
+import { useQuery } from "react-query";
 
 const socials = [
 	{
@@ -24,16 +30,20 @@ const socials = [
 ];
 
 function HiImSimon(): JSX.Element {
-	const languages = `🇳🇿 Kia ora,
-🇩🇪 Hallo, ich heiße Simon 😎
-🇫🇷 Salut, moi c'est Simon 😏
-🇮🇪 Dia duit, is mise Simon 😙
-🇨🇳 嗨, 我叫单泉`;
+	const repoResponse = useQuery(
+		'getRepo',
+		() => getRepos({ owner: 'mightbesimon' })
+	);
+
+	const engagement = (repo: RepositoryResponse) =>
+		repo.stargazers_count +
+		repo.watchers_count +
+		repo.forks_count;
 
 	return (
 		<SimonWrapper view='HiImSimon'>
 			<div className='hello flex wrap'>
-				<pre>{languages}</pre>
+				<pre>{greetings.join('\n')}</pre>
 				<div className='right'>
 					<h1>Hi, I'm Simon 👋</h1>
 					<p className='flex wrap'>
@@ -48,11 +58,39 @@ function HiImSimon(): JSX.Element {
 					</div>
 				</div>
 			</div>
-			{/* <ImageLink
+			<h2>My repositories to check out</h2>
+			<div className='showcase repos flex wrap'>
+				{
+					repoResponse.data ? repoResponse.data
+						.filter(repo => repositories.map(x => x.repo).includes(repo.name))
+						.sort((a, b) => engagement(a) - engagement(b))
+						.reverse().map(repo => (
+							<a key={repo.full_name} href={repo.html_url}>
+								<div>{repo.full_name}</div>
+								<div>{repo.description}</div>
+								<div>starts: {repo.stargazers_count}</div>
+								<div>watchers: {repo.watchers_count}</div>
+								<div>forks: {repo.forks_count}</div>
+							</a>
+						)) : <></>
+				}
+			</div>
+			<h2>Pages to check out</h2>
+			<div className='showcase pages flex wrap'>
+				{
+					unauthenticatedContent.filter(page => page.path)
+						.map(page => (
+							<Link key={page.path} to={page.path}>
+								<div>mightbesimon.com{page.path}</div>
+							</Link>
+						))
+				}
+			</div>
+			<ImageLink
 				name='github stats'
 				image='https://github-readme-stats.vercel.app/api?username=mightbesimon&show_icons=true&theme=dracula'
 				url='https://github.com/mightbesimon'
-			/> */}
+			/>
 		</SimonWrapper>
 	)
 }

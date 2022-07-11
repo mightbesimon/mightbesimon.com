@@ -1,5 +1,5 @@
 import './Footer.scss';
-import Deployments from 'utils/data/Deployments.json';
+import deployments from 'utils/data/deployments.json';
 import ImageLink from 'components/ImageLink';
 
 function Footer() {
@@ -7,7 +7,7 @@ function Footer() {
 		<footer className='flex wrap'>
 			<div className='deployment flex wrap'>
 				{
-					Deployments.map(data => ImageLink(data))
+					deployments.map(data => ImageLink(data))
 				}
 			</div>
 			<div className='copyright'>
