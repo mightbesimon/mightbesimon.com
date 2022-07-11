@@ -1,7 +1,5 @@
 import { Route } from "react-location";
 
-const AuthenticatedContent = (): Route[] => {
-	return [];
-};
+const authenticatedContent: Route[] = [];
 
-export default AuthenticatedContent;
+export default authenticatedContent;

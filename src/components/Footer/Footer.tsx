@@ -1,18 +1,6 @@
 import './Footer.scss';
-import ImageLink from "components/ImageLink";
-
-const deployments = [
-	{
-		name: 'development',
-		image: 'https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-development.yml/badge.svg',
-		url: 'https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-development.yml',
-	},
-	{
-		name: 'production',
-		image: 'https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-production.yml/badge.svg',
-		url: 'https://github.com/mightbesimon/mightbesimon.com/actions/workflows/deploy-production.yml',
-	},
-];
+import deployments from 'utils/data/deployments.json';
+import ImageLink from 'components/ImageLink';
 
 function Footer() {
 	return (
