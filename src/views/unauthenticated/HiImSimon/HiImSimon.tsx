@@ -62,15 +62,19 @@ function HiImSimon(): JSX.Element {
 			<div className='showcase repos flex wrap'>
 				{
 					repoResponse.data ? repoResponse.data
-						.filter(repo => repositories.map(x => x.repo).includes(repo.name))
+						.filter(repo => repositories.map(x => x.repo).includes(repo.name) || engagement(repo) > 2)
 						.sort((a, b) => engagement(a) - engagement(b))
 						.reverse().map(repo => (
-							<a key={repo.full_name} href={repo.html_url}>
-								<div>{repo.full_name}</div>
-								<div>{repo.description}</div>
-								<div>starts: {repo.stargazers_count}</div>
-								<div>watchers: {repo.watchers_count}</div>
-								<div>forks: {repo.forks_count}</div>
+							<a key={repo.full_name} className='flex column' href={repo.html_url}>
+								<div className='title'>
+									<h3>{repo.name}</h3>
+									<div className='description'>{repo.description}</div>
+								</div>
+								<div className='engagement flex'>
+									<div>⭐️ {repo.stargazers_count}</div>
+									<div>👀 {repo.watchers_count}</div>
+									<div>🍴 {repo.forks_count}</div>
+								</div>
 							</a>
 						)) : <></>
 				}
@@ -81,7 +85,9 @@ function HiImSimon(): JSX.Element {
 					unauthenticatedContent.filter(page => page.path)
 						.map(page => (
 							<Link key={page.path} to={page.path}>
-								<div>mightbesimon.com{page.path}</div>
+								<div className='title'>
+									<h3>mightbesimon.com{page.path}</h3>
+								</div>
 							</Link>
 						))
 				}
