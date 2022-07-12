@@ -1,11 +1,11 @@
 import './NotFound.scss'
-import SimonWrapper from 'components/SimonWrapper/SimonWrapper'
+import SectionWrapper from 'components/SectionWrapper/SectionWrapper'
 
 function NotFound() {
 	return (
-		<SimonWrapper view='NotFound'>
+		<SectionWrapper view='NotFound' title='404' neon game>
 			<h1>PAGE NOT FOUND ☹️</h1>
-		</SimonWrapper>
+		</SectionWrapper>
 	)
 }
 
