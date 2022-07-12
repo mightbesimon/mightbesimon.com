@@ -6,6 +6,7 @@ import EllipsisLoader from 'components/Loader/EllipsisLoader';
 import { ImageLink, SvgLink } from 'components/ImageLink';
 import SectionWrapper from 'components/SectionWrapper/SectionWrapper';
 import getRepos, { RepositoryResponse } from 'utils/api/github/getRepos';
+import featured from 'utils/data/featured.json';
 import greetings from 'utils/data/greetings.json';
 import repositories from 'utils/data/repositories.json';
 import unauthenticatedContent from "views/unauthenticated/UnauthenticatedContent";
@@ -62,7 +63,18 @@ function HiImSimon(): JSX.Element {
 
 			<h2>✨ Featured</h2>
 
-
+			<div className='showcase featured flex wrap'>
+				{
+					featured.map(data => (
+						<a key={data.title} className='flex column' href={data.url}>
+							<div className='title'>
+								<h3>{data.title}</h3>
+								<div className='description'>{data.description}</div>
+							</div>
+						</a>
+					))
+				}
+			</div>
 
 			<h2>📦 My repositories to check out</h2>
 
