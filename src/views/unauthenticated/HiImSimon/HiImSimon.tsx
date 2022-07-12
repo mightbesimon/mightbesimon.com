@@ -4,7 +4,7 @@ import { ReactComponent as Github } from 'assets/SocialMedia/github.svg';
 import { ReactComponent as LinkedIn } from 'assets/SocialMedia/linkedin.svg';
 import EllipsisLoader from 'components/Loader/EllipsisLoader';
 import { ImageLink, SvgLink } from 'components/ImageLink';
-import SimonWrapper from 'components/SimonWrapper/SimonWrapper';
+import SectionWrapper from 'components/SectionWrapper/SectionWrapper';
 import getRepos, { RepositoryResponse } from 'utils/api/github/getRepos';
 import greetings from 'utils/data/greetings.json';
 import repositories from 'utils/data/repositories.json';
@@ -42,7 +42,7 @@ function HiImSimon(): JSX.Element {
 		repo.forks_count;
 
 	return (
-		<SimonWrapper view='HiImSimon'>
+		<SectionWrapper view='HiImSimon' title='SIMON' game>
 			<div className='hello flex wrap'>
 				<pre>{greetings.join('\n')}</pre>
 				<div className='right'>
@@ -59,7 +59,8 @@ function HiImSimon(): JSX.Element {
 					</div>
 				</div>
 			</div>
-			<h2>My repositories to check out</h2>
+			<h2>✨ Featured</h2>
+			<h2>📦 My repositories to check out</h2>
 			<div className='showcase repos flex wrap'>
 				{
 					repoResponse.data ? repoResponse.data
@@ -80,7 +81,7 @@ function HiImSimon(): JSX.Element {
 						)) : <EllipsisLoader text='🌵' />
 				}
 			</div>
-			<h2>Pages to check out</h2>
+			<h2>🌏 Pages to check out</h2>
 			<div className='showcase pages flex wrap'>
 				{
 					unauthenticatedContent.filter(page => page.path)
@@ -98,13 +99,26 @@ function HiImSimon(): JSX.Element {
 					</div>
 				</Link>
 			</div>
-			<h2>My Github stats</h2>
+			<h2 className='engagement stats flex'>
+				📊 My Github stats
+				{
+					repoResponse.data ? (
+						<div className='engagement flex'>
+							<div>📦 {repoResponse.data.length}</div>
+							<div>⭐️ {repoResponse.data.reduce((sum, repo) => sum + repo.stargazers_count, 0)}</div>
+							<div>👀 {repoResponse.data.reduce((sum, repo) => sum + repo.watchers_count, 0)}</div>
+							<div>🍴 {repoResponse.data.reduce((sum, repo) => sum + repo.forks_count, 0)}</div>
+						</div>
+					) : <EllipsisLoader text='📊' />
+				}
+			</h2>
+
 			<ImageLink
 				name='github stats'
 				image='https://github-readme-stats.vercel.app/api?username=mightbesimon&show_icons=true&theme=dracula'
 				url='https://github.com/mightbesimon'
 			/>
-		</SimonWrapper>
+		</SectionWrapper>
 	)
 }
 
