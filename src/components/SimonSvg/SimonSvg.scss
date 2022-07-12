@@ -1,17 +1,17 @@
-svg {
+svg.simon {
 	max-width: 16rem;
 
 	>g {
+		>* {
+			transition: var(--transition);
+		}
+
 		&:hover {
 
 			>.arms,
 			>.chest {
 				transform: translateY(-2rem);
 			}
-		}
-
-		>* {
-			transition: var(--transition);
 		}
 
 		>.eyes {
