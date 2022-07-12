@@ -83,24 +83,23 @@ section.HiImSimon {
 			padding: 1rem;
 			max-width: 25rem;
 			border-radius: .5rem;
-			transition: var(--transition);
+			border: 1px solid var(--main);
 			background: var(--mariana2);
+			transition: var(--transition);
 			justify-content: space-between;
 			transition: var(--transition);
 
 			&:hover {
-				background: hsla(32, 100%, 66%, 67%);
-				box-shadow: var(--shadow-card);
-
-				>div.title>div.description {
-					opacity: 100%;
-				}
+				border: 1px solid var(--orange);
+				// background: hsla(32, 100%, 66%, 67%);
+				// box-shadow: var(--shadow-card);
 			}
 
 			>div.title {
 				>h3 {
 					margin: 0rem;
 					color: var(--mint);
+					font-weight: normal;
 				}
 
 				>div.description {
