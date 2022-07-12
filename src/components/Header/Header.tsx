@@ -2,16 +2,20 @@ import './Header.scss';
 import SimonSvg from 'components/SimonSvg/SimonSvg';
 import { useState } from 'react';
 
-function Header() {
-	const [lights, setLights] = useState(true);
+type HeaderProps = {
+	title?: string,
+	neon?: boolean,
+}
+
+function Header({ title, neon: defaultNeon }: HeaderProps) {
+	const [neon, setNeon] = useState(defaultNeon);
 
 	return (
-		<header className={lights ? 'flex wrap' : 'flex wrap lights-out'}>
+		<header className={neon ? 'neon flex wrap' : 'flex wrap'}
+			onClick={() => { setNeon(!neon) }}
+		>
 			<SimonSvg />
-			<h1
-				onMouseEnter={() => { setLights(false) }}
-				onMouseLeave={() => { setLights(true) }}
-			>SIMON</h1>
+			<h1>{title}</h1>
 		</header>
 	)
 }
