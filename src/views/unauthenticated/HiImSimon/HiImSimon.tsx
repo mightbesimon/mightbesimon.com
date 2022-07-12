@@ -59,8 +59,13 @@ function HiImSimon(): JSX.Element {
 					</div>
 				</div>
 			</div>
+
 			<h2>✨ Featured</h2>
+
+
+
 			<h2>📦 My repositories to check out</h2>
+
 			<div className='showcase repos flex wrap'>
 				{
 					repoResponse.data ? repoResponse.data
@@ -81,7 +86,9 @@ function HiImSimon(): JSX.Element {
 						)) : <EllipsisLoader text='🌵' />
 				}
 			</div>
+
 			<h2>🌏 Pages to check out</h2>
+
 			<div className='showcase pages flex wrap'>
 				{
 					unauthenticatedContent.filter(page => page.path)
@@ -99,8 +106,15 @@ function HiImSimon(): JSX.Element {
 					</div>
 				</Link>
 			</div>
-			<h2 className='engagement stats flex'>
-				📊 My Github stats
+
+			<h2>📊 My Github stats</h2>
+
+			<div className='stats'>
+				<ImageLink
+					name='github stats'
+					image='https://github-readme-stats.vercel.app/api?username=mightbesimon&show_icons=true&theme=dracula'
+					url='https://github.com/mightbesimon'
+				/>
 				{
 					repoResponse.data ? (
 						<div className='engagement flex'>
@@ -111,13 +125,7 @@ function HiImSimon(): JSX.Element {
 						</div>
 					) : <EllipsisLoader text='📊' />
 				}
-			</h2>
-
-			<ImageLink
-				name='github stats'
-				image='https://github-readme-stats.vercel.app/api?username=mightbesimon&show_icons=true&theme=dracula'
-				url='https://github.com/mightbesimon'
-			/>
+			</div>
 		</SectionWrapper>
 	)
 }
