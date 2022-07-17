@@ -5,6 +5,11 @@ section.Resume {
 	padding: 0rem 1rem 1rem 18rem;
 	max-width: 60rem;
 
+	&.no-nav {
+		padding: 0rem 1rem 1rem 1rem;
+		max-width: 43rem;
+	}
+
 	* {
 		max-width: 100vw;
 	}
@@ -22,6 +27,43 @@ section.Resume {
 		color: var(--mint);
 	}
 
+	div.contact {
+		>a {
+			margin: .3rem 0rem;
+			font-size: .9rem;
+			line-height: 1rem;
+			display: flex;
+			align-items: center;
+
+			>span {
+				margin: 0rem .5rem 0rem 0rem;
+				font-size: 1rem;
+			}
+
+			>img {
+				margin: 0rem .5rem 0rem 0rem;
+				height: 1rem;
+			}
+		}
+	}
+
+	>h2#contact {
+		display: none;
+
+		&.no-nav {
+			display: initial;
+		}
+	}
+
+	>div.contact {
+		margin: .5rem 1rem;
+		display: none;
+
+		&.no-nav {
+			display: initial;
+		}
+	}
+
 	>nav {
 		position: absolute;
 		left: 0rem;
@@ -30,8 +72,11 @@ section.Resume {
 		width: 16rem;
 		height: calc(100% + 2rem);
 		border-radius: 1rem 0rem 0rem 1rem;
-		// border: 2px solid var(--text);
 		background: var(--mint);
+
+		&.no-nav {
+			display: none;
+		}
 
 		>div.sticky {
 			position: sticky;
@@ -47,31 +92,6 @@ section.Resume {
 				margin: .3rem;
 				padding: .5rem;
 				border-radius: .5rem;
-
-				&.contact {
-					// color: var(--text);
-					// background: var(--main);
-					// box-shadow: var(--shadow);
-					// opacity: 50%;
-
-					>a {
-						margin: .3rem 0rem;
-						font-size: .9rem;
-						line-height: 1rem;
-						display: flex;
-						align-items: center;
-
-						>span {
-							margin: 0rem .5rem 0rem 0rem;
-							font-size: 1rem;
-						}
-
-						>img {
-							margin: 0rem .5rem 0rem 0rem;
-							height: 1rem;
-						}
-					}
-				}
 
 				&.table-of-contents {
 					margin-top: 1.5rem;
@@ -91,8 +111,6 @@ section.Resume {
 				}
 			}
 		}
-
-		// background: var(--mariana2);
 	}
 
 	p {
