@@ -1,7 +1,7 @@
-import './HiImSimon.scss';
-import { ReactComponent as Instagram } from 'assets/SocialMedia/instagram.svg';
-import { ReactComponent as Github } from 'assets/SocialMedia/github.svg';
-import { ReactComponent as LinkedIn } from 'assets/SocialMedia/linkedin.svg';
+import './Home.scss';
+import { ReactComponent as Instagram } from 'assets/Contacts/instagram.svg';
+import { ReactComponent as Github } from 'assets/Contacts/github.svg';
+import { ReactComponent as LinkedIn } from 'assets/Contacts/linkedin.svg';
 import EllipsisLoader from 'components/Loader/EllipsisLoader';
 import { ImageLink, SvgLink } from 'components/ImageLink';
 import SectionWrapper from 'components/SectionWrapper/SectionWrapper';
@@ -31,7 +31,7 @@ const socials = [
 	},
 ];
 
-function HiImSimon(): JSX.Element {
+function Home(): JSX.Element {
 	const repoResponse = useQuery(
 		'getRepo',
 		() => getRepos({ owner: 'mightbesimon' })
@@ -43,7 +43,7 @@ function HiImSimon(): JSX.Element {
 		repo.forks_count;
 
 	return (
-		<SectionWrapper view='HiImSimon' title='SIMON' game>
+		<SectionWrapper view='Home' title='SIMON' game>
 			<div className='hello flex wrap'>
 				<pre>{greetings.join('\n')}</pre>
 				<div className='right'>
@@ -71,6 +71,7 @@ function HiImSimon(): JSX.Element {
 								<h3>{data.title}</h3>
 								<div className='description'>{data.description}</div>
 							</div>
+							{data.badge && <img alt='badge' src={data.badge} />}
 						</a>
 					))
 				}
@@ -103,7 +104,7 @@ function HiImSimon(): JSX.Element {
 
 			<div className='showcase pages flex wrap'>
 				{
-					unauthenticatedContent.filter(page => page.path)
+					unauthenticatedContent.filter(page => page.path && !page.hide)
 						.map(page => (
 							<Link key={page.path} to={page.path}>
 								<div className='title'>
@@ -119,7 +120,7 @@ function HiImSimon(): JSX.Element {
 				</Link>
 			</div>
 
-			<h2>📊 My Github stats</h2>
+			<h2>📊 My Github metrics</h2>
 
 			<div className='stats'>
 				<ImageLink
@@ -142,4 +143,4 @@ function HiImSimon(): JSX.Element {
 	)
 }
 
-export default HiImSimon;
+export default Home;
