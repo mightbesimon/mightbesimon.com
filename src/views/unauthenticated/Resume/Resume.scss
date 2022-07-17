@@ -27,6 +27,15 @@ section.Resume {
 		color: var(--mint);
 	}
 
+	p {
+		margin: 1rem 1rem;
+		line-height: 1.25;
+
+		&.small {
+			opacity: 80%;
+		}
+	}
+
 	div.contact {
 		>a {
 			margin: .3rem 0rem;
@@ -47,20 +56,15 @@ section.Resume {
 		}
 	}
 
-	>h2#contact {
+	>div.contact {
 		display: none;
 
 		&.no-nav {
 			display: initial;
 		}
-	}
 
-	>div.contact {
-		margin: .5rem 1rem;
-		display: none;
-
-		&.no-nav {
-			display: initial;
+		>div.contact {
+			margin: 1rem 1rem;
 		}
 	}
 
@@ -110,15 +114,6 @@ section.Resume {
 					}
 				}
 			}
-		}
-	}
-
-	p {
-		margin: 1rem 1rem;
-		line-height: 1.25;
-
-		&.small {
-			opacity: 80%;
 		}
 	}
 }

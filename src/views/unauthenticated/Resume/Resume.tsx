@@ -6,16 +6,18 @@ import { useEffect, useState } from 'react';
 function Resume() {
 	const [showNav, setShowNav] = useState(window.innerWidth >= 800);
 
+	const onResize = () => {
+		setShowNav(window.innerWidth >= 800)
+	};
+
 	useEffect(() => {
-		const onResize = () => { setShowNav(window.innerWidth >= 800) };
 		window.addEventListener('resize', onResize);
 		return () => { window.removeEventListener('resize', onResize) };
 	});
 
 	return (
-		<section
+		<section id='resume'
 			className={showNav ? 'Resume flex column' : 'no-nav Resume flex column'}
-			id='resume'
 		>
 			<nav className={showNav ? '' : 'no-nav'}>
 				<div className='sticky'>
@@ -92,29 +94,30 @@ function Resume() {
 					</div>
 				</div>
 			</nav>
+
 			<h1>Simon Shan</h1>
 
-			<h2 id='contact' className={showNav ? '' : 'no-nav'}
-			>CONTACT</h2>
-
 			<div className={showNav ? 'contact' : 'no-nav contact'}>
-				<a href='tel:0223227529'>
-					<span>📞</span>022 322 7529 | Auckland, NZ
-				</a>
-				<a href='mailto:qsha020@aucklanduni.ac.nz'>
-					<span>✉️</span>qsha020@aucklanduni.ac.nz
-				</a>
-				<a href='https://linkedin.com/in/mightbesimon'>
-					<img alt='LinkedIn' src={LinkedIn} />
-					linkedin.com/in/mightbesimon
-				</a>
-				<a href='https://github.com/mightbesimon'>
-					<img alt='Github' src={Github} />
-					github.com/mightbesimon
-				</a>
-				<a href='https://mightbesimon.com'>
-					<span>🌏</span>mightbesimon.com
-				</a>
+				<h2 id='contact'>CONTACT</h2>
+				<div className='contact'>
+					<a href='tel:0223227529'>
+						<span>📞</span>022 322 7529 | Auckland, NZ
+					</a>
+					<a href='mailto:qsha020@aucklanduni.ac.nz'>
+						<span>✉️</span>qsha020@aucklanduni.ac.nz
+					</a>
+					<a href='https://linkedin.com/in/mightbesimon'>
+						<img alt='LinkedIn' src={LinkedIn} />
+						linkedin.com/in/mightbesimon
+					</a>
+					<a href='https://github.com/mightbesimon'>
+						<img alt='Github' src={Github} />
+						github.com/mightbesimon
+					</a>
+					<a href='https://mightbesimon.com'>
+						<span>🌏</span>mightbesimon.com
+					</a>
+				</div>
 			</div>
 
 			<h2 id='summary'>SUMMARY</h2>
