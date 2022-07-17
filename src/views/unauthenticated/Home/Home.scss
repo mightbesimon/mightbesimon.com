@@ -88,6 +88,7 @@ section.Home {
 			align-items: flex-start;
 			justify-content: space-between;
 			transition: var(--transition);
+			text-overflow: ellipsis;
 
 			&:hover {
 				border: 1px solid var(--orange);
@@ -95,11 +96,18 @@ section.Home {
 				// box-shadow: var(--shadow-card);
 			}
 
+			* {
+				max-width: calc(100vw - 6rem);
+			}
+
 			>div.title {
+
 				>h3 {
 					margin: 0rem;
 					color: var(--mint);
 					font-weight: normal;
+					overflow-x: hidden;
+					text-overflow: ellipsis;
 				}
 
 				>div.description {

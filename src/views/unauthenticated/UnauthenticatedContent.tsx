@@ -29,12 +29,29 @@ const unauthenticatedContent: HidableRoute[] = [
 		hide: true,
 		element: <Resume />,
 	},
+	// {
+	// 	path: '/showcase',
+	// 	children: [
+	// 		{
+	// 			path: '/',
+	// 			element: <></>,
+	// 		},
+	// 		{
+	// 			path: '/loading',
+	// 			element: <LoadingPage />,
+	// 		},
+	// 		{
+	// 			path: '/neon',
+	// 			element: <NeonPage />,
+	// 		},
+	// 	],
+	// },
 	{
-		path: '/showcase/loading',
+		path: '/loading',
 		element: <LoadingPage />,
 	},
 	{
-		path: '/showcase/neon',
+		path: '/neon',
 		element: <NeonPage />,
 	},
 	{

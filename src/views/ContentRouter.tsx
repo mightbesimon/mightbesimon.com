@@ -1,7 +1,7 @@
-// import { useContext } from "react";
-import { Outlet, ReactLocation, Router, Navigate } from "react-location";
-import unauthenticatedContent from "./unauthenticated/UnauthenticatedContent";
-import authenticatedContent from "./authenticated/AuthenticatedContent";
+// import { useContext } from 'react';
+import { Outlet, ReactLocation, Router, Navigate } from 'react-location';
+import unauthenticatedContent from './unauthenticated/UnauthenticatedContent';
+import authenticatedContent from './authenticated/AuthenticatedContent';
 
 const location = new ReactLocation();
 
@@ -15,7 +15,7 @@ const ContentRouter = () => {
 
 	const AuthCheck = ({ authenticationRequired }: AuthCheckProps) => {
 		return !authenticationRequired || authenticated ?
-			<Outlet /> : <Navigate to="/auth" replace={true} />
+			<Outlet /> : <Navigate to='/auth' replace={true} />
 	};
 
 	return (
@@ -23,13 +23,14 @@ const ContentRouter = () => {
 			location={location}
 			routes={[
 				{
-					path: "/user",
-					element: <AuthCheck authenticationRequired={true} />,
-					children: authenticatedContent,
-				},
-				{
+					path: '',
 					element: <AuthCheck authenticationRequired={false} />,
 					children: unauthenticatedContent,
+				},
+				{
+					path: '/user',
+					element: <AuthCheck authenticationRequired={true} />,
+					children: authenticatedContent,
 				},
 			]}
 		>
