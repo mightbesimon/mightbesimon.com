@@ -4,8 +4,9 @@ section.Resume {
 	margin: 1rem 0rem;
 	padding: 0rem 1rem 1rem 18rem;
 	max-width: 60rem;
+	line-height: 1.25;
 
-	&.no-nav {
+	@media (max-width: 800px) {
 		padding: 0rem 1rem 1rem 1rem;
 		max-width: 43rem;
 	}
@@ -27,13 +28,36 @@ section.Resume {
 		color: var(--mint);
 	}
 
+	h3 {
+		margin: 0rem;
+		font-size: 1rem;
+		color: var(--orange);
+	}
+
 	p {
-		margin: 1rem 1rem;
-		line-height: 1.25;
+		margin: 0rem;
 
 		&.small {
-			opacity: 80%;
+			opacity: 60%;
 		}
+	}
+
+	div.br {
+		height: 1rem;
+	}
+
+	>section {
+		margin: 0rem;
+
+		>div {
+			margin: 1rem 1rem;
+			line-height: 1.25;
+		}
+	}
+
+	>div {
+		margin: 1rem 1rem;
+		line-height: 1.25;
 	}
 
 	div.contact {
@@ -61,7 +85,7 @@ section.Resume {
 	>section.contact {
 		display: none;
 
-		&.no-nav {
+		@media (max-width: 800px) {
 			display: initial;
 		}
 
@@ -80,7 +104,7 @@ section.Resume {
 		border-radius: 1rem 0rem 0rem 1rem;
 		background: var(--mint);
 
-		&.no-nav {
+		@media (max-width: 800px) {
 			display: none;
 		}
 
@@ -92,6 +116,7 @@ section.Resume {
 
 			h3 {
 				margin: 0rem 0rem .5rem 0rem;
+				color: var(--body);
 			}
 
 			>div {
@@ -103,18 +128,19 @@ section.Resume {
 					margin-top: 1.5rem;
 
 					>div {
-						margin: .5rem 0rem;
+						padding: .25rem 0rem;
 
 						&.active {
-							background: red;
+							// background: red;
+							text-decoration: underline;
 						}
 
 						&.indent1 {
-							margin: .5rem 0rem .5rem 1rem;
+							padding: .25rem 0rem .25rem 1rem;
 						}
 
 						&.indent2 {
-							margin: .2rem 0rem .2rem 2rem;
+							padding: .1rem 0rem .1rem 2rem;
 							opacity: 75%;
 						}
 					}
