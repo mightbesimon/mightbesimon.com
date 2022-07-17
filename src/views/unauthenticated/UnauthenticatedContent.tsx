@@ -1,6 +1,6 @@
 import { Route } from 'react-location';
 import AuthPage from './AuthPage/AuthPage';
-import HiImSimon from './HiImSimon/HiImSimon';
+import Home from './Home/Home';
 import LoadingPage from './LoadingPage/LoadingPage';
 import NeonPage from './NeonPage/NeonPage';
 import NotFound from './NotFound/NotFound';
@@ -13,7 +13,7 @@ export type HidableRoute = Route & {
 const unauthenticatedContent: HidableRoute[] = [
 	{
 		path: '/',
-		element: <HiImSimon />,
+		element: <Home />,
 	},
 	{
 		path: '/auth',

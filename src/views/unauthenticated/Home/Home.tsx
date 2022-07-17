@@ -1,4 +1,4 @@
-import './HiImSimon.scss';
+import './Home.scss';
 import { ReactComponent as Instagram } from 'assets/Contacts/instagram.svg';
 import { ReactComponent as Github } from 'assets/Contacts/github.svg';
 import { ReactComponent as LinkedIn } from 'assets/Contacts/linkedin.svg';
@@ -31,7 +31,7 @@ const socials = [
 	},
 ];
 
-function HiImSimon(): JSX.Element {
+function Home(): JSX.Element {
 	const repoResponse = useQuery(
 		'getRepo',
 		() => getRepos({ owner: 'mightbesimon' })
@@ -43,7 +43,7 @@ function HiImSimon(): JSX.Element {
 		repo.forks_count;
 
 	return (
-		<SectionWrapper view='HiImSimon' title='SIMON' game>
+		<SectionWrapper view='Home' title='SIMON' game>
 			<div className='hello flex wrap'>
 				<pre>{greetings.join('\n')}</pre>
 				<div className='right'>
@@ -142,4 +142,4 @@ function HiImSimon(): JSX.Element {
 	)
 }
 
-export default HiImSimon;
+export default Home;
