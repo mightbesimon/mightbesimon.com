@@ -1,7 +1,7 @@
 import './HiImSimon.scss';
-import { ReactComponent as Instagram } from 'assets/SocialMedia/instagram.svg';
-import { ReactComponent as Github } from 'assets/SocialMedia/github.svg';
-import { ReactComponent as LinkedIn } from 'assets/SocialMedia/linkedin.svg';
+import { ReactComponent as Instagram } from 'assets/Contacts/instagram.svg';
+import { ReactComponent as Github } from 'assets/Contacts/github.svg';
+import { ReactComponent as LinkedIn } from 'assets/Contacts/linkedin.svg';
 import EllipsisLoader from 'components/Loader/EllipsisLoader';
 import { ImageLink, SvgLink } from 'components/ImageLink';
 import SectionWrapper from 'components/SectionWrapper/SectionWrapper';

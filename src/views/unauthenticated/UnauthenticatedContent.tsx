@@ -4,6 +4,7 @@ import HiImSimon from './HiImSimon/HiImSimon';
 import LoadingPage from './LoadingPage/LoadingPage';
 import NeonPage from './NeonPage/NeonPage';
 import NotFound from './NotFound/NotFound';
+import Resume from './Resume/Resume';
 
 const unauthenticatedContent: Route[] = [
 	{
@@ -15,11 +16,15 @@ const unauthenticatedContent: Route[] = [
 		element: <AuthPage />,
 	},
 	{
-		path: '/loading',
+		path: '/resume',
+		element: <Resume />,
+	},
+	{
+		path: '/showcase/loading',
 		element: <LoadingPage />,
 	},
 	{
-		path: '/neon',
+		path: '/showcase/neon',
 		element: <NeonPage />,
 	},
 	{
