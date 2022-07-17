@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react';
 function Resume() {
 	const [showNav, setShowNav] = useState(window.innerWidth >= 800);
 
-
 	useEffect(() => {
 		const onResize = () => { setShowNav(window.innerWidth >= 800) };
 		window.addEventListener('resize', onResize);

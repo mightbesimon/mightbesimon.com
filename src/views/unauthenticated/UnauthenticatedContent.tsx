@@ -6,7 +6,11 @@ import NeonPage from './NeonPage/NeonPage';
 import NotFound from './NotFound/NotFound';
 import Resume from './Resume/Resume';
 
-const unauthenticatedContent: Route[] = [
+export type HidableRoute = Route & {
+	hide?: boolean,
+};
+
+const unauthenticatedContent: HidableRoute[] = [
 	{
 		path: '/',
 		element: <HiImSimon />,
@@ -17,6 +21,12 @@ const unauthenticatedContent: Route[] = [
 	},
 	{
 		path: '/resume',
+		hide: true,
+		element: <Resume />,
+	},
+	{
+		path: '/cv',
+		hide: true,
 		element: <Resume />,
 	},
 	{

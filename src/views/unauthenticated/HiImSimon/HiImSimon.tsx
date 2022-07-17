@@ -103,7 +103,7 @@ function HiImSimon(): JSX.Element {
 
 			<div className='showcase pages flex wrap'>
 				{
-					unauthenticatedContent.filter(page => page.path)
+					unauthenticatedContent.filter(page => page.path && !page.hide)
 						.map(page => (
 							<Link key={page.path} to={page.path}>
 								<div className='title'>
