@@ -56,7 +56,7 @@ section.Resume {
 		}
 	}
 
-	>div.contact {
+	>section.contact {
 		display: none;
 
 		&.no-nav {
@@ -102,6 +102,10 @@ section.Resume {
 
 					>div {
 						margin: .5rem 0rem;
+
+						&.active {
+							background: red;
+						}
 
 						&.indent1 {
 							margin: .5rem 0rem .5rem 1rem;

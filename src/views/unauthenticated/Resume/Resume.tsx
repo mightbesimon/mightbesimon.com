@@ -3,16 +3,39 @@ import Github from 'assets/Contacts/github.svg';
 import LinkedIn from 'assets/Contacts/linkedin.svg';
 import { useEffect, useState } from 'react';
 
+type TableOfContentItemType = {
+	indent: number,
+	id: string,
+	title: string,
+	active: boolean,
+}
+
 function Resume() {
 	const [showNav, setShowNav] = useState(window.innerWidth >= 800);
 
 	const onResize = () => {
-		setShowNav(window.innerWidth >= 800)
+		setShowNav(window.innerWidth >= 800);
 	};
+
+	const observer = new IntersectionObserver(elements => {
+		elements.forEach(element => {
+			const id = element.target.getAttribute('id');
+			if (element.intersectionRatio > 0) {
+				document.querySelector(`nav>div>div>div>a[href="#${id}"]`)?.parentElement?.classList.add('active');
+			} else {
+				document.querySelector(`nav a[href="#${id}"]`)?.parentElement?.classList.remove('active');
+			}
+		});
+	});
 
 	useEffect(() => {
 		window.addEventListener('resize', onResize);
-		return () => { window.removeEventListener('resize', onResize) };
+		document.querySelectorAll('*[id]')
+			.forEach((element) => { observer.observe(element) });
+
+		return () => {
+			window.removeEventListener('resize', onResize);
+		};
 	});
 
 	return (
@@ -24,10 +47,12 @@ function Resume() {
 					<div className='contact'>
 						<h3>CONTACT</h3>
 						<a href='tel:0223227529'>
-							<span>📞</span>022 322 7529 | Auckland, NZ
+							<span>📞</span>
+							022 322 7529 | Auckland, NZ
 						</a>
 						<a href='mailto:qsha020@aucklanduni.ac.nz'>
-							<span>✉️</span>qsha020@aucklanduni.ac.nz
+							<span>✉️</span>
+							qsha020@aucklanduni.ac.nz
 						</a>
 						<a href='https://linkedin.com/in/mightbesimon'>
 							<img alt='LinkedIn' src={LinkedIn} />
@@ -97,8 +122,8 @@ function Resume() {
 
 			<h1>Simon Shan</h1>
 
-			<div className={showNav ? 'contact' : 'no-nav contact'}>
-				<h2 id='contact'>CONTACT</h2>
+			<section className={showNav ? 'contact' : 'no-nav contact'}>
+				<h2>CONTACT</h2>
 				<div className='contact'>
 					<a href='tel:0223227529'>
 						<span>📞</span>022 322 7529 | Auckland, NZ
@@ -118,7 +143,7 @@ function Resume() {
 						<span>🌏</span>mightbesimon.com
 					</a>
 				</div>
-			</div>
+			</section>
 
 			<h2 id='summary'>SUMMARY</h2>
 
