@@ -85,7 +85,7 @@ section.Home {
 			border-radius: .5rem;
 			border: 1px solid var(--main);
 			background: var(--mariana2);
-			transition: var(--transition);
+			align-items: flex-start;
 			justify-content: space-between;
 			transition: var(--transition);
 
@@ -107,6 +107,10 @@ section.Home {
 					font-size: .8rem;
 					opacity: 75%;
 				}
+			}
+
+			>img {
+				margin: 1rem 0rem 0rem 0rem;
 			}
 
 			>div.engagement {

@@ -3,12 +3,12 @@ import Github from 'assets/Contacts/github.svg';
 import LinkedIn from 'assets/Contacts/linkedin.svg';
 import { useEffect, useState } from 'react';
 
-type TableOfContentItemType = {
-	indent: number,
-	id: string,
-	title: string,
-	active: boolean,
-}
+// type TableOfContentItemType = {
+// 	indent: number,
+// 	id: string,
+// 	title: string,
+// 	active: boolean,
+// }
 
 function Resume() {
 	const [showNav, setShowNav] = useState(window.innerWidth >= 800);

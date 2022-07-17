@@ -2,7 +2,8 @@
 	{
 		"title": "VSCode Emoji File Icons",
 		"description": "my vscode extension with 1k+ downloads",
-		"url": "https://marketplace.visualstudio.com/items?itemName=mightbesimon.emoji-icons"
+		"url": "https://marketplace.visualstudio.com/items?itemName=mightbesimon.emoji-icons",
+		"badge": "https://github.com/mightbesimon/vscode-emoji-icons/actions/workflows/publish.yml/badge.svg"
 	},
 	{
 		"title": "CSS Neon",

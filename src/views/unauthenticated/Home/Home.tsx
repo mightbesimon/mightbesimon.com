@@ -71,6 +71,7 @@ function Home(): JSX.Element {
 								<h3>{data.title}</h3>
 								<div className='description'>{data.description}</div>
 							</div>
+							{data.badge && <img alt='badge' src={data.badge} />}
 						</a>
 					))
 				}
