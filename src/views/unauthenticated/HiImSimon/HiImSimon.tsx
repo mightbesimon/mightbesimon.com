@@ -119,7 +119,7 @@ function HiImSimon(): JSX.Element {
 				</Link>
 			</div>
 
-			<h2>📊 My Github stats</h2>
+			<h2>📊 My Github metrics</h2>
 
 			<div className='stats'>
 				<ImageLink
