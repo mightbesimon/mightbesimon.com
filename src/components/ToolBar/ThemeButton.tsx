@@ -9,11 +9,13 @@ function ThemeButton() {
 			setTheme(ThemeEnum.marianaLight);
 			document.body.className = '';
 			document.body.classList.add(...ThemeEnum.marianaLight.split(' '));
+			return;
 		}
 		if (theme === ThemeEnum.marianaLight) {
 			setTheme(ThemeEnum.marianaDark);
 			document.body.className = '';
 			document.body.classList.add(...ThemeEnum.marianaDark.split(' '));
+			return;
 		}
 	};
 

@@ -49,9 +49,9 @@
 * {
   box-sizing: border-box;
   border-collapse: collapse;
+  transition: var(--transition5);
 }
 
-html,
 body {
   margin: 0rem;
   background: var(--body);
