@@ -1,14 +1,8 @@
 import './Resume.scss'
+import ResumeNav from './ResumeNav';
 import Github from 'assets/Contacts/github.svg';
 import LinkedIn from 'assets/Contacts/linkedin.svg';
 import { useEffect } from 'react';
-
-// type TableOfContentItemType = {
-// 	indent: number,
-// 	id: string,
-// 	title: string,
-// 	active: boolean,
-// }
 
 function Resume() {
 
@@ -35,84 +29,7 @@ function Resume() {
 		<section id='resume'
 			className='Resume flex column'
 		>
-			<nav>
-				<div className='sticky'>
-					<div className='contact'>
-						<h3>CONTACT</h3>
-						<a href='tel:0223227529'>
-							<span>📞</span>
-							022 322 7529 | Auckland, NZ
-						</a>
-						<a href='mailto:qsha020@aucklanduni.ac.nz'>
-							<span>✉️</span>
-							qsha020@aucklanduni.ac.nz
-						</a>
-						<a href='https://linkedin.com/in/mightbesimon'>
-							<img alt='LinkedIn' src={LinkedIn} />
-							linkedin.com/in/mightbesimon
-						</a>
-						<a href='https://github.com/mightbesimon'>
-							<img alt='Github' src={Github} />
-							github.com/mightbesimon
-						</a>
-						<a href='https://mightbesimon.com'>
-							<span>🌏</span>mightbesimon.com
-						</a>
-					</div>
-					<div className='table-of-contents'>
-						<h3>TABLE OF CONTENTS</h3>
-						<div>
-							<a href='#resume'>Resumé</a>
-							<div className='indent1'>
-								<a href='#summary'>Summary</a>
-							</div>
-							<div className='indent1'>
-								<a href='#work-experience'>Work Experience</a>
-								<div className='indent2'>
-									<a href='#work-experience-healthnow'>HealthNow Ltd</a>
-								</div>
-							</div>
-							<div className='indent1'>
-								<a href='#leadership-experience'>Leadership Experience</a>
-								<div className='indent2'>
-									<a href='#leader-experience-faculty-representative'>Faculty Rep</a>
-								</div>
-								<div className='indent2'>
-									<a href='#leader-experience-studentvoice-representative'>StudentVoice Rep</a>
-								</div>
-							</div>
-							<div className='indent1'>
-								<a href='#personal-projects'>Personal Projects</a>
-							</div>
-							<div className='indent1'>
-								<a href='#personal-skills'>Personal Skills</a>
-							</div>
-							<div className='indent1'>
-								<a href='#technical-skills'>Technical Skills</a>
-							</div>
-							<div className='indent1'>
-								<a href='#certifications'>Certifications</a>
-							</div>
-							<div className='indent1'>
-								<a href='#education'>Education</a>
-							</div>
-							<div className='indent1'>
-								<a href='#achievements'>Achievements</a>
-							</div>
-							<div className='indent1'>
-								<a href='#other-accomplishments'>Other Accomplishments</a>
-							</div>
-							<div className='indent1'>
-								<a href='#other-interests'>Other Interests</a>
-							</div>
-							<div className='indent1'>
-								<a href='#references'>References</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</nav>
-
+			<ResumeNav />
 
 			<h1>Simon Shan</h1>
 
@@ -201,11 +118,6 @@ function Resume() {
 			</section>
 
 
-			<section id='personal-projects'>
-				<h2>PERSONAL PROJECTS</h2>
-			</section>
-
-
 			<section id='personal-skills'>
 				<h2>PERSONAL SKILLS</h2>
 
@@ -213,21 +125,28 @@ function Resume() {
 					<h3 id='personal-skills-listening-communication'>
 						Listening Skills and Communication
 					</h3>
+					<p className='small'>(I/O for humans)</p>
 					<p>As a consecutive class representative for two years, I have consistently voiced student concerns to academic staff and Students' Association.</p>
 
 					<div className='br' />
 
-					<h3>Receptive Learning and Self Learning</h3>
+					<h3 id='personal-skills-learning'>
+						Receptive Learning and Self Learning
+					</h3>
 					<p>I taught myself many languages before classes by doing my own research and gained competency quickly. Similarly, I taught myself two instruments.</p>
 
 					<div className='br' />
 
-					<h3>Teamwork and Emotional Intelligence</h3>
+					<h3 id='personal-skills-teamwork'>
+						Teamwork and Emotional Intelligence
+					</h3>
 					<p>Having partaken in various group projects, I learnt to both collaborate and delegate in a team. Our team designed truss bridges and hearing devices to assist people with impairments.</p>
 
 					<div className='br' />
 
-					<h3>Thinking Outside the Box</h3>
+					<h3 id='personal-skills-thinking'>
+						Thinking Outside the Box
+					</h3>
 					<p>I often come up with completely unique solutions for problems to optimise the final work.</p>
 				</div>
 			</section>
@@ -235,6 +154,11 @@ function Resume() {
 
 			<section id='technical-skills'>
 				<h2>TECHNICAL SKILLS</h2>
+			</section>
+
+
+			<section id='personal-projects'>
+				<h2>PERSONAL PROJECTS</h2>
 			</section>
 
 
