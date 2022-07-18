@@ -16,7 +16,7 @@ function Resume() {
 		elements.forEach(element => {
 			const id = element.target.getAttribute('id');
 			if (element.intersectionRatio > 0) {
-				document.querySelector(`nav>div>div>div>a[href="#${id}"]`)?.parentElement?.classList.add('active');
+				document.querySelector(`nav div>a[href="#${id}"]`)?.parentElement?.classList.add('active');
 			} else {
 				document.querySelector(`nav a[href="#${id}"]`)?.parentElement?.classList.remove('active');
 			}
@@ -63,51 +63,51 @@ function Resume() {
 						<h3>TABLE OF CONTENTS</h3>
 						<div>
 							<a href='#resume'>Resumé</a>
-						</div>
-						<div className='indent1'>
-							<a href='#summary'>Summary</a>
-						</div>
-						<div className='indent1'>
-							<a href='#work-experience'>Work Experience</a>
-						</div>
-						<div className='indent2'>
-							<a href='#work-experience-healthnow'>HealthNow Ltd</a>
-						</div>
-						<div className='indent1'>
-							<a href='#leadership-experience'>Leadership Experience</a>
-						</div>
-						<div className='indent2'>
-							<a href='#leader-experience-faculty-representative'>Faculty Rep</a>
-						</div>
-						<div className='indent2'>
-							<a href='#leader-experience-studentvoice-representative'>StudentVoice Rep</a>
-						</div>
-						<div className='indent1'>
-							<a href='#personal-projects'>Personal Projects</a>
-						</div>
-						<div className='indent1'>
-							<a href='#personal-skills'>Personal Skills</a>
-						</div>
-						<div className='indent1'>
-							<a href='#technical-skills'>Technical Skills</a>
-						</div>
-						<div className='indent1'>
-							<a href='#certifications'>Certifications</a>
-						</div>
-						<div className='indent1'>
-							<a href='#education'>Education</a>
-						</div>
-						<div className='indent1'>
-							<a href='#achievements'>Achievements</a>
-						</div>
-						<div className='indent1'>
-							<a href='#other-accomplishments'>Other Accomplishments</a>
-						</div>
-						<div className='indent1'>
-							<a href='#other-interests'>Other Interests</a>
-						</div>
-						<div className='indent1'>
-							<a href='#references'>References</a>
+							<div className='indent1'>
+								<a href='#summary'>Summary</a>
+							</div>
+							<div className='indent1'>
+								<a href='#work-experience'>Work Experience</a>
+								<div className='indent2'>
+									<a href='#work-experience-healthnow'>HealthNow Ltd</a>
+								</div>
+							</div>
+							<div className='indent1'>
+								<a href='#leadership-experience'>Leadership Experience</a>
+								<div className='indent2'>
+									<a href='#leader-experience-faculty-representative'>Faculty Rep</a>
+								</div>
+								<div className='indent2'>
+									<a href='#leader-experience-studentvoice-representative'>StudentVoice Rep</a>
+								</div>
+							</div>
+							<div className='indent1'>
+								<a href='#personal-projects'>Personal Projects</a>
+							</div>
+							<div className='indent1'>
+								<a href='#personal-skills'>Personal Skills</a>
+							</div>
+							<div className='indent1'>
+								<a href='#technical-skills'>Technical Skills</a>
+							</div>
+							<div className='indent1'>
+								<a href='#certifications'>Certifications</a>
+							</div>
+							<div className='indent1'>
+								<a href='#education'>Education</a>
+							</div>
+							<div className='indent1'>
+								<a href='#achievements'>Achievements</a>
+							</div>
+							<div className='indent1'>
+								<a href='#other-accomplishments'>Other Accomplishments</a>
+							</div>
+							<div className='indent1'>
+								<a href='#other-interests'>Other Interests</a>
+							</div>
+							<div className='indent1'>
+								<a href='#references'>References</a>
+							</div>
 						</div>
 					</div>
 				</div>
