@@ -184,7 +184,7 @@ function Resume() {
 					</h3>
 					<p className='small'>2021</p>
 					<h3 id='leader-experience-studentvoice-representative'>
-						Students' Association StudentVoice Representative — 13 classes
+						Students' Association StudentVoice Representative — 13 courses
 					</h3>
 					<p className='small'>2020 - present</p>
 					<p>
