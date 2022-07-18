@@ -4,8 +4,9 @@ section.Resume {
 	margin: 1rem 0rem;
 	padding: 0rem 1rem 1rem 18rem;
 	max-width: 60rem;
+	line-height: 1.25;
 
-	&.no-nav {
+	@media (max-width: 800px) {
 		padding: 0rem 1rem 1rem 1rem;
 		max-width: 43rem;
 	}
@@ -27,12 +28,43 @@ section.Resume {
 		color: var(--mint);
 	}
 
+	h3 {
+		margin: 0rem;
+		font-size: 1rem;
+		font-weight: normal;
+		color: var(--orange);
+	}
+
 	p {
-		margin: 1rem 1rem;
-		line-height: 1.25;
+		margin: 0rem;
 
 		&.small {
-			opacity: 80%;
+			opacity: 60%;
+		}
+	}
+
+	div.br {
+		// height: 1rem;
+		margin: .5rem 0rem;
+		border: 1px solid var(--mariana2);
+		opacity: 50%;
+	}
+
+	>section {
+		a {
+			text-decoration: underline;
+		}
+
+		div {
+			line-height: 1.25;
+		}
+
+		>div {
+			margin: 1rem 1rem;
+
+			>div.flex {
+				justify-content: flex-start;
+			}
 		}
 	}
 
@@ -61,65 +93,12 @@ section.Resume {
 	>section.contact {
 		display: none;
 
-		&.no-nav {
+		@media (max-width: 800px) {
 			display: initial;
 		}
 
 		>div.contact {
 			margin: 1rem 1rem;
-		}
-	}
-
-	>nav {
-		position: absolute;
-		left: 0rem;
-		top: -1rem;
-		padding: .5rem;
-		width: 16rem;
-		height: calc(100% + 2rem);
-		border-radius: 1rem 0rem 0rem 1rem;
-		background: var(--mint);
-
-		&.no-nav {
-			display: none;
-		}
-
-		>div.sticky {
-			position: sticky;
-			left: auto;
-			top: 1.8rem;
-			color: var(--body);
-
-			h3 {
-				margin: 0rem 0rem .5rem 0rem;
-			}
-
-			>div {
-				margin: .3rem;
-				padding: .5rem;
-				border-radius: .5rem;
-
-				&.table-of-contents {
-					margin-top: 1.5rem;
-
-					>div {
-						margin: .5rem 0rem;
-
-						&.active {
-							background: red;
-						}
-
-						&.indent1 {
-							margin: .5rem 0rem .5rem 1rem;
-						}
-
-						&.indent2 {
-							margin: .2rem 0rem .2rem 2rem;
-							opacity: 75%;
-						}
-					}
-				}
-			}
 		}
 	}
 }

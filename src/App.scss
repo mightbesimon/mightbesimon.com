@@ -25,3 +25,19 @@ main {
 		color: var(--orange);
 	}
 }
+
+body.mariana.dark {
+	--body: var(--mariana0);
+	--main: var(--mariana1);
+	--text: var(--mariana3);
+	--card: var(--mariana2);
+}
+
+body.mariana.light {
+	--body: var(--mariana3);
+	--main: white;
+	--text: var(--mariana0);
+	--card: var(--mariana3);
+	--mint: hsla(114, 25%, 60%, 100%);
+	--orange: hsla(32, 75%, 60%, 100%);
+}
