@@ -2,7 +2,9 @@ import './Resume.scss'
 import ResumeNav from './ResumeNav';
 import Github from 'assets/Contacts/github.svg';
 import LinkedIn from 'assets/Contacts/linkedin.svg';
+import ToolBar from 'components/ToolBar/ToolBar';
 import { useEffect } from 'react';
+import ThemeButton from 'components/ToolBar/ThemeButton';
 
 function Resume() {
 
@@ -28,6 +30,9 @@ function Resume() {
 			className='Resume flex column'
 		>
 			<ResumeNav />
+			<ToolBar>
+				<ThemeButton />
+			</ToolBar>
 
 			<h1>Simon Shan</h1>
 

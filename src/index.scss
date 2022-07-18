@@ -26,7 +26,7 @@
 
   /* shadow */
   --shadow: 0rem .2rem .3rem 0rem hsla(0, 0%, 0%, 25%);
-  --shadow-card: -.1rem .3rem .5rem 0rem hsla(0, 0%, 0%, 67%);
+  --shadow-card: .1rem .3rem .5rem 0rem hsla(0, 0%, 0%, 67%);
 
   /* transition */
   --transition: all 200ms ease;
@@ -36,14 +36,7 @@
   --body: var(--mariana0);
   --main: var(--mariana1);
   --text: var(--mariana3);
-  --footer: var(--mariana2);
-  --arrow: var(--blue);
-  --header: var(--purple);
-  --arrow-down: var(--teal);
   --card: var(--mariana2);
-  --link: var(--teal);
-  --button: var(--mint);
-  --button-hover: var(--blue);
 }
 
 /**************************************************************

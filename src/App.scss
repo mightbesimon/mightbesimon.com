@@ -25,3 +25,17 @@ main {
 		color: var(--orange);
 	}
 }
+
+body.mariana.dark {
+	--body: var(--mariana0);
+	--main: var(--mariana1);
+	--text: var(--mariana3);
+	--card: var(--mariana2);
+}
+
+body.mariana.light {
+	--body: var(--mariana3);
+	--main: white; // var(--mariana3);
+	--text: var(--mariana0);
+	--card: var(--mariana2);
+}

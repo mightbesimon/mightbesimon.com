@@ -18,12 +18,12 @@ section.Resume>nav {
 		bottom: 1.8rem;
 		left: 0rem;
 		right: 0rem;
-		color: var(--body);
+		color: var(--mariana0);
 
 		h3 {
 			margin: 0rem 0rem .5rem 0rem;
 			font-weight: bold;
-			color: var(--body);
+			color: var(--mariana0);
 		}
 
 		>div {
@@ -78,6 +78,7 @@ section.Resume>nav {
 
 					&.indent2>a {
 						padding-left: 2.5rem;
+						font-size: .9rem;
 					}
 				}
 			}
