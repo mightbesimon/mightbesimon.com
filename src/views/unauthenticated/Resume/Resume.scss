@@ -6,7 +6,7 @@ section.Resume {
 	max-width: 60rem;
 	line-height: 1.25;
 
-	@media (max-width: 800px) {
+	@media (max-width: 750px) {
 		padding: 0rem 1rem 1rem 1rem;
 		max-width: 43rem;
 	}
@@ -44,7 +44,10 @@ section.Resume {
 	}
 
 	div.br {
-		height: 1rem;
+		// height: 1rem;
+		margin: .5rem 0rem;
+		border: 1px solid var(--mariana2);
+		opacity: 50%;
 	}
 
 	>section {
@@ -92,7 +95,7 @@ section.Resume {
 	>section.contact {
 		display: none;
 
-		@media (max-width: 800px) {
+		@media (max-width: 750px) {
 			display: initial;
 		}
 

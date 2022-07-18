@@ -18,11 +18,9 @@ function Resume() {
 	});
 
 	useEffect(() => {
-		document.querySelectorAll('*[id]')
-			.forEach((element) => { observer.observe(element) });
-
-		return () => {
-		};
+		document.querySelectorAll('*[id]').forEach(
+			(element) => { observer.observe(element) }
+		);
 	});
 
 	return (
@@ -80,9 +78,7 @@ function Resume() {
 
 				<div className='work-experience'>
 					<h3 id='work-experience-healthnow'>
-						Software Engineer — <a href='https://healthnow.co.nz'>
-							HealthNow Ltd (Start-up)
-						</a>
+						Software Engineer — <a href='https://healthnow.co.nz'>HealthNow Ltd (Start-up)</a>
 					</h3>
 					<p className='small'>2022 - present</p>
 					<p>
@@ -166,7 +162,9 @@ function Resume() {
 				<h2>CERTIFICATIONS</h2>
 
 				<div className='certifications'>
-					<h3>AZ-900: Microsoft Azure Fundamentals</h3>
+					<h3 id='certifications-azure'>
+						AZ-900: Microsoft Azure Fundamentals
+					</h3>
 					<p className='small'>Issued in Jun 2021 by Microsoft</p>
 				</div>
 			</section>
@@ -176,16 +174,16 @@ function Resume() {
 				<h2>EDUCATION</h2>
 
 				<div className='education'>
-					<div id='education-auckland-computer-science'
-						className='flex wrap'
-					>
+					<div className='flex wrap'>
 						<div>
 							<h3>University of Auckland —&nbsp;</h3>
 							<p>Bachelor of Science</p>
 							<p className='small'>2020 - 2022</p>
 						</div>
 						<div>
-							<h3><strong>Computer Science</strong></h3>
+							<h3 id='education-auckland-computer-science'>
+								<strong>Computer Science</strong>
+							</h3>
 							<p className='small'><a href='#achievements-first-in-course'>First in Course Award</a> received in May 2021</p>
 							<p className='small'>7 <a href='#achievements-outstanding'>Certificates of Outstanding Achievement</a></p>
 						</div>
@@ -193,16 +191,16 @@ function Resume() {
 
 					<div className='br' />
 
-					<div id='education-auckland-business-analytics'
-						className='flex wrap'
-					>
+					<div className='flex wrap'>
 						<div>
 							<h3>University of Auckland —&nbsp;</h3>
 							<p>Bachelor of Commerce</p>
 							<p className='small'>2019 - grad in 2022</p>
 						</div>
 						<div>
-							<h3><strong>Business Analytics,</strong></h3>
+							<h3 id='education-auckland-business-analytics'>
+								<strong>Business Analytics,</strong>
+							</h3>
 							<h3 id='education-auckland-commercial-law'>
 								<strong>Commercial Law</strong>
 							</h3>
@@ -212,16 +210,16 @@ function Resume() {
 
 					<div className='br' />
 
-					<div id='education-auckland-computer-science'
-						className='flex wrap'
-					>
+					<div className='flex wrap'>
 						<div>
 							<h3>University of Auckland —&nbsp;</h3>
 							<p className='small'>Auckland, NZ</p>
 							<p className='small'>2019</p>
 						</div>
 						<div>
-							<h3><strong>Engineering <em>(Honours)</em></strong></h3>
+							<h3 id='education-auckland-engineering'>
+								<strong>Engineering <em>(Honours)</em></strong>
+							</h3>
 							<p className='small'>papers include Engineering Computation</p>
 							<p className='small'>and Software Development</p>
 						</div>
@@ -241,7 +239,9 @@ function Resume() {
 
 					<div className='br' />
 
-					<h3>Community Engagement Recognition</h3>
+					<h3 id='achievements-community-engagement'>
+						Community Engagement Recognition
+					</h3>
 					<p className='small'>Co-curricular activities recognised by the University of Auckland</p>
 
 					<div className='br' />
@@ -253,12 +253,16 @@ function Resume() {
 
 					<div className='br' />
 
-					<h3>1.5k+ downloads on Microsoft Marketplace</h3>
+					<h3 id='achievements-vscode'>
+						1.5k+ downloads on Microsoft Marketplace
+					</h3>
 					<p className='small'>For my VSCode extension <em>Emoji File Icons</em>, a hobby project</p>
 
 					<div className='br' />
 
-					<h3>Completed Google's coding challenge</h3>
+					<h3 id='achievements-google'>
+						Completed Google's coding challenge
+					</h3>
 				</div>
 			</section>
 

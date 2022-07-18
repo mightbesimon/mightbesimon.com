@@ -8,14 +8,16 @@ section.Resume>nav {
 	border-radius: 1rem 0rem 0rem 1rem;
 	background: var(--mint);
 
-	@media (max-width: 800px) {
+	@media (max-width: 750px) {
 		display: none;
 	}
 
 	>div.sticky {
 		position: sticky;
-		left: auto;
 		top: 1.8rem;
+		bottom: 1.8rem;
+		left: 0rem;
+		right: 0rem;
 		color: var(--body);
 
 		h3 {
@@ -31,6 +33,9 @@ section.Resume>nav {
 
 			&.table-of-contents {
 				margin: 1.5rem .3rem .3rem 0rem;
+				max-height: calc(100vh - 15rem);
+				overflow-y: scroll;
+
 
 				div {
 
@@ -57,7 +62,8 @@ section.Resume>nav {
 
 						>a {
 							font-weight: bold;
-							text-decoration: underline solid var(--mariana2);
+							text-decoration: underline;
+							text-decoration-color: var(--mariana2);
 							color: black;
 						}
 

@@ -80,14 +80,44 @@ function ResumeNav() {
 
 						<div className='indent1'>
 							<a href='#certifications'>Certifications</a>
+							<div className='indent2'>
+								<a href='#certifications-azure'>AZ-900</a>
+							</div>
 						</div>
 
 						<div className='indent1'>
 							<a href='#education'>Education</a>
+							<div className='indent2'>
+								<a href='#education-auckland-computer-science'>Computer Science</a>
+							</div>
+							<div className='indent2'>
+								<a href='#education-auckland-business-analytics'>Business Analytics</a>
+							</div>
+							<div className='indent2'>
+								<a href='#education-auckland-commercial-law'>Commercial Law</a>
+							</div>
+							<div className='indent2'>
+								<a href='#education-auckland-engineering'>Engineering</a>
+							</div>
 						</div>
 
 						<div className='indent1'>
 							<a href='#achievements'>Achievements</a>
+							<div className='indent2'>
+								<a href='#achievements-first-in-course'>First in Course Award</a>
+							</div>
+							<div className='indent2'>
+								<a href='#achievements-community-engagement'>Community Engagement</a>
+							</div>
+							<div className='indent2'>
+								<a href='#achievements-outstanding'>Certificates</a>
+							</div>
+							<div className='indent2'>
+								<a href='#achievements-vscode'>1.5k+ Downloads</a>
+							</div>
+							<div className='indent2'>
+								<a href='#achievements-google'>Google Challenge</a>
+							</div>
 						</div>
 
 						<div className='indent1'>
