@@ -6,7 +6,7 @@ section.Resume {
 	max-width: 60rem;
 	line-height: 1.25;
 
-	@media (max-width: 750px) {
+	@media (max-width: 800px) {
 		padding: 0rem 1rem 1rem 1rem;
 		max-width: 43rem;
 	}
@@ -95,7 +95,7 @@ section.Resume {
 	>section.contact {
 		display: none;
 
-		@media (max-width: 750px) {
+		@media (max-width: 800px) {
 			display: initial;
 		}
 
