@@ -31,6 +31,7 @@ section.Resume {
 	h3 {
 		margin: 0rem;
 		font-size: 1rem;
+		font-weight: normal;
 		color: var(--orange);
 	}
 
@@ -49,15 +50,21 @@ section.Resume {
 	>section {
 		margin: 0rem;
 
-		>div {
-			margin: 1rem 1rem;
+		a {
+			text-decoration: underline;
+		}
+
+		div {
 			line-height: 1.25;
 		}
-	}
 
-	>div {
-		margin: 1rem 1rem;
-		line-height: 1.25;
+		>div {
+			margin: 1rem 1rem;
+
+			>div.flex {
+				justify-content: flex-start;
+			}
+		}
 	}
 
 	div.contact {
@@ -116,6 +123,7 @@ section.Resume {
 
 			h3 {
 				margin: 0rem 0rem .5rem 0rem;
+				font-weight: bold;
 				color: var(--body);
 			}
 
@@ -142,7 +150,7 @@ section.Resume {
 
 						&.active {
 							font-weight: bold;
-							text-decoration: underline;
+							text-decoration: underline solid var(--mariana2);
 							color: black;
 							// margin-right: -1.5rem;
 							// color: var(--text);

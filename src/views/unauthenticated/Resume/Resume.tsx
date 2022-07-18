@@ -77,10 +77,10 @@ function Resume() {
 							<a href='#leadership-experience'>Leadership Experience</a>
 						</div>
 						<div className='indent2'>
-							<a href='#leader-experience-faculty-representative'>Faculty Representative</a>
+							<a href='#leader-experience-faculty-representative'>Faculty Rep</a>
 						</div>
 						<div className='indent2'>
-							<a href='#leader-experience-studentvoice-representative'>Student Representative</a>
+							<a href='#leader-experience-studentvoice-representative'>StudentVoice Rep</a>
 						</div>
 						<div className='indent1'>
 							<a href='#personal-projects'>Personal Projects</a>
@@ -147,7 +147,7 @@ function Resume() {
 
 				<div className='summary'>
 					<p>
-						Full-time software engineer at HealthNow Ltd.
+						Full-time software engineer at HealthNow Ltd (Start-up).
 						Also final year student at University of Auckland.
 						Curious, adaptive and methodical.
 						Proficient in React, C#, Python, C, Java and many others.
@@ -169,7 +169,7 @@ function Resume() {
 					</h3>
 					<p className='small'>2022 - present</p>
 					<p>
-						text
+						frontend React, backend C# and AWS, data analytics and sometimes even UI design.
 					</p>
 				</div>
 			</section>
@@ -188,7 +188,7 @@ function Resume() {
 					</h3>
 					<p className='small'>2020 - present</p>
 					<p>
-						As a consecutive StudentVoice representative for two years, I have consistently voiced student concerns to academic staff and Students' Association. This role involves active and critical listening and communication skills. In my Student-Staff Consultative meetings, I have advised the committee of numerous ideas for improvement and asserted students' suggestions.
+						As a consecutive StudentVoice representative for two years, I have consistently voiced student concerns to academic staff and Students' Association. This role involves <a href='#personal-skills-listening-communication'>active and critical listening and communication skills</a>. In my Student-Staff Consultative meetings, I have advised the committee of numerous ideas for improvement and asserted students' suggestions.
 					</p>
 				</div>
 			</section>
@@ -203,7 +203,7 @@ function Resume() {
 				<h2>PERSONAL SKILLS</h2>
 
 				<div className='personal-skills'>
-					<h3>Listening Skills and Communication</h3>
+					<h3 id='personal-skills-listening-communication'>Listening Skills and Communication</h3>
 					<p>As a consecutive class representative for two years, I have consistently voiced student concerns to academic staff and Students' Association.</p>
 					<div className='br' />
 					<h3>Receptive Learning and Self Learning</h3>
@@ -235,6 +235,55 @@ function Resume() {
 
 			<section id='education'>
 				<h2>EDUCATION</h2>
+
+				<div className='education'>
+					<div id='education-auckland-computer-science'
+						className='flex wrap'
+					>
+						<div>
+							<h3>University of Auckland —&nbsp;</h3>
+							<p>Bachelor of Science</p>
+							<p className='small'>2020 - 2022</p>
+						</div>
+						<div>
+							<h3><strong>Computer Science</strong></h3>
+							<p className='small'><a href='#achievements-first-in-course'>First in Course Award</a> received in May 2021</p>
+							<p className='small'>7 <a href='#achievements-outstanding'>Certificates of Outstanding Achievement</a></p>
+						</div>
+					</div>
+					<div className='br' />
+					<div id='education-auckland-business-analytics'
+						className='flex wrap'
+					>
+						<div>
+							<h3>University of Auckland —&nbsp;</h3>
+							<p>Bachelor of Commerce</p>
+							<p className='small'>2019 - grad in 2022</p>
+						</div>
+						<div>
+							<h3><strong>Business Analytics,</strong></h3>
+							<h3 id='education-auckland-commercial-law'>
+								<strong>Commercial Law</strong>
+							</h3>
+							<p className='small'>papers include Accounting, Law in Commerce</p>
+						</div>
+					</div>
+					<div className='br' />
+					<div id='education-auckland-computer-science'
+						className='flex wrap'
+					>
+						<div>
+							<h3>University of Auckland —&nbsp;</h3>
+							<p className='small'>Auckland, NZ</p>
+							<p className='small'>2019</p>
+						</div>
+						<div>
+							<h3><strong>Engineering <em>(Honours)</em></strong></h3>
+							<p className='small'>papers include Engineering Computation</p>
+							<p className='small'>and Software Development</p>
+						</div>
+					</div>
+				</div>
 			</section>
 
 
@@ -242,19 +291,23 @@ function Resume() {
 				<h2>ACHIEVEMENTS</h2>
 
 				<div className='achievements'>
-					<h3>First in Course Award</h3>
+					<h3 id='achievements-first-in-course'>
+						First in Course Award
+					</h3>
 					<p className='small'>Received in 2021</p>
 					<div className='br' />
 					<h3>Community Engagement Recognition</h3>
 					<p className='small'>Co-curricular activities recognised by the University of Auckland</p>
 					<div className='br' />
-					<h3>Certificates of Outstanding Achievement — 10 classes</h3>
+					<h3 id='achievements-outstanding'>
+						Certificates of Outstanding Achievement — 10 classes
+					</h3>
 					<p className='small'>Received in 2020 for the classes Object Oriented Software Development, Algorithms and Data Structures, Cyber Security and 7 others.</p>
 					<div className='br' />
-					<h3>2k+ downloads on Microsoft Marketplace</h3>
-					<p className='small'>For my VSCode extension, a hobby project</p>
+					<h3>1.5k+ downloads on Microsoft Marketplace</h3>
+					<p className='small'>For my VSCode extension <em>Emoji File Icons</em>, a hobby project</p>
 					<div className='br' />
-					<h3>Completed Google's Foobar coding challenge</h3>
+					<h3>Completed Google's coding challenge</h3>
 				</div>
 			</section>
 
