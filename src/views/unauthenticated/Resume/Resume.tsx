@@ -62,7 +62,7 @@ function Resume() {
 					<div className='table-of-contents'>
 						<h3>TABLE OF CONTENTS</h3>
 						<div>
-							<a href='#resume'>Simon Resumé</a>
+							<a href='#resume'>Resumé</a>
 						</div>
 						<div className='indent1'>
 							<a href='#summary'>Summary</a>
@@ -169,6 +169,11 @@ function Resume() {
 					</h3>
 					<p className='small'>2022 - present</p>
 					<p>
+						teamplayer
+						first job with not much experience when I started, got hired because I was first of my software dev class, learned on the job.
+						love the team dynamic we have and I recieve lots of recognition from my colleages. I feel very valued.
+					</p>
+					<p>
 						frontend React, backend C# and AWS, data analytics and sometimes even UI design.
 					</p>
 				</div>
@@ -188,7 +193,9 @@ function Resume() {
 					</h3>
 					<p className='small'>2020 - present</p>
 					<p>
-						As a consecutive StudentVoice representative for two years, I have consistently voiced student concerns to academic staff and Students' Association. This role involves <a href='#personal-skills-listening-communication'>active and critical listening and communication skills</a>. In my Student-Staff Consultative meetings, I have advised the committee of numerous ideas for improvement and asserted students' suggestions.
+						Consistently voiced student concerns to academic staff and Students' Association.
+						This role involves <a href='#personal-skills-listening-communication'>active and critical listening and communication skills</a>.
+						In our Student-Staff Consultative meetings, I have advised the committee of numerous ideas for improvement and asserted students' suggestions.
 					</p>
 				</div>
 			</section>
@@ -203,15 +210,23 @@ function Resume() {
 				<h2>PERSONAL SKILLS</h2>
 
 				<div className='personal-skills'>
-					<h3 id='personal-skills-listening-communication'>Listening Skills and Communication</h3>
+					<h3 id='personal-skills-listening-communication'>
+						Listening Skills and Communication
+					</h3>
 					<p>As a consecutive class representative for two years, I have consistently voiced student concerns to academic staff and Students' Association.</p>
+
 					<div className='br' />
+
 					<h3>Receptive Learning and Self Learning</h3>
 					<p>I taught myself many languages before classes by doing my own research and gained competency quickly. Similarly, I taught myself two instruments.</p>
+
 					<div className='br' />
-					<h3>Teamwork</h3>
+
+					<h3>Teamwork and Emotional Intelligence</h3>
 					<p>Having partaken in various group projects, I learnt to both collaborate and delegate in a team. Our team designed truss bridges and hearing devices to assist people with impairments.</p>
+
 					<div className='br' />
+
 					<h3>Thinking Outside the Box</h3>
 					<p>I often come up with completely unique solutions for problems to optimise the final work.</p>
 				</div>
@@ -251,7 +266,9 @@ function Resume() {
 							<p className='small'>7 <a href='#achievements-outstanding'>Certificates of Outstanding Achievement</a></p>
 						</div>
 					</div>
+
 					<div className='br' />
+
 					<div id='education-auckland-business-analytics'
 						className='flex wrap'
 					>
@@ -268,7 +285,9 @@ function Resume() {
 							<p className='small'>papers include Accounting, Law in Commerce</p>
 						</div>
 					</div>
+
 					<div className='br' />
+
 					<div id='education-auckland-computer-science'
 						className='flex wrap'
 					>
@@ -295,18 +314,26 @@ function Resume() {
 						First in Course Award
 					</h3>
 					<p className='small'>Received in 2021</p>
+
 					<div className='br' />
+
 					<h3>Community Engagement Recognition</h3>
 					<p className='small'>Co-curricular activities recognised by the University of Auckland</p>
+
 					<div className='br' />
+
 					<h3 id='achievements-outstanding'>
 						Certificates of Outstanding Achievement — 10 classes
 					</h3>
 					<p className='small'>Received in 2020 for the classes Object Oriented Software Development, Algorithms and Data Structures, Cyber Security and 7 others.</p>
+
 					<div className='br' />
+
 					<h3>1.5k+ downloads on Microsoft Marketplace</h3>
 					<p className='small'>For my VSCode extension <em>Emoji File Icons</em>, a hobby project</p>
+
 					<div className='br' />
+
 					<h3>Completed Google's coding challenge</h3>
 				</div>
 			</section>
