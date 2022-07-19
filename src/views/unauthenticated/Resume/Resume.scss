@@ -43,6 +43,11 @@ section.Resume {
 		}
 	}
 
+	ul {
+		margin: 0rem;
+		padding-left: 1rem;
+	}
+
 	div.br {
 		// height: 1rem;
 		margin: .5rem 0rem;
@@ -99,6 +104,20 @@ section.Resume {
 
 		>div.contact {
 			margin: 1rem 1rem;
+		}
+	}
+
+	>section#other-interests {
+		>div.other-interests {
+			justify-content: flex-start;
+
+			>ul {
+				margin: 0rem 1rem 0rem 0rem;
+
+				&:last-of-type {
+					margin: 0rem 2rem 1rem 0rem;
+				}
+			}
 		}
 	}
 }

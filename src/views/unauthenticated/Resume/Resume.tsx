@@ -287,22 +287,29 @@ function Resume() {
 			<section id='other-interests'>
 				<h2>OTHER INTERESTS</h2>
 
-				<div className='other-interests'>
+				<div className='other-interests flex wrap'>
 					<ul>
 						<li>Snowboarding</li>
 						<li>Wood carving</li>
 						<li>Literary adaptation movies</li>
 						<li>Animal documentaries</li>
 						<li>Tennis</li>
+					</ul>
+					<ul>
 						<li>Hiking</li>
-						<li>Gardening</li>
 						<li>Drawing</li>
 						<li>Chess</li>
 						<li>Archery</li>
 						<li>Drums</li>
 					</ul>
-					<p className='small'>Favourite classes of animal:</p>
-					<p>birds and fish</p>
+					<div id='other-interests-animals'>
+						<h3>Favourite animals:</h3>
+						<ul>
+							<li>Sharks</li>
+							<li>Birds</li>
+							<li>Fish</li>
+						</ul>
+					</div>
 				</div>
 			</section>
 
