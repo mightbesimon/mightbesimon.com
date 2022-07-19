@@ -2,9 +2,11 @@ import './Resume.scss'
 import ResumeNav from './ResumeNav';
 import Github from 'assets/Contacts/github.svg';
 import LinkedIn from 'assets/Contacts/linkedin.svg';
+import ResumePDF from 'components/ResumePDF/ResumePDF';
 import ToolBar from 'components/ToolBar/ToolBar';
-import { useEffect } from 'react';
 import ThemeButton from 'components/ToolBar/ThemeButton';
+import { useEffect } from 'react';
+import { PDFDownloadLink } from '@react-pdf/renderer';
 
 function Resume() {
 
@@ -35,6 +37,12 @@ function Resume() {
 			</ToolBar>
 
 			<h1>Simon Shan</h1>
+
+			<PDFDownloadLink document={<ResumePDF />} fileName="somename.pdf">
+				{({ loading }) =>
+					loading ? 'Loading document...' : 'Download now!'
+				}
+			</PDFDownloadLink>
 
 
 			<div className='contact'>
