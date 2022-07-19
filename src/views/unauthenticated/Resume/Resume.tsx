@@ -189,8 +189,8 @@ function Resume() {
 							<h3 id='education-auckland-computer-science'>
 								<strong>Computer Science</strong>
 							</h3>
-							<p className='small'><a href='#achievements-first-in-course'>First in Course Award</a> received in May 2021</p>
-							<p className='small'>7 <a href='#achievements-outstanding'>Certificates of Outstanding Achievement</a></p>
+							<p><a href='#achievements-first-in-course'>First in Course Award</a> received in May 2021</p>
+							<p>7 <a href='#achievements-outstanding'>Certificates of Outstanding Achievement</a></p>
 						</div>
 					</div>
 
@@ -209,7 +209,7 @@ function Resume() {
 							<h3 id='education-auckland-commercial-law'>
 								<strong>Commercial Law</strong>
 							</h3>
-							<p className='small'>papers include Accounting, Law in Commerce</p>
+							<p>papers include Accounting, Law in Commerce</p>
 						</div>
 					</div>
 
@@ -225,8 +225,8 @@ function Resume() {
 							<h3 id='education-auckland-engineering'>
 								<strong>Engineering <em>(Honours)</em></strong>
 							</h3>
-							<p className='small'>papers include Engineering Computation</p>
-							<p className='small'>and Software Development</p>
+							<p>papers include Engineering Computation</p>
+							<p>and Software Development</p>
 						</div>
 					</div>
 				</div>
