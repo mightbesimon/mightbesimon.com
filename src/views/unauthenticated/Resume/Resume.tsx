@@ -37,29 +37,25 @@ function Resume() {
 			<h1>Simon Shan</h1>
 
 
-			<section className='contact'>
-				<h2>CONTACT</h2>
-
-				<div className='contact'>
-					<a href='tel:0223227529'>
-						<span>📞</span>022 322 7529 | Auckland, NZ
-					</a>
-					<a href='mailto:qsha020@aucklanduni.ac.nz'>
-						<span>✉️</span>qsha020@aucklanduni.ac.nz
-					</a>
-					<a href='https://linkedin.com/in/mightbesimon'>
-						<img alt='LinkedIn' src={LinkedIn} />
-						linkedin.com/in/mightbesimon
-					</a>
-					<a href='https://github.com/mightbesimon'>
-						<img alt='Github' src={Github} />
-						github.com/mightbesimon
-					</a>
-					<a href='https://mightbesimon.com'>
-						<span>🌏</span>mightbesimon.com
-					</a>
-				</div>
-			</section>
+			<div className='contact'>
+				<a href='tel:0223227529'>
+					<span>📞</span>022 322 7529 | Auckland, NZ
+				</a>
+				<a href='mailto:qsha020@aucklanduni.ac.nz'>
+					<span>✉️</span>qsha020@aucklanduni.ac.nz
+				</a>
+				<a href='https://linkedin.com/in/mightbesimon'>
+					<img alt='LinkedIn' src={LinkedIn} />
+					linkedin.com/in/mightbesimon
+				</a>
+				<a href='https://github.com/mightbesimon'>
+					<img alt='Github' src={Github} />
+					github.com/mightbesimon
+				</a>
+				<a href='https://mightbesimon.com'>
+					<span>🌏</span>mightbesimon.com
+				</a>
+			</div>
 
 
 			<section id='summary'>
@@ -71,7 +67,7 @@ function Resume() {
 						Also final year student at University of Auckland.
 						Curious, adaptive and methodical.
 						Proficient in React, C#, Python, C, Java and many others.
-						Experienced in working in a team, pull requests, frontend, backend and architecturing.
+						Experienced in working in a team, pull requests, frontend, backend and architecting.
 						Top of my class with lots of personal projects.
 					</p>
 				</div>
@@ -89,7 +85,7 @@ function Resume() {
 					<p>
 						teamplayer
 						first job with not much experience when I started, got hired because I was first of my software dev class, learned on the job.
-						love the team dynamic we have and I recieve lots of recognition from my colleages. I feel very valued.
+						love the team dynamic we have and I receive lots of recognition from my colleagues. I feel very valued.
 					</p>
 					<p>
 						frontend React, backend C# and AWS, data analytics and sometimes even UI design.
@@ -107,7 +103,7 @@ function Resume() {
 					</h3>
 					<p className='small'>2021</p>
 					<h3 id='leader-experience-studentvoice-representative'>
-						Students' Association StudentVoice Representative — 13 courses
+						StudentVoice Representative — Students' Association
 					</h3>
 					<p className='small'>2020 - present</p>
 					<p>
@@ -189,8 +185,8 @@ function Resume() {
 							<h3 id='education-auckland-computer-science'>
 								<strong>Computer Science</strong>
 							</h3>
-							<p className='small'><a href='#achievements-first-in-course'>First in Course Award</a> received in May 2021</p>
-							<p className='small'>7 <a href='#achievements-outstanding'>Certificates of Outstanding Achievement</a></p>
+							<p><a href='#achievements-first-in-course'>First in Course Award</a> received in May 2021</p>
+							<p>7 <a href='#achievements-outstanding'>Certificates of Outstanding Achievement</a></p>
 						</div>
 					</div>
 
@@ -209,7 +205,7 @@ function Resume() {
 							<h3 id='education-auckland-commercial-law'>
 								<strong>Commercial Law</strong>
 							</h3>
-							<p className='small'>papers include Accounting, Law in Commerce</p>
+							<p>papers include Accounting, Law in Commerce</p>
 						</div>
 					</div>
 
@@ -225,8 +221,8 @@ function Resume() {
 							<h3 id='education-auckland-engineering'>
 								<strong>Engineering <em>(Honours)</em></strong>
 							</h3>
-							<p className='small'>papers include Engineering Computation</p>
-							<p className='small'>and Software Development</p>
+							<p>papers include Engineering Computation</p>
+							<p>and Software Development</p>
 						</div>
 					</div>
 				</div>
@@ -287,22 +283,29 @@ function Resume() {
 			<section id='other-interests'>
 				<h2>OTHER INTERESTS</h2>
 
-				<div className='other-interests'>
+				<div className='other-interests flex wrap'>
 					<ul>
 						<li>Snowboarding</li>
 						<li>Wood carving</li>
 						<li>Literary adaptation movies</li>
 						<li>Animal documentaries</li>
 						<li>Tennis</li>
+					</ul>
+					<ul>
 						<li>Hiking</li>
-						<li>Gardening</li>
 						<li>Drawing</li>
 						<li>Chess</li>
 						<li>Archery</li>
 						<li>Drums</li>
 					</ul>
-					<p className='small'>Favourite classes of animal:</p>
-					<p>birds and fish</p>
+					<div id='other-interests-animals'>
+						<h3>Favourite animals:</h3>
+						<ul>
+							<li>Sharks</li>
+							<li>Birds</li>
+							<li>Fish</li>
+						</ul>
+					</div>
 				</div>
 			</section>
 

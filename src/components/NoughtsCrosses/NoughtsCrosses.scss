@@ -54,7 +54,7 @@ div.game {
 				padding: .5rem;
 				font-size: 1.1rem;
 				text-align: center;
-				color: var(--body);
+				color: var(--mariana0);
 				transition: var(--transition);
 
 				&:hover {
@@ -79,7 +79,7 @@ div.game {
 
 			>div.restart {
 				flex: 4;
-				background: var(--text);
+				background: var(--mariana3);
 			}
 		}
 	}

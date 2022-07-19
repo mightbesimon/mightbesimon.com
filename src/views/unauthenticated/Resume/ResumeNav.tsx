@@ -31,7 +31,7 @@ function ResumeNav() {
 				<div className='table-of-contents'>
 					<h3>TABLE OF CONTENTS</h3>
 					<div>
-						<a href='#resume'>Resumé</a>
+						<a href='#resume'>Résumé</a>
 
 						<div className='indent1'>
 							<a href='#summary'>Summary</a>
