@@ -67,7 +67,7 @@ function Resume() {
 						Also final year student at University of Auckland.
 						Curious, adaptive and methodical.
 						Proficient in React, C#, Python, C, Java and many others.
-						Experienced in working in a team, pull requests, frontend, backend and architecturing.
+						Experienced in working in a team, pull requests, frontend, backend and architecting.
 						Top of my class with lots of personal projects.
 					</p>
 				</div>
@@ -85,7 +85,7 @@ function Resume() {
 					<p>
 						teamplayer
 						first job with not much experience when I started, got hired because I was first of my software dev class, learned on the job.
-						love the team dynamic we have and I recieve lots of recognition from my colleages. I feel very valued.
+						love the team dynamic we have and I receive lots of recognition from my colleagues. I feel very valued.
 					</p>
 					<p>
 						frontend React, backend C# and AWS, data analytics and sometimes even UI design.
@@ -103,7 +103,7 @@ function Resume() {
 					</h3>
 					<p className='small'>2021</p>
 					<h3 id='leader-experience-studentvoice-representative'>
-						Students' Association StudentVoice Representative — 13 courses
+						StudentVoice Representative — Students' Association
 					</h3>
 					<p className='small'>2020 - present</p>
 					<p>
