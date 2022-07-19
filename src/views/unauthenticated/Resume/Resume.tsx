@@ -37,29 +37,25 @@ function Resume() {
 			<h1>Simon Shan</h1>
 
 
-			<section className='contact'>
-				<h2>CONTACT</h2>
-
-				<div className='contact'>
-					<a href='tel:0223227529'>
-						<span>📞</span>022 322 7529 | Auckland, NZ
-					</a>
-					<a href='mailto:qsha020@aucklanduni.ac.nz'>
-						<span>✉️</span>qsha020@aucklanduni.ac.nz
-					</a>
-					<a href='https://linkedin.com/in/mightbesimon'>
-						<img alt='LinkedIn' src={LinkedIn} />
-						linkedin.com/in/mightbesimon
-					</a>
-					<a href='https://github.com/mightbesimon'>
-						<img alt='Github' src={Github} />
-						github.com/mightbesimon
-					</a>
-					<a href='https://mightbesimon.com'>
-						<span>🌏</span>mightbesimon.com
-					</a>
-				</div>
-			</section>
+			<div className='contact'>
+				<a href='tel:0223227529'>
+					<span>📞</span>022 322 7529 | Auckland, NZ
+				</a>
+				<a href='mailto:qsha020@aucklanduni.ac.nz'>
+					<span>✉️</span>qsha020@aucklanduni.ac.nz
+				</a>
+				<a href='https://linkedin.com/in/mightbesimon'>
+					<img alt='LinkedIn' src={LinkedIn} />
+					linkedin.com/in/mightbesimon
+				</a>
+				<a href='https://github.com/mightbesimon'>
+					<img alt='Github' src={Github} />
+					github.com/mightbesimon
+				</a>
+				<a href='https://mightbesimon.com'>
+					<span>🌏</span>mightbesimon.com
+				</a>
+			</div>
 
 
 			<section id='summary'>

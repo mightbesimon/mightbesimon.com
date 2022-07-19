@@ -95,15 +95,12 @@ section.Resume {
 		}
 	}
 
-	>section.contact {
+	>div.contact {
 		display: none;
+		margin: 0rem auto;
 
 		@media (max-width: 800px) {
 			display: initial;
-		}
-
-		>div.contact {
-			margin: 1rem 1rem;
 		}
 	}
 
