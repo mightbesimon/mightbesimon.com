@@ -38,7 +38,7 @@ function Resume() {
 
 			<h1>Simon Shan</h1>
 
-			<PDFDownloadLink document={<ResumePDF />} fileName="somename.pdf">
+			<PDFDownloadLink document={<ResumePDF />} fileName="Simon Resume 2022.pdf">
 				{({ loading }) =>
 					loading ? 'Loading document...' : 'Download now!'
 				}
