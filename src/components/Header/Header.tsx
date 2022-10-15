@@ -1,5 +1,4 @@
 import './Header.scss';
-import SimonSvg from 'components/SimonSvg/SimonSvg';
 import { useState } from 'react';
 
 type HeaderProps = {
@@ -15,7 +14,7 @@ function Header({ title, image, neon: defaultNeon }: HeaderProps) {
 		<header className={neon ? 'neon flex wrap' : 'flex wrap'}
 			onClick={() => { setNeon(!neon) }}
 		>
-			<SimonSvg />
+			{image}
 			<h1>{title}</h1>
 		</header>
 	)
