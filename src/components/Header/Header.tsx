@@ -4,10 +4,11 @@ import { useState } from 'react';
 
 type HeaderProps = {
 	title?: string,
+	image?: JSX.Element,
 	neon?: boolean,
 }
 
-function Header({ title, neon: defaultNeon }: HeaderProps) {
+function Header({ title, image, neon: defaultNeon }: HeaderProps) {
 	const [neon, setNeon] = useState(defaultNeon);
 
 	return (

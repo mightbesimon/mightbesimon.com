@@ -1,6 +1,6 @@
 import './Footer.scss';
-import deployments from 'utils/data/deployments.json';
 import ImageLink from 'components/ImageLink';
+import deployments from 'data/deployments.json';
 
 function Footer() {
 	return (
