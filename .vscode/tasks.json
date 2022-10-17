@@ -1,4 +1,6 @@
 {
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
 	"version": "2.0.0",
 	"tasks": [
 		{
@@ -6,7 +8,7 @@
 			"script": "test",
 			"group": {
 				"kind": "test",
-				"isDefault": true
+				"isDefault": true,
 			},
 			"label": "npm test"
 		},
@@ -15,7 +17,7 @@
 			"script": "build",
 			"group": {
 				"kind": "build",
-				"isDefault": true
+				"isDefault": true,
 			},
 			"label": "npm build"
 		},

@@ -5,6 +5,7 @@ import LoadingPage from './LoadingPage/LoadingPage';
 import NeonPage from './NeonPage/NeonPage';
 import NotFound from './NotFound/NotFound';
 import Resume from './Resume/Resume';
+import Teapot from './Teapot/Teapot';
 
 export type HidableRoute = Route & {
 	hide?: boolean,
@@ -53,6 +54,10 @@ const unauthenticatedContent: HidableRoute[] = [
 	{
 		path: '/neon',
 		element: <NeonPage />,
+	},
+	{
+		path: '/coffee',
+		element: <Teapot />,
 	},
 	{
 		// NotFound must be last in routes array
