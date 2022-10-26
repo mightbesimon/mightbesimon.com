@@ -1,8 +1,8 @@
 import './EllipsisLoader.scss';
 
-export type EllipsisLoaderProps = {
+type EllipsisLoaderProps = {
 	text?: string,
-}
+};
 
 function EllipsisLoader({ text }: EllipsisLoaderProps) {
 	return (

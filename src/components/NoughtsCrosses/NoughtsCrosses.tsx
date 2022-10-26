@@ -20,7 +20,7 @@ type Tile = {
 type Cell = {
 	row: number,
 	col: number,
-}
+};
 
 function NoughtsCrosses(): JSX.Element {
 	const rem = useRem();
