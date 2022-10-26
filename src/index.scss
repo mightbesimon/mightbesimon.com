@@ -29,6 +29,7 @@
   --shadow-card: .1rem .3rem .5rem 0rem hsla(0, 0%, 0%, 67%);
 
   /* transition */
+  --transition1: all 50ms ease;
   --transition: all 200ms ease;
   --transition5: all 500ms ease;
 
@@ -49,7 +50,7 @@
 * {
   box-sizing: border-box;
   border-collapse: collapse;
-  transition: var(--transition);
+  transition: var(--transition1);
 }
 
 body {

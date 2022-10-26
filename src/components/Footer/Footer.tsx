@@ -6,9 +6,7 @@ function Footer() {
 	return (
 		<footer className='flex wrap'>
 			<div className='deployment flex wrap'>
-				{
-					deployments.map(data => ImageLink(data))
-				}
+				{deployments.map(data => ImageLink(data))}
 			</div>
 			<div className='copyright'>
 				Copyright © 2022 <a href='https://mightbesimon.com'>mightbesimon.com</a>

@@ -1,35 +1,15 @@
 import './Home.scss';
-import { ReactComponent as Instagram } from 'assets/Contacts/instagram.svg';
-import { ReactComponent as Github } from 'assets/Contacts/github.svg';
-import { ReactComponent as LinkedIn } from 'assets/Contacts/linkedin.svg';
-import EllipsisLoader from 'components/Loader/EllipsisLoader';
-import { ImageLink, SvgLink } from 'components/ImageLink';
+import Featured from './Featured';
+import GithubStats from './GithubStats';
+import PagesList from './PagesList';
+import ReposList from './ReposList';
+import socials from './Socials';
+import SvgLink from 'components/SvgLink';
 import SectionWrapper from 'components/SectionWrapper/SectionWrapper';
-import featured from 'data/featured.json';
+import SponsorButton from 'components/Sponsor/SponsorButton';
 import greetings from 'data/greetings.json';
-import repositories from 'data/repositories.json';
-import getRepos, { RepositoryResponse } from 'utils/api/github/getRepos';
-import unauthenticatedContent from "views/unauthenticated/UnauthenticatedContent";
-import { Link } from 'react-location';
+import getRepos from 'utils/api/github/getRepos';
 import { useQuery } from "react-query";
-
-const socials = [
-	{
-		name: 'instagram',
-		svg: Instagram,
-		url: 'https://www.instagram.com/definitely.not_simon',
-	},
-	{
-		name: 'github',
-		svg: Github,
-		url: 'https://github.com/mightbesimon',
-	},
-	{
-		name: 'LinkedIn',
-		svg: LinkedIn,
-		url: 'https://www.linkedin.com/in/mightbesimon',
-	},
-];
 
 function Home(): JSX.Element {
 	const repoResponse = useQuery(
@@ -37,13 +17,9 @@ function Home(): JSX.Element {
 		() => getRepos({ owner: 'mightbesimon' })
 	);
 
-	const engagement = (repo: RepositoryResponse) =>
-		repo.stargazers_count +
-		repo.watchers_count +
-		repo.forks_count;
-
 	return (
 		<SectionWrapper view='Home' title='SIMON' game>
+
 			<div className='hello flex wrap'>
 				<pre>{greetings.join('\n')}</pre>
 				<div className='right'>
@@ -54,91 +30,24 @@ function Home(): JSX.Element {
 						<span>San Jose, CA</span>
 					</p>
 					<div className='flex wrap'>
-						{
-							socials.map(data => SvgLink(data))
-						}
+						{socials.map(data => SvgLink(data))}
+						<SponsorButton />
 					</div>
 				</div>
 			</div>
 
 			<h2>✨ Featured</h2>
-
-			<div className='showcase featured flex wrap'>
-				{
-					featured.map(data => (
-						<a key={data.title} className='flex column' href={data.url}>
-							<div className='title'>
-								<h3>{data.title}</h3>
-								<div className='description'>{data.description}</div>
-							</div>
-							{data.badge && <img alt='badge' src={data.badge} />}
-						</a>
-					))
-				}
-			</div>
+			<Featured />
 
 			<h2>📦 My repositories to check out</h2>
-
-			<div className='showcase repos flex wrap'>
-				{
-					repoResponse.data ? repoResponse.data
-						.filter(repo => repositories.map(x => x.repo).includes(repo.name) || engagement(repo) > 2)
-						.sort((a, b) => engagement(a) - engagement(b))
-						.reverse().map(repo => (
-							<a key={repo.full_name} className='flex column' href={repo.html_url}>
-								<div className='title'>
-									<h3>{repo.name}</h3>
-									<div className='description'>{repo.description}</div>
-								</div>
-								<div className='engagement flex'>
-									<div>⭐️ {repo.stargazers_count}</div>
-									<div>👀 {repo.watchers_count}</div>
-									<div>🍴 {repo.forks_count}</div>
-								</div>
-							</a>
-						)) : <EllipsisLoader text='🌵' />
-				}
-			</div>
+			<ReposList data={repoResponse.data} />
 
 			<h2>🌏 Pages to check out</h2>
-
-			<div className='showcase pages flex wrap'>
-				{
-					unauthenticatedContent.filter(page => page.path && !page.hide)
-						.map(page => (
-							<Link key={page.path} to={page.path}>
-								<div className='title'>
-									<h3>mightbesimon.com{page.path}</h3>
-								</div>
-							</Link>
-						))
-				}
-				<Link key='notfound' to='/notfound'>
-					<div className='title'>
-						<h3>page not found</h3>
-					</div>
-				</Link>
-			</div>
+			<PagesList />
 
 			<h2>📊 My Github metrics</h2>
+			<GithubStats data={repoResponse.data} />
 
-			<div className='stats'>
-				<ImageLink
-					name='github stats'
-					image='https://github-readme-stats.vercel.app/api?username=mightbesimon&show_icons=true&theme=dracula'
-					url='https://github.com/mightbesimon'
-				/>
-				{
-					repoResponse.data ? (
-						<div className='engagement flex'>
-							<div>📦 {repoResponse.data.length}</div>
-							<div>⭐️ {repoResponse.data.reduce((sum, repo) => sum + repo.stargazers_count, 0)}</div>
-							<div>👀 {repoResponse.data.reduce((sum, repo) => sum + repo.watchers_count, 0)}</div>
-							<div>🍴 {repoResponse.data.reduce((sum, repo) => sum + repo.forks_count, 0)}</div>
-						</div>
-					) : <EllipsisLoader text='📊' />
-				}
-			</div>
 		</SectionWrapper>
 	)
 }

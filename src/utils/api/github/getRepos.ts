@@ -29,6 +29,11 @@ async function getRepos(
 		}
 	);
 
+	if (response.status != 200) {
+		console.log(response);
+		return [];
+	}
+
 	return response.json();
 }
 

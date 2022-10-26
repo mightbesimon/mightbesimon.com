@@ -1,0 +1,164 @@
+div.flag {
+	width: 4.5rem;
+	height: 3rem;
+}
+
+div.german.flag {
+	display: flex;
+	flex-direction: column;
+
+	>div {
+		width: 100%;
+		height: 33.3%;
+	}
+
+	>div:nth-child(1) {
+		border-radius: .5rem .5rem 0rem 0rem;
+		background: var(--mariana0);
+	}
+
+	>div:nth-child(2) {
+		background: var(--red);
+	}
+
+	>div:nth-child(3) {
+		border-radius: 0rem 0rem .5rem .5rem;
+		background: var(--orange);
+	}
+}
+
+div.french.flag {
+	display: flex;
+
+	>div {
+		width: 33.3%;
+		height: 100%;
+	}
+
+	>div:nth-child(1) {
+		border-radius: .5rem 0rem 0rem .5rem;
+		background: var(--blue);
+	}
+
+	>div:nth-child(2) {
+		background: var(--mariana3);
+	}
+
+	>div:nth-child(3) {
+		border-radius: 0rem .5rem .5rem 0rem;
+		background: var(--red);
+	}
+}
+
+div.italian.flag {
+	display: flex;
+
+	>div {
+		width: 33.3%;
+		height: 100%;
+	}
+
+	>div:nth-child(1) {
+		border-radius: .5rem 0rem 0rem .5rem;
+		background: var(--mint);
+	}
+
+	>div:nth-child(2) {
+		background: var(--mariana3);
+	}
+
+	>div:nth-child(3) {
+		border-radius: 0rem .5rem .5rem 0rem;
+		background: var(--red);
+	}
+}
+
+div.irish.flag {
+	display: flex;
+
+	>div {
+		width: 33.3%;
+		height: 100%;
+	}
+
+	>div:nth-child(1) {
+		border-radius: .5rem 0rem 0rem .5rem;
+		background: var(--mint);
+	}
+
+	>div:nth-child(2) {
+		background: var(--mariana3);
+	}
+
+	>div:nth-child(3) {
+		border-radius: 0rem .5rem .5rem 0rem;
+		background: var(--orange);
+	}
+}
+
+div.us.flag {
+	display: flex;
+	flex-direction: column;
+
+	>div:first-child {
+		width: 100%;
+		height: 53.8%;
+		display: flex;
+
+		>div:first-child {
+			width: 40%;
+			height: 100%;
+
+			// border-radius: .5rem 0rem 0rem 0rem;
+			background: var(--blue);
+		}
+
+		>div:last-child {
+			width: 60%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+
+			>div {
+				width: 100%;
+				height: 14.3%;
+			}
+
+			// >div:first-child {
+			// 	border-radius: 0rem .5rem 0rem 0rem;
+			// }
+
+			>div:nth-child(odd) {
+				background: var(--red);
+			}
+
+			>div:nth-child(even) {
+				background: var(--mariana3);
+			}
+		}
+	}
+
+	>div:last-child {
+		width: 100%;
+		height: 46.2%;
+		display: flex;
+		flex-direction: column;
+
+		>div {
+			width: 100%;
+			height: 16.6%;
+		}
+
+		>div:nth-child(odd) {
+			background: var(--mariana3);
+		}
+
+		>div:nth-child(even) {
+			background: var(--red);
+		}
+
+		// >div:last-child {
+		// 	border-radius: 0% 0% .5rem .5rem;
+		// }
+	}
+}

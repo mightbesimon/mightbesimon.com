@@ -7,7 +7,7 @@ import NotFound from './NotFound/NotFound';
 import Resume from './Resume/Resume';
 import Teapot from './Teapot/Teapot';
 
-export type HidableRoute = Route & {
+type HidableRoute = Route & {
 	hide?: boolean,
 };
 
