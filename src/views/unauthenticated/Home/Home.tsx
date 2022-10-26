@@ -18,6 +18,7 @@ function Home(): JSX.Element {
 
 	return (
 		<SectionWrapper view='Home' title='SIMON' game>
+
 			<div className='hello flex wrap'>
 				<pre>{greetings.join('\n')}</pre>
 				<div className='right'>
@@ -44,6 +45,7 @@ function Home(): JSX.Element {
 
 			<h2>📊 My Github metrics</h2>
 			<GithubStats data={repoResponse.data} />
+
 		</SectionWrapper>
 	)
 }

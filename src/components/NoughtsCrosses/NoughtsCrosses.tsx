@@ -5,7 +5,7 @@ import Nought from 'assets/NoughtsCrosses/nought.svg';
 import Cross from 'assets/NoughtsCrosses/cross.svg';
 import useRem from 'utils/hooks/useRem';
 
-export enum Mark {
+enum Mark {
 	Empty = '',
 	Nought = 'noughts',
 	Cross = 'crosses',
@@ -26,28 +26,24 @@ function NoughtsCrosses(): JSX.Element {
 	const rem = useRem();
 	const [D] = useState({ rows: 3, cols: 3 });
 
-	const calcRing = (cell: Cell) => {
-		return Math.min(
-			cell.row + 1,
-			cell.col + 1,
-			D.rows - cell.row,
-			D.cols - cell.col
-		);
-	};
+	const calcRing = (cell: Cell) => Math.min(
+		cell.row + 1,
+		cell.col + 1,
+		D.rows - cell.row,
+		D.cols - cell.col
+	);
 
-	const resetTiles = () => {
-		return Array.from(
-			{ length: D.rows }, (_, row) => Array.from(
-				{ length: D.cols }, (_, col) => {
-					return {
-						mark: Mark.Empty,
-						cell: { row, col },
-						ring: calcRing({ row, col }),
-					}
+	const resetTiles = () => Array.from(
+		{ length: D.rows }, (_, row) => Array.from(
+			{ length: D.cols }, (_, col) => {
+				return {
+					mark: Mark.Empty,
+					cell: { row, col },
+					ring: calcRing({ row, col }),
 				}
-			)
+			}
 		)
-	};
+	);
 
 	const resetLines = () => {
 		const rowLines = range(D.rows).map(row => range(D.cols).map(col => { return { row, col } }));
@@ -140,48 +136,40 @@ function NoughtsCrosses(): JSX.Element {
 		<div className='game flex column'>
 			<table className='hashtag'>
 				<tbody>
-					{
-						range(D.rows).map(row =>
-							<tr key={row}>
-								{
-									range(D.cols).map(col =>
-										<td key={col}
-											onClick={cross(row, col)}
-											style={tileSize}
-										>
-											<div>
-												{
-													tiles[row][col].mark === Mark.Nought ?
-														<img alt='' src={Nought} /> :
-														tiles[row][col].mark === Mark.Cross ?
-															<img alt='' src={Cross} /> : null
-												}
-											</div>
-										</td>
-									)
-								}
-							</tr>
-						)
-					}
+					{range(D.rows).map(row =>
+						<tr key={row}>
+							{range(D.cols).map(col =>
+								<td key={col}
+									onClick={cross(row, col)}
+									style={tileSize}
+								>
+									<div>
+										{
+											tiles[row][col].mark === Mark.Nought ?
+												<img alt='' src={Nought} /> :
+												tiles[row][col].mark === Mark.Cross ?
+													<img alt='' src={Cross} /> : null
+										}
+									</div>
+								</td>
+							)}
+						</tr>
+					)}
 				</tbody>
 			</table>
-			{
-				game.over && (
-					<div className='result'>
-						<div className='title'>{game.message}</div>
-						<div className='buttons flex'>
-							<div className='minus' onClick={deltaD({ rows: -1, cols: -1 })}>&ndash;</div>
-							<div className='restart' onClick={restart}>restart</div>
-							<div className='plus' onClick={deltaD({ rows: +1, cols: +1 })}>+</div>
-						</div>
+			{game.over && (
+				<div className='result'>
+					<div className='title'>{game.message}</div>
+					<div className='buttons flex'>
+						<div className='minus' onClick={deltaD({ rows: -1, cols: -1 })}>&ndash;</div>
+						<div className='restart' onClick={restart}>restart</div>
+						<div className='plus' onClick={deltaD({ rows: +1, cols: +1 })}>+</div>
 					</div>
-				)
-			}
-			{
-				(D.rows * D.cols > 0) || (
-					<p>you got too curious and now the game is gone ☹️</p>
-				)
-			}
+				</div>
+			)}
+			{(D.rows * D.cols > 0) || (
+				<p>you got too curious and now the game is gone ☹️</p>
+			)}
 		</div>
 	)
 }
