@@ -16,7 +16,7 @@ function GithubStats({ data }: GithubStatsProps): JSX.Element {
 				url='https://github.com/mightbesimon'
 			/>
 			{
-				data ? (
+				data?.length ? (
 					<div className='engagement flex'>
 						<div>📦 {data.length}</div>
 						<div>⭐️ {data.reduce((sum, repo) => sum + repo.stargazers_count, 0)}</div>

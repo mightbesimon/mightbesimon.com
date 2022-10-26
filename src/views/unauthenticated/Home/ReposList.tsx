@@ -16,7 +16,7 @@ function ReposList({ data }: ReposListProps): JSX.Element {
 	return (
 		<div className='showcase repos flex wrap'>
 			{
-				data ? data
+				data?.length ? data
 					.filter(repo => repositories.map(x => x.repo).includes(repo.name) || engagement(repo) > 2)
 					.sort((a, b) => engagement(a) - engagement(b))
 					.reverse().map(repo => (
