@@ -30,12 +30,13 @@ section.Home {
 
 			>div.flex.wrap {
 				justify-content: center;
+				align-items: center;
 				padding: .25rem;
 				border-radius: .5rem;
 				// background: var(--orange);
 
 				>a.svg.image.link {
-					margin: 0rem .5rem;
+					margin: .25rem .5rem;
 					padding: .25rem;
 					border-radius: .5rem;
 					transition: var(--transition);
@@ -67,6 +68,10 @@ section.Home {
 							filter: drop-shadow(0rem 0rem .3rem yellow);
 						}
 					}
+				}
+
+				>a.sponsor.button {
+					margin: .25rem .5rem;
 				}
 			}
 		}

@@ -1,14 +1,15 @@
 import './Home.scss';
+import Featured from './Featured';
 import GithubStats from './GithubStats';
 import PagesList from './PagesList';
 import ReposList from './ReposList';
 import socials from './Socials';
 import SvgLink from 'components/SvgLink';
 import SectionWrapper from 'components/SectionWrapper/SectionWrapper';
+import SponsorButton from 'components/Sponsor/SponsorButton';
 import greetings from 'data/greetings.json';
 import getRepos from 'utils/api/github/getRepos';
 import { useQuery } from "react-query";
-import Featured from './Featured';
 
 function Home(): JSX.Element {
 	const repoResponse = useQuery(
@@ -30,6 +31,7 @@ function Home(): JSX.Element {
 					</p>
 					<div className='flex wrap'>
 						{socials.map(data => SvgLink(data))}
+						<SponsorButton />
 					</div>
 				</div>
 			</div>
