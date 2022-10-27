@@ -5,8 +5,8 @@ import Resume from './Resume/Resume';
 import LoadingPage from './Showcase/LoadingPage/LoadingPage';
 import NeonPage from './Showcase/NeonPage/NeonPage';
 import FlagsPage from './Showcase/FlagsPage/FlagsPage';
-import NotFound from './NotFound/NotFound';
-import Teapot from './Teapot/Teapot';
+import NotFound from './StatusCodes/NotFound/NotFound';
+import Teapot from './StatusCodes/Teapot/Teapot';
 
 type HidableRoute = Route & {
 	hide?: boolean,
@@ -62,6 +62,10 @@ const unauthenticatedContent: HidableRoute[] = [
 	},
 	{
 		path: '/coffee',
+		element: <Teapot />,
+	},
+	{
+		path: '/teapot',
 		element: <Teapot />,
 	},
 	{
