@@ -1,10 +1,11 @@
 import { Route } from 'react-location';
-import AuthPage from './AuthPage/AuthPage';
 import Home from './Home/Home';
-import LoadingPage from './LoadingPage/LoadingPage';
-import NeonPage from './NeonPage/NeonPage';
-import NotFound from './NotFound/NotFound';
+import AuthPage from './AuthPage/AuthPage';
 import Resume from './Resume/Resume';
+import LoadingPage from './Showcase/LoadingPage/LoadingPage';
+import NeonPage from './Showcase/NeonPage/NeonPage';
+import FlagsPage from './Showcase/FlagsPage/FlagsPage';
+import NotFound from './NotFound/NotFound';
 import Teapot from './Teapot/Teapot';
 
 type HidableRoute = Route & {
@@ -54,6 +55,10 @@ const unauthenticatedContent: HidableRoute[] = [
 	{
 		path: '/neon',
 		element: <NeonPage />,
+	},
+	{
+		path: '/flags',
+		element: <FlagsPage />,
 	},
 	{
 		path: '/coffee',
