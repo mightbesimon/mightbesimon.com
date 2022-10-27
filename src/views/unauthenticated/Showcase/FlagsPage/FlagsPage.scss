@@ -1,0 +1,19 @@
+section.FlagsPage {
+	margin: auto;
+
+	>div {
+		display: flex;
+		justify-content: center;
+
+		>div.flag {
+			margin: 1.5rem;
+			width: 9rem;
+			height: 6rem;
+		}
+
+		>div.us.flag {
+			width: 21rem;
+			height: 11rem;
+		}
+	}
+}

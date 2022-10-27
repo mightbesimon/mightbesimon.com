@@ -1,0 +1,64 @@
+div.covered.button {
+	width: 12rem;
+	height: 8rem;
+	position: relative;
+	perspective: 777px;
+
+	>div.base {
+		width: 100%;
+		height: 100%;
+		border-radius: 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: var(--body);
+		box-shadow: inset 0rem .3rem .8rem 0rem hsla(0, 0%, 0%, 67%);
+	}
+
+	>div.cover {
+		position: absolute;
+		top: 0rem;
+		left: 0rem;
+		width: 100%;
+		height: 100%;
+		border-radius: 1rem;
+		background: hsla(357, 48%, 40%, 100%);
+		opacity: .9;
+		transition: var(--transition5);
+
+		>div {
+			width: 100%;
+			height: 85%;
+			border-radius: 1rem;
+			background: hsla(357, 79%, 65%, 100%);
+			display: flex;
+
+			>div {
+				margin: auto 0rem 0rem 0rem;
+				width: 100%;
+				height: 80%;
+				border-radius: 1rem;
+				font-size: 2rem;
+				text-align: center;
+			}
+		}
+	}
+
+	&:hover {
+		>div.cover {
+			transform: translateY(-100%) rotateX(.5turn);
+			transform-style: preserve-3d;
+			background: hsla(357, 79%, 65%, 100%);
+
+			>div {
+				border: 2px solid hsla(357, 80%, 70%, 100%);
+				background: hsla(357, 50%, 50%, 100%);
+
+				>div {
+					padding-top: 1rem;
+					background: hsla(357, 48%, 40%, 100%);
+				}
+			}
+		}
+	}
+}
