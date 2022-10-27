@@ -7,6 +7,7 @@ import NeonPage from './Showcase/NeonPage/NeonPage';
 import FlagsPage from './Showcase/FlagsPage/FlagsPage';
 import NotFound from './StatusCodes/NotFound/NotFound';
 import Teapot from './StatusCodes/Teapot/Teapot';
+import ButtonsPage from './Showcase/ButtonsPage/ButtonsPage';
 
 type HidableRoute = Route & {
 	hide?: boolean,
@@ -59,6 +60,10 @@ const unauthenticatedContent: HidableRoute[] = [
 	{
 		path: '/flags',
 		element: <FlagsPage />,
+	},
+	{
+		path: '/buttons',
+		element: <ButtonsPage />,
 	},
 	{
 		path: '/coffee',

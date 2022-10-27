@@ -1,0 +1,36 @@
+div.button.dimensional {
+	width: 6rem;
+	height: 4rem;
+	padding: .25rem;
+	border-radius: .5rem;
+	background: var(--orange);
+
+	>div {
+		width: 100%;
+		height: 100%;
+		border-radius: .5rem;
+		background: hsla(357, 48%, 40%, 100%);
+		position: relative;
+
+		>div {
+			position: absolute;
+			bottom: .8rem;
+			width: 100%;
+			height: 100%;
+			padding: .5rem;
+			border-radius: .5rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			color: var(--mariana0);
+			background: hsla(357, 79%, 65%, 100%);
+			cursor: pointer;
+
+			&:active {
+				bottom: .2rem;
+				background: hsla(357, 70%, 60%, 100%);
+			}
+		}
+	}
+}
