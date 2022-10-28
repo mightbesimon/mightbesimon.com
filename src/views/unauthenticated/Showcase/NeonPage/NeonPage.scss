@@ -14,7 +14,9 @@ section.NeonPage {
 
 		&:hover {
 			border: .2rem solid white;
-			box-shadow: 0 0 1rem yellow, inset 0 0 1rem yellow;
+			box-shadow:
+				0 0 1rem yellow,
+				inset 0 0 1rem yellow;
 
 			>p {
 				text-shadow: 0 0 1rem yellow;

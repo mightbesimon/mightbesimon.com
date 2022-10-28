@@ -90,7 +90,9 @@ section.Home {
 			&:hover {
 				--neon-mint: 0 0 .3rem var(--mint0);
 				border: 2px solid var(--mariana3);
-				box-shadow: var(--neon-mint), inset var(--neon-mint);
+				box-shadow:
+					var(--neon-mint),
+					inset var(--neon-mint);
 			}
 
 			* {
