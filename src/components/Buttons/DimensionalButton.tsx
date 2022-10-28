@@ -2,6 +2,7 @@ import './DimensionalButton.scss';
 
 type DimensionalButtonProps = {
 	children?: JSX.Element | JSX.Element[] | string,
+	onClick?: () => void,
 	width?: string,
 	height?: string,
 	borderRadius?: {
@@ -17,8 +18,8 @@ type DimensionalButtonProps = {
 	},
 };
 
-function DimensionalButton({ children,
-	width, height, borderRadius, colour, font
+function DimensionalButton({ children, onClick,
+	width, height, borderRadius, colour, font,
 }: DimensionalButtonProps): JSX.Element {
 	return (
 		<div className='button dimensional'
@@ -29,11 +30,14 @@ function DimensionalButton({ children,
 			}}
 		>
 			<div style={{ borderRadius: borderRadius?.button, }}>
-				<div style={{
-					borderRadius: borderRadius?.button,
-					fontSize: font?.size,
-					color: font?.colour,
-				}}>
+				<div
+					onClick={onClick}
+					style={{
+						borderRadius: borderRadius?.button,
+						fontSize: font?.size,
+						color: font?.colour,
+					}}
+				>
 					{children}
 				</div>
 			</div>
