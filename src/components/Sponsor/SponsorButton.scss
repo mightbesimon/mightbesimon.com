@@ -29,7 +29,7 @@ div.sponsor.button {
 		width: 100%;
 		height: 100%;
 		border-radius: .5rem;
-		background: hsla(114, 20%, 40%, 100%);
+		background: var(--mint0);
 		position: relative;
 
 		>div {
@@ -44,17 +44,17 @@ div.sponsor.button {
 			align-items: center;
 			text-align: center;
 			color: var(--mariana0);
-			background: hsla(114, 31%, 68%, 100%);
+			background: var(--mint3);
 			cursor: pointer;
 
 			&:hover {
 				bottom: .2rem;
-				background: hsla(114, 30%, 64%, 100%);
+				background: var(--mint2);
 			}
 
 			&:active {
 				bottom: .1rem;
-				background: hsla(114, 24%, 55%, 100%);
+				background: var(--mint2);
 			}
 
 			>span {
