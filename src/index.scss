@@ -124,3 +124,15 @@ pre {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
+.stroke {
+  text-shadow:
+    -1px -1px 0px var(--mariana0),
+    -1px 0px 0px var(--mariana0),
+    -1px 1px 0px var(--mariana0),
+    0px -1px 0px var(--mariana0),
+    0px 1px 0px var(--mariana0),
+    1px -1px 0px var(--mariana0),
+    1px 0px 0px var(--mariana0),
+    1px 1px 0px var(--mariana0);
+}

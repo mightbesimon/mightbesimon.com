@@ -11,7 +11,7 @@ div.toolbar.fixed {
 		border-radius: 25px;
 		// border-bottom: 2px solid var(--mariana0);
 		box-shadow: var(--shadow0);
-		transition: all 50ms ease;
+		transition: all 50ms ease, box-shadow 1s ease;
 		cursor: pointer;
 
 		&:active {
@@ -26,14 +26,11 @@ div.toolbar.fixed {
 		line-height: 50px;
 		text-align: center;
 		background: var(--text);
-		text-shadow:
-			-1px -1px 0px var(--mariana0),
-			-1px 0px 0px var(--mariana0),
-			-1px 1px 0px var(--mariana0),
-			0px -1px 0px var(--mariana0),
-			0px 1px 0px var(--mariana0),
-			1px -1px 0px var(--mariana0),
-			1px 0px 0px var(--mariana0),
-			1px 1px 0px var(--mariana0);
+
+		&:hover {
+			box-shadow:
+				-50px -50px 99px 32px var(--text),
+				var(--shadow0);
+		}
 	}
 }
