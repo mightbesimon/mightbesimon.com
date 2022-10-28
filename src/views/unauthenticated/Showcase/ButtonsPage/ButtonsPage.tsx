@@ -22,12 +22,10 @@ function ButtonsPage(): JSX.Element {
 						topChildren={<span style={{ fontWeight: 'bold' }}>LOCKED</span>}
 						locked isOpen={isOpen} setIsOpen={setIsOpen}
 					>
-						Can't touch this
+						{isOpen ? 'now shut the cover' : `unlock me`}
 					</GlassCover>
-					<GlassCover topChildren={
-						<span style={{ fontSize: '3rem' }}>TEST</span>
-					}>
-						MISSILE TEST
+					<GlassCover topChildren='unlocked'>
+						nothing here
 					</GlassCover>
 					<GlassCover topChildren='⚠️'
 						width='6rem' height='6rem'
