@@ -12,7 +12,7 @@ div.covered.button {
 		justify-content: center;
 		align-items: center;
 		background: var(--body);
-		box-shadow: inset 0rem .3rem .8rem 0rem hsla(0, 0%, 0%, 67%);
+		box-shadow: inset var(--shadow0);
 	}
 
 	>div.cover {

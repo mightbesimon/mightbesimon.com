@@ -10,7 +10,7 @@ div.toolbar.fixed {
 		height: 50px;
 		border-radius: 25px;
 		border-bottom: 2px solid var(--mariana0);
-		box-shadow: .1rem .1rem .8rem 0rem hsla(0, 0%, 0%, 67%);
+		box-shadow: var(--shadow0);
 		transition: all 50ms ease;
 		cursor: pointer;
 
