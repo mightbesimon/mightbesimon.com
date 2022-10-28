@@ -18,12 +18,12 @@ div.german.flag {
 	}
 
 	>div:nth-child(2) {
-		background: var(--red);
+		background: var(--red3);
 	}
 
 	>div:nth-child(3) {
 		border-radius: 0rem 0rem .5rem .5rem;
-		background: var(--orange);
+		background: var(--orange3);
 	}
 }
 
@@ -37,7 +37,7 @@ div.french.flag {
 
 	>div:nth-child(1) {
 		border-radius: .5rem 0rem 0rem .5rem;
-		background: var(--blue);
+		background: var(--blue3);
 	}
 
 	>div:nth-child(2) {
@@ -46,7 +46,7 @@ div.french.flag {
 
 	>div:nth-child(3) {
 		border-radius: 0rem .5rem .5rem 0rem;
-		background: var(--red);
+		background: var(--red3);
 	}
 }
 
@@ -60,7 +60,7 @@ div.italian.flag {
 
 	>div:nth-child(1) {
 		border-radius: .5rem 0rem 0rem .5rem;
-		background: var(--mint);
+		background: var(--mint3);
 	}
 
 	>div:nth-child(2) {
@@ -69,7 +69,7 @@ div.italian.flag {
 
 	>div:nth-child(3) {
 		border-radius: 0rem .5rem .5rem 0rem;
-		background: var(--red);
+		background: var(--red3);
 	}
 }
 
@@ -83,7 +83,7 @@ div.irish.flag {
 
 	>div:nth-child(1) {
 		border-radius: .5rem 0rem 0rem .5rem;
-		background: var(--mint);
+		background: var(--mint3);
 	}
 
 	>div:nth-child(2) {
@@ -92,7 +92,7 @@ div.irish.flag {
 
 	>div:nth-child(3) {
 		border-radius: 0rem .5rem .5rem 0rem;
-		background: var(--orange);
+		background: var(--orange2);
 	}
 }
 
@@ -110,7 +110,7 @@ div.us.flag {
 			height: 100%;
 
 			// border-radius: .5rem 0rem 0rem 0rem;
-			background: var(--blue);
+			background: var(--blue3);
 		}
 
 		>div:last-child {
@@ -129,7 +129,7 @@ div.us.flag {
 			// }
 
 			>div:nth-child(odd) {
-				background: var(--red);
+				background: var(--red3);
 			}
 
 			>div:nth-child(even) {
@@ -154,7 +154,7 @@ div.us.flag {
 		}
 
 		>div:nth-child(even) {
-			background: var(--red);
+			background: var(--red3);
 		}
 
 		// >div:last-child {

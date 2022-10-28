@@ -31,6 +31,8 @@ body.mariana.dark {
 	--main: var(--mariana1);
 	--text: var(--mariana3);
 	--card: var(--mariana2);
+	--mint: var(--mint3);
+	--orange: var(--orange3);
 }
 
 body.mariana.light {
@@ -38,6 +40,6 @@ body.mariana.light {
 	--main: white;
 	--text: var(--mariana0);
 	--card: var(--mariana3);
-	--mint: hsla(114, 25%, 60%, 100%);
-	--orange: hsla(32, 85%, 55%, 100%);
+	--mint: var(--mint1);
+	--orange: var(--orange2);
 }
