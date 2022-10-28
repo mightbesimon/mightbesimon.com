@@ -18,17 +18,15 @@ function Home(): JSX.Element {
 	);
 
 	return (
-		<SectionWrapper view='Home' title='SIMON' game>
+		<SectionWrapper view='Home' title='SIMON' game height='60vh'>
 
 			<div className='hello flex wrap'>
 				<pre>{greetings.join('\n')}</pre>
 				<div className='right'>
 					<h1>Hi, I'm Simon 👋</h1>
-					<p className='flex wrap'>
+					{/* <p className='flex'>
 						<span>Auckland, NZ</span>
-						<span>🛫</span>
-						<span>San Jose, CA</span>
-					</p>
+					</p> */}
 					<div className='flex wrap'>
 						{socials.map(data => SvgLink(data))}
 						<SponsorButton />

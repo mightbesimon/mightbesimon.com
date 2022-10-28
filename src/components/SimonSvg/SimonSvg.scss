@@ -3,6 +3,7 @@ svg.simon {
 
 	>g {
 		>* {
+			cursor: no-drop;
 			transition: var(--transition);
 		}
 

@@ -16,7 +16,7 @@ header {
 		>h1 {
 			color: white;
 			font-weight: 100;
-			filter: drop-shadow(0rem 0rem .5rem yellow);
+			filter: drop-shadow(var(--neon-yellow));
 		}
 	}
 
@@ -27,6 +27,6 @@ header {
 		border: none;
 		color: var(--mariana0);
 		transition: var(--transition);
-		cursor: default;
+		cursor: pointer;
 	}
 }

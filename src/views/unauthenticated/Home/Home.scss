@@ -1,25 +1,22 @@
 section.Home {
+
+	>h2 {
+		margin-top: 4.5rem;
+	}
+
 	>div.hello {
+		// margin: 0rem 0rem;
 		justify-content: center;
 
 		>pre {
 			flex: 1;
-			margin: 1rem 1rem 0rem 1rem;
+			margin: 1rem 2rem;
 		}
 
 		>div.right {
 			flex: 1;
-			margin: 0rem 1rem;
+			margin: 1rem 2rem;
 			min-width: 16rem;
-
-			>h1 {
-				transition: var(--transition);
-
-				// &:hover {
-				// 	color: white;
-				// 	filter: drop-shadow(0rem 0rem .5rem yellow)
-				// }
-			}
 
 			>p {
 				margin: .5rem auto;
@@ -33,7 +30,6 @@ section.Home {
 				align-items: center;
 				padding: .25rem;
 				border-radius: .5rem;
-				// background: var(--orange);
 
 				>a.svg.image.link {
 					margin: .25rem .5rem;
@@ -60,18 +56,14 @@ section.Home {
 						fill: var(--blue)
 					}
 
-					&:hover {
-						// box-shadow: inset 0rem .2rem .5rem .2rem hsla(0, 0%, 0%, 33%);
-
-						&>svg {
-							fill: white !important;
-							filter: drop-shadow(0rem 0rem .3rem yellow);
-						}
+					>svg:hover {
+						fill: white !important;
+						filter: drop-shadow(var(--neon-yellow));
 					}
 				}
 
-				>a.sponsor.button {
-					margin: .25rem .5rem;
+				>div.sponsor.button {
+					margin: .25rem 1rem;
 				}
 			}
 		}
@@ -88,7 +80,7 @@ section.Home {
 			padding: 1rem;
 			max-width: 25rem;
 			border-radius: .5rem;
-			border: 1px solid var(--main);
+			border: 2px solid var(--main);
 			background: var(--card);
 			align-items: flex-start;
 			justify-content: space-between;
@@ -96,9 +88,11 @@ section.Home {
 			text-overflow: ellipsis;
 
 			&:hover {
-				border: 1px solid var(--orange);
-				// background: hsla(32, 100%, 66%, 67%);
-				// box-shadow: var(--shadow-card);
+				--neon-mint: 0 0 .3rem var(--mint0);
+				border: 2px solid var(--mariana3);
+				box-shadow:
+					var(--neon-mint),
+					inset var(--neon-mint);
 			}
 
 			* {
