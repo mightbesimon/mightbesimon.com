@@ -3,34 +3,33 @@ div.toolbar.fixed {
 	right: 25px;
 	bottom: 25px;
 	justify-content: flex-end;
+	align-items: center;
 
 	>* {
 		width: 50px;
 		height: 50px;
 		margin: 8px;
-		border-radius: 25px;
-		// border-bottom: 2px solid var(--mariana0);
+		border-radius: 50%;
+		font-size: 24px;
+		text-align: center;
 		box-shadow: var(--shadow0);
-		transition: all 50ms ease, box-shadow 1s ease;
+		transition: var(--transition);
 		cursor: pointer;
 
+		&:hover {
+			transform: scale(1.1);
+		}
+
 		&:active {
-			border: none;
 			transform: translateY(2px);
 			box-shadow: var(--shadow1);
 		}
 	}
 
 	>div.theme.button {
-		font-size: 24px;
-		line-height: 50px;
-		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		background: var(--text);
-
-		&:hover {
-			box-shadow:
-				-50px -50px 99px 32px var(--text),
-				var(--shadow0);
-		}
 	}
 }

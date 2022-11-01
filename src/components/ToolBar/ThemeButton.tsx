@@ -16,7 +16,7 @@ function ThemeButton() {
 	};
 
 	return (
-		<div className="theme button stroke"
+		<div className="theme button"
 			onClick={onClick}
 		>
 			<div>{theme === ThemeEnum.marianaDark ? '🔦' : '🌛'}</div>
