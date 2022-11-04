@@ -19,7 +19,7 @@ function ThemeButton() {
 		<div className="theme button"
 			onClick={onClick}
 		>
-			<div>{theme === ThemeEnum.marianaDark ? '☀️' : '🌛'}</div>
+			<div>{theme === ThemeEnum.marianaDark ? '🔦' : '🌛'}</div>
 		</div>
 	)
 }

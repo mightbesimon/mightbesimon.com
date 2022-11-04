@@ -2,7 +2,7 @@ import api from "../API";
 
 export type RepositoryRequest = {
 	owner: string,
-}
+};
 
 export type RepositoryResponse = {
 	name: string,
@@ -15,11 +15,11 @@ export type RepositoryResponse = {
 	stargazers_count: number,
 	watchers_count: number,
 	forks_count: number,
-}
+};
 
 async function getRepos(
 	{ owner }: RepositoryRequest
-): Promise<RepositoryResponse[]> {
+): Promise<RepositoryResponse[] | undefined> {
 
 	const response = await fetch(
 		`${api.github}/users/${owner}/repos`,
@@ -31,10 +31,10 @@ async function getRepos(
 
 	if (response.status !== 200) {
 		console.log(response);
-		return [];
+		return;
 	}
 
-	return response.json();
+	return await response.json();
 }
 
 export default getRepos;

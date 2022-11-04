@@ -24,13 +24,13 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v3
-        with:
-          name: build
-          path: .
-      - uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MIGHTBESIMON_ROOT }}
-          channelId: development
-          projectId: ${{ env.PROJECT_ID }}
+    - uses: actions/download-artifact@v3
+      with:
+        name: build
+        path: .
+    - uses: FirebaseExtended/action-hosting-deploy@v0
+      with:
+        repoToken: ${{ secrets.GITHUB_TOKEN }}
+        firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MIGHTBESIMON_ROOT }}
+        channelId: development
+        projectId: ${{ env.PROJECT_ID }}
