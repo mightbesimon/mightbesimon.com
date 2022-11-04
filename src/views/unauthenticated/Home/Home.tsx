@@ -9,12 +9,18 @@ import SectionWrapper from 'components/SectionWrapper/SectionWrapper';
 import SponsorButton from 'components/Sponsor/SponsorButton';
 import greetings from 'data/greetings.json';
 import getRepos from 'utils/api/github/getRepos';
+import getExtension from 'utils/api/vscode/getExtension';
 import { useQuery } from "react-query";
 
 function Home(): JSX.Element {
 	const repoResponse = useQuery(
-		'getRepo',
+		'getRepos',
 		() => getRepos({ owner: 'mightbesimon' })
+	);
+
+	const extensionResponse = useQuery(
+		'getExtension',
+		() => getExtension({ extensionId: 'mightbesimon.emoji-icons' })
 	);
 
 	return (
@@ -24,9 +30,7 @@ function Home(): JSX.Element {
 				<pre>{greetings.join('\n')}</pre>
 				<div className='right'>
 					<h1>Hi, I'm Simon 👋</h1>
-					{/* <p className='flex'>
-						<span>Auckland, NZ</span>
-					</p> */}
+					<p>Auckland, NZ</p>
 					<div className='flex wrap'>
 						{socials.map(data => SvgLink(data))}
 						<SponsorButton />
@@ -35,7 +39,7 @@ function Home(): JSX.Element {
 			</div>
 
 			<h2>✨ Featured</h2>
-			<Featured />
+			<Featured data={extensionResponse.data} />
 
 			<h2>📦 My repositories to check out</h2>
 			<ReposList data={repoResponse.data} />
