@@ -3,7 +3,7 @@ import EllipsisLoader from 'components/Loader/EllipsisLoader';
 import { RepositoryResponse } from 'utils/api/github/getRepos';
 
 type ReposListProps = {
-	data: RepositoryResponse[] | undefined
+	data: RepositoryResponse[] | undefined,
 };
 
 function ReposList({ data }: ReposListProps): JSX.Element {

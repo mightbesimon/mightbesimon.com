@@ -4,7 +4,7 @@ import EllipsisLoader from 'components/Loader/EllipsisLoader';
 import { RepositoryResponse } from 'utils/api/github/getRepos';
 
 type GithubStatsProps = {
-	data: RepositoryResponse[] | undefined
+	data: RepositoryResponse[] | undefined,
 };
 
 function GithubStats({ data }: GithubStatsProps): JSX.Element {
