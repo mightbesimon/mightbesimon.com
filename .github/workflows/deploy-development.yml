@@ -13,15 +13,18 @@ env:
 
 jobs:
   test:
+    name: test 🧪
     if: ${{ inputs.test }}
     uses: ./.github/workflows/test.yml
 
   build:
     # needs: test
+    name: build 🔧
     uses: ./.github/workflows/build.yml
 
   deploy-firebase:
     needs: build
+    name: deploy firebase 🔥
     runs-on: ubuntu-latest
     steps:
     - uses: actions/download-artifact@v3

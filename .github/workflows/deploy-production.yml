@@ -13,14 +13,17 @@ env:
 
 jobs:
   # test:
+  #   name: test 🧪
   #   uses: ./.github/workflows/test.yml
 
   build:
     # needs: test
+    name: build 🔧
     uses: ./.github/workflows/build.yml
 
   deploy-pages:
     needs: build
+    name: deploy pages 📑
     concurrency: deploy-pages
     runs-on: ubuntu-latest
     steps:
@@ -38,6 +41,7 @@ jobs:
 
   deploy-firebase:
     needs: build
+    name: deploy firebase 🔥
     concurrency: deploy-firebase
     runs-on: ubuntu-latest
     steps:
