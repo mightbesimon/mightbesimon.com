@@ -15,7 +15,7 @@ const ContentRouter = () => {
 
 	const AuthCheck = ({ authenticationRequired }: AuthCheckProps) => {
 		return !authenticationRequired || authenticated ?
-			<Outlet /> : <Navigate to='/auth' replace={true} />
+			<Outlet /> : <Navigate to='/auth' replace={true} />;
 	};
 
 	return (

@@ -13,7 +13,7 @@ function SvgLink({ name, svg: Svg, url, newTab }: SvgLinkProps) {
 		>
 			<Svg />
 		</a>
-	)
+	);
 }
 
 export default SvgLink;

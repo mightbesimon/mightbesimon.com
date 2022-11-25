@@ -13,7 +13,7 @@ function ImageLink({ name, image, url, newTab }: ImageLinkProps) {
 		>
 			<img alt={name} src={image} />
 		</a>
-	)
+	);
 }
 
 export default ImageLink;

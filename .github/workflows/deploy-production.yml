@@ -31,6 +31,9 @@ jobs:
       with:
         name: build
         path: .
+    - run: |
+        mkdir build/.github
+        echo 'github: mightbesimon' > build/.github/FUNDING.yml
     - uses: JamesIves/github-pages-deploy-action@v4
       with:
         repository-name: ${{ env.PAGES_REPO }}

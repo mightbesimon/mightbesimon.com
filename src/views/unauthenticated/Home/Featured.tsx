@@ -5,7 +5,8 @@ type FeaturedProps = {
 	data: ExtensionResponse | undefined,
 };
 
-function Featured({ data: extensionData }: FeaturedProps): JSX.Element {
+function Featured({ data: extensionData }: FeaturedProps): JSX.Element
+{
 	const downloads = extensionData?.statistics
 		.filter(x => x.statisticName === 'install')[0]?.value;
 
@@ -22,7 +23,11 @@ function Featured({ data: extensionData }: FeaturedProps): JSX.Element {
 							{data.description?.replace('##downloads##', repr)}
 						</div>
 					</div>
-					{data.badge && <img alt='badge' src={data.badge} />}
+					<div className='badges flex'>
+						{data.badges && data.badges.map(badge =>
+							<img alt='badge' src={badge} />
+						)}
+					</div>
 				</a>
 			))}
 		</div>

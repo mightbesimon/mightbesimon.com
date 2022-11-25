@@ -3,7 +3,7 @@ export enum ResumeSectionEnum {
 	Summary = 'summary',
 	WorkExperience = 'work-experience',
 
-};
+}
 
 export type ResumeSectionType = {
 	title: string,

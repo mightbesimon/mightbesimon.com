@@ -1,4 +1,4 @@
-import './LoadingPage.scss'
+import './LoadingPage.scss';
 import EllipsisLoader from 'components/Loader/EllipsisLoader';
 import SectionWrapper from 'components/SectionWrapper/SectionWrapper';
 
@@ -34,7 +34,7 @@ function LoadingPage() {
 				<EllipsisLoader text='🍆' />
 			</div>
 		</SectionWrapper>
-	)
+	);
 }
 
 export default LoadingPage;

@@ -16,13 +16,13 @@ function Header({ title, image, neon: defaultNeon, height }: HeaderProps) {
 
 	return (
 		<header className={neon ? 'neon flex wrap' : 'flex wrap'}
-			onClick={() => { setNeon(!neon) }}
+			onClick={() => { setNeon(!neon); }}
 			style={{ height }}
 		>
 			{image}
 			<h1>{title}</h1>
 		</header>
-	)
+	);
 }
 
 export default Header;

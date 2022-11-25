@@ -10,6 +10,6 @@ function ToolBar({ children }: ToolBarProps) {
 			{children}
 		</div>
 	);
-};
+}
 
 export default ToolBar;

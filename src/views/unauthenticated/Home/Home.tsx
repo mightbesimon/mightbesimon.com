@@ -51,7 +51,7 @@ function Home(): JSX.Element {
 			<GithubStats data={repoResponse.data} />
 
 		</SectionWrapper>
-	)
+	);
 }
 
 export default Home;

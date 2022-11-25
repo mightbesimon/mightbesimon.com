@@ -1,4 +1,4 @@
-import './SectionWrapper.scss'
+import './SectionWrapper.scss';
 import Footer from 'components/Footer/Footer';
 import Header from 'components/Header/Header';
 import NoughtsCrosses from 'components/NoughtsCrosses/NoughtsCrosses';
@@ -13,7 +13,7 @@ type SectionWrapperProps = {
 	neon?: boolean,
 	game?: boolean,
 	height?: string,
-}
+};
 
 function SectionWrapper({ children, view, title, neon, game, height }: SectionWrapperProps) {
 	return (
@@ -29,7 +29,7 @@ function SectionWrapper({ children, view, title, neon, game, height }: SectionWr
 				<ThemeButton />
 			</ToolBar>
 		</>
-	)
+	);
 }
 
 export default SectionWrapper;

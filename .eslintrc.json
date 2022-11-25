@@ -1,0 +1,25 @@
+{
+	"root": true,
+	"extends": [
+		"react-app",
+		"react-app/jest"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module"
+	},
+	"ignorePatterns": [
+		"out",
+		"dist",
+		"**/*.d.ts"
+	],
+	"rules": {
+		"@typescript-eslint/no-unused-vars": "warn",
+		"@typescript-eslint/no-extra-semi": "warn",
+		"@typescript-eslint/semi": "warn",
+		"eqeqeq": "error",
+		"semi-spacing": "warn",
+		"semi-style": "warn"
+	}
+}
