@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "mightbesimon-root",
+    "site": "mightbesimon",
     "public": "build",
     "ignore": [
       "firebase.json",

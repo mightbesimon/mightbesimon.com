@@ -1,8 +1,9 @@
 import './ResumeNav.scss';
-import Github from 'assets/Contacts/github.svg';
-import LinkedIn from 'assets/Contacts/linkedin.svg';
+import Github from 'assets/Socials/github.svg';
+import LinkedIn from 'assets/Socials/linkedin.svg';
 
-function ResumeNav() {
+function ResumeNav()
+{
 	return (
 		<nav>
 			<div className='sticky'>

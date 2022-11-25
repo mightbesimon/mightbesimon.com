@@ -7,20 +7,23 @@ on:
       - main
 
 env:
-  PROJECT_ID: mightbesimon-root
+  PROJECT_ID: mightbesimon
   PAGES_REPO: mightbesimon/mightbesimon.github.io
   PAGES_BRANCH: main
 
 jobs:
   # test:
+  #   name: test 🧪
   #   uses: ./.github/workflows/test.yml
 
   build:
     # needs: test
+    name: build 🔧
     uses: ./.github/workflows/build.yml
 
   deploy-pages:
     needs: build
+    name: deploy pages 📑
     concurrency: deploy-pages
     runs-on: ubuntu-latest
     steps:
@@ -38,6 +41,7 @@ jobs:
 
   deploy-firebase:
     needs: build
+    name: deploy firebase 🔥
     concurrency: deploy-firebase
     runs-on: ubuntu-latest
     steps:
@@ -48,6 +52,6 @@ jobs:
     - uses: FirebaseExtended/action-hosting-deploy@v0
       with:
         repoToken: ${{ secrets.GITHUB_TOKEN }}
-        firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MIGHTBESIMON_ROOT }}
+        firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MIGHTBESIMON }}
         channelId: live
         projectId: ${{ env.PROJECT_ID }}

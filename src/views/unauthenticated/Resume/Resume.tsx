@@ -1,25 +1,31 @@
 import './Resume.scss'
 import ResumeNav from './ResumeNav';
-import Github from 'assets/Contacts/github.svg';
-import LinkedIn from 'assets/Contacts/linkedin.svg';
+import Github from 'assets/Socials/github.svg';
+import LinkedIn from 'assets/Socials/linkedin.svg';
 import ToolBar from 'components/ToolBar/ToolBar';
 import { useEffect } from 'react';
 import ThemeButton from 'components/ToolBar/ThemeButton';
 
-function Resume() {
+function Resume()
+{
 
-	const observer = new IntersectionObserver(elements => {
-		elements.forEach(element => {
+	const observer = new IntersectionObserver(elements =>
+	{
+		elements.forEach(element =>
+		{
 			const id = element.target.getAttribute('id');
-			if (element.intersectionRatio > 0) {
+			if (element.intersectionRatio > 0)
+			{
 				document.querySelector(`nav div>a[href="#${id}"]`)?.parentElement?.classList.add('active');
-			} else {
+			} else
+			{
 				document.querySelector(`nav a[href="#${id}"]`)?.parentElement?.classList.remove('active');
 			}
 		});
 	});
 
-	useEffect(() => {
+	useEffect(() =>
+	{
 		document.querySelectorAll('*[id]').forEach(
 			(element) => { observer.observe(element) }
 		);
