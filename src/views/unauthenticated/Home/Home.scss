@@ -114,8 +114,12 @@ section.Home {
 				}
 			}
 
-			>img {
+			>div.badges {
 				margin: 1rem 0rem 0rem 0rem;
+
+				>img {
+					margin: 0rem .25rem;
+				}
 			}
 
 			>div.engagement {
