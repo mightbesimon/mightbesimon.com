@@ -1,0 +1,22 @@
+{
+	"root": true,
+	"extends": [
+		"react-app",
+		"react-app/jest"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module"
+	},
+	"ignorePatterns": [
+		"out",
+		"dist",
+		"**/*.d.ts"
+	],
+	"rules": {
+		"eqeqeq": "warn",
+		"no-unused-vars": "warn",
+		"semi": "warn"
+	}
+}
