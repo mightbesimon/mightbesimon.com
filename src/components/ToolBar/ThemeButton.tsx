@@ -21,7 +21,7 @@ function ThemeButton() {
 		>
 			<div>{theme === ThemeEnum.marianaDark ? '🔦' : '🌛'}</div>
 		</div>
-	)
+	);
 }
 
 export default ThemeButton;

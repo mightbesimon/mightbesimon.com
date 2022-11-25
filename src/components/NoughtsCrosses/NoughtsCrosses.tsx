@@ -9,7 +9,7 @@ enum Mark {
 	Empty = '',
 	Nought = 'noughts',
 	Cross = 'crosses',
-};
+}
 
 type Tile = {
 	mark: Mark,
@@ -40,17 +40,17 @@ function NoughtsCrosses(): JSX.Element {
 					mark: Mark.Empty,
 					cell: { row, col },
 					ring: calcRing({ row, col }),
-				}
+				};
 			}
 		)
 	);
 
 	const resetLines = () => {
-		const rowLines = range(D.rows).map(row => range(D.cols).map(col => { return { row, col } }));
-		const colLines = range(D.cols).map(col => range(D.rows).map(row => { return { row, col } }));
+		const rowLines = range(D.rows).map(row => range(D.cols).map(col => { return { row, col }; }));
+		const colLines = range(D.cols).map(col => range(D.rows).map(row => { return { row, col }; }));
 		const diagonalLines = D.rows !== D.cols ? [] : [
-			range(D.rows).map(rc => { return { row: rc, col: rc } }),
-			range(D.rows).map(rc => { return { row: rc, col: D.rows - rc - 1 } })
+			range(D.rows).map(rc => { return { row: rc, col: rc }; }),
+			range(D.rows).map(rc => { return { row: rc, col: D.rows - rc - 1 }; })
 		];
 		return rowLines.concat(colLines)
 			.concat(diagonalLines);
@@ -59,7 +59,7 @@ function NoughtsCrosses(): JSX.Element {
 	const resetTileSize = () => {
 		const size = Math.min(4 * rem, window.innerWidth / D.rows);
 		return { width: size, height: size };
-	}
+	};
 
 	const [tiles, setTiles] = useState<Tile[][]>(resetTiles());
 	const [lines, setLines] = useState<Cell[][]>(resetLines());
@@ -171,7 +171,7 @@ function NoughtsCrosses(): JSX.Element {
 				<p>you got too curious and now the game is gone ☹️</p>
 			)}
 		</div>
-	)
+	);
 }
 
 export default NoughtsCrosses;

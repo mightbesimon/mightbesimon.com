@@ -4,7 +4,7 @@ export function GithubSponsorButton(): JSX.Element {
 		title="Sponsor mightbesimon"
 		height="35" width="116"
 		style={{ border: 0 }}
-	/>
+	/>;
 }
 
 export function GithubSponsorCard(): JSX.Element {
@@ -13,5 +13,5 @@ export function GithubSponsorCard(): JSX.Element {
 		title="Sponsor mightbesimon"
 		height="225" width="600"
 		style={{ border: 0 }}
-	/>
+	/>;
 }

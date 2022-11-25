@@ -16,7 +16,7 @@ function NeonPage() {
 				<LogoOff className='three' />
 			</div>
 		</SectionWrapper>
-	)
+	);
 }
 
 export default NeonPage;

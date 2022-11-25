@@ -12,7 +12,7 @@ function Footer() {
 				Copyright © 2022 <a href='https://mightbesimon.com'>mightbesimon.com</a>
 			</div>
 		</footer>
-	)
+	);
 }
 
 export default Footer;

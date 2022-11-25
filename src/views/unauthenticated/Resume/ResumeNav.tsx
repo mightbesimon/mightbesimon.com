@@ -136,7 +136,7 @@ function ResumeNav()
 				</div>
 			</div>
 		</nav>
-	)
+	);
 }
 
 export default ResumeNav;

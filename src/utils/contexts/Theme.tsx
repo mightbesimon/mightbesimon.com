@@ -3,7 +3,7 @@ import { createContext, useEffect, useState } from 'react';
 export enum ThemeEnum {
 	marianaDark = 'mariana dark',
 	marianaLight = 'mariana light',
-};
+}
 
 type ThemeContextType = {
 	theme: ThemeEnum,
@@ -36,7 +36,7 @@ export function ThemeProvider(props: ThemeProviderProps) {
 		localStorage.setItem('theme', newTheme);
 	};
 
-	useEffect(() => { changeTheme(theme) });
+	useEffect(() => { changeTheme(theme); });
 
 	return (
 		<ThemeContext.Provider
@@ -48,4 +48,4 @@ export function ThemeProvider(props: ThemeProviderProps) {
 			{props.children}
 		</ThemeContext.Provider>
 	);
-};
+}

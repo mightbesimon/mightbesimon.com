@@ -15,8 +15,11 @@
 		"**/*.d.ts"
 	],
 	"rules": {
-		"eqeqeq": "warn",
-		"no-unused-vars": "warn",
-		"semi": "warn"
+		"@typescript-eslint/no-unused-vars": "warn",
+		"@typescript-eslint/no-extra-semi": "warn",
+		"@typescript-eslint/semi": "warn",
+		"eqeqeq": "error",
+		"semi-spacing": "warn",
+		"semi-style": "warn"
 	}
 }

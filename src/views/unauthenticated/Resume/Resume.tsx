@@ -1,4 +1,4 @@
-import './Resume.scss'
+import './Resume.scss';
 import ResumeNav from './ResumeNav';
 import Github from 'assets/Socials/github.svg';
 import LinkedIn from 'assets/Socials/linkedin.svg';
@@ -27,7 +27,7 @@ function Resume()
 	useEffect(() =>
 	{
 		document.querySelectorAll('*[id]').forEach(
-			(element) => { observer.observe(element) }
+			(element) => { observer.observe(element); }
 		);
 	});
 
@@ -325,7 +325,7 @@ function Resume()
 			</section>
 
 		</section >
-	)
+	);
 }
 
 export default Resume;
