@@ -1,6 +1,6 @@
-import { ReactComponent as Instagram } from 'assets/Contacts/instagram.svg';
-import { ReactComponent as Github } from 'assets/Contacts/github.svg';
-import { ReactComponent as LinkedIn } from 'assets/Contacts/linkedin.svg';
+import { ReactComponent as Instagram } from 'assets/Socials/instagram.svg';
+import { ReactComponent as Github } from 'assets/Socials/github.svg';
+import { ReactComponent as LinkedIn } from 'assets/Socials/linkedin.svg';
 import { SvgLinkProps } from 'components/SvgLink';
 
 const socials: SvgLinkProps[] = [
