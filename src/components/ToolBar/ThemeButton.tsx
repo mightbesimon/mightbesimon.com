@@ -1,3 +1,4 @@
+import FloatingButton from 'components/Buttons/FloatingButton';
 import { useContext } from "react";
 import { ThemeContext, ThemeEnum } from "utils/contexts/Theme";
 
@@ -20,11 +21,12 @@ function ThemeButton()
 	};
 
 	return (
-		<div className="theme button"
+		<FloatingButton className="theme"
 			onClick={onClick}
+			colour={'var(--text)'}
 		>
-			<div>{theme === ThemeEnum.marianaDark ? '🔦' : '🌛'}</div>
-		</div>
+			{theme === ThemeEnum.marianaDark ? '🔦' : '🌛'}
+		</FloatingButton>
 	);
 }
 

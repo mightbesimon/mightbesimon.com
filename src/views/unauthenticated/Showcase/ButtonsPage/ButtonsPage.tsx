@@ -3,6 +3,7 @@ import GlassCover from 'components/Buttons/GlassCover';
 import DimensionalButton from 'components/Buttons/DimensionalButton';
 import SectionWrapper from 'components/SectionWrapper/SectionWrapper';
 import { useState } from 'react';
+import FloatingButton from 'components/Buttons/FloatingButton';
 
 function ButtonsPage(): JSX.Element
 {
@@ -11,7 +12,8 @@ function ButtonsPage(): JSX.Element
 	return (
 		<SectionWrapper view='ButtonsPage'>
 			<div className='flex column'>
-				<div>
+				<div className='flex wrap'>
+					<FloatingButton>🛟</FloatingButton>
 					<div style={{
 						borderRadius: '10%',
 						padding: '.2rem',
