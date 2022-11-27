@@ -25,7 +25,7 @@ function Featured({ data: extensionData }: FeaturedProps): JSX.Element
 					</div>
 					<div className='badges flex'>
 						{data.badges && data.badges.map(badge =>
-							<img alt='badge' src={badge} />
+							<img key={badge} alt='badge' src={badge} />
 						)}
 					</div>
 				</a>

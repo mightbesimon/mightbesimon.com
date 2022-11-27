@@ -12,15 +12,18 @@ import getRepos from 'utils/api/github/getRepos';
 import getExtension from 'utils/api/vscode/getExtension';
 import { useQuery } from "react-query";
 
-function Home(): JSX.Element {
+function Home(): JSX.Element
+{
 	const repoResponse = useQuery(
 		'getRepos',
-		() => getRepos({ owner: 'mightbesimon' })
+		() => getRepos({ owner: 'mightbesimon' }),
+		{ staleTime: 300000 }
 	);
 
 	const extensionResponse = useQuery(
 		'getExtension',
-		() => getExtension({ extensionId: 'mightbesimon.emoji-icons' })
+		() => getExtension({ extensionId: 'mightbesimon.emoji-icons' }),
+		{ staleTime: 300000 }
 	);
 
 	return (

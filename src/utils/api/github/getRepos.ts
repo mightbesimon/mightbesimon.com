@@ -13,14 +13,13 @@ export type RepositoryResponse = {
 	updated_at: Date,
 	pushed_at: Date,
 	stargazers_count: number,
-	watchers_count: number,
 	forks_count: number,
 };
 
 async function getRepos(
 	{ owner }: RepositoryRequest
-): Promise<RepositoryResponse[] | undefined> {
-
+): Promise<RepositoryResponse[] | undefined>
+{
 	const response = await fetch(
 		`${api.github}/users/${owner}/repos`,
 		{
@@ -29,7 +28,13 @@ async function getRepos(
 		}
 	);
 
-	if (response.status !== 200) {
+	console.log(
+		'github ratelimit remaning',
+		response.headers.get('x-ratelimit-remaining'),
+	);
+
+	if (response.status !== 200)
+	{
 		console.log(response);
 		return;
 	}

@@ -7,7 +7,8 @@ type GithubStatsProps = {
 	data: RepositoryResponse[] | undefined,
 };
 
-function GithubStats({ data }: GithubStatsProps): JSX.Element {
+function GithubStats({ data }: GithubStatsProps): JSX.Element
+{
 	return (
 		<div className='stats'>
 			<ImageLink
@@ -20,7 +21,6 @@ function GithubStats({ data }: GithubStatsProps): JSX.Element {
 					<div className='engagement flex'>
 						<div>📦 {data.length}</div>
 						<div>⭐️ {data.reduce((sum, repo) => sum + repo.stargazers_count, 0)}</div>
-						<div>👀 {data.reduce((sum, repo) => sum + repo.watchers_count, 0)}</div>
 						<div>🍴 {data.reduce((sum, repo) => sum + repo.forks_count, 0)}</div>
 					</div>
 				) : <EllipsisLoader text='📊' />

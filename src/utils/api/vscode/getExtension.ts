@@ -58,7 +58,8 @@ type VscodeApiResponse = {
 
 async function getExtension(
 	{ extensionId }: ExtensionRequest
-): Promise<ExtensionResponse | undefined> {
+): Promise<ExtensionResponse | undefined>
+{
 
 	const response = await fetch(
 		`${api.vscode}`,
@@ -75,7 +76,7 @@ async function getExtension(
 							{
 								filterType: 7,
 								value: extensionId,
-							}
+							},
 						],
 					},
 				],
@@ -87,11 +88,12 @@ async function getExtension(
 				// https://github.com/microsoft/vscode/blob/main/src/vs/platform/extensionManagement/common/extensionGalleryService.ts
 				// This flag value is 0x192.
 				flags: 402,
-			})
+			}),
 		}
 	);
 
-	if (response.status !== 200) {
+	if (response.status !== 200)
+	{
 		console.log(response);
 		return;
 	}
