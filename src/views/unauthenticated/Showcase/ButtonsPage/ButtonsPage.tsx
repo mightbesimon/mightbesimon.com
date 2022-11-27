@@ -3,7 +3,6 @@ import GlassCover from 'components/Buttons/GlassCover';
 import DimensionalButton from 'components/Buttons/DimensionalButton';
 import SectionWrapper from 'components/SectionWrapper/SectionWrapper';
 import { useState } from 'react';
-import SponsorButton from 'components/Sponsor/SponsorButton';
 
 function ButtonsPage(): JSX.Element
 {
@@ -14,13 +13,14 @@ function ButtonsPage(): JSX.Element
 			<div className='flex column'>
 				<div>
 					<div style={{
-						width: '3rem', height: '1.9rem', borderRadius: '10%',
-						padding: '.2rem', background: 'var(--orange)',
+						borderRadius: '10%',
+						padding: '.2rem',
+						background: 'var(--orange)',
 					}}>
 						<DimensionalButton
 							onClick={() => setIsOpen(false)}
 						>
-							?
+							? click me last ?
 						</DimensionalButton>
 					</div>
 				</div>
@@ -51,14 +51,6 @@ function ButtonsPage(): JSX.Element
 							</DimensionalButton>
 						</div>
 					</GlassCover>
-				</div>
-				<div className='flex'>
-					<SponsorButton />
-					<DimensionalButton width='8rem' height='2rem'>
-						<span style={{ font: 'normal 1rem monospace', lineHeight: '1.5rem' }}>
-							Sponsor
-						</span>
-					</DimensionalButton>
 				</div>
 			</div>
 		</SectionWrapper >

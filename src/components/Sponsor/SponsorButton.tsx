@@ -6,7 +6,7 @@ function SponsorButton(): JSX.Element
 	return (
 		<a className='sponsor button' href='https://github.com/sponsors/mightbesimon'>
 			<DimensionalButton
-				width='8rem' height='2rem'
+				height='2rem'
 			>
 				<>
 					<span className='stroke'>👉</span>
