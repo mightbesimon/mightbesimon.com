@@ -1,4 +1,4 @@
-name: 👨‍🚀 production
+name: production 👨‍🚀
 
 on:
   workflow_dispatch:

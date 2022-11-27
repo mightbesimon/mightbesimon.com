@@ -1,4 +1,4 @@
-name: 🔧 build
+name: build 🔧
 
 on:
   workflow_call:
