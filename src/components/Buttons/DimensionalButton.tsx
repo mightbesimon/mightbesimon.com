@@ -20,7 +20,8 @@ type DimensionalButtonProps = {
 
 function DimensionalButton({ children, onClick,
 	width, height, borderRadius, colour, font,
-}: DimensionalButtonProps): JSX.Element {
+}: DimensionalButtonProps): JSX.Element
+{
 	return (
 		<div className='button dimensional'
 			style={{
@@ -29,7 +30,7 @@ function DimensionalButton({ children, onClick,
 				background: colour?.base,
 			}}
 		>
-			<div style={{ borderRadius: borderRadius?.button, }}>
+			<div style={{ borderRadius: borderRadius?.button }}>
 				<div
 					onClick={onClick}
 					style={{

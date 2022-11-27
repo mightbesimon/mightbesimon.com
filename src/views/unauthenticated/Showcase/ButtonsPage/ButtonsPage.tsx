@@ -4,7 +4,8 @@ import DimensionalButton from 'components/Buttons/DimensionalButton';
 import SectionWrapper from 'components/SectionWrapper/SectionWrapper';
 import { useState } from 'react';
 
-function ButtonsPage(): JSX.Element {
+function ButtonsPage(): JSX.Element
+{
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
