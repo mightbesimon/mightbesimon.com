@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from 'react';
 
-export enum ThemeEnum {
+export enum ThemeEnum
+{
 	marianaDark = 'mariana dark',
 	marianaLight = 'mariana light',
 }
@@ -21,8 +22,10 @@ export const ThemeContext = createContext<ThemeContextType>(
 	}
 );
 
-export function ThemeProvider(props: ThemeProviderProps) {
-	const tryGetTheme = () => {
+export function ThemeProvider(props: ThemeProviderProps)
+{
+	const tryGetTheme = () =>
+	{
 		const storedTheme = localStorage.getItem('theme');
 		return storedTheme && storedTheme === ThemeEnum.marianaLight ?
 			ThemeEnum.marianaLight : ThemeEnum.marianaDark;
@@ -30,10 +33,22 @@ export function ThemeProvider(props: ThemeProviderProps) {
 
 	const [theme, setTheme] = useState<ThemeEnum>(tryGetTheme());
 
-	const changeTheme = (newTheme: ThemeEnum) => {
-		setTheme(newTheme);
-		document.body.className = newTheme;
+	const changeTheme = (newTheme: ThemeEnum) =>
+	{
+		const colour = newTheme === ThemeEnum.marianaLight ?
+			'hsla(219, 28%, 88%, 100%)' :
+			'hsla(215, 15%, 16%, 100%)';
+
+		document.body
+			.setAttribute('class', newTheme);
+
+		document.head
+			.querySelector(`meta[name='theme-color']`)
+			?.setAttribute('content', colour);
+
 		localStorage.setItem('theme', newTheme);
+
+		setTheme(newTheme);
 	};
 
 	useEffect(() => { changeTheme(theme); });
