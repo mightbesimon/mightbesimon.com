@@ -1,4 +1,4 @@
-name: test
+name: 🧪 test
 
 on:
   workflow_call:
@@ -8,6 +8,7 @@ env:
 
 jobs:
   test:
+    name: 🧪
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
