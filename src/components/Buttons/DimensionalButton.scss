@@ -1,41 +1,49 @@
 div.button.dimensional {
-	width: 5rem;
-	height: 4rem;
-	padding: .25rem;
-	border-radius: .5rem;
-	background: var(--orange);
-	user-select: none;
+	min-width: 2rem;
+	min-height: 1.5rem;
+	border-radius: 1rem 1rem .5rem .5rem;
+	background: var(--red0);
+	position: relative;
 
 	>div {
+		position: absolute;
+		bottom: min(1rem, 25%);
 		width: 100%;
 		height: 100%;
+		padding: .5rem;
 		border-radius: .5rem;
-		background: var(--red0);
-		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		color: var(--mariana0);
+		background: var(--red3);
+		cursor: pointer;
 
-		>div {
-			position: absolute;
-			bottom: 16.7%;
-			width: 100%;
-			height: 100%;
-			padding: .5rem;
-			border-radius: .5rem;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			text-align: center;
-			color: var(--mariana0);
-			background: var(--red3);
-			cursor: pointer;
-
-			&:hover {
-				bottom: 13.3%;
-			}
-
-			&:active {
-				bottom: 5%;
-				background: var(--red2);
-			}
+		&:hover {
+			bottom: min(.8rem, 20%);
+			filter: brightness(1.1);
 		}
+
+		&:active {
+			bottom: min(.8rem, 10%);
+			filter: brightness(.9);
+		}
+	}
+}
+
+div.button.dimensional.red {
+	background: var(--red0);
+
+	>div {
+		background: var(--red3);
+	}
+}
+
+div.button.dimensional.mint {
+	background: var(--mint0);
+
+	>div {
+		background: var(--mint3);
 	}
 }
