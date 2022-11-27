@@ -32,7 +32,7 @@ function Home(): JSX.Element
 			<div className='hello flex wrap'>
 				<pre>{greetings.join('\n')}</pre>
 				<div className='right'>
-					<h1>Hi, I'm Simon 👋</h1>
+					<h1>Hi, I'm Simon</h1>
 					<p>Auckland, NZ</p>
 					<div className='flex wrap'>
 						{socials.map(data => SvgLink(data))}

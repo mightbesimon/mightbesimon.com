@@ -47,22 +47,13 @@ div.game {
 		}
 
 		>div.buttons {
-			margin: .5rem 0rem 0rem 0rem;
+			margin: 1rem 0rem 0rem 0rem;
 
 			>div {
 				flex: 1;
-				padding: .5rem;
 				font-size: 1.1rem;
 				text-align: center;
 				color: var(--mariana0);
-				transition: var(--transition);
-
-				&:hover {
-					cursor: pointer;
-					padding: .6rem .5rem .4rem .5rem;
-					opacity: 90%;
-					box-shadow: inset var(--shadow1);
-				}
 			}
 
 			>div.minus {
@@ -79,6 +70,7 @@ div.game {
 
 			>div.restart {
 				flex: 4;
+				border-radius: 0rem;
 				background: var(--mariana3);
 			}
 		}

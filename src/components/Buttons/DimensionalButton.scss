@@ -3,10 +3,11 @@ div.button.dimensional {
 	display: flex;
 	color: var(--mariana0);
 	background: var(--red3);
-	position: relative;
-	cursor: pointer;
 	transform-style: preserve-3d;
 	transform: translate3d(0, -.5rem, 0rem);
+	position: relative;
+	cursor: pointer;
+	user-select: none;
 
 	>div {
 		width: 100%;
