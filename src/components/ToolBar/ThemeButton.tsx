@@ -1,15 +1,19 @@
 import { useContext } from "react";
 import { ThemeContext, ThemeEnum } from "utils/contexts/Theme";
 
-function ThemeButton() {
+function ThemeButton()
+{
 	const { theme, setTheme } = useContext(ThemeContext);
 
-	const onClick = () => {
-		if (theme === ThemeEnum.marianaDark) {
+	const onClick = () =>
+	{
+		if (theme === ThemeEnum.marianaDark)
+		{
 			setTheme(ThemeEnum.marianaLight);
 			return;
 		}
-		if (theme === ThemeEnum.marianaLight) {
+		if (theme === ThemeEnum.marianaLight)
+		{
 			setTheme(ThemeEnum.marianaDark);
 			return;
 		}

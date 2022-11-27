@@ -3,12 +3,14 @@ import { useState } from 'react';
 
 type HeaderProps = {
 	title?: string,
+	height?: string,
 	image?: JSX.Element,
 	neon?: boolean,
-	height?: string,
 };
 
-function Header({ title, image, neon: defaultNeon, height }: HeaderProps) {
+function Header({ title, height, image, neon: defaultNeon,
+}: HeaderProps)
+{
 	const [neon, setNeon] = useState(defaultNeon);
 
 	if (height && window.innerHeight < 750)

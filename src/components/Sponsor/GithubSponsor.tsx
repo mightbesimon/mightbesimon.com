@@ -1,4 +1,5 @@
-export function GithubSponsorButton(): JSX.Element {
+export function GithubSponsorButton(): JSX.Element
+{
 	return <iframe
 		src="https://github.com/sponsors/mightbesimon/button"
 		title="Sponsor mightbesimon"
@@ -7,7 +8,8 @@ export function GithubSponsorButton(): JSX.Element {
 	/>;
 }
 
-export function GithubSponsorCard(): JSX.Element {
+export function GithubSponsorCard(): JSX.Element
+{
 	return <iframe
 		src="https://github.com/sponsors/mightbesimon/card"
 		title="Sponsor mightbesimon"

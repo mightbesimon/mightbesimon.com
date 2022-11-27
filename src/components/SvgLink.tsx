@@ -5,7 +5,8 @@ export type SvgLinkProps = {
 	newTab?: boolean,
 };
 
-function SvgLink({ name, svg: Svg, url, newTab }: SvgLinkProps) {
+function SvgLink({ name, svg: Svg, url, newTab }: SvgLinkProps)
+{
 	return (
 		<a className='svg image link' key={name}
 			href={url} target={newTab ? '_blank' : undefined}

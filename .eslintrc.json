@@ -18,6 +18,10 @@
 		"@typescript-eslint/no-unused-vars": "warn",
 		"@typescript-eslint/no-extra-semi": "warn",
 		"@typescript-eslint/semi": "warn",
+		"comma-dangle": [
+			"warn",
+			"always-multiline"
+		],
 		"eqeqeq": "error",
 		"semi-spacing": "warn",
 		"semi-style": "warn"

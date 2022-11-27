@@ -2,7 +2,8 @@ import './Footer.scss';
 import ImageLink from 'components/ImageLink';
 import deployments from 'data/deployments.json';
 
-function Footer() {
+function Footer()
+{
 	return (
 		<footer className='flex wrap'>
 			<div className='deployment flex wrap'>

@@ -15,6 +15,7 @@ div.toolbar.fixed {
 		transition: var(--transition);
 		box-shadow: var(--shadow2);
 		cursor: pointer;
+		user-select: none;
 
 		&:hover {
 			transform: scale(1.1);
