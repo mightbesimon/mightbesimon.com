@@ -1,6 +1,7 @@
 import SectionWrapper from 'components/SectionWrapper/SectionWrapper';
 
-function NotFound() {
+function NotFound()
+{
 	return (
 		<SectionWrapper view='Teapot' title='418' game>
 			<h1>I'M A TEAPOT 🫖</h1>

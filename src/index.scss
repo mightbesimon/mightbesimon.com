@@ -11,28 +11,30 @@
   --mariana1: hsla(212, 15%, 22%, 100%);
   --mariana2: hsla(212, 14%, 36%, 100%);
   --mariana3: hsla(219, 28%, 88%, 100%);
-  --purple: hsla(300, 30%, 68%, 100%);
-  --blue: hsla(210, 50%, 60%, 100%);
-  --teal: hsla(180, 36%, 54%, 100%);
-  --mint: hsla(114, 31%, 68%, 100%);
-  --orange: hsla(32, 93%, 66%, 100%);
   --red: hsla(357, 79%, 65%, 100%);
+  --coral: hsla(13, 93%, 66%, 100%);
+  --orange: hsla(32, 93%, 66%, 100%);
+  --yellow: hsla(40, 94%, 68%, 100%);
+  --mint: hsla(114, 31%, 68%, 100%);
+  --teal: hsla(180, 36%, 54%, 100%);
+  --blue: hsla(210, 50%, 60%, 100%);
+  --purple: hsla(300, 30%, 68%, 100%);
 
   --mac-red: hsla(2, 100%, 66%, 100%);
   --mac-yellow: hsla(46, 78%, 57%, 100%);
   --mac-green: hsla(111, 54%, 49%, 100%);
 
-  --blue3: hsla(210, 50%, 60%, 100%);
-  --mint0: hsla(114, 20%, 40%, 100%);
-  --mint1: hsla(114, 25%, 60%, 100%);
-  --mint2: hsla(114, 27%, 64%, 100%);
-  --mint3: hsla(114, 31%, 68%, 100%);
-  --orange2: hsla(32, 85%, 55%, 100%);
-  --orange3: hsla(32, 93%, 66%, 100%);
   --red0: hsla(357, 48%, 40%, 100%);
   --red1: hsla(357, 50%, 50%, 100%);
   --red2: hsla(357, 70%, 60%, 100%);
   --red3: hsla(357, 79%, 65%, 100%);
+  --orange2: hsla(32, 85%, 55%, 100%);
+  --orange3: hsla(32, 93%, 66%, 100%);
+  --blue3: hsla(210, 50%, 60%, 100%);
+  --mint0: hsla(114, 20%, 40%, 100%);
+  --mint1: hsla(114, 25%, 60%, 100%); // .90
+  --mint2: hsla(114, 27%, 64%, 100%); // .95
+  --mint3: hsla(114, 31%, 68%, 100%);
 
   /* borders */
   --border-title: 2px solid var(--mariana2);
@@ -136,4 +138,9 @@ pre {
     1px -1px 0px var(--mariana0),
     1px 0px 0px var(--mariana0),
     1px 1px 0px var(--mariana0);
+}
+
+.button {
+  cursor: pointer;
+  user-select: none;
 }

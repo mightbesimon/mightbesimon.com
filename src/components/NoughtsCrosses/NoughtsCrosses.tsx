@@ -4,8 +4,10 @@ import { range } from 'utils/extension/Functions';
 import Nought from 'assets/NoughtsCrosses/nought.svg';
 import Cross from 'assets/NoughtsCrosses/cross.svg';
 import useRem from 'utils/hooks/useRem';
+import DimensionalButton from 'components/Buttons/DimensionalButton';
 
-enum Mark {
+enum Mark
+{
 	Empty = '',
 	Nought = 'noughts',
 	Cross = 'crosses',
@@ -22,7 +24,8 @@ type Cell = {
 	col: number,
 };
 
-function NoughtsCrosses(): JSX.Element {
+function NoughtsCrosses(): JSX.Element
+{
 	const rem = useRem();
 	const [D] = useState({ rows: 3, cols: 3 });
 
@@ -35,28 +38,31 @@ function NoughtsCrosses(): JSX.Element {
 
 	const resetTiles = () => Array.from(
 		{ length: D.rows }, (_, row) => Array.from(
-			{ length: D.cols }, (_, col) => {
-				return {
-					mark: Mark.Empty,
-					cell: { row, col },
-					ring: calcRing({ row, col }),
-				};
-			}
+			{ length: D.cols }, (_, col) =>
+		{
+			return {
+				mark: Mark.Empty,
+				cell: { row, col },
+				ring: calcRing({ row, col }),
+			};
+		}
 		)
 	);
 
-	const resetLines = () => {
+	const resetLines = () =>
+	{
 		const rowLines = range(D.rows).map(row => range(D.cols).map(col => { return { row, col }; }));
 		const colLines = range(D.cols).map(col => range(D.rows).map(row => { return { row, col }; }));
 		const diagonalLines = D.rows !== D.cols ? [] : [
 			range(D.rows).map(rc => { return { row: rc, col: rc }; }),
-			range(D.rows).map(rc => { return { row: rc, col: D.rows - rc - 1 }; })
+			range(D.rows).map(rc => { return { row: rc, col: D.rows - rc - 1 }; }),
 		];
 		return rowLines.concat(colLines)
 			.concat(diagonalLines);
 	};
 
-	const resetTileSize = () => {
+	const resetTileSize = () =>
+	{
 		const size = Math.min(4 * rem, window.innerWidth / D.rows);
 		return { width: size, height: size };
 	};
@@ -70,7 +76,8 @@ function NoughtsCrosses(): JSX.Element {
 		winner: Mark.Empty,
 	});
 
-	const setTile = (cell: Cell, mark: Mark) => {
+	const setTile = (cell: Cell, mark: Mark) =>
+	{
 		let temp = [...tiles];
 		temp[cell.row][cell.col] = {
 			mark,
@@ -80,7 +87,8 @@ function NoughtsCrosses(): JSX.Element {
 		setTiles(temp);
 	};
 
-	const cross = (row: number, col: number) => () => {
+	const cross = (row: number, col: number) => () =>
+	{
 		if (game.over) return;
 		if (tiles[row][col].mark !== Mark.Empty) return;
 
@@ -89,44 +97,52 @@ function NoughtsCrosses(): JSX.Element {
 		if (!game.over) nought();
 	};
 
-	const nought = () => {
+	const nought = () =>
+	{
 		const tile = chooseInnerMostEmptyTile();
 		setTile(tile.cell, Mark.Nought);
 		check(Mark.Nought);
 	};
 
-	const check = (mark: Mark) => {
+	const check = (mark: Mark) =>
+	{
 		if (lines.some(line => line.every(
 			cell => tiles[cell.row][cell.col].mark === mark
-		))) {
+		)))
+		{
 			endGame(mark);
 			return;
 		}
-		if (tiles.every(row => row.every(tile => tile.mark !== Mark.Empty))) {
+		if (tiles.every(row => row.every(tile => tile.mark !== Mark.Empty)))
+		{
 			endGame(Mark.Empty);
 		}
 	};
 
-	const deltaD = (delta: { rows: number, cols: number }) => () => {
+	const deltaD = (delta: { rows: number, cols: number }) => () =>
+	{
 		D.rows += delta.rows;
 		D.cols += delta.cols;
 		setTileSize(resetTileSize());
 		restart();
 	};
 
-	const endGame = (winner: Mark) => {
+	const endGame = (winner: Mark) =>
+	{
 		game.over = true;
 		game.message = winner === Mark.Empty ? 'draw' : `${winner} win`;
 	};
 
-	const chooseInnerMostEmptyTile = () => {
+	const chooseInnerMostEmptyTile = () =>
+	{
 		const emptyTiles = tiles.flat().filter(x => x.mark === Mark.Empty);
 		const innerMostRing = Math.max(...emptyTiles.map(x => x.ring));
 		const innerMostTiles = emptyTiles.filter(x => x.ring === innerMostRing);
 		return innerMostTiles[Math.floor(Math.random() * innerMostTiles.length)];
 	};
 
-	const restart = () => {
+	const restart = () =>
+	{
 		setTiles(resetTiles());
 		setLines(resetLines());
 		game.over = false;
@@ -161,9 +177,21 @@ function NoughtsCrosses(): JSX.Element {
 				<div className='result'>
 					<div className='title'>{game.message}</div>
 					<div className='buttons flex'>
-						<div className='minus' onClick={deltaD({ rows: -1, cols: -1 })}>&ndash;</div>
-						<div className='restart' onClick={restart}>restart</div>
-						<div className='plus' onClick={deltaD({ rows: +1, cols: +1 })}>+</div>
+						<DimensionalButton className='minus'
+							onClick={deltaD({ rows: -1, cols: -1 })}
+						>
+							&ndash;
+						</DimensionalButton>
+						<DimensionalButton className='restart'
+							onClick={restart}
+						>
+							restart
+						</DimensionalButton>
+						<DimensionalButton className='plus'
+							onClick={deltaD({ rows: +1, cols: +1 })}
+						>
+							+
+						</DimensionalButton>
 					</div>
 				</div>
 			)}

@@ -6,11 +6,10 @@ type ReposListProps = {
 	data: RepositoryResponse[] | undefined,
 };
 
-function ReposList({ data }: ReposListProps): JSX.Element {
-
+function ReposList({ data }: ReposListProps): JSX.Element
+{
 	const engagement = (repo: RepositoryResponse) =>
 		repo.stargazers_count +
-		repo.watchers_count +
 		repo.forks_count;
 
 	return (
@@ -27,7 +26,6 @@ function ReposList({ data }: ReposListProps): JSX.Element {
 							</div>
 							<div className='engagement flex'>
 								<div>⭐️ {repo.stargazers_count}</div>
-								<div>👀 {repo.watchers_count}</div>
 								<div>🍴 {repo.forks_count}</div>
 							</div>
 						</a>

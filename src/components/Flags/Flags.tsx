@@ -1,6 +1,8 @@
+import { range } from 'utils/extension/Functions';
 import './Flags.scss';
 
-export function GermanFlag(): JSX.Element {
+export function GermanFlag(): JSX.Element
+{
 	return (
 		<div className='german flag'>
 			<div />
@@ -10,7 +12,8 @@ export function GermanFlag(): JSX.Element {
 	);
 }
 
-export function FrenchFlag(): JSX.Element {
+export function FrenchFlag(): JSX.Element
+{
 	return (
 		<div className='french flag'>
 			<div />
@@ -20,7 +23,8 @@ export function FrenchFlag(): JSX.Element {
 	);
 }
 
-export function ItalianFlag(): JSX.Element {
+export function ItalianFlag(): JSX.Element
+{
 	return (
 		<div className='italian flag'>
 			<div />
@@ -30,7 +34,8 @@ export function ItalianFlag(): JSX.Element {
 	);
 }
 
-export function IrishFlag(): JSX.Element {
+export function IrishFlag(): JSX.Element
+{
 	return (
 		<div className='irish flag'>
 			<div />
@@ -40,17 +45,18 @@ export function IrishFlag(): JSX.Element {
 	);
 }
 
-export function USFlag(): JSX.Element {
+export function USFlag(): JSX.Element
+{
 	return (
 		<div className='us flag'>
 			<div>
 				<div />
 				<div>
-					{Array(7).fill(<div />)}
+					{range(7).map(x => <div key={x} />)}
 				</div>
 			</div>
 			<div>
-				{Array(6).fill(<div />)}
+				{range(6).map(x => <div key={x} />)}
 			</div>
 		</div>
 	);

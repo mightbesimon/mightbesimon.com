@@ -2,7 +2,8 @@ import './NeonPage.scss';
 import { ReactComponent as LogoOff } from 'assets/BagOfCansStudio/logo-off.svg';
 import SectionWrapper from "components/SectionWrapper/SectionWrapper";
 
-function NeonPage() {
+function NeonPage()
+{
 	return (
 		<SectionWrapper view='NeonPage'>
 			<div className='neon'>

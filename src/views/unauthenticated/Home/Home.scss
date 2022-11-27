@@ -5,7 +5,6 @@ section.Home {
 	}
 
 	>div.hello {
-		// margin: 0rem 0rem;
 		justify-content: center;
 
 		>pre {
@@ -60,7 +59,7 @@ section.Home {
 					}
 				}
 
-				>div.sponsor.button {
+				>a.sponsor.button {
 					margin: .25rem 1rem;
 				}
 			}

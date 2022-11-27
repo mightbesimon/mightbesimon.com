@@ -5,7 +5,8 @@ import { ThemeProvider } from 'utils/contexts/Theme';
 
 const client = new QueryClient();
 
-function App() {
+function App()
+{
   return (
     <QueryClientProvider client={client}>
       <ThemeProvider>

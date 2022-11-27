@@ -10,16 +10,18 @@ type SectionWrapperProps = {
 	children: JSX.Element | JSX.Element[],
 	view?: string,
 	title?: string,
+	height?: string,
 	neon?: boolean,
 	game?: boolean,
-	height?: string,
 };
 
-function SectionWrapper({ children, view, title, neon, game, height }: SectionWrapperProps) {
+function SectionWrapper({ children, view, title, height, neon, game,
+}: SectionWrapperProps)
+{
 	return (
 		<>
 			{title && <Header title={title} image={SimonSvg()} neon={neon} height={height} />}
-			<section className={view ? `${view} flex column` : 'flex column'}>
+			<section className={'flex column ' + view}>
 				{children}
 			</section>
 			{game && <NoughtsCrosses />}

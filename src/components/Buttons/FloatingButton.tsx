@@ -1,6 +1,6 @@
-import './DimensionalButton.scss';
+import './FloatingButton.scss';
 
-type DimensionalButtonProps = {
+type FloatingButtonProps = {
 	className?: string,
 	children?: JSX.Element | JSX.Element[] | string,
 	onClick?: () => void,
@@ -10,18 +10,18 @@ type DimensionalButtonProps = {
 	colour?: string,
 };
 
-function DimensionalButton({ className, children, onClick,
+function FloatingButton({ className, children, onClick,
 	width, height, borderRadius, colour,
-}: DimensionalButtonProps): JSX.Element
+}: FloatingButtonProps): JSX.Element
 {
 	return (
-		<div className={'button dimensional ' + className}
+		<div className={'button floating ' + className}
 			style={{ width, height, borderRadius, background: colour }}
 			onClick={onClick}
 		>
-			<div>{children}</div>
+			{children}
 		</div>
 	);
 }
 
-export default DimensionalButton;
+export default FloatingButton;

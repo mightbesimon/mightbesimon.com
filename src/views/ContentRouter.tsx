@@ -9,11 +9,13 @@ type AuthCheckProps = {
 	authenticationRequired: boolean;
 };
 
-const ContentRouter = () => {
+const ContentRouter = () =>
+{
 	// const { authenticated } = useContext(AuthContext);
 	const authenticated = false;
 
-	const AuthCheck = ({ authenticationRequired }: AuthCheckProps) => {
+	const AuthCheck = ({ authenticationRequired }: AuthCheckProps) =>
+	{
 		return !authenticationRequired || authenticated ?
 			<Outlet /> : <Navigate to='/auth' replace={true} />;
 	};

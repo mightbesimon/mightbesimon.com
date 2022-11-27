@@ -5,7 +5,8 @@ type ImageLinkProps = {
 	newTab?: boolean,
 };
 
-function ImageLink({ name, image, url, newTab }: ImageLinkProps) {
+function ImageLink({ name, image, url, newTab }: ImageLinkProps)
+{
 	return (
 		<a className='image link' key={name}
 			href={url} target={newTab ? '_blank' : undefined}
