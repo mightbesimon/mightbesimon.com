@@ -8,7 +8,6 @@ type ReposListProps = {
 
 function ReposList({ data }: ReposListProps): JSX.Element
 {
-
 	const engagement = (repo: RepositoryResponse) =>
 		repo.stargazers_count +
 		repo.forks_count;

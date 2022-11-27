@@ -1,7 +1,8 @@
 import unauthenticatedContent from '../UnauthenticatedContent';
 import { Link } from 'react-location';
 
-function PagesList(): JSX.Element {
+function PagesList(): JSX.Element
+{
 	return (
 		<div className='showcase pages flex wrap'>
 			{
