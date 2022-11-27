@@ -24,7 +24,6 @@ async function getRepos(
 		`${api.github}/users/${owner}/repos`,
 		{
 			method: "GET",
-			headers: {},
 		}
 	);
 
