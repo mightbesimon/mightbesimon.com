@@ -1,33 +1,40 @@
 div.github.stats {
-	margin: 1rem auto;
-	position: relative;
+	margin: 1rem;
 
-	>a.image.link {
-		max-width: calc(100vw - 2rem);
-
-		>img {
-			max-width: inherit;
-		}
-	}
-
-	>div.engagement {
-		max-width: 50%;
-		min-width: 12rem;
-		position: absolute;
-		top: .8rem;
-		right: .5rem;
-		padding: .3rem 0rem;
-		border-radius: .3rem;
-		font-size: 1rem;
-		color: var(--text);
-		background: var(--mint);
+	>div.table {
+		width: max-content;
+		margin-top: 1.95rem;
+		border-radius: .5rem;
+		border: 2px solid var(--mariana0);
 
 		>div {
-			margin: 0rem .3rem;
-			padding: .25rem .5rem;
-			border-radius: .5rem;
-			vertical-align: middle;
-			background: var(--main);
+			padding: .3875rem .5rem;
+			text-align: center;
+			background: var(--mariana0);
+		}
+
+		>table {
+			width: 100%;
+			height: calc(100% - 1.9rem);
+			font-size: .8rem;
+
+			tr:first-child {
+				border: none;
+			}
+
+			tr {
+				border-top: 2px solid var(--mariana0);
+				line-height: 1rem;
+
+				>td {
+					padding: .375rem .5rem;
+				}
+
+				>td.value {
+					font: normal 1rem monospace;
+					text-align: right;
+				}
+			}
 		}
 	}
 }

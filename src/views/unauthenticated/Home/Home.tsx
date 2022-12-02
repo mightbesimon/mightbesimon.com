@@ -37,6 +37,7 @@ function Home(): JSX.Element
 
 			<div className='stats flex wrap'>
 				<VscodeStats />
+				{/* <GithubStats /> */}
 			</div>
 
 			<h2>✨ Featured</h2>
@@ -47,9 +48,6 @@ function Home(): JSX.Element
 
 			<h2>🌏 Pages to check out</h2>
 			<PagesList />
-
-			<h2>📊 My Github metrics</h2>
-			<GithubStats data={repoResponse.data} />
 
 		</SectionWrapper>
 	);
