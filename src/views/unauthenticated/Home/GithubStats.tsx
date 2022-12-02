@@ -1,29 +1,49 @@
 import './GithubStats.scss';
-import ImageLink from 'components/ImageLink';
 import EllipsisLoader from 'components/Loader/EllipsisLoader';
-import { RepositoryResponse } from 'utils/api/github/getRepos';
+import getRepos from 'utils/api/github/getRepos';
+import { useQuery } from 'react-query';
 
-type GithubStatsProps = {
-	data: RepositoryResponse[] | undefined,
-};
-
-function GithubStats({ data }: GithubStatsProps): JSX.Element
+function GithubStats(): JSX.Element
 {
+	const response = useQuery(
+		'getRepos',
+		() => getRepos({ owner: 'mightbesimon' }),
+		{ staleTime: 300000 }
+	);
+
+	const data = {
+		repos: response.data?.length,
+		stars: response.data?.reduce((sum, item) => sum + item.stargazers_count, 0),
+		forks: response.data?.reduce((sum, item) => sum + item.forks_count, 0),
+	};
+
+	const format = (downloads: number | undefined) =>
+		downloads ? downloads.toLocaleString('en-NZ') : '-';
+
 	return (
-		<div className='stats'>
-			<ImageLink
-				name='github stats'
-				image='https://github-readme-stats.vercel.app/api?username=mightbesimon&show_icons=true&theme=dracula'
-				url='https://github.com/mightbesimon'
-			/>
-			{
-				data?.length ? (
-					<div className='engagement flex'>
-						<div>📦 {data.length}</div>
-						<div>⭐️ {data.reduce((sum, repo) => sum + repo.stargazers_count, 0)}</div>
-						<div>🍴 {data.reduce((sum, repo) => sum + repo.forks_count, 0)}</div>
-					</div>
-				) : <EllipsisLoader text='📊' />
+		<div className='github stats'>
+			{data ?
+				<div className='table'>
+					<div>GitHub</div>
+					<table>
+						<tbody>
+							<tr key='repos'>
+								<td>Repos</td>
+								<td>📂</td>
+								<td className='value'>{format(data.repos)}</td>
+							</tr>
+							<tr key='stars'>
+								<td>Stars</td>
+								<td>⭐️</td>
+								<td className='value'>{format(data.stars)}</td>
+							</tr>
+							<tr key='forks'>
+								<td>Forks</td>
+								<td>🍴</td>
+								<td className='value'>{format(data.forks)}</td>
+							</tr>
+						</tbody>
+					</table></div> : <EllipsisLoader text='📊' />
 			}
 		</div>
 	);

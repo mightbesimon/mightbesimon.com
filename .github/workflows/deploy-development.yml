@@ -1,4 +1,4 @@
-name: development 👷‍♂️
+name: development 👷
 
 on:
   workflow_dispatch:
