@@ -67,9 +67,14 @@ section.Home {
 		}
 	}
 
+	>div.stats {
+		margin-top: 3rem;
+	}
+
 	>div.showcase {
 		padding: 0rem 1rem;
 		justify-content: flex-start;
+		align-self: center;
 		max-width: 56rem;
 
 		>a {

@@ -10,7 +10,7 @@ type GithubStatsProps = {
 function GithubStats({ data }: GithubStatsProps): JSX.Element
 {
 	return (
-		<div className='stats'>
+		<div className='github stats'>
 			<ImageLink
 				name='github stats'
 				image='https://github-readme-stats.vercel.app/api?username=mightbesimon&show_icons=true&theme=dracula'

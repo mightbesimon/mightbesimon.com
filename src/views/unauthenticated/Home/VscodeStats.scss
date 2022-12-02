@@ -1,0 +1,54 @@
+div.vscode.stats {
+	margin: 1rem;
+
+	>h3 {
+		margin: 0rem;
+		font: normal 1.25rem sans-serif;
+		text-align: center;
+	}
+
+	>div.table {
+		margin-top: .5rem;
+		border-radius: .5rem;
+		font-size: .8rem;
+		border: 2px solid var(--blue);
+
+		>div.total {
+			padding: .2rem;
+			justify-content: center;
+			align-items: center;
+			background: var(--blue);
+			color: var(--mariana0);
+
+			>div:last-child {
+				margin-left: 1rem;
+				font: normal 1.5rem monospace;
+			}
+		}
+
+		>table {
+
+			tr:first-child {
+				border: none;
+			}
+
+			tr {
+				border-top: 2px solid var(--blue);
+				line-height: 1rem;
+
+				>td {
+					padding: .25rem .5rem;
+				}
+
+				>td.name {
+					text-align: center;
+				}
+
+				>td.downloads {
+					font: normal 1rem monospace;
+					text-align: right;
+				}
+			}
+		}
+	}
+}

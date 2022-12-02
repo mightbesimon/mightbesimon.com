@@ -4,13 +4,13 @@ import GithubStats from './GithubStats';
 import PagesList from './PagesList';
 import ReposList from './ReposList';
 import socials from './Socials';
+import VscodeStats from './VscodeStats';
 import SvgLink from 'components/SvgLink';
 import SectionWrapper from 'components/SectionWrapper/SectionWrapper';
 import SponsorButton from 'components/Sponsor/SponsorButton';
 import greetings from 'data/greetings.json';
 import getRepos from 'utils/api/github/getRepos';
 import { useQuery } from "react-query";
-import Stats from './Stats';
 
 function Home(): JSX.Element
 {
@@ -35,7 +35,9 @@ function Home(): JSX.Element
 				</div>
 			</div>
 
-			<Stats />
+			<div className='stats flex wrap'>
+				<VscodeStats />
+			</div>
 
 			<h2>✨ Featured</h2>
 			<Featured />
