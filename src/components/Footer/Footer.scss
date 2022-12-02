@@ -4,20 +4,19 @@
 footer {
 	margin: auto 1rem 1rem 1rem;
 	border-radius: .5rem;
-	font: .8rem monospace;
-	text-align: right;
 	background: var(--body);
 	align-items: center;
 
-	* {
-		max-width: calc(100vw - 2rem);
+	>div.deployment {
+		margin: .25rem 0rem;
+
+		>a.image.link {
+			margin: .25rem .5rem;
+		}
 	}
 
-	>* {
+	>div.copyright {
 		margin: .5rem 0rem;
-	}
-
-	>div.deployment>a.image.link {
-		margin: 0rem .5rem;
+		font: .8rem monospace;
 	}
 }
