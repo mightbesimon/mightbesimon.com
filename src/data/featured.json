@@ -1,7 +1,7 @@
 [
 	{
 		"title": "VSCode Emoji File Icons",
-		"description": "my vscode extension with ##downloads## downloads",
+		"description": "my vscode extension",
 		"url": "https://marketplace.visualstudio.com/items?itemName=mightbesimon.emoji-icons",
 		"badges": [
 			"https://img.shields.io/visual-studio-marketplace/v/mightbesimon.emoji-icons?label=",

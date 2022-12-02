@@ -9,20 +9,14 @@ import SectionWrapper from 'components/SectionWrapper/SectionWrapper';
 import SponsorButton from 'components/Sponsor/SponsorButton';
 import greetings from 'data/greetings.json';
 import getRepos from 'utils/api/github/getRepos';
-import getExtension from 'utils/api/vscode/getExtension';
 import { useQuery } from "react-query";
+import Stats from './Stats';
 
 function Home(): JSX.Element
 {
 	const repoResponse = useQuery(
 		'getRepos',
 		() => getRepos({ owner: 'mightbesimon' }),
-		{ staleTime: 300000 }
-	);
-
-	const extensionResponse = useQuery(
-		'getExtension',
-		() => getExtension({ extensionId: 'mightbesimon.emoji-icons' }),
 		{ staleTime: 300000 }
 	);
 
@@ -41,8 +35,10 @@ function Home(): JSX.Element
 				</div>
 			</div>
 
+			<Stats />
+
 			<h2>✨ Featured</h2>
-			<Featured data={extensionResponse.data} />
+			<Featured />
 
 			<h2>📦 My repositories to check out</h2>
 			<ReposList data={repoResponse.data} />

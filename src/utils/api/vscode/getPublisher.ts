@@ -1,7 +1,7 @@
 import api from "../API";
 
-export type ExtensionRequest = {
-	extensionId: string,
+export type PublisherRequest = {
+	publisherName: string,
 };
 
 export type ExtensionResponse = {
@@ -38,9 +38,9 @@ type VscodeApiResponse = {
 	}[],
 };
 
-async function getExtension(
-	{ extensionId }: ExtensionRequest
-): Promise<ExtensionResponse | undefined>
+async function getPublisher(
+	{ publisherName }: PublisherRequest
+): Promise<ExtensionResponse[] | undefined>
 {
 	const response = await fetch(
 		`${api.vscode}`,
@@ -55,8 +55,8 @@ async function getExtension(
 					{
 						criteria: [
 							{
-								filterType: 7,
-								value: extensionId,
+								filterType: 10,
+								value: `publisher:"${publisherName}"`,
 							},
 						],
 					},
@@ -75,7 +75,7 @@ async function getExtension(
 	}
 
 	return (await response.json() as VscodeApiResponse)
-		.results[0].extensions[0];
+		.results[0].extensions;
 }
 
-export default getExtension;
+export default getPublisher;

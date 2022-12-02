@@ -21,7 +21,6 @@ async function getPackageDownloads(
 	{ package: packageName }: PackageDownloadsRequest
 ): Promise<PackageDownloadsResponse[] | undefined>
 {
-
 	const response = await fetch(
 		`${api.pypi}/packages/${packageName}/overall`,
 		{
@@ -35,9 +34,7 @@ async function getPackageDownloads(
 		return;
 	}
 
-	return (
-		await response.json() as unknown as PypiStatsApiResponse
-	).data;
+	return (await response.json() as PypiStatsApiResponse).data;
 }
 
 export default getPackageDownloads;

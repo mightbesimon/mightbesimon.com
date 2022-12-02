@@ -20,6 +20,7 @@ section.Home {
 			>p {
 				margin: .5rem auto;
 				text-align: center;
+				font: normal 1rem monospace;
 			}
 
 			>div.flex.wrap {
@@ -31,7 +32,6 @@ section.Home {
 				>a.svg.image.link {
 					margin: .25rem .5rem;
 					padding: .25rem;
-					border-radius: .5rem;
 					transition: var(--transition);
 
 					>svg {
@@ -61,6 +61,7 @@ section.Home {
 
 				>a.sponsor.button {
 					margin: .25rem 1rem;
+					padding: .25rem 0rem;
 				}
 			}
 		}
