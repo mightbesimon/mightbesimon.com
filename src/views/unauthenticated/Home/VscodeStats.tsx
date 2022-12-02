@@ -5,13 +5,13 @@ import './VscodeStats.scss';
 
 function VscodeStats(): JSX.Element
 {
-	const extensions = useQuery(
+	const reponse = useQuery(
 		'getExtension',
 		() => getPublisher({ publisherName: 'mightbesimon' }),
 		{ staleTime: 300000 }
 	);
 
-	const data = extensions.data
+	const data = reponse.data
 		?.map(item =>
 		{
 			return {
@@ -25,15 +25,16 @@ function VscodeStats(): JSX.Element
 	const totalDownloads = data?.reduce((sum, item) => sum + item.downloads, 0);
 
 	const format = (downloads: number | undefined) =>
-		!downloads ? '' :
-			downloads >= 1000 ? (Math.floor(downloads / 100) / 10).toFixed(1) + 'k+' :
-				downloads.toString();
+		downloads ? downloads.toLocaleString('en-NZ') : '-';
+	// !downloads ? '-' :
+	// 	downloads >= 1000 ? (Math.floor(downloads / 100) / 10).toFixed(1) + 'k+' :
+	// 		downloads.toString();
 
 	return (
 		<div className='vscode stats'>
 			<h3>My VSCode Extensions</h3>
-			{
-				data ? <div className='table'>
+			{data ?
+				<div className='table'>
 					<div className='total flex'>
 						<div>total downloads</div>
 						<div>{format(totalDownloads)}</div>

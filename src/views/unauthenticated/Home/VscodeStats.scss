@@ -8,13 +8,14 @@ div.vscode.stats {
 	}
 
 	>div.table {
+		width: max-content;
 		margin-top: .5rem;
 		border-radius: .5rem;
 		font-size: .8rem;
 		border: 2px solid var(--blue);
 
 		>div.total {
-			padding: .2rem;
+			padding: .2rem .5rem;
 			justify-content: center;
 			align-items: center;
 			background: var(--blue);
@@ -27,6 +28,7 @@ div.vscode.stats {
 		}
 
 		>table {
+			width: 100%;
 
 			tr:first-child {
 				border: none;

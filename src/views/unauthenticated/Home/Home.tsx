@@ -21,7 +21,7 @@ function Home(): JSX.Element
 	);
 
 	return (
-		<SectionWrapper view='Home' title='SIMON' game height='60vh'>
+		<SectionWrapper view='Home' title='SIMON' height='60vh' game>
 
 			<div className='hello flex wrap'>
 				<pre>{greetings.join('\n')}</pre>
