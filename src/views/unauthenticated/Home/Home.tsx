@@ -1,6 +1,6 @@
 import './Home.scss';
 import Featured from './Featured';
-import GithubStats from './GithubStats';
+// import GithubStats from './GithubStats';
 import PagesList from './PagesList';
 import ReposList from './ReposList';
 import socials from './Socials';
@@ -9,17 +9,9 @@ import SvgLink from 'components/SvgLink';
 import SectionWrapper from 'components/SectionWrapper/SectionWrapper';
 import SponsorButton from 'components/Sponsor/SponsorButton';
 import greetings from 'data/greetings.json';
-import getRepos from 'utils/api/github/getRepos';
-import { useQuery } from "react-query";
 
 function Home(): JSX.Element
 {
-	const repoResponse = useQuery(
-		'getRepos',
-		() => getRepos({ owner: 'mightbesimon' }),
-		{ staleTime: 300000 }
-	);
-
 	return (
 		<SectionWrapper view='Home' title='SIMON' height='60vh' game>
 
@@ -44,7 +36,7 @@ function Home(): JSX.Element
 			<Featured />
 
 			<h2>📦 My repositories to check out</h2>
-			<ReposList data={repoResponse.data} />
+			<ReposList />
 
 			<h2>🌏 Pages to check out</h2>
 			<PagesList />
