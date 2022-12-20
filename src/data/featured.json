@@ -12,10 +12,11 @@
 	{
 		"title": "Python – lifehacks.metaclasses",
 		"description": "my most downloaded python package",
+		"url": "https://pypi.org/project/lifehacks.metaclasses",
 		"badges": [
 			"https://img.shields.io/pypi/v/lifehacks.metaclasses?label=",
 			"https://img.shields.io/pypi/dm/lifehacks.metaclasses?color=white&label=&logo=python",
-			"https://github.com/mightbesimon/lifehacks.colour/actions/workflows/publish.yml/badge.svg"
+			"https://github.com/mightbesimon/lifehacks.metaclasses/actions/workflows/publish.yml/badge.svg"
 		]
 	},
 	{
