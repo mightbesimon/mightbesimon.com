@@ -1,7 +1,8 @@
 import './Home.scss';
 import Featured from './Featured';
-// import GithubStats from './GithubStats';
+import GithubStats from './GithubStats';
 import PagesList from './PagesList';
+import PypiStats from './PypiStats';
 import ReposList from './ReposList';
 import socials from './Socials';
 import VscodeStats from './VscodeStats';
@@ -29,13 +30,14 @@ function Home(): JSX.Element
 
 			<div className='stats flex wrap'>
 				<VscodeStats />
-				{/* <GithubStats /> */}
+				<GithubStats />
+				<PypiStats />
 			</div>
 
 			<h2>✨ Featured</h2>
 			<Featured />
 
-			<h2>📦 My repositories to check out</h2>
+			<h2>🗃 My repositories to check out</h2>
 			<ReposList />
 
 			<h2>🌏 Pages to check out</h2>
