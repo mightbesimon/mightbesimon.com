@@ -26,9 +26,6 @@ function VscodeStats(): JSX.Element
 
 	const format = (downloads: number | undefined) =>
 		downloads ? downloads.toLocaleString('en-NZ') : '-';
-	// !downloads ? '-' :
-	// 	downloads >= 1000 ? (Math.floor(downloads / 100) / 10).toFixed(1) + 'k+' :
-	// 		downloads.toString();
 
 	return (
 		<div className='vscode stats'>
@@ -44,7 +41,7 @@ function VscodeStats(): JSX.Element
 							{data?.map(item =>
 								<tr key={item.extensionId}>
 									<td className='name'>{item.name}</td>
-									<td className='badge'><img alt='version' src={`https://img.shields.io/visual-studio-marketplace/v/${item.extensionId}?label=`} /></td>
+									<td className='version'><img alt='version' src={`https://img.shields.io/visual-studio-marketplace/v/${item.extensionId}?label=`} /></td>
 									<td className='downloads'>{format(item.downloads)}</td>
 								</tr>
 							)}

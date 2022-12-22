@@ -1,0 +1,52 @@
+div.pypi.stats {
+	margin: 1rem;
+
+	>h3 {
+		margin: 0rem;
+		font: normal 1.25rem sans-serif;
+		text-align: center;
+	}
+
+	>div.table {
+		width: max-content;
+		margin-top: .5rem;
+		border-radius: .5rem;
+		font-size: .8rem;
+		border: 2px solid var(--blue);
+
+		>div.total {
+			// padding: .2rem .5rem;
+			padding: .3875rem .5rem;
+			justify-content: space-evenly;
+			align-items: center;
+			background: var(--blue);
+			color: var(--mariana0);
+
+			// >div:last-child {
+			// 	font: normal 1.5rem monospace;
+			// }
+		}
+
+		>table {
+			width: 100%;
+
+			tr:first-child {
+				border: none;
+			}
+
+			tr {
+				border-top: 2px solid var(--blue);
+				line-height: 1rem;
+
+				>td {
+					padding: .25rem .5rem;
+				}
+
+				>td.downloads {
+					font: normal 1rem monospace;
+					text-align: right;
+				}
+			}
+		}
+	}
+}
