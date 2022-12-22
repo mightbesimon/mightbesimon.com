@@ -29,7 +29,7 @@ function GithubStats(): JSX.Element
 						<tbody>
 							<tr key='repos'>
 								<td>Repos</td>
-								<td>📂</td>
+								<td>🗃</td>
 								<td className='value'>{format(data.repos)}</td>
 							</tr>
 							<tr key='stars'>
