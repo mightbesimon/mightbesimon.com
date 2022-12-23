@@ -1,34 +1,14 @@
-import './PypiStats.scss';
 import EllipsisLoader from 'components/Loader/EllipsisLoader';
-import { getPackagesDownloads } from 'utils/api/pypi/getPackageDownloads';
-import { useQuery } from 'react-query';
+import './PypiStats.scss';
 
 function PypiStats(): JSX.Element
 {
-	const packages = [
+
+	const data = [
 		'lifehacks.metaclasses',
 		'lifehacks.colour',
 		'lifehacks',
 	];
-
-	const responses = useQuery(
-		'getPackagesDownloads',
-		() => getPackagesDownloads(packages),
-		{ staleTime: 300000 },
-	);
-
-	const data = responses.data?.map(
-		(item, idx) =>
-		{
-			return {
-				name: packages[idx],
-				downloads: item?.reduce((sum, x) => sum + x.downloads, 0),
-			};
-		},
-	);
-
-	const format = (downloads: number | undefined) =>
-		downloads ? downloads.toLocaleString('en-NZ') : '-';
 
 	return (
 		<div className='pypi stats'>
@@ -41,10 +21,10 @@ function PypiStats(): JSX.Element
 					<table>
 						<tbody>
 							{data?.map(item =>
-								<tr key={item.name}>
-									<td className='name'>{item.name}</td>
-									<td className='badge'><img alt='version' src={`https://img.shields.io/pypi/v/${item.name}?label=`} /></td>
-									<td className='downloads'>{format(item.downloads)}</td>
+								<tr key={item}>
+									<td className='name'>{item}</td>
+									<td className='badge'><img alt='version' src={`https://img.shields.io/pypi/v/${item}?label=`} /></td>
+									<td className='downloads'><img alt='downloads' src={`https://img.shields.io/pypi/dm/${item}?color=white&label=&logo=python`} /></td>
 								</tr>
 							)}
 						</tbody>
