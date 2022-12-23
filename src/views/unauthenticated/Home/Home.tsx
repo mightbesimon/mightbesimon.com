@@ -29,8 +29,8 @@ function Home(): JSX.Element
 			</div>
 
 			<div className='stats flex wrap'>
-				<VscodeStats />
 				<GithubStats />
+				<VscodeStats />
 				<PypiStats />
 			</div>
 
