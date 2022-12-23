@@ -8,7 +8,7 @@ function ReposList(): JSX.Element
 	const response = useQuery(
 		'getRepos',
 		() => getRepos({ owner: 'mightbesimon' }),
-		{ staleTime: 300000 }
+		{ staleTime: 300000 },
 	);
 
 	const engagement = (repo: RepositoryResponse) =>

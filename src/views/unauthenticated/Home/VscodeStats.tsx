@@ -1,14 +1,14 @@
-import EllipsisLoader from 'components/Loader/EllipsisLoader';
-import { useQuery } from 'react-query';
-import getPublisher from 'utils/api/vscode/getPublisher';
 import './VscodeStats.scss';
+import EllipsisLoader from 'components/Loader/EllipsisLoader';
+import getPublisher from 'utils/api/vscode/getPublisher';
+import { useQuery } from 'react-query';
 
 function VscodeStats(): JSX.Element
 {
 	const reponse = useQuery(
 		'getExtension',
 		() => getPublisher({ publisherName: 'mightbesimon' }),
-		{ staleTime: 300000 }
+		{ staleTime: 300000 },
 	);
 
 	const data = reponse.data
