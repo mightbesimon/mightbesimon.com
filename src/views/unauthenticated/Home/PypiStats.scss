@@ -12,19 +12,15 @@ div.pypi.stats {
 		margin-top: .5rem;
 		border-radius: .5rem;
 		font-size: .8rem;
-		border: 2px solid var(--orange);
+		border: 2px solid var(--coral);
 
 		>div.total {
-			// padding: .2rem .5rem;
 			padding: .3875rem .5rem;
 			justify-content: space-evenly;
 			align-items: center;
-			background: var(--orange);
+			background: var(--coral);
 			color: var(--mariana0);
-
-			// >div:last-child {
-			// 	font: normal 1.5rem monospace;
-			// }
+			font: normal 1rem monospace;
 		}
 
 		>table {
@@ -35,7 +31,7 @@ div.pypi.stats {
 			}
 
 			tr {
-				border-top: 2px solid var(--orange);
+				border-top: 2px solid var(--coral);
 				line-height: 1rem;
 
 				>td {
