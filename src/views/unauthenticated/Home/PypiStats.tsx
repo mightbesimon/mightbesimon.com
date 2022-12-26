@@ -16,7 +16,7 @@ function PypiStats(): JSX.Element
 			{data ?
 				<div className='table'>
 					<div className='total flex'>
-						<div>badges</div>
+						<div>lifehacks namespace</div>
 					</div>
 					<table>
 						<tbody>
@@ -24,7 +24,7 @@ function PypiStats(): JSX.Element
 								<tr key={item}>
 									<td className='name'>{item}</td>
 									<td className='badge'><img alt='version' src={`https://img.shields.io/pypi/v/${item}?label=`} /></td>
-									<td className='downloads'><img alt='downloads' src={`https://img.shields.io/pypi/dm/${item}?color=white&label=&logo=python`} /></td>
+									<td className='downloads'><img alt='downloads' src={`https://img.shields.io/badge/dynamic/json?color=white&label=&logo=python&query=%24.total_downloads&url=https%3A%2F%2Fapi.pepy.tech%2Fapi%2Fv2%2Fprojects%2F${item}`} /></td>
 								</tr>
 							)}
 						</tbody>
