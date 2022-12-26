@@ -16,7 +16,7 @@ function PypiStats(): JSX.Element
 			{data ?
 				<div className='table'>
 					<div className='total flex'>
-						<div>badges</div>
+						<div>lifehacks namespace</div>
 					</div>
 					<table>
 						<tbody>
