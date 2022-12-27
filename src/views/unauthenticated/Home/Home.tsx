@@ -1,14 +1,14 @@
 import './Home.scss';
 import Featured from './Featured';
-import GithubStats from './GithubStats';
 import PagesList from './PagesList';
-import PypiStats from './PypiStats';
 import ReposList from './ReposList';
 import socials from './Socials';
-import VscodeStats from './VscodeStats';
 import SvgLink from 'components/Links/SvgLink';
 import SectionWrapper from 'components/SectionWrapper/SectionWrapper';
 import SponsorButton from 'components/Sponsor/SponsorButton';
+import GithubStats from 'components/Stats/GithubStats';
+import PypiStats from 'components/Stats/PypiStats';
+import VscodeStats from 'components/Stats/VscodeStats';
 import greetings from 'data/greetings.json';
 
 function Home(): JSX.Element
