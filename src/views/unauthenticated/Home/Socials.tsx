@@ -1,7 +1,7 @@
 import { ReactComponent as Instagram } from 'assets/Socials/instagram.svg';
 import { ReactComponent as Github } from 'assets/Socials/github.svg';
 import { ReactComponent as LinkedIn } from 'assets/Socials/linkedin.svg';
-import { SvgLinkProps } from 'components/SvgLink';
+import { SvgLinkProps } from 'components/Links/SvgLink';
 
 const socials: SvgLinkProps[] = [
 	{
