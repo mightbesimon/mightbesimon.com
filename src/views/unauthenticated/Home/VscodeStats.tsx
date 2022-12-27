@@ -1,6 +1,7 @@
 import './VscodeStats.scss';
 import EllipsisLoader from 'components/Loader/EllipsisLoader';
 import getPublisher from 'utils/api/vscode/getPublisher';
+import { formatCount } from 'utils/extension/Functions';
 import { useQuery } from 'react-query';
 
 function VscodeStats(): JSX.Element
@@ -24,9 +25,6 @@ function VscodeStats(): JSX.Element
 
 	const totalDownloads = data?.reduce((sum, item) => sum + item.downloads, 0);
 
-	const format = (downloads: number | undefined) =>
-		downloads ? downloads.toLocaleString('en-NZ') : '-';
-
 	return (
 		<div className='vscode stats'>
 			<h3>My VSCode Extensions</h3>
@@ -34,7 +32,7 @@ function VscodeStats(): JSX.Element
 				<div className='table'>
 					<div className='total flex'>
 						<div>total downloads</div>
-						<div>{format(totalDownloads)}</div>
+						<div>{formatCount(totalDownloads)}</div>
 					</div>
 					<table>
 						<tbody>
@@ -42,7 +40,7 @@ function VscodeStats(): JSX.Element
 								<tr key={item.extensionId}>
 									<td className='name'>{item.name}</td>
 									<td className='version'><img alt='version' src={`https://img.shields.io/visual-studio-marketplace/v/${item.extensionId}?label=`} /></td>
-									<td className='downloads'>{format(item.downloads)}</td>
+									<td className='downloads'>{formatCount(item.downloads)}</td>
 								</tr>
 							)}
 						</tbody>
