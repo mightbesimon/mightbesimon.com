@@ -16,7 +16,7 @@ async function getPackage(
 ): Promise<PackageResponse | undefined>
 {
 	const response = await fetch(
-		`${api.pypi}/projects/${packageName}`,
+		`${api.pypi}/v2/projects/${packageName}`,
 		{
 			method: "GET",
 		}

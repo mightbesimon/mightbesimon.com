@@ -34,23 +34,24 @@ function PypiStats(): JSX.Element
 			{
 				return {
 					date: new Date(kvp[0]),
-					downloads: kvp[1] as number,
+					downloads: Object.entries(kvp[1] as any)
+						.reduce((sum, item) => sum + (item[1] as number), 0),
 					offset: 0,
 					cummulative: 0,
 				};
 			});
 
-		// let cummulative = total - items.reduce((sum, item) => sum + item.downloads, 0);
-		let cummulative = 0;
+		let cummulative = total - items.reduce((sum, item) => sum + item.downloads, 0);
+		// let cummulative = 0;
 
 		items.forEach(item =>
 		{
 			cummulative += item.downloads;
-			item.offset = Math.floor((item.date.getTime() - new Date().getTime()) / 86400000) + 31;
+			item.offset = Math.floor(
+				(item.date.getTime() - new Date().getTime()) / 86400000) + 91;
 			item.cummulative = cummulative;
 		});
 
-		console.log(items);
 		return items;
 	};
 
@@ -70,16 +71,16 @@ function PypiStats(): JSX.Element
 	const [showGraph, setShowGraph] = useState(false);
 	const [index, setIndex] = useState(0);
 
-	const getPath = (items: Aggregated[], total: number) =>
+	const getPath = (items: Aggregated[]) =>
 	{
-		total = items[items.length - 1].cummulative;
+		const total = items[items.length - 1].cummulative;
 		let path = 'M';
 		items.forEach(item =>
 		{
-			path += ` ${item.offset} ${16 - 15 * item.cummulative / total} L`;
+			path += ` ${item.offset} ${48 - 47 * item.cummulative / total} L`;
 		});
 
-		return path + ' 29 1';
+		return path + ' 89 1';
 	};
 
 	return (
@@ -107,18 +108,15 @@ function PypiStats(): JSX.Element
 					</table>
 					<div className='graph' style={{ display: showGraph ? 'block' : 'none' }}>
 						<div>
-							<span>{data?.at(index)?.name}</span> last 30 days
+							<span>{data?.at(index)?.name}</span> last 90 days
 						</div>
-						<svg viewBox='0 0 29 16'>
-							<rect fill='var(--body)' opacity={.8} width='100%' height='100%' />
-							<path
-								fill='none'
-								stroke='var(--text)'
-								strokeWidth={.25}
-								d={getPath(
-									data?.at(index)?.last30days as Aggregated[],
-									data?.at(index)?.downloads as number
-								)} />
+						<svg viewBox='0 0 89 48'>
+							<rect fill='var(--body)' opacity={.8}
+								width='100%' height='100%'
+							/>
+							<path fill='none'
+								stroke='var(--text)' strokeWidth={.7}
+								d={getPath(data?.at(index)?.last30days as Aggregated[])} />
 						</svg>
 					</div>
 				</div> : <EllipsisLoader text='📊' />
