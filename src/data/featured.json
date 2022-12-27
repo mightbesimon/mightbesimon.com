@@ -15,7 +15,7 @@
 		"url": "https://pypi.org/project/lifehacks.metaclasses",
 		"badges": [
 			"https://img.shields.io/pypi/v/lifehacks.metaclasses?label=",
-			"https://img.shields.io/badge/dynamic/json?color=white&label=&logo=python&query=%24.total_downloads&url=https%3A%2F%2Fapi.pepy.tech%2Fapi%2Fv2%2Fprojects%2Flifehacks.metaclasses",
+			"https://img.shields.io/badge/dynamic/json?color=white&label=&logo=python&query=%24.total_downloads&url=https%3A%2F%2Fapi.pepy.tech%2Fapi%2Fprojects%2Flifehacks.metaclasses",
 			"https://github.com/mightbesimon/lifehacks.metaclasses/actions/workflows/publish.yml/badge.svg"
 		]
 	},

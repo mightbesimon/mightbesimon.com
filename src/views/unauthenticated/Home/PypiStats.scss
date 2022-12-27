@@ -15,12 +15,15 @@ div.pypi.stats {
 		border: 2px solid var(--coral);
 
 		>div.total {
-			padding: .3875rem .5rem;
+			padding: .2rem .5rem;
 			justify-content: space-evenly;
 			align-items: center;
 			background: var(--coral);
 			color: var(--mariana0);
-			font: normal 1rem monospace;
+
+			>div:last-child {
+				font: normal 1.5rem monospace;
+			}
 		}
 
 		>table {
