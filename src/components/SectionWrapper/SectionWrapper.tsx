@@ -4,7 +4,7 @@ import Header from 'components/Header/Header';
 import NoughtsCrosses from 'components/NoughtsCrosses/NoughtsCrosses';
 import SimonSvg from 'components/SimonSvg/SimonSvg';
 import ToolBar from 'components/ToolBar/ToolBar';
-import ThemeButton from 'components/ToolBar/ThemeButton';
+import ThemeButton from 'components/ToolBar/ThemeToggle';
 
 type SectionWrapperProps = {
 	children: JSX.Element | JSX.Element[],
