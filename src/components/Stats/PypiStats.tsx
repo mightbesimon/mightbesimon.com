@@ -29,6 +29,8 @@ function PypiStats(): JSX.Element
 
 	const aggregate = (downloads: any, total: number) =>
 	{
+		if (!downloads) return;
+
 		const items = Object.entries(downloads)
 			.map((kvp): Aggregated =>
 			{
@@ -71,8 +73,9 @@ function PypiStats(): JSX.Element
 	const [showGraph, setShowGraph] = useState(false);
 	const [index, setIndex] = useState(0);
 
-	const getPath = (items: Aggregated[]) =>
+	const getPath = (items: Aggregated[] | undefined) =>
 	{
+		if (!items) return;
 		const total = items[items.length - 1].cummulative;
 		let path = 'M';
 		items.forEach(item =>
@@ -122,7 +125,8 @@ function PypiStats(): JSX.Element
 							/>
 							<path fill='none'
 								stroke='var(--text)' strokeWidth={.7}
-								d={getPath(data?.at(index)?.last30days as Aggregated[])} />
+								d={getPath(data?.at(index)?.last30days)}
+							/>
 						</svg>
 					</div>
 				</div> : <EllipsisLoader text='📊' />
