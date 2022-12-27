@@ -61,7 +61,7 @@ function PypiStats(): JSX.Element
 		(item, idx) =>
 		{
 			return {
-				name: requests[idx].package,
+				name: item?.id,
 				downloads: item?.total_downloads as number,
 				last30days: aggregate(item?.downloads, item?.total_downloads as number),
 			};
@@ -99,7 +99,7 @@ function PypiStats(): JSX.Element
 					</div>
 					<table>
 						<tbody>
-							{data?.map((item, idx) =>
+							{data.map((item, idx) =>
 								<tr key={item.name}
 									onMouseEnter={() => { setShowGraph(true); setIndex(idx); }}
 									onMouseLeave={() => { setShowGraph(false); }}
@@ -111,11 +111,11 @@ function PypiStats(): JSX.Element
 							)}
 						</tbody>
 					</table>
-					<div className='graph'
+					<div className='graph flex column'
 						style={{ opacity: showGraph ? 1 : 0 }}
 					>
 						<div className='flex'>
-							<span>{data?.at(index)?.name}</span> last 90 days
+							<span>{data[index].name}</span> last 90 days
 						</div>
 						<svg viewBox='0 0 89 48'
 							preserveAspectRatio='none'
@@ -125,7 +125,7 @@ function PypiStats(): JSX.Element
 							/>
 							<path fill='none'
 								stroke='var(--text)' strokeWidth={.7}
-								d={getPath(data?.at(index)?.last30days)}
+								d={getPath(data[index].last30days)}
 							/>
 						</svg>
 					</div>
