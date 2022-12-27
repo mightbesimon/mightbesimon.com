@@ -87,7 +87,9 @@ function PypiStats(): JSX.Element
 		<div className='pypi stats'>
 			<h3>My Python Packages</h3>
 			{data ?
-				<div className='table'>
+				<div className='table'
+					style={{ borderRadius: showGraph ? '0rem .5rem .5rem 0rem' : '.5rem' }}
+				>
 					<div className='total flex'>
 						<div>total downloads</div>
 						<div>{formatCount(totalDownloads)}</div>
@@ -106,18 +108,22 @@ function PypiStats(): JSX.Element
 							)}
 						</tbody>
 					</table>
-					<div className='graph' style={{ display: showGraph ? 'block' : 'none' }}>
-						<div>
-							<span>{data?.at(index)?.name}</span> last 90 days
-						</div>
-						<svg viewBox='0 0 89 48'>
-							<rect fill='var(--body)' opacity={.8}
+					<div className='graph'
+						style={{ opacity: showGraph ? 1 : 0 }}
+					>
+						<svg viewBox='0 0 89 48'
+							preserveAspectRatio='none'
+						>
+							<rect fill='var(--body)' opacity={.9}
 								width='100%' height='100%'
 							/>
 							<path fill='none'
 								stroke='var(--text)' strokeWidth={.7}
 								d={getPath(data?.at(index)?.last30days as Aggregated[])} />
 						</svg>
+						<div>
+							<span>{data?.at(index)?.name}</span> last 90 days
+						</div>
 					</div>
 				</div> : <EllipsisLoader text='📊' />
 			}
