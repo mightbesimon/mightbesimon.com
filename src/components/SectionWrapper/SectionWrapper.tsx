@@ -3,8 +3,9 @@ import Footer from 'components/Footer/Footer';
 import Header from 'components/Header/Header';
 import NoughtsCrosses from 'components/NoughtsCrosses/NoughtsCrosses';
 import SimonSvg from 'components/SimonSvg/SimonSvg';
+import GotoTop from 'components/ToolBar/GotoTop';
+import ThemeButton from 'components/ToolBar/ThemeToggle';
 import ToolBar from 'components/ToolBar/ToolBar';
-import ThemeButton from 'components/ToolBar/ThemeButton';
 
 type SectionWrapperProps = {
 	children: JSX.Element | JSX.Element[],
@@ -28,6 +29,7 @@ function SectionWrapper({ children, view, title, height, neon, game,
 			<Footer />
 
 			<ToolBar>
+				<GotoTop />
 				<ThemeButton />
 			</ToolBar>
 		</>

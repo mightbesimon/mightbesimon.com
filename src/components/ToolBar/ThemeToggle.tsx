@@ -1,6 +1,6 @@
 import FloatingButton from 'components/Buttons/FloatingButton';
-import { useContext } from "react";
 import { ThemeContext, ThemeEnum } from "utils/contexts/Theme";
+import { useContext } from "react";
 
 function ThemeButton()
 {

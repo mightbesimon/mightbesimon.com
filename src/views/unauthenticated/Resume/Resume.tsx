@@ -2,9 +2,10 @@ import './Resume.scss';
 import ResumeNav from './ResumeNav';
 import Github from 'assets/Socials/github.svg';
 import LinkedIn from 'assets/Socials/linkedin.svg';
+import GotoTop from 'components/ToolBar/GotoTop';
+import ThemeButton from 'components/ToolBar/ThemeToggle';
 import ToolBar from 'components/ToolBar/ToolBar';
 import { useEffect } from 'react';
-import ThemeButton from 'components/ToolBar/ThemeButton';
 
 function Resume()
 {
@@ -37,6 +38,7 @@ function Resume()
 		>
 			<ResumeNav />
 			<ToolBar>
+				<GotoTop />
 				<ThemeButton />
 			</ToolBar>
 
