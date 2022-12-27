@@ -7,7 +7,7 @@ export type PackageRequest = {
 export type PackageResponse = {
 	id: string,
 	total_downloads: number,
-	downloads: any[],
+	downloads: any,
 	versions: string[],
 };
 
