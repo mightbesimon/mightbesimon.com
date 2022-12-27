@@ -1,5 +1,5 @@
 import './PypiStats.scss';
-import EllipsisLoader from 'components/Loader/EllipsisLoader';
+import EllipsisSpinner from 'components/Spinner/EllipsisSpinner';
 import batchCall from 'utils/api/batchCall';
 import getPackage from 'utils/api/pypi/getPackage';
 import { formatCount } from 'utils/extension/Functions';
@@ -129,7 +129,7 @@ function PypiStats(): JSX.Element
 							/>
 						</svg>
 					</div>
-				</div> : <EllipsisLoader text='📊' />
+				</div> : <EllipsisSpinner text='📊' />
 			}
 		</div>
 	);

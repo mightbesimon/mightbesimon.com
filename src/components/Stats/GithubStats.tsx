@@ -1,5 +1,5 @@
 import './GithubStats.scss';
-import EllipsisLoader from 'components/Loader/EllipsisLoader';
+import EllipsisSpinner from 'components/Spinner/EllipsisSpinner';
 import getRepos from 'utils/api/github/getRepos';
 import { useQuery } from 'react-query';
 
@@ -43,7 +43,7 @@ function GithubStats(): JSX.Element
 								<td className='value'>{format(data.forks)}</td>
 							</tr>
 						</tbody>
-					</table></div> : <EllipsisLoader text='📊' />
+					</table></div> : <EllipsisSpinner text='📊' />
 			}
 		</div>
 	);

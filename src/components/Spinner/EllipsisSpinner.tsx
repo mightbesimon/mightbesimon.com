@@ -1,10 +1,10 @@
-import './EllipsisLoader.scss';
+import './EllipsisSpinner.scss';
 
-type EllipsisLoaderProps = {
+type EllipsisSpinnerProps = {
 	text?: string,
 };
 
-function EllipsisLoader({ text }: EllipsisLoaderProps)
+function EllipsisSpinner({ text }: EllipsisSpinnerProps)
 {
 	return (
 		<div className="ellipsis loader">
@@ -15,4 +15,4 @@ function EllipsisLoader({ text }: EllipsisLoaderProps)
 		</div>
 	);
 }
-export default EllipsisLoader;
+export default EllipsisSpinner;
