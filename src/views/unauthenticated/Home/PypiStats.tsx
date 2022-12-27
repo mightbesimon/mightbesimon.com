@@ -3,7 +3,6 @@ import './PypiStats.scss';
 
 function PypiStats(): JSX.Element
 {
-
 	const data = [
 		'lifehacks.metaclasses',
 		'lifehacks.colour',
