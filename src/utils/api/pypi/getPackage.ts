@@ -7,7 +7,7 @@ export type PackageRequest = {
 export type PackageResponse = {
 	id: string,
 	total_downloads: number,
-	downloads: any[],
+	downloads: any,
 	versions: string[],
 };
 
@@ -16,7 +16,7 @@ async function getPackage(
 ): Promise<PackageResponse | undefined>
 {
 	const response = await fetch(
-		`${api.pypi}/v2/projects/${packageName}`,
+		`${api.pypi}/projects/${packageName}`,
 		{
 			method: "GET",
 		}

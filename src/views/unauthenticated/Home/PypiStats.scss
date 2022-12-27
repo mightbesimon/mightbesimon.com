@@ -13,6 +13,7 @@ div.pypi.stats {
 		border-radius: .5rem;
 		font-size: .8rem;
 		border: 2px solid var(--coral);
+		position: relative;
 
 		>div.total {
 			padding: .2rem .5rem;
@@ -36,6 +37,11 @@ div.pypi.stats {
 			tr {
 				border-top: 2px solid var(--coral);
 				line-height: 1rem;
+				transition: var(--transition);
+
+				&:hover {
+					background: var(--body);
+				}
 
 				>td {
 					padding: .25rem .5rem;
@@ -45,6 +51,31 @@ div.pypi.stats {
 					font: normal 1rem monospace;
 					text-align: right;
 				}
+			}
+		}
+
+		>div.graph {
+			display: none;
+			position: absolute;
+			top: 50%;
+			left: 0%;
+			translate: -100% -50%;
+			border-radius: .5rem;
+			border: 2px solid var(--coral);
+
+			>div {
+				padding: .5rem;
+				background: var(--coral);
+				color: var(--mariana0);
+
+				>span {
+					font: bold 1rem monospace;
+				}
+			}
+
+			>svg {
+				width: 16rem;
+				border-radius: 0rem 0rem .5rem .5rem;
 			}
 		}
 	}
