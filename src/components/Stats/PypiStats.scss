@@ -58,27 +58,28 @@ div.pypi.stats {
 			opacity: 0;
 			position: absolute;
 			top: 50%;
-			left: 0%;
+			right: 0%;
 			height: calc(100% + 3.5px);
-			translate: -100% -50%;
-			border-radius: .5rem 0rem 0rem .5rem;
+			translate: 100% -50%;
+			border-radius: 0rem .5rem.5rem 0rem;
 			border: 2px solid var(--coral);
 			transition: var(--transition);
 
-			>svg {
-				width: 16rem;
-				height: calc(100% - 1.85rem);
-				border-radius: .5rem 0rem 0rem 0rem;
-			}
-
 			>div {
 				padding: .475rem;
+				justify-content: space-between;
 				background: var(--coral);
 				color: var(--mariana0);
 
 				>span {
 					font: bold 1rem monospace;
 				}
+			}
+
+			>svg {
+				width: 16rem;
+				height: calc(100% - 1.85rem);
+				border-radius: 0rem 0rem .5rem 0rem;
 			}
 		}
 	}
