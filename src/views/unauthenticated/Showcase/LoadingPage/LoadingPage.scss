@@ -4,9 +4,10 @@ section.LoadingPage {
 	>div {
 		display: flex;
 		align-items: center;
+		text-align: center;
 
-		>div:first-child {
-			width: 7.5rem;
+		>div {
+			width: 7.5rem !important;
 		}
 	}
 }

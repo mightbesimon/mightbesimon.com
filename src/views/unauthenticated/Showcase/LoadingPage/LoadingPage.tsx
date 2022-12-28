@@ -1,5 +1,5 @@
 import './LoadingPage.scss';
-import EllipsisLoader from 'components/Loader/EllipsisLoader';
+import EllipsisSpinner from 'components/Spinner/EllipsisSpinner';
 import SectionWrapper from 'components/SectionWrapper/SectionWrapper';
 
 function LoadingPage()
@@ -8,31 +8,31 @@ function LoadingPage()
 		<SectionWrapper view='LoadingPage'>
 			<div>
 				<div>default</div>
-				<EllipsisLoader />
+				<EllipsisSpinner />
 			</div>
 			<div>
 				<div>star</div>
-				<EllipsisLoader text='⭐️' />
+				<EllipsisSpinner text='⭐️' />
 			</div>
 			<div>
 				<div>dance</div>
-				<EllipsisLoader text='💃' />
+				<EllipsisSpinner text='💃' />
 			</div>
 			<div>
 				<div>denied</div>
-				<EllipsisLoader text='🚫' />
+				<EllipsisSpinner text='🚫' />
 			</div>
 			<div>
 				<div>construction</div>
-				<EllipsisLoader text='🚧' />
+				<EllipsisSpinner text='🚧' />
 			</div>
 			<div>
 				<div>worker</div>
-				<EllipsisLoader text='👷‍♂️' />
+				<EllipsisSpinner text='👷‍♂️' />
 			</div>
 			<div>
 				<div>vegetable</div>
-				<EllipsisLoader text='🍆' />
+				<EllipsisSpinner text='🍆' />
 			</div>
 		</SectionWrapper>
 	);

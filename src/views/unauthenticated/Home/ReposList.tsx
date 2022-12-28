@@ -1,5 +1,5 @@
 import repositories from 'data/repositories.json';
-import EllipsisLoader from 'components/Loader/EllipsisLoader';
+import EllipsisSpinner from 'components/Spinner/EllipsisSpinner';
 import getRepos, { RepositoryResponse } from 'utils/api/github/getRepos';
 import { useQuery } from 'react-query';
 
@@ -31,7 +31,7 @@ function ReposList(): JSX.Element
 							<div>🍴 {repo.forks_count}</div>
 						</div>
 					</a>
-				)) : <EllipsisLoader text='🌵' />
+				)) : <EllipsisSpinner text='🌵' />
 			}
 		</div>
 	);

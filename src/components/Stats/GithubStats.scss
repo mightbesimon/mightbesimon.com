@@ -8,7 +8,11 @@ div.github.stats {
 		border: 2px solid var(--mariana0);
 
 		>div {
-			padding: .3875rem .5rem;
+			display: flex;
+			height: 2rem;
+			padding: auto .5rem;
+			justify-content: space-evenly;
+			align-items: center;
 			text-align: center;
 			background: var(--mariana0);
 			color: var(--mariana3);

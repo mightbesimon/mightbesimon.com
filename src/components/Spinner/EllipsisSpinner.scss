@@ -1,8 +1,9 @@
 div.ellipsis.loader {
 	display: inline-block;
 	position: relative;
-	width: 5rem;
+	width: 100%;
 	height: 5rem;
+	line-height: 1rem;
 
 	>div {
 		position: absolute;
@@ -18,22 +19,22 @@ div.ellipsis.loader {
 	}
 
 	>div:nth-child(1) {
-		left: .5rem;
+		left: calc(50% - 2.25rem);
 		animation: ellipsis1 500ms infinite;
 	}
 
 	>div:nth-child(2) {
-		left: .5rem;
+		left: calc(50% - 2.25rem);
 		animation: ellipsis2 500ms infinite;
 	}
 
 	>div:nth-child(3) {
-		left: 2rem;
+		left: calc(50% - .75rem);
 		animation: ellipsis2 500ms infinite;
 	}
 
 	>div:nth-child(4) {
-		left: 3.5rem;
+		left: calc(50% + .75rem);
 		animation: ellipsis3 500ms infinite;
 	}
 

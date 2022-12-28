@@ -1,5 +1,5 @@
 import './VscodeStats.scss';
-import EllipsisLoader from 'components/Loader/EllipsisLoader';
+import EllipsisSpinner from 'components/Spinner/EllipsisSpinner';
 import getPublisher from 'utils/api/vscode/getPublisher';
 import { formatCount } from 'utils/extension/Functions';
 import { useQuery } from 'react-query';
@@ -45,7 +45,7 @@ function VscodeStats(): JSX.Element
 							)}
 						</tbody>
 					</table>
-				</div> : <EllipsisLoader text='📊' />
+				</div> : <EllipsisSpinner text='📊' />
 			}
 		</div>
 	);
