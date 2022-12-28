@@ -112,7 +112,7 @@ function PypiStats(): JSX.Element
 						</tbody>
 					</table>
 					<div className='graph flex column'
-						style={{ opacity: showGraph ? 1 : 0 }}
+						style={{ display: showGraph ? 'flex' : 'none' }}
 					>
 						<div className='flex'>
 							<span>{data[index].name}</span> last 90 days
