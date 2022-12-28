@@ -15,7 +15,8 @@ div.vscode.stats {
 		border: 2px solid var(--blue);
 
 		>div.total {
-			padding: .2rem .5rem;
+			height: 2rem;
+			padding: auto .5rem;
 			justify-content: space-evenly;
 			align-items: center;
 			background: var(--blue);

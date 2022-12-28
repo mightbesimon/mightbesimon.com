@@ -16,7 +16,8 @@ div.pypi.stats {
 		position: relative;
 
 		>div.total {
-			padding: .2rem .5rem;
+			height: 2rem;
+			padding: auto .5rem;
 			justify-content: space-evenly;
 			align-items: center;
 			background: var(--coral);
@@ -59,15 +60,19 @@ div.pypi.stats {
 			position: absolute;
 			top: 50%;
 			right: 0%;
-			height: calc(100% + 3.5px);
+			height: calc(100% + 4px);
 			translate: 100% -50%;
 			border-radius: 0rem .5rem.5rem 0rem;
 			border: 2px solid var(--coral);
 			transition: var(--transition);
 
 			>div {
-				padding: .475rem;
+				flex: 1 1;
+				height: 2rem;
+				padding: .5rem;
+				line-height: 1rem;
 				justify-content: space-between;
+				align-items: center;
 				background: var(--coral);
 				color: var(--mariana0);
 
@@ -78,7 +83,6 @@ div.pypi.stats {
 
 			>svg {
 				width: 16rem;
-				height: calc(100% - 1.85rem);
 				border-radius: 0rem 0rem .5rem 0rem;
 			}
 		}
