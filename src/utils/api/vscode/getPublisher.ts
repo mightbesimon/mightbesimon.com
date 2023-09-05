@@ -22,6 +22,12 @@ export type ExtensionResponse = {
 	publishedDate: Date,
 	releaseDate: Date,
 	shortDescription: string,
+	versions:
+	{
+		version: string,
+		flags: string,
+		lastUpdated: Date,
+	},
 	statistics:
 	{
 		statisticName: string,
@@ -63,7 +69,7 @@ async function getPublisher(
 				],
 				// The flag value is calculated as the combined hex values of the requested flags, converted to base 10.
 				// https://github.com/microsoft/vscode/blob/main/src/vs/platform/extensionManagement/common/extensionGalleryService.ts
-				flags: 256,
+				flags: 257,
 			}),
 		}
 	);
