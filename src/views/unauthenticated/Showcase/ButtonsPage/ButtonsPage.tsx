@@ -15,11 +15,12 @@ function ButtonsPage(): JSX.Element
 				<div className='flex wrap'>
 					<FloatingButton>🛟</FloatingButton>
 					<div style={{
-						borderRadius: '10%',
+						borderRadius: '.5rem',
 						padding: '.2rem',
 						background: 'var(--orange)',
 					}}>
 						<DimensionalButton
+							width='8.25rem' height='2rem'
 							onClick={() => setIsOpen(false)}
 						>
 							? click me last ?

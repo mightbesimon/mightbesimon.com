@@ -1,3 +1,4 @@
+import ColourEnum from 'types/ColourEnums';
 import './DimensionalButton.scss';
 
 type DimensionalButtonProps = {
@@ -7,19 +8,32 @@ type DimensionalButtonProps = {
 	width?: string,
 	height?: string,
 	borderRadius?: string,
-	colour?: string,
+	colour?: ColourEnum,
+	font?: {
+		size?: string,
+		colour?: string,
+	},
 };
 
 function DimensionalButton({ className, children, onClick,
-	width, height, borderRadius, colour,
+	width, height, borderRadius, colour, font,
 }: DimensionalButtonProps): JSX.Element
 {
 	return (
-		<div className={'button dimensional ' + className}
-			style={{ width, height, borderRadius, background: colour }}
-			onClick={onClick}
+		<div className={'button dimensional '
+			+ className + (colour ? colour : '')}
+			style={{ width, height, borderRadius }}
 		>
-			<div>{children}</div>
+			<div
+				onClick={onClick}
+				style={{
+					borderRadius,
+					fontSize: font?.size,
+					color: font?.colour,
+				}}
+			>
+				{children}
+			</div>
 		</div>
 	);
 }
