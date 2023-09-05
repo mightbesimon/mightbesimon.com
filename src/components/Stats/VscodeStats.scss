@@ -1,5 +1,5 @@
 div.vscode.stats {
-	margin: 1rem;
+	margin: 1rem 2rem;
 
 	>h3 {
 		margin: 0rem;
@@ -8,7 +8,6 @@ div.vscode.stats {
 	}
 
 	>div.table {
-		width: max-content;
 		margin-top: .5rem;
 		border-radius: .5rem;
 		font-size: .8rem;
@@ -46,7 +45,7 @@ div.vscode.stats {
 					text-align: center;
 				}
 
-				>td.downloads {
+				>td.installs {
 					font: normal 1rem monospace;
 					text-align: right;
 				}
