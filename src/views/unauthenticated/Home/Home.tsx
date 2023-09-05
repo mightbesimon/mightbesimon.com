@@ -6,9 +6,8 @@ import socials from './Socials';
 import SvgLink from 'components/Links/SvgLink';
 import SectionWrapper from 'components/SectionWrapper/SectionWrapper';
 import SponsorButton from 'components/Sponsor/SponsorButton';
-import GithubStats from 'components/Stats/GithubStats';
-import PypiStats from 'components/Stats/PypiStats';
 import VscodeStats from 'components/Stats/VscodeStats';
+import GithubStats from 'components/Stats/GithubStats';
 import greetings from 'data/greetings.json';
 
 function Home(): JSX.Element
@@ -29,9 +28,8 @@ function Home(): JSX.Element
 			</div>
 
 			<div className='stats flex wrap'>
-				<GithubStats />
 				<VscodeStats />
-				<PypiStats />
+				<GithubStats />
 			</div>
 
 			<h2>✨ Featured</h2>

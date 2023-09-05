@@ -5,14 +5,10 @@ function SponsorButton(): JSX.Element
 {
 	return (
 		<a className='sponsor button' href='https://github.com/sponsors/mightbesimon'>
-			<DimensionalButton
-				height='2rem'
-			>
-				<>
-					<span className='stroke'>👉</span>
-					<span className='sponsor'>Sponsor</span>
-					<span className='stroke'>👈</span>
-				</>
+			<DimensionalButton width='8rem' height='2rem'>
+				<span className='stroke'>👉</span>
+				<span className='sponsor'>Sponsor</span>
+				<span className='stroke'>👈</span>
 			</DimensionalButton>
 		</a>
 	);

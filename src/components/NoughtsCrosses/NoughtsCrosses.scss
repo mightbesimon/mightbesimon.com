@@ -48,6 +48,7 @@ div.game {
 
 		>div.buttons {
 			margin: 1rem 0rem 0rem 0rem;
+			height: 2rem;
 
 			>div {
 				flex: 1;
@@ -59,19 +60,16 @@ div.game {
 			>div.minus {
 				flex: 1;
 				border-radius: .5rem 0rem 0rem .5rem;
-				background: var(--teal);
-			}
-
-			>div.plus {
-				flex: 1;
-				border-radius: 0rem .5rem .5rem 0rem;
-				background: var(--orange);
 			}
 
 			>div.restart {
 				flex: 4;
 				border-radius: 0rem;
-				background: var(--mariana3);
+			}
+
+			>div.plus {
+				flex: 1;
+				border-radius: 0rem .5rem .5rem 0rem;
 			}
 		}
 	}

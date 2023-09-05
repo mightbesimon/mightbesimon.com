@@ -18,12 +18,12 @@ function VscodeStats(): JSX.Element
 			return {
 				extensionId: item.publisher.publisherName + '.' + item.extensionName,
 				name: item.displayName,
-				downloads: item.statistics.filter(x => x.statisticName === 'install')[0].value,
+				installs: item.statistics.filter(x => x.statisticName === 'install')[0].value,
 			};
 		})
-		.sort((a, b) => b.downloads - a.downloads);
+		.sort((a, b) => b.installs - a.installs);
 
-	const totalDownloads = data?.reduce((sum, item) => sum + item.downloads, 0);
+	const totalInstalls = data?.reduce((sum, item) => sum + item.installs, 0);
 
 	return (
 		<div className='vscode stats'>
@@ -31,8 +31,8 @@ function VscodeStats(): JSX.Element
 			{data ?
 				<div className='table'>
 					<div className='total flex'>
-						<div>total downloads</div>
-						<div>{formatCount(totalDownloads)}</div>
+						<div>total installs</div>
+						<div>{formatCount(totalInstalls)}</div>
 					</div>
 					<table>
 						<tbody>
@@ -40,7 +40,7 @@ function VscodeStats(): JSX.Element
 								<tr key={item.extensionId}>
 									<td className='name'>{item.name}</td>
 									<td className='version'><img alt='version' src={`https://img.shields.io/visual-studio-marketplace/v/${item.extensionId}?label=`} /></td>
-									<td className='downloads'>{formatCount(item.downloads)}</td>
+									<td className='installs'>{formatCount(item.installs)}</td>
 								</tr>
 							)}
 						</tbody>

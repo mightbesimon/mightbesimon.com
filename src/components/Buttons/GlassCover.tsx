@@ -14,8 +14,8 @@ type GlassCoverProps = {
 function GlassCover({ children,
 	topChildren, locked, isOpen, setIsOpen,
 	width, height, borderRadius,
-}: GlassCoverProps): JSX.Element {
-
+}: GlassCoverProps): JSX.Element
+{
 	return (
 		<div className={'covered button'
 			+ (locked ? '' : ' unlocked')
@@ -26,8 +26,8 @@ function GlassCover({ children,
 				{children}
 			</div>
 			<div className='cover' style={{ borderRadius }}>
-				<div style={{ borderRadius }}>
-					<div style={{ borderRadius }}>
+				<div>
+					<div>
 						{topChildren}
 					</div>
 				</div>
