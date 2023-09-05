@@ -21,7 +21,7 @@ function DimensionalButton({ className, children, onClick,
 {
 	return (
 		<div className={'button dimensional '
-			+ className + (colour ? colour : '')}
+			+ className + ' ' + (colour ? colour : '')}
 			style={{ width, height, borderRadius }}
 		>
 			<div

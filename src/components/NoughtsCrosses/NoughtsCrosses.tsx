@@ -3,8 +3,9 @@ import { useState } from 'react';
 import { range } from 'utils/extension/Functions';
 import Nought from 'assets/NoughtsCrosses/nought.svg';
 import Cross from 'assets/NoughtsCrosses/cross.svg';
-import useRem from 'utils/hooks/useRem';
 import DimensionalButton from 'components/Buttons/DimensionalButton';
+import ColourEnum from 'types/ColourEnums';
+import useRem from 'utils/hooks/useRem';
 
 enum Mark
 {
@@ -177,17 +178,23 @@ function NoughtsCrosses(): JSX.Element
 				<div className='result'>
 					<div className='title'>{game.message}</div>
 					<div className='buttons flex'>
-						<DimensionalButton className='minus'
+						<DimensionalButton
+							className='minus'
+							colour={ColourEnum.teal}
 							onClick={deltaD({ rows: -1, cols: -1 })}
 						>
 							&ndash;
 						</DimensionalButton>
-						<DimensionalButton className='restart'
+						<DimensionalButton
+							className='restart'
+							colour={ColourEnum.light}
 							onClick={restart}
 						>
 							restart
 						</DimensionalButton>
-						<DimensionalButton className='plus'
+						<DimensionalButton
+							className='plus'
+							colour={ColourEnum.orange}
 							onClick={deltaD({ rows: +1, cols: +1 })}
 						>
 							+
