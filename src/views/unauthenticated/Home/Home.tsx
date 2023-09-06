@@ -13,7 +13,7 @@ import greetings from 'data/greetings.json';
 function Home(): JSX.Element
 {
 	return (
-		<SectionWrapper view='Home' title='SIMON' height='60vh' game>
+		<SectionWrapper view='Home' title='SIMON' height='60vh' auth game>
 
 			<div className='hello flex wrap'>
 				<pre>{greetings.join('\n')}</pre>
