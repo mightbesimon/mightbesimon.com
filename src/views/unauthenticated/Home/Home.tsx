@@ -3,6 +3,7 @@ import Featured from './Featured';
 import PagesList from './PagesList';
 import ReposList from './ReposList';
 import socials from './Socials';
+import { CVButton } from 'components/Buttons/Buttons';
 import SvgLink from 'components/Links/SvgLink';
 import SectionWrapper from 'components/SectionWrapper/SectionWrapper';
 import SponsorButton from 'components/Sponsor/SponsorButton';
@@ -30,6 +31,9 @@ function Home(): JSX.Element
 			<div className='stats flex wrap'>
 				<VscodeStats />
 				<GithubStats />
+				<div className='buttons flex column'>
+					<CVButton />
+				</div>
 			</div>
 
 			<h2>✨ Featured</h2>

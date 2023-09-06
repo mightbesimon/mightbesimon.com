@@ -12,3 +12,18 @@ export function AuthButton(): JSX.Element
 		</Link>
 	);
 }
+
+export function CVButton(): JSX.Element
+{
+	return (
+		<a className='cv button'
+			href='https://docs.google.com/document/d/1j9Ao758OLEx3xW7ADl4ITOiEEWZO5TCxVsSr4s7WyOE/edit?usp=sharing'
+			target='_blank' rel='noopener noreferrer'
+		>
+			<DimensionalButton width='8rem' height='2rem' colour={ColourEnum.blue}>
+				<span className='stroke'>💼</span>
+				<span className='cv'>&nbsp;Want my CV?</span>
+			</DimensionalButton>
+		</a>
+	);
+}
