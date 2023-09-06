@@ -35,7 +35,7 @@ function Home(): JSX.Element
 			<h2>✨ Featured</h2>
 			<Featured />
 
-			<h2>🗃 My repositories to check out</h2>
+			<h2>💾 My repositories to check out</h2>
 			<ReposList />
 
 			<h2>🌏 Pages to check out</h2>
