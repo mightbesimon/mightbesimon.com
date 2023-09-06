@@ -6,6 +6,7 @@ import socials from './Socials';
 import { CVButton } from 'components/Buttons/Buttons';
 import SvgLink from 'components/Links/SvgLink';
 import SectionWrapper from 'components/SectionWrapper/SectionWrapper';
+import { GithubSponsorCard } from 'components/Sponsor/GithubSponsor';
 import SponsorButton from 'components/Sponsor/SponsorButton';
 import VscodeStats from 'components/Stats/VscodeStats';
 import GithubStats from 'components/Stats/GithubStats';
@@ -44,6 +45,10 @@ function Home(): JSX.Element
 
 			<h2>🌏 Pages to check out</h2>
 			<PagesList />
+
+			<div className='github sponsor flex'>
+				<GithubSponsorCard />
+			</div>
 
 		</SectionWrapper>
 	);

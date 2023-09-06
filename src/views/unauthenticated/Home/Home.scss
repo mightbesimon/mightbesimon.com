@@ -145,4 +145,14 @@ section.Home {
 			}
 		}
 	}
+
+	>div.github.sponsor {
+		margin-top: 2rem;
+		justify-content: center;
+
+		>iframe {
+			border-radius: 1rem;
+			background: var(--mariana3);
+		}
+	}
 }
