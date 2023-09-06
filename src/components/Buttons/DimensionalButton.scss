@@ -20,6 +20,7 @@ div.button.dimensional {
 		text-align: center;
 		color: var(--mariana0);
 		background: var(--red3);
+		font-family: monospace;
 
 		&:hover {
 			bottom: min(.8rem, 20%);
@@ -30,6 +31,15 @@ div.button.dimensional {
 			bottom: min(.8rem, 10%);
 			filter: brightness(.9);
 		}
+	}
+}
+
+div.button.dimensional.dark {
+	background: black;
+
+	>div {
+		color: var(--mariana3);
+		background: var(--mariana1);
 	}
 }
 
@@ -70,5 +80,13 @@ div.button.dimensional.teal {
 
 	>div {
 		background: var(--teal3);
+	}
+}
+
+div.button.dimensional.blue {
+	background: var(--blue0);
+
+	>div {
+		background: var(--blue3);
 	}
 }

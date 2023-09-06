@@ -24,6 +24,12 @@ main {
 		border-bottom: var(--border-title);
 		color: var(--orange);
 	}
+
+	hr {
+		margin: 1rem 1.5rem;
+		border: none;
+		border-bottom: var(--border-title);
+	}
 }
 
 body.mariana.dark {

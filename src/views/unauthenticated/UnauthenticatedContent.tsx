@@ -1,7 +1,6 @@
 import { Route } from 'react-location';
 import Home from './Home/Home';
 import AuthPage from './AuthPage/AuthPage';
-import Resume from './Resume/Resume';
 import LoadingPage from './Showcase/LoadingPage/LoadingPage';
 import NeonPage from './Showcase/NeonPage/NeonPage';
 import FlagsPage from './Showcase/FlagsPage/FlagsPage';
@@ -21,16 +20,6 @@ const unauthenticatedContent: HidableRoute[] = [
 	{
 		path: '/auth',
 		element: <AuthPage />,
-	},
-	{
-		path: '/resume',
-		hide: true,
-		element: <Resume />,
-	},
-	{
-		path: '/cv',
-		hide: true,
-		element: <Resume />,
 	},
 	// {
 	// 	path: '/showcase',

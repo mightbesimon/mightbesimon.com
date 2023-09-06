@@ -1,5 +1,5 @@
-import unauthenticatedContent from '../UnauthenticatedContent';
 import { Link } from 'react-location';
+import unauthenticatedContent from 'views/unauthenticated/UnauthenticatedContent';
 
 function PagesList(): JSX.Element
 {

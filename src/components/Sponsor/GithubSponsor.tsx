@@ -13,7 +13,7 @@ export function GithubSponsorCard(): JSX.Element
 	return <iframe
 		src="https://github.com/sponsors/mightbesimon/card"
 		title="Sponsor mightbesimon"
-		height="225" width="600"
+		height="100" width="600"
 		style={{ border: 0 }}
 	/>;
 }

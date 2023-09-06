@@ -1,5 +1,5 @@
-import ColourEnum from 'types/ColourEnums';
 import './DimensionalButton.scss';
+import ColourEnum from 'types/ColourEnums';
 
 type DimensionalButtonProps = {
 	className?: string,
