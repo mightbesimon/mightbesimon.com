@@ -16,14 +16,14 @@ function ButtonsPage(): JSX.Element
 					<FloatingButton>🛟</FloatingButton>
 					<div style={{
 						borderRadius: '.5rem',
-						padding: '.2rem',
+						padding: '.25rem',
 						background: 'var(--orange)',
 					}}>
 						<DimensionalButton
 							width='8.25rem' height='2rem'
 							onClick={() => setIsOpen(false)}
 						>
-							? click me last ?
+							click me last
 						</DimensionalButton>
 					</div>
 				</div>
