@@ -1,6 +1,11 @@
 section.ButtonsPage {
 	margin: auto;
 
+	div.button.dimensional {
+		margin-top: 0rem;
+		translate: 0%;
+	}
+
 	>div {
 		align-items: center;
 
