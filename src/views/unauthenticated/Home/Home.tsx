@@ -3,13 +3,12 @@ import Featured from './Featured';
 import PagesList from './PagesList';
 import ReposList from './ReposList';
 import socials from './Socials';
-import { CVButton } from 'components/Buttons/Buttons';
+import greetings from 'data/greetings.json';
 import SvgLink from 'components/Links/SvgLink';
 import SectionWrapper from 'components/SectionWrapper/SectionWrapper';
-import SponsorButton from 'components/Sponsor/SponsorButton';
 import VscodeStats from 'components/Stats/VscodeStats';
 import GithubStats from 'components/Stats/GithubStats';
-import greetings from 'data/greetings.json';
+import { SponsorButton, CVButton } from 'components/Buttons/Buttons';
 
 function Home(): JSX.Element
 {
