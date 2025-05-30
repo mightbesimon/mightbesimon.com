@@ -1,6 +1,6 @@
 import SectionWrapper from 'components/SectionWrapper/SectionWrapper';
 
-function NotFound()
+function Teapot()
 {
 	return (
 		<SectionWrapper view='Teapot' title='418' game>
@@ -9,4 +9,4 @@ function NotFound()
 	);
 }
 
-export default NotFound;
+export default Teapot;

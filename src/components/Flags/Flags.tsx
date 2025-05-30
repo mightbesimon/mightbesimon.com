@@ -1,4 +1,3 @@
-import { range } from 'utils/extension/Functions';
 import './Flags.scss';
 
 export function GermanFlag(): JSX.Element
@@ -45,19 +44,23 @@ export function IrishFlag(): JSX.Element
 	);
 }
 
-export function USFlag(): JSX.Element
+export function LuxembourgFlag(): JSX.Element
 {
 	return (
-		<div className='us flag'>
-			<div>
-				<div />
-				<div>
-					{range(7).map(x => <div key={x} />)}
-				</div>
-			</div>
-			<div>
-				{range(6).map(x => <div key={x} />)}
-			</div>
+		<div className='luxembourg flag'>
+			<div />
+			<div />
+			<div />
+		</div>
+	);
+}
+
+export function SwissFlag(): JSX.Element
+{
+	return (
+		<div className='swiss flag'>
+			<div />
+			<div />
 		</div>
 	);
 }
