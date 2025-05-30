@@ -27,7 +27,7 @@ jobs:
     name: deploy firebase 🔥
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/download-artifact@v3
+    - uses: actions/download-artifact@v4
       with:
         name: build
         path: .
