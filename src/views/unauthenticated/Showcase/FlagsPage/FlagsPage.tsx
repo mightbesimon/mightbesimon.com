@@ -1,5 +1,5 @@
 import './FlagsPage.scss';
-import { FrenchFlag, GermanFlag, IrishFlag, ItalianFlag, USFlag } from 'components/Flags/Flags';
+import { FrenchFlag, GermanFlag, IrishFlag, ItalianFlag, LuxembourgFlag, SwissFlag } from 'components/Flags/Flags';
 import SectionWrapper from 'components/SectionWrapper/SectionWrapper';
 
 function FlagsPage(): JSX.Element
@@ -7,15 +7,16 @@ function FlagsPage(): JSX.Element
 	return (
 		<SectionWrapper view='FlagsPage'>
 			<div>
-				<GermanFlag />
 				<FrenchFlag />
+				<GermanFlag />
 			</div>
 			<div>
-				<ItalianFlag />
 				<IrishFlag />
+				<LuxembourgFlag />
+				<ItalianFlag />
 			</div>
 			<div>
-				<USFlag />
+				<SwissFlag />
 			</div>
 		</SectionWrapper>
 	);

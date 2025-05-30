@@ -14,11 +14,11 @@ div.german.flag {
 
 	>div:nth-child(1) {
 		border-radius: .5rem .5rem 0rem 0rem;
-		background: var(--mariana0);
+		background: black;
 	}
 
 	>div:nth-child(2) {
-		background: var(--red3);
+		background: var(--red2);
 	}
 
 	>div:nth-child(3) {
@@ -37,7 +37,7 @@ div.french.flag {
 
 	>div:nth-child(1) {
 		border-radius: .5rem 0rem 0rem .5rem;
-		background: var(--blue3);
+		background: var(--blue2);
 	}
 
 	>div:nth-child(2) {
@@ -46,7 +46,7 @@ div.french.flag {
 
 	>div:nth-child(3) {
 		border-radius: 0rem .5rem .5rem 0rem;
-		background: var(--red3);
+		background: var(--red2);
 	}
 }
 
@@ -60,7 +60,7 @@ div.italian.flag {
 
 	>div:nth-child(1) {
 		border-radius: .5rem 0rem 0rem .5rem;
-		background: var(--mint3);
+		background: var(--mint1);
 	}
 
 	>div:nth-child(2) {
@@ -69,7 +69,7 @@ div.italian.flag {
 
 	>div:nth-child(3) {
 		border-radius: 0rem .5rem .5rem 0rem;
-		background: var(--red3);
+		background: var(--red2);
 	}
 }
 
@@ -83,7 +83,7 @@ div.irish.flag {
 
 	>div:nth-child(1) {
 		border-radius: .5rem 0rem 0rem .5rem;
-		background: var(--mint3);
+		background: var(--mint2);
 	}
 
 	>div:nth-child(2) {
@@ -96,69 +96,51 @@ div.irish.flag {
 	}
 }
 
-div.us.flag {
+div.luxembourg.flag {
 	display: flex;
 	flex-direction: column;
 
-	>div:first-child {
+	>div {
 		width: 100%;
-		height: 53.8%;
-		display: flex;
-
-		>div:first-child {
-			width: 40%;
-			height: 100%;
-
-			// border-radius: .5rem 0rem 0rem 0rem;
-			background: var(--blue3);
-		}
-
-		>div:last-child {
-			width: 60%;
-			height: 100%;
-			display: flex;
-			flex-direction: column;
-
-			>div {
-				width: 100%;
-				height: 14.3%;
-			}
-
-			// >div:first-child {
-			// 	border-radius: 0rem .5rem 0rem 0rem;
-			// }
-
-			>div:nth-child(odd) {
-				background: var(--red3);
-			}
-
-			>div:nth-child(even) {
-				background: white;
-			}
-		}
+		height: 33.3%;
 	}
 
-	>div:last-child {
-		width: 100%;
-		height: 46.2%;
-		display: flex;
-		flex-direction: column;
+	>div:nth-child(1) {
+		border-radius: .5rem .5rem 0rem 0rem;
+		background: var(--red3);
+	}
 
-		>div {
-			width: 100%;
-			height: 16.6%;
-		}
+	>div:nth-child(2) {
+		background: white;
+	}
 
-		>div:nth-child(odd) {
-			background: white;
-		}
+	>div:nth-child(3) {
+		border-radius: 0rem 0rem .5rem .5rem;
+		background: var(--blue3);
+	}
+}
 
-		>div:nth-child(even) {
-			background: var(--red3);
-		}
+div.swiss.flag {
+	position: relative;
+	border-radius: .5rem;
+	background: var(--red3);
 
-		// >div:last-child {
-		// 	border-radius: 0% 0% .5rem .5rem;
-		// }
+	>div {
+		position: absolute;
+		background: white;
+	}
+
+	>div:nth-child(1) {
+		top: 40.625%;
+		bottom: 40.625%;
+		left: 18.75%;
+		right: 18.75%;
+	}
+
+	>div:nth-child(2) {
+		top: 18.75%;
+		bottom: 18.75%;
+		left: 40.625%;
+		right: 40.625%;
 	}
 }
