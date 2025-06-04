@@ -22,7 +22,6 @@ function SectionWrapper({ children, view, title, height,
 	auth, neon, game,
 }: SectionWrapperProps)
 {
-	console.log(auth);
 	return (
 		<>
 			{title && <Header title={title} image={SimonSvg()} neon={neon} height={height} />}

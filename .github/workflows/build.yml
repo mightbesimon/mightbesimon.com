@@ -22,7 +22,6 @@ jobs:
       with:
         name: build
         path: |
-          .git/
           build/
           .firebaserc
           firebase.json
