@@ -39,6 +39,7 @@ jobs:
         external_repository: ${{ env.PAGES_REPO }}
         publish_branch: ${{ env.PAGES_BRANCH }}
         publish_dir: build/
+        exclude_assets: ''
 
   deploy-firebase:
     needs: build
