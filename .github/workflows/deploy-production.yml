@@ -35,6 +35,8 @@ jobs:
         echo 'github: mightbesimon' > build/.github/FUNDING.yml
     - uses: peaceiris/actions-gh-pages@v4
       with:
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
         personal_token: ${{ secrets.DEPLOY_PAGES_TOKEN }}
         external_repository: ${{ env.PAGES_REPO }}
         publish_branch: ${{ env.PAGES_BRANCH }}
