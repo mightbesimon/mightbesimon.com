@@ -35,7 +35,7 @@ jobs:
         echo 'github: mightbesimon' > build/.github/FUNDING.yml
     - uses: peaceiris/actions-gh-pages@v4
       with:
-        deploy_key: ${{ secrets.DEPLOY_PAGES_TOKEN }}
+        personal_token: ${{ secrets.DEPLOY_PAGES_TOKEN }}
         external_repository: ${{ env.PAGES_REPO }}
         publish_branch: ${{ env.PAGES_BRANCH }}
         publish_dir: build/
