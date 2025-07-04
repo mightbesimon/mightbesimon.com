@@ -12,7 +12,7 @@ function Featured(): JSX.Element
 							{data.description}
 						</div>
 					</div>
-					<div className='badges flex'>
+					<div className='badges flex wrap'>
 						{data.badges && data.badges.map(badge =>
 							<img key={badge} alt='badge' src={badge} />
 						)}
