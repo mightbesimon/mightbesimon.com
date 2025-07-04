@@ -18,6 +18,7 @@ function VscodeStats(): JSX.Element
 			return {
 				extensionId: item.publisher.publisherName + '.' + item.extensionName,
 				name: item.displayName,
+				version: item.versions[0]?.version,
 				installs: item.statistics.filter(x => x.statisticName === 'install')[0].value,
 			};
 		})
@@ -39,7 +40,7 @@ function VscodeStats(): JSX.Element
 							{data?.map(item =>
 								<tr key={item.extensionId}>
 									<td className='name'>{item.name}</td>
-									<td className='version'><img alt='version' src={`https://img.shields.io/visual-studio-marketplace/v/${item.extensionId}?label=`} /></td>
+									<td className='version'><img alt='version' src={`https://img.shields.io/badge/v${item.version}-blue`} /></td>
 									<td className='installs'>{formatCount(item.installs)}</td>
 								</tr>
 							)}

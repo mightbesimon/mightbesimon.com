@@ -27,7 +27,7 @@ export type ExtensionResponse = {
 		version: string,
 		flags: string,
 		lastUpdated: Date,
-	},
+	}[],
 	statistics:
 	{
 		statisticName: string,
