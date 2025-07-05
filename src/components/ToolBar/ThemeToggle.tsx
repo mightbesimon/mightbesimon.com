@@ -8,16 +8,9 @@ function ThemeToggle()
 
 	const onClick = () =>
 	{
-		if (theme === ThemeEnum.marianaDark)
-		{
-			setTheme(ThemeEnum.marianaLight);
-			return;
-		}
-		if (theme === ThemeEnum.marianaLight)
-		{
-			setTheme(ThemeEnum.marianaDark);
-			return;
-		}
+		setTheme(theme === ThemeEnum.marianaDark
+			? ThemeEnum.marianaLight
+			: ThemeEnum.marianaDark);
 	};
 
 	return (

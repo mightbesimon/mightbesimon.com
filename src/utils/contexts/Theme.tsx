@@ -24,14 +24,10 @@ export const ThemeContext = createContext<ThemeContextType>(
 
 export function ThemeProvider(props: ThemeProviderProps)
 {
-	const tryGetTheme = () =>
-	{
-		const storedTheme = localStorage.getItem('theme');
-		return storedTheme && storedTheme === ThemeEnum.marianaLight ?
-			ThemeEnum.marianaLight : ThemeEnum.marianaDark;
-	};
-
-	const [theme, setTheme] = useState<ThemeEnum>(tryGetTheme());
+	const [theme, setTheme] = useState<ThemeEnum>(
+		localStorage.getItem('theme') === ThemeEnum.marianaLight
+			? ThemeEnum.marianaLight
+			: ThemeEnum.marianaDark);
 
 	const changeTheme = (newTheme: ThemeEnum) =>
 	{
@@ -55,10 +51,7 @@ export function ThemeProvider(props: ThemeProviderProps)
 
 	return (
 		<ThemeContext.Provider
-			value={{
-				theme,
-				setTheme: changeTheme,
-			}}
+			value={{ theme, setTheme: changeTheme }}
 		>
 			{props.children}
 		</ThemeContext.Provider>
