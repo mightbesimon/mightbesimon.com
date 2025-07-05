@@ -2,7 +2,7 @@ import FloatingButton from 'components/Buttons/FloatingButton';
 import { ThemeContext, ThemeEnum } from "utils/contexts/Theme";
 import { useContext } from "react";
 
-function ThemeButton()
+function ThemeToggle()
 {
 	const { theme, setTheme } = useContext(ThemeContext);
 
@@ -30,4 +30,4 @@ function ThemeButton()
 	);
 }
 
-export default ThemeButton;
+export default ThemeToggle;
