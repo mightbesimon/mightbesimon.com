@@ -19,7 +19,7 @@ function Home(): JSX.Element
 				<pre>{greetings.join('\n')}</pre>
 				<div className='right'>
 					<h1>Hi, I'm Simon</h1>
-					<p>Auckland, NZ</p>
+					<p>Auckland, New Zealand ∙ Darmstadt, Germany</p>
 					<div className='flex wrap'>
 						{socials.map(data => SvgLink(data))}
 						<SponsorButton />
@@ -35,13 +35,13 @@ function Home(): JSX.Element
 				</div>
 			</div>
 
-			<h2>✨ Featured</h2>
+			<h2>✨ Featured ✨</h2>
 			<Featured />
 
-			<h2>💾 My repositories to check out</h2>
+			<h2>🍴 Popular Repos 🍴</h2>
 			<ReposList />
 
-			<h2>🌏 Pages to check out</h2>
+			<h2>🌍 Fun Pages 🌏</h2>
 			<PagesList />
 
 		</SectionWrapper>
