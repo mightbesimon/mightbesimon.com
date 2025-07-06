@@ -26,7 +26,7 @@ function ReposList(): JSX.Element
 							<h3>{repo.name}</h3>
 							<div className='description'>{repo.description}</div>
 						</div>
-						<div className='engagement flex'>
+						<div className='engagement flex wrap'>
 							<div>⭐️ {repo.stargazers_count}</div>
 							<div>🍴 {repo.forks_count}</div>
 						</div>

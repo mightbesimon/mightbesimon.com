@@ -18,11 +18,20 @@ main {
 	}
 
 	h2 {
-		margin: 2rem 1.5rem 0rem 1.5rem;
-		padding: 0rem 1rem;
+		margin: 2rem 1rem;
+		display: flex;
+		font-size: 1.75rem;
 		font-weight: normal;
-		border-bottom: var(--border-title);
-		color: var(--orange);
+		// color: var(--orange);
+
+		&::before,
+		&::after {
+			content: '';
+			flex: 1;
+			margin: auto 1rem;
+			border: var(--border-title);
+			border-radius: 2px;
+		}
 	}
 
 	hr {
