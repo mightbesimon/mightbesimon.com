@@ -6,149 +6,152 @@
  *****              declare global variables              *****
  **************************************************************/
 :root {
-  /* colour palette */
-  --mariana0: hsla(215, 15%, 16%, 100%);
-  --mariana1: hsla(212, 15%, 22%, 100%);
-  --mariana2: hsla(212, 14%, 36%, 100%);
-  --mariana3: hsla(219, 28%, 88%, 100%);
-  --red: hsla(357, 79%, 65%, 100%);
-  --coral: hsla(13, 93%, 66%, 100%);
-  --orange: hsla(32, 93%, 66%, 100%);
-  --yellow: hsla(40, 94%, 68%, 100%);
-  --mint: hsla(114, 31%, 68%, 100%);
-  --teal: hsla(180, 36%, 54%, 100%);
-  --blue: hsla(210, 50%, 60%, 100%);
-  --purple: hsla(300, 30%, 68%, 100%);
+	/* colour palette */
+	--mariana0: hsla(215, 15%, 16%, 100%);
+	--mariana1: hsla(210, 15%, 22%, 100%); // sublime blue1
+	--mariana2: hsla(210, 15%, 36%, 100%);
+	--mariana3: hsla(219, 28%, 88%, 100%); // sublime white3
+	// --blue2: hsla(210, 13%, 40%, .7); // sublime
+	// --blue4: hsla(210, 13%, 45%, 1); // sublime
+	// --blue6: hsla(221, 12%, 69%, 1); // sublime
+	--red: hsla(357, 79%, 65%, 100%); // sublime red
+	--coral: hsla(13, 93%, 66%, 100%); // sublime red2
+	--orange: hsla(32, 93%, 66%, 100%); // sublime orange
+	--yellow: hsla(40, 94%, 68%, 100%); //sublime orange3
+	--mint: hsla(114, 31%, 68%, 100%); // sublime green
+	--teal: hsla(180, 36%, 54%, 100%); // sublime blue5
+	--blue: hsla(210, 50%, 60%, 100%); // sublime blue
+	--purple: hsla(300, 30%, 68%, 100%); // sublime pink
 
-  --mac-red: hsla(2, 100%, 66%, 100%);
-  --mac-yellow: hsla(46, 78%, 57%, 100%);
-  --mac-green: hsla(111, 54%, 49%, 100%);
+	--mac-red: hsla(2, 100%, 66%, 100%);
+	--mac-yellow: hsla(46, 78%, 57%, 100%);
+	--mac-green: hsla(111, 54%, 49%, 100%);
 
-  --red0: hsla(357, 40%, 40%, 100%);
-  --red1: hsla(357, 50%, 50%, 100%);
-  --red2: hsla(357, 70%, 60%, 100%);
-  --red3: hsla(357, 79%, 65%, 100%);
-  --orange0: hsla(32, 55%, 40%, 100%);
-  --orange1: hsla(32, 72%, 48%, 100%);
-  --orange2: hsla(32, 80%, 55%, 100%);
-  --orange3: hsla(32, 93%, 66%, 100%);
-  --blue0: hsla(210, 35%, 40%, 100%);
-  --blue1: hsla(210, 40%, 48%, 100%);
-  --blue2: hsla(210, 45%, 55%, 100%);
-  --blue3: hsla(210, 50%, 60%, 100%);
-  --teal0: hsla(180, 24%, 32%, 100%);
-  --teal1: hsla(180, 24%, 40%, 100%);
-  --teal2: hsla(180, 20%, 48%, 100%);
-  --teal3: hsla(180, 36%, 54%, 100%);
-  --mint0: hsla(114, 20%, 40%, 100%);
-  --mint1: hsla(114, 25%, 60%, 100%);
-  --mint2: hsla(114, 27%, 64%, 100%);
-  --mint3: hsla(114, 31%, 68%, 100%);
+	--red0: hsla(357, 40%, 40%, 100%);
+	--red1: hsla(357, 50%, 50%, 100%);
+	--red2: hsla(357, 70%, 60%, 100%);
+	--red3: hsla(357, 79%, 65%, 100%);
+	--orange0: hsla(32, 55%, 40%, 100%);
+	--orange1: hsla(32, 72%, 48%, 100%);
+	--orange2: hsla(32, 85%, 55%, 100%); // sublime orange2
+	--orange3: hsla(32, 93%, 66%, 100%);
+	--blue0: hsla(210, 35%, 40%, 100%);
+	--blue1: hsla(210, 40%, 48%, 100%);
+	--blue2: hsla(210, 45%, 55%, 100%);
+	--blue3: hsla(210, 50%, 60%, 100%); // sublime blue-vibrant: hsla(210, 60%, 60%, 1)
+	--teal0: hsla(180, 24%, 32%, 100%);
+	--teal1: hsla(180, 24%, 40%, 100%);
+	--teal2: hsla(180, 20%, 48%, 100%);
+	--teal3: hsla(180, 36%, 54%, 100%);
+	--mint0: hsla(114, 20%, 40%, 100%);
+	--mint1: hsla(114, 25%, 60%, 100%);
+	--mint2: hsla(114, 27%, 64%, 100%);
+	--mint3: hsla(114, 31%, 68%, 100%);
 
-  /* borders */
-  --border-title: 2px solid var(--mariana2);
+	/* borders */
+	--border-title: 2px solid var(--mariana2);
 
-  /* shadow */
-  --shadow0: 0rem .3rem .8rem 0rem hsla(0, 0%, 0%, 67%);
-  --shadow1: 0rem .2rem .3rem 0rem hsla(0, 0%, 0%, 25%);
-  --shadow2: 0rem .2rem .4rem 0rem hsla(0, 0%, 0%, 50%);
-  --shadow3: .1rem .3rem .5rem 0rem hsla(0, 0%, 0%, 67%);
-  --neon-yellow: 0 0 .5rem yellow;
+	/* shadow */
+	--shadow0: 0rem .3rem .8rem 0rem hsla(0, 0%, 0%, 67%);
+	--shadow1: 0rem .2rem .3rem 0rem hsla(0, 0%, 0%, 25%);
+	--shadow2: 0rem .2rem .4rem 0rem hsla(0, 0%, 0%, 50%);
+	--shadow3: .1rem .3rem .5rem 0rem hsla(0, 0%, 0%, 67%);
+	--neon-yellow: 0 0 .5rem yellow;
 
-  /* transition */
-  --transition1: all 50ms ease;
-  --transition: all 200ms ease;
-  --transition5: all 500ms ease;
+	/* transition */
+	--transition1: all 50ms ease;
+	--transition: all 200ms ease;
+	--transition5: all 500ms ease;
 
-  /* themes */
-  --body: var(--mariana0);
-  --main: var(--mariana1);
-  --text: var(--mariana3);
-  --card: var(--mariana2);
+	/* themes */
+	--body: var(--mariana0);
+	--main: var(--mariana1);
+	--text: var(--mariana3);
+	--card: var(--mariana2);
 }
 
 /**************************************************************
  *****             override unhelpful presets             *****
  **************************************************************/
 [onClick] {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 * {
-  box-sizing: border-box;
-  border-collapse: collapse;
-  transition: var(--transition1);
+	box-sizing: border-box;
+	border-collapse: collapse;
+	transition: var(--transition1);
 }
 
 body {
-  margin: 0rem;
-  background: var(--body);
-  font-family: sans-serif;
-  color: var(--text);
+	margin: 0rem;
+	font-family: sans-serif;
+	background: var(--body);
+	color: var(--text);
 }
 
 a {
-  color: inherit;
-  text-decoration: inherit;
+	color: inherit;
+	text-decoration: inherit;
 }
 
 img,
 svg {
-  display: block;
+	display: block;
 }
 
 /**************************************************************
  *****                      presets                       *****
  **************************************************************/
 table.hashtag {
-  tr:first-child>td {
-    border-top: none;
-  }
+	tr:first-child>td {
+		border-top: none;
+	}
 
-  tr:last-child>td {
-    border-bottom: none;
-  }
+	tr:last-child>td {
+		border-bottom: none;
+	}
 
-  tr>td:first-child {
-    border-left: none;
-  }
+	tr>td:first-child {
+		border-left: none;
+	}
 
-  tr>td:last-child {
-    border-right: none;
-  }
+	tr>td:last-child {
+		border-right: none;
+	}
 }
 
 pre {
-  padding: .8rem;
-  border-radius: .8rem;
-  background: var(--body);
+	padding: .8rem;
+	border-radius: .8rem;
+	background: var(--body);
 }
 
 .flex {
-  display: flex;
+	display: flex;
 }
 
 .column {
-  flex-direction: column;
+	flex-direction: column;
 }
 
 .wrap {
-  flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 
 .stroke {
-  text-shadow:
-    -1px -1px 0px var(--mariana0),
-    -1px 0px 0px var(--mariana0),
-    -1px 1px 0px var(--mariana0),
-    0px -1px 0px var(--mariana0),
-    0px 1px 0px var(--mariana0),
-    1px -1px 0px var(--mariana0),
-    1px 0px 0px var(--mariana0),
-    1px 1px 0px var(--mariana0);
+	text-shadow:
+		-1px -1px 0px var(--mariana0),
+		-1px 0px 0px var(--mariana0),
+		-1px 1px 0px var(--mariana0),
+		0px -1px 0px var(--mariana0),
+		0px 1px 0px var(--mariana0),
+		1px -1px 0px var(--mariana0),
+		1px 0px 0px var(--mariana0),
+		1px 1px 0px var(--mariana0);
 }
 
 .button {
-  cursor: pointer;
-  user-select: none;
+	cursor: pointer;
+	user-select: none;
 }
