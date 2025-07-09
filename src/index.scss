@@ -48,8 +48,9 @@
 	--mint2: hsla(114, 27%, 64%, 100%);
 	--mint3: hsla(114, 31%, 68%, 100%);
 
-	/* borders */
-	--border-title: 2px solid var(--mariana2);
+	/* outline */
+	--outline1: 1px solid black;
+	--outline: 2px solid black;
 
 	/* shadow */
 	--shadow0: 0rem .3rem .8rem 0rem hsla(0, 0%, 0%, 67%);
@@ -140,18 +141,24 @@ pre {
 }
 
 .stroke {
+	color: var(--mariana3);
 	text-shadow:
-		-1px -1px 0px var(--mariana0),
-		-1px 0px 0px var(--mariana0),
-		-1px 1px 0px var(--mariana0),
-		0px -1px 0px var(--mariana0),
-		0px 1px 0px var(--mariana0),
-		1px -1px 0px var(--mariana0),
-		1px 0px 0px var(--mariana0),
-		1px 1px 0px var(--mariana0);
+		-1px -1px 1px black,
+		-1px 0px 1px black,
+		-1px 1px 1px black,
+		0px -1px 1px black,
+		0px 1px 1px black,
+		1px -1px 1px black,
+		1px 0px 1px black,
+		1px 1px 1px black;
 }
 
 .button {
 	cursor: pointer;
 	user-select: none;
+}
+
+.badge {
+	border-radius: 4px;
+	outline: var(--outline);
 }

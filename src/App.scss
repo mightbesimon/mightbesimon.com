@@ -22,22 +22,45 @@ main {
 		display: flex;
 		font-size: 1.75rem;
 		font-weight: normal;
-		// color: var(--orange);
 
 		&::before,
 		&::after {
 			content: '';
 			flex: 1;
 			margin: auto 1rem;
-			border: var(--border-title);
-			border-radius: 2px;
+			outline: var(--outline1);
+			border-radius: 1px;
 		}
 	}
 
 	hr {
 		margin: 1rem 1.5rem;
 		border: none;
-		border-bottom: var(--border-title);
+		outline: var(--outline1);
+	}
+}
+
+main {
+	outline: var(--outline);
+
+	header {
+		outline: var(--outline);
+	}
+
+	&:has(header.neon) {
+		outline: none;
+
+		header {
+			outline: none;
+		}
+
+		footer {
+			outline: none;
+		}
+	}
+
+	footer {
+		outline: var(--outline);
 	}
 }
 
@@ -55,6 +78,6 @@ body.light {
 	--main: white;
 	--text: var(--mariana0);
 	--card: var(--mariana3);
-	--mint: var(--mint1);
+	--mint: var(--mint0);
 	--orange: var(--orange2);
 }
