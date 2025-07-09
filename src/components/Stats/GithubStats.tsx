@@ -27,19 +27,19 @@ function GithubStats(): JSX.Element
 					<div>GitHub</div>
 					<table>
 						<tbody>
-							<tr key='repos'>
-								<td>Repos</td>
-								<td>💾</td>
-								<td className='value'>{format(data.repos)}</td>
-							</tr>
 							<tr key='stars'>
 								<td>Stars</td>
-								<td>⭐️</td>
+								<td className='stroke'>⭐️</td>
 								<td className='value'>{format(data.stars)}</td>
+							</tr>
+							<tr key='repos'>
+								<td>Repos</td>
+								<td className='stroke'>💾</td>
+								<td className='value'>{format(data.repos)}</td>
 							</tr>
 							<tr key='forks'>
 								<td>Forks</td>
-								<td>🍴</td>
+								<td className='stroke'>🍴</td>
 								<td className='value'>{format(data.forks)}</td>
 							</tr>
 						</tbody>

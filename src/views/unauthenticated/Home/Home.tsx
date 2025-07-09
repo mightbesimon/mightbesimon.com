@@ -35,13 +35,24 @@ function Home(): JSX.Element
 				</div>
 			</div>
 
-			<h2>✨ Featured ✨</h2>
+			<h2>
+				<span className='stroke'>✨</span>&nbsp;
+				Featured&nbsp;
+				<span className='stroke'>✨</span>
+			</h2>
 			<Featured />
 
-			<h2>🍴 Popular Repos 🍴</h2>
+			<h2>
+				<span className='stroke'>🍴</span>&nbsp;
+				Popular Repos&nbsp;
+				<span className='stroke'>🍴</span></h2>
 			<ReposList />
 
-			<h2>🌍 Fun Pages 🌏</h2>
+			<h2>
+				<span className='stroke'>🌍</span>&nbsp;
+				Fun Pages&nbsp;
+				<span className='stroke'>🌍</span>
+			</h2>
 			<PagesList />
 
 		</SectionWrapper>

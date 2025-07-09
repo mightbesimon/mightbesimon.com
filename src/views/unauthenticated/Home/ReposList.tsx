@@ -27,8 +27,14 @@ function ReposList(): JSX.Element
 							<div className='description'>{repo.description}</div>
 						</div>
 						<div className='engagement flex wrap'>
-							<div className='badge'>⭐️ {repo.stargazers_count}</div>
-							<div className='badge'>🍴 {repo.forks_count}</div>
+							<div className='badge'>
+								<span className='stroke'>⭐️</span>&nbsp;
+								{repo.stargazers_count}
+							</div>
+							<div className='badge'>
+								<span className='stroke'>🍴</span>&nbsp;
+								{repo.forks_count}
+							</div>
 						</div>
 					</a>
 				)) : <EllipsisSpinner text='🌵' />
