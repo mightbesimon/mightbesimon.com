@@ -131,7 +131,7 @@ function NoughtsCrosses(): JSX.Element
 	const endGame = (winner: Mark) =>
 	{
 		game.over = true;
-		game.message = winner === Mark.Empty ? 'draw' : `${winner} win`;
+		game.message = winner === Mark.Empty ? 'DRAW' : `${winner} WIN`;
 	};
 
 	const chooseInnerMostEmptyTile = () =>
