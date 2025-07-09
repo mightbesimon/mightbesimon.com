@@ -2,8 +2,8 @@ import { createContext, useEffect, useState } from 'react';
 
 export enum ThemeEnum
 {
-	marianaDark = 'mariana dark',
-	marianaLight = 'mariana light',
+	marianaDark = 'dark',
+	marianaLight = 'light',
 }
 
 type ThemeContextType = {

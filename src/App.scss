@@ -41,7 +41,7 @@ main {
 	}
 }
 
-body.mariana.dark {
+body.dark {
 	--body: var(--mariana0);
 	--main: var(--mariana1);
 	--text: var(--mariana3);
@@ -50,7 +50,7 @@ body.mariana.dark {
 	--orange: var(--orange3);
 }
 
-body.mariana.light {
+body.light {
 	--body: var(--mariana3);
 	--main: white;
 	--text: var(--mariana0);
