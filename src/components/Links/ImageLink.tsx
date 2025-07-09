@@ -12,7 +12,7 @@ function ImageLink({ name, image, url, newTab }: ImageLinkProps)
 			href={url} target={newTab ? '_blank' : undefined}
 			rel='noopener noreferrer'
 		>
-			<img alt={name} src={image} />
+			<img className='badge' alt={name} src={image} />
 		</a>
 	);
 }
