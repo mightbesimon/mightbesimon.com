@@ -88,9 +88,11 @@ section.Home {
 			box-shadow: var(--box-shadow);
 
 			&:hover {
-				// box-shadow: 2px 4px 0px black;
-				// margin: calc(1rem + 2px) calc(1rem - 1px) calc(1rem - 2px) calc(1rem + 1px);
-				box-shadow: 1px 3px 0px 4px black;
+				transform: scale(1.05);
+			}
+
+			&:active {
+				transform: scale(.95);
 			}
 
 			// &:has(img) {
