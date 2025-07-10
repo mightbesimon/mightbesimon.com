@@ -19,15 +19,20 @@ div.game {
 				border-radius: .5rem;
 				transition: var(--transition5);
 
-				&:empty:hover {
-					cursor: pointer;
-					background: var(--body);
-					opacity: 50%;
-				}
-
 				>img {
 					width: 100%;
 					height: 100%;
+					transition: var(--transition5);
+				}
+
+				>img.empty {
+					cursor: pointer;
+					opacity: 0;
+					// there is a problem here on mobile
+				}
+
+				>img.empty:hover {
+					opacity: 10%;
 				}
 			}
 		}
