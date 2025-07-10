@@ -8,14 +8,17 @@ type FloatingButtonProps = {
 	height?: string,
 	borderRadius?: string,
 	colour?: string,
+	plain?: boolean,
 };
 
 function FloatingButton({ className, children, onClick,
-	width, height, borderRadius, colour,
+	width, height, borderRadius, colour, plain,
 }: FloatingButtonProps): JSX.Element
 {
 	return (
-		<div className={'button floating ' + className}
+		<div className={'button floating stroke '
+			+ (plain ? '' : 'outline ')
+			+ className}
 			style={{ width, height, borderRadius, background: colour }}
 			onClick={onClick}
 		>

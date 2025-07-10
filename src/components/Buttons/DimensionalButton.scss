@@ -36,6 +36,14 @@ div.button.dimensional {
 	}
 }
 
+div.button.dimensional.outline {
+	outline: var(--outline);
+
+	>div {
+		outline: var(--outline);
+	}
+}
+
 div.button.dimensional.dark {
 	background: black;
 

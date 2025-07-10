@@ -19,3 +19,7 @@ div.button.floating {
 		box-shadow: var(--shadow1);
 	}
 }
+
+div.button.floating.outline {
+	outline: var(--outline);
+}

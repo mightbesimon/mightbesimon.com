@@ -9,28 +9,23 @@ type DimensionalButtonProps = {
 	height?: string,
 	borderRadius?: string,
 	colour?: ColourEnum,
-	font?: {
-		size?: string,
-		colour?: string,
-	},
+	plain?: boolean,
 };
 
 function DimensionalButton({ className, children, onClick,
-	width, height, borderRadius, colour, font,
+	width, height, borderRadius, plain, colour,
 }: DimensionalButtonProps): JSX.Element
 {
 	return (
 		<div className={'button dimensional '
-			+ className + ' ' + (colour ? colour : '')}
+			+ (colour ? `${colour} ` : '')
+			+ (plain ? '' : 'outline ')
+			+ className}
 			style={{ width, height, borderRadius }}
 		>
 			<div
 				onClick={onClick}
-				style={{
-					borderRadius,
-					fontSize: font?.size,
-					color: font?.colour,
-				}}
+				style={{ borderRadius }}
 			>
 				{children}
 			</div>
