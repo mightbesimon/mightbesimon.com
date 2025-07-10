@@ -22,6 +22,7 @@
 	--teal: hsla(180, 36%, 54%, 100%); // sublime blue5
 	--blue: hsla(210, 50%, 60%, 100%); // sublime blue
 	--purple: hsla(300, 30%, 68%, 100%); // sublime pink
+	--pink: color-mix(in hsl, var(--purple) 50%, var(--coral) 50%);
 
 	--mac-red: hsla(2, 100%, 66%, 100%);
 	--mac-yellow: hsla(46, 78%, 57%, 100%);
@@ -47,6 +48,7 @@
 	--mint1: hsla(114, 25%, 60%, 100%);
 	--mint2: hsla(114, 27%, 64%, 100%);
 	--mint3: hsla(114, 31%, 68%, 100%);
+	--purple5: hsla(300, 35%, 82%, 100%);
 
 	/* outline */
 	--outline: 2px solid black;
@@ -89,8 +91,13 @@
 body {
 	margin: 0rem;
 	font-family: sans-serif;
-	background: var(--body);
 	color: var(--text);
+	background:
+		radial-gradient(circle, transparent 20%, var(--body) 20%, var(--body) 80%, transparent 80%, transparent),
+		radial-gradient(circle, transparent 20%, var(--body) 20%, var(--body) 80%, transparent 80%, transparent) 25px 25px,
+		linear-gradient(var(--body-symbol) 2px, transparent 2px) 0 -1px,
+		linear-gradient(90deg, var(--body-symbol) 2px, var(--body) 2px) -1px 0;
+	background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
 }
 
 a {
@@ -142,7 +149,9 @@ pre {
 	flex-wrap: wrap;
 }
 
-.stroke {
+.stroke // , h2
+
+	{
 	color: var(--mariana3);
 	text-shadow:
 		-1px -1px 1px black,

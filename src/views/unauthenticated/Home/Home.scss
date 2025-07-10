@@ -82,7 +82,7 @@ section.Home {
 	}
 
 	>div.stats {
-		margin-top: 3rem;
+		margin-top: 2rem;
 		justify-content: center;
 
 		>div.buttons.column {
@@ -106,14 +106,14 @@ section.Home {
 			justify-content: space-between;
 			text-overflow: ellipsis;
 			transition: var(--transition);
-			background: var(--card);
+			background: var(--teal);
 			outline: var(--outline);
 			box-shadow: var(--box-shadow);
 
 			&:hover {
 				// box-shadow: 2px 4px 0px black;
 				// margin: calc(1rem + 2px) calc(1rem - 1px) calc(1rem - 2px) calc(1rem + 1px);
-				box-shadow: 3px 6px 0px var(--orange);
+				box-shadow: 1px 3px 0px 4px black;
 			}
 
 			// &:has(img) {
@@ -131,10 +131,10 @@ section.Home {
 			}
 
 			>div.title {
+				color: black;
 
 				>h3 {
 					margin: 0rem;
-					color: var(--text);
 					font-weight: normal;
 					overflow-x: hidden;
 					text-overflow: ellipsis;
@@ -143,7 +143,7 @@ section.Home {
 				>div.description {
 					margin: .25rem 0rem 0rem 0rem;
 					font-size: .8rem;
-					opacity: 80%;
+					opacity: 90%;
 				}
 			}
 
@@ -167,7 +167,8 @@ section.Home {
 					padding: .25rem .5rem;
 					border-radius: .5rem;
 					vertical-align: middle;
-					background: var(--main);
+					background: var(--purple);
+					color: var(--mariana0)
 				}
 
 				>div:last-child {

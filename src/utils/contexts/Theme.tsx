@@ -32,7 +32,7 @@ export function ThemeProvider(props: ThemeProviderProps)
 	const changeTheme = (newTheme: ThemeEnum) =>
 	{
 		const colour = newTheme === ThemeEnum.marianaLight ?
-			'hsla(219, 28%, 88%, 100%)' :
+			'hsla(300, 35%, 82%, 100%)' :
 			'hsla(215, 15%, 16%, 100%)';
 
 		document.body

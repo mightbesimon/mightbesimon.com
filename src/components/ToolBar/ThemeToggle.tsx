@@ -16,7 +16,9 @@ function ThemeToggle()
 	return (
 		<FloatingButton className="theme"
 			onClick={onClick}
-			colour={'var(--text)'}
+			colour={theme === ThemeEnum.marianaDark ?
+				'var(--yellow)' : 'var(--blue1)'
+			}
 		>
 			{theme === ThemeEnum.marianaDark ? '🔦' : '🌛'}
 		</FloatingButton>
