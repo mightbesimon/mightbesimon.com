@@ -16,7 +16,18 @@ function Home(): JSX.Element
 		<SectionWrapper view='Home' title='SIMON' height='60vh' auth game>
 
 			<div className='hello flex wrap'>
-				<pre>{greetings.join('\n')}</pre>
+				<div className='left'>
+					{greetings.map(greeting =>
+						<div className='flex' key={greeting.language}>
+							<div className='stroke'>{greeting.flag}</div>
+							<div>
+								{greeting.greeting.map(text =>
+									<div key={text}>{text}</div>)
+								}
+							</div>
+						</div>
+					)}
+				</div>
 				<div className='right'>
 					<h1>Hi, I'm Simon</h1>
 					<p>Auckland, New Zealand ∙ Darmstadt, Germany</p>
