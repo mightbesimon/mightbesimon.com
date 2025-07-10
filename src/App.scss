@@ -72,15 +72,6 @@ main {
 	// }
 }
 
-body.dark {
-	--body: var(--mariana0);
-	--body-symbol: var(--mariana1);
-	--main: var(--mariana1);
-	--footer: var(--purple);
-	--text: var(--mariana3);
-	--light: var(--yellow);
-}
-
 body.light {
 	--body: var(--purple5);
 	--body-symbol: var(--mariana0);
@@ -88,4 +79,13 @@ body.light {
 	--footer: var(--coral);
 	--text: var(--mariana0);
 	--light: var(--mint);
+}
+
+body.dark {
+	--body: var(--mariana0);
+	--body-symbol: var(--mariana1);
+	--main: var(--mariana1);
+	--footer: var(--purple);
+	--text: var(--mariana3);
+	--light: var(--yellow);
 }

@@ -8,19 +8,19 @@ function ThemeToggle()
 
 	const onClick = () =>
 	{
-		setTheme(theme === ThemeEnum.marianaDark
-			? ThemeEnum.marianaLight
-			: ThemeEnum.marianaDark);
+		setTheme(theme === ThemeEnum.dark
+			? ThemeEnum.light
+			: ThemeEnum.dark);
 	};
 
 	return (
 		<FloatingButton className="theme"
 			onClick={onClick}
-			colour={theme === ThemeEnum.marianaDark ?
+			colour={theme === ThemeEnum.dark ?
 				'var(--yellow)' : 'var(--blue1)'
 			}
 		>
-			{theme === ThemeEnum.marianaDark ? '🔦' : '🌛'}
+			{theme === ThemeEnum.dark ? '🔦' : '🌛'}
 		</FloatingButton>
 	);
 }

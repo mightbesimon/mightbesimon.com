@@ -2,8 +2,8 @@ import { createContext, useEffect, useState } from 'react';
 
 export enum ThemeEnum
 {
-	marianaDark = 'dark',
-	marianaLight = 'light',
+	dark = 'dark',
+	light = 'light',
 }
 
 type ThemeContextType = {
@@ -17,7 +17,7 @@ type ThemeProviderProps = {
 
 export const ThemeContext = createContext<ThemeContextType>(
 	{
-		theme: ThemeEnum.marianaDark,
+		theme: ThemeEnum.dark,
 		setTheme: () => { },
 	}
 );
@@ -25,13 +25,13 @@ export const ThemeContext = createContext<ThemeContextType>(
 export function ThemeProvider(props: ThemeProviderProps)
 {
 	const [theme, setTheme] = useState<ThemeEnum>(
-		localStorage.getItem('theme') === ThemeEnum.marianaLight
-			? ThemeEnum.marianaLight
-			: ThemeEnum.marianaDark);
+		localStorage.getItem('theme') === ThemeEnum.dark
+			? ThemeEnum.dark
+			: ThemeEnum.light);
 
 	const changeTheme = (newTheme: ThemeEnum) =>
 	{
-		const colour = newTheme === ThemeEnum.marianaLight ?
+		const colour = newTheme === ThemeEnum.light ?
 			'hsla(300, 35%, 82%, 100%)' :
 			'hsla(215, 15%, 16%, 100%)';
 
