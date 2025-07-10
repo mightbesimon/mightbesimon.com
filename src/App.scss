@@ -70,6 +70,7 @@ body.dark {
 	--main: var(--mariana1);
 	--text: var(--mariana3);
 	--card: var(--mariana2);
+	--light: var(--mariana3);
 }
 
 body.light {
@@ -77,4 +78,5 @@ body.light {
 	--main: white;
 	--text: var(--mariana0);
 	--card: var(--mariana3);
+	--light: white;
 }

@@ -40,7 +40,13 @@ function VscodeStats(): JSX.Element
 							{data?.map(item =>
 								<tr key={item.extensionId}>
 									<td className='name'>{item.name}</td>
-									<td className='version'><img alt='version' src={`https://img.shields.io/badge/v${item.version}-blue`} /></td>
+									<td className='version'>
+										<img
+											className='badge'
+											alt='version'
+											src={`https://img.shields.io/badge/v${item.version}-blue`}
+										/>
+									</td>
 									<td className='installs'>{formatCount(item.installs)}</td>
 								</tr>
 							)}
