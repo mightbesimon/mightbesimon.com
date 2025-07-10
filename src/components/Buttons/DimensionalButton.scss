@@ -36,6 +36,15 @@ div.button.dimensional {
 	}
 }
 
+div.button.dimensional.pressed {
+	cursor: default;
+
+	>div {
+		bottom: min(.8rem, 12%);
+		filter: brightness(.9);
+	}
+}
+
 div.button.dimensional.outline {
 	outline: var(--outline);
 

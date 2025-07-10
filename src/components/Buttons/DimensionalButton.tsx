@@ -5,6 +5,7 @@ type DimensionalButtonProps = {
 	className?: string,
 	children?: JSX.Element | JSX.Element[] | string,
 	onClick?: () => void,
+	isPressed?: boolean,
 	width?: string,
 	height?: string,
 	borderRadius?: string,
@@ -13,18 +14,20 @@ type DimensionalButtonProps = {
 };
 
 function DimensionalButton({ className, children, onClick,
-	width, height, borderRadius, plain, colour,
+	isPressed, width, height, borderRadius, plain, colour,
 }: DimensionalButtonProps): JSX.Element
 {
 	return (
 		<div className={'button dimensional '
+			+ (isPressed ? 'pressed ' : '')
 			+ (colour ? `${colour} ` : '')
 			+ (plain ? '' : 'outline ')
 			+ className}
 			style={{ width, height, borderRadius }}
 		>
 			<div
-				onClick={onClick}
+				className={isPressed ? 'pressed' : ''}
+				onClick={isPressed ? undefined : onClick}
 				style={{ borderRadius }}
 			>
 				{children}

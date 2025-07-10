@@ -13,7 +13,25 @@ section.ButtonsPage {
 			align-items: center;
 
 			>div.button {
-				margin: 1.5rem;
+				margin: 1rem;
+			}
+
+			&:first-child {
+				margin: 1rem;
+
+				>div>div.button {
+					margin: 0px 1px 0px 1px;
+					width: 5rem;
+					height: 2.5rem;
+
+					&:first-child {
+						border-radius: .5rem 0rem 0rem .5rem;
+					}
+
+					&:last-child {
+						border-radius: 0rem .5rem .5rem 0rem;
+					}
+				}
 			}
 		}
 	}
