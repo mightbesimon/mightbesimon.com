@@ -53,12 +53,10 @@ section.Home {
 				>a.svg.image.link {
 					margin: .25rem .5rem;
 					padding: .25rem;
-					transition: var(--transition);
 
 					>svg {
 						width: 1.5rem;
 						height: 1.5rem;
-						transition: var(--transition);
 						fill: var(--text)
 					}
 
@@ -72,11 +70,6 @@ section.Home {
 
 					>svg.linkedin.logo {
 						fill: var(--blue)
-					}
-
-					>svg:hover {
-						fill: white !important;
-						filter: drop-shadow(var(--neon-yellow));
 					}
 				}
 
