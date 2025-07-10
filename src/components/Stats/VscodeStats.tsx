@@ -3,6 +3,7 @@ import EllipsisSpinner from 'components/Spinner/EllipsisSpinner';
 import getPublisher from 'utils/api/vscode/getPublisher';
 import { formatCount } from 'utils/extension/Functions';
 import { useQuery } from 'react-query';
+import React from 'react';
 
 function VscodeStats(): JSX.Element
 {
@@ -25,6 +26,13 @@ function VscodeStats(): JSX.Element
 		.sort((a, b) => b.installs - a.installs);
 
 	const totalInstalls = data?.reduce((sum, item) => sum + item.installs, 0);
+	const wrapEmoji = (text: string) =>
+		<span dangerouslySetInnerHTML={{
+			__html: text.replace(
+				/(\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/g,
+				(match) => `<span class='stroke'>${match}</span>`,
+			),
+		}} />;
 
 	return (
 		<div className='vscode stats'>
@@ -39,7 +47,7 @@ function VscodeStats(): JSX.Element
 						<tbody>
 							{data?.map(item =>
 								<tr key={item.extensionId}>
-									<td className='name'>{item.name}</td>
+									<td className='name'>{wrapEmoji(item.name)}</td>
 									<td className='version'>
 										<img
 											className='badge'
