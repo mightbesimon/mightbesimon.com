@@ -1,7 +1,7 @@
 import { Link } from 'react-location';
 import DimensionalButton from 'components/Buttons/DimensionalButton';
 import ColourEnum from 'types/ColourEnums';
-import url from 'data/other.json';
+import url from 'data/links.json';
 
 export function AuthButton(): JSX.Element
 {
@@ -13,7 +13,6 @@ export function AuthButton(): JSX.Element
 		</Link>
 	);
 }
-
 
 export function SponsorButton(): JSX.Element
 {

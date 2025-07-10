@@ -2,12 +2,11 @@ import './Home.scss';
 import Featured from './Featured';
 import PagesList from './PagesList';
 import ReposList from './ReposList';
-import socials from './Socials';
 import greetings from 'data/greetings.json';
-import SvgLink from 'components/Links/SvgLink';
 import SectionWrapper from 'components/SectionWrapper/SectionWrapper';
 import VscodeStats from 'components/Stats/VscodeStats';
 import GithubStats from 'components/Stats/GithubStats';
+import SocialButtons from 'components/Buttons/SocialButtons';
 import { SponsorButton, CVButton } from 'components/Buttons/Buttons';
 
 function Home(): JSX.Element
@@ -32,7 +31,7 @@ function Home(): JSX.Element
 					<h1>Hi, I'm Simon</h1>
 					<p>Auckland, New Zealand ∙ Darmstadt, Germany</p>
 					<div className='flex wrap'>
-						{socials.map(data => SvgLink(data))}
+						<SocialButtons />
 						<SponsorButton />
 					</div>
 				</div>

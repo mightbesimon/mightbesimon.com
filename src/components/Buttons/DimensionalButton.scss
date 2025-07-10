@@ -33,6 +33,10 @@ div.button.dimensional {
 			bottom: min(.8rem, 10%);
 			filter: brightness(.9);
 		}
+
+		>span.stroke {
+			margin-top: -.15rem;
+		}
 	}
 }
 
@@ -107,5 +111,13 @@ div.button.dimensional.blue {
 
 	>div {
 		background: var(--blue3);
+	}
+}
+
+div.button.dimensional.purple {
+	background: var(--purple);
+
+	>div {
+		background: var(--purple5);
 	}
 }
