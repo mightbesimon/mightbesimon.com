@@ -12,12 +12,6 @@ header {
 
 	&.neon {
 		background: var(--body);
-
-		>h1 {
-			color: white;
-			font-weight: 100;
-			filter: drop-shadow(var(--neon-yellow));
-		}
 	}
 
 	>h1 {
@@ -29,4 +23,10 @@ header {
 		transition: var(--transition);
 		cursor: pointer;
 	}
+}
+
+body.dark header.neon h1 {
+	color: white;
+	font-weight: 100;
+	filter: drop-shadow(var(--neon-yellow));
 }

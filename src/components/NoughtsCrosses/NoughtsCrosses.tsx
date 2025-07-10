@@ -131,7 +131,7 @@ function NoughtsCrosses(): JSX.Element
 	const endGame = (winner: Mark) =>
 	{
 		game.over = true;
-		game.message = winner === Mark.Empty ? 'draw' : `${winner} win`;
+		game.message = winner === Mark.Empty ? 'DRAW' : `${winner} WIN`;
 	};
 
 	const chooseInnerMostEmptyTile = () =>
@@ -156,16 +156,14 @@ function NoughtsCrosses(): JSX.Element
 					{range(D.rows).map(row =>
 						<tr key={row}>
 							{range(D.cols).map(col =>
-								<td key={col}
-									onClick={cross(row, col)}
-									style={tileSize}
-								>
+								<td key={col} onClick={cross(row, col)} style={tileSize}>
 									<div>
 										{
 											tiles[row][col].mark === Mark.Nought ?
-												<img alt='' src={Nought} /> :
-												tiles[row][col].mark === Mark.Cross ?
-													<img alt='' src={Cross} /> : null
+												<img alt='nought' src={Nought} /> :
+												tiles[row][col].mark === Mark.Cross
+													? <img alt='cross' src={Cross} />
+													: <img alt='cross' src={Cross} className='empty' />
 										}
 									</div>
 								</td>

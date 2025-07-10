@@ -1,7 +1,33 @@
 [
-	"🇳🇿 Kia ora,",
-	"🇩🇪 Hallo, ich heiße Simon 😎",
-	"🇫🇷 Salut, moi c'est Simon 😏",
-	"🇮🇪 Dia duit, is mise Simon 😙",
-	"🇨🇳 嗨, 我叫单泉"
+	{
+		"language": "Maori",
+		"flag": "🥝",
+		"greeting": [
+			"Kia ora,"
+		]
+	},
+	{
+		"language": "German",
+		"flag": "🍻",
+		"greeting": [
+			"Hallo, ich heiße Simon.",
+			"Was geht?"
+		]
+	},
+	{
+		"language": "French",
+		"flag": "😙",
+		"greeting": [
+			"Salut, moi c'est Simon.",
+			"Ça dit quoi l'équipe ?"
+		]
+	},
+	{
+		"language": "Irish",
+		"flag": "🍀",
+		"greeting": [
+			"Dia duit,",
+			"an bhfuil tú go maith?"
+		]
+	}
 ]

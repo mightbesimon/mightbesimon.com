@@ -2,12 +2,11 @@ import './Home.scss';
 import Featured from './Featured';
 import PagesList from './PagesList';
 import ReposList from './ReposList';
-import socials from './Socials';
 import greetings from 'data/greetings.json';
-import SvgLink from 'components/Links/SvgLink';
 import SectionWrapper from 'components/SectionWrapper/SectionWrapper';
 import VscodeStats from 'components/Stats/VscodeStats';
 import GithubStats from 'components/Stats/GithubStats';
+import SocialButtons from 'components/Buttons/SocialButtons';
 import { SponsorButton, CVButton } from 'components/Buttons/Buttons';
 
 function Home(): JSX.Element
@@ -16,12 +15,23 @@ function Home(): JSX.Element
 		<SectionWrapper view='Home' title='SIMON' height='60vh' auth game>
 
 			<div className='hello flex wrap'>
-				<pre>{greetings.join('\n')}</pre>
+				<div className='left'>
+					{greetings.map(greeting =>
+						<div className='flex' key={greeting.language}>
+							<div className='stroke'>{greeting.flag}</div>
+							<div>
+								{greeting.greeting.map(text =>
+									<div key={text}>{text}</div>)
+								}
+							</div>
+						</div>
+					)}
+				</div>
 				<div className='right'>
 					<h1>Hi, I'm Simon</h1>
 					<p>Auckland, New Zealand ∙ Darmstadt, Germany</p>
 					<div className='flex wrap'>
-						{socials.map(data => SvgLink(data))}
+						<SocialButtons />
 						<SponsorButton />
 					</div>
 				</div>
@@ -35,13 +45,24 @@ function Home(): JSX.Element
 				</div>
 			</div>
 
-			<h2>✨ Featured ✨</h2>
+			<h2>
+				<span className='stroke'>✨</span>&nbsp;
+				Featured&nbsp;
+				<span className='stroke'>✨</span>
+			</h2>
 			<Featured />
 
-			<h2>🍴 Popular Repos 🍴</h2>
+			<h2>
+				<span className='stroke'>🍴</span>&nbsp;
+				Popular Repos&nbsp;
+				<span className='stroke'>🍴</span></h2>
 			<ReposList />
 
-			<h2>🌍 Fun Pages 🌏</h2>
+			<h2>
+				<span className='stroke'>🌍</span>&nbsp;
+				Fun Pages&nbsp;
+				<span className='stroke'>🌍</span>
+			</h2>
 			<PagesList />
 
 		</SectionWrapper>

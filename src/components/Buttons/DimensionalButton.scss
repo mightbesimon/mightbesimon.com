@@ -2,7 +2,7 @@ div.button.dimensional {
 	min-width: 2rem;
 	min-height: 1.5rem;
 	border-radius: .5rem;
-	margin-top: .25rem;
+	margin: .25rem 1px 0 1px;
 	translate: 0% 12.5%;
 	background: var(--red0);
 	position: relative;
@@ -33,6 +33,27 @@ div.button.dimensional {
 			bottom: min(.8rem, 10%);
 			filter: brightness(.9);
 		}
+
+		>span.stroke {
+			margin-top: -.15rem;
+		}
+	}
+}
+
+div.button.dimensional.pressed {
+	cursor: default;
+
+	>div {
+		bottom: min(.8rem, 12%);
+		filter: brightness(.9);
+	}
+}
+
+div.button.dimensional.outline {
+	outline: var(--outline);
+
+	>div {
+		outline: var(--outline);
 	}
 }
 
@@ -90,5 +111,13 @@ div.button.dimensional.blue {
 
 	>div {
 		background: var(--blue3);
+	}
+}
+
+div.button.dimensional.purple {
+	background: var(--purple);
+
+	>div {
+		background: var(--purple5);
 	}
 }

@@ -3,9 +3,34 @@ section.Home {
 	>div.hello {
 		justify-content: center;
 
-		>pre {
+		>div.left {
 			flex: 1;
 			margin: 1rem 2rem;
+			padding: .8rem;
+			border-radius: .8rem;
+			background: var(--purple);
+			color: black;
+			outline: var(--outline);
+			box-shadow: var(--box-shadow);
+
+			>div {
+				vertical-align: baseline;
+
+				>div.stroke {
+					margin: 0rem .25rem;
+					width: 1.5rem !important;
+				}
+
+				>div {
+					margin-top: .25rem;
+					max-width: calc(100% - 2rem);
+
+					>div {
+						display: inline-block;
+						margin-right: .25rem;
+					}
+				}
+			}
 		}
 
 		>div.right {
@@ -25,37 +50,7 @@ section.Home {
 				padding: .25rem;
 				border-radius: .5rem;
 
-				>a.svg.image.link {
-					margin: .25rem .5rem;
-					padding: .25rem;
-					transition: var(--transition);
-
-					>svg {
-						width: 1.5rem;
-						height: 1.5rem;
-						transition: var(--transition);
-						fill: var(--text)
-					}
-
-					>svg.instagram.logo {
-						fill: var(--purple);
-					}
-
-					>svg.github.logo {
-						fill: var(--text)
-					}
-
-					>svg.linkedin.logo {
-						fill: var(--blue)
-					}
-
-					>svg:hover {
-						fill: white !important;
-						filter: drop-shadow(var(--neon-yellow));
-					}
-				}
-
-				>a.sponsor.button {
+				>* {
 					margin: .25rem 1rem;
 					padding: .25rem 0rem;
 				}
@@ -64,7 +59,7 @@ section.Home {
 	}
 
 	>div.stats {
-		margin-top: 3rem;
+		margin-top: 2rem;
 		justify-content: center;
 
 		>div.buttons.column {
@@ -84,30 +79,39 @@ section.Home {
 			margin: 1rem;
 			padding: 1rem;
 			border-radius: .5rem;
-			border: 2px solid var(--main);
-			background: var(--card);
 			align-items: flex-start;
 			justify-content: space-between;
-			transition: var(--transition);
 			text-overflow: ellipsis;
+			transition: var(--transition);
+			background: var(--teal);
+			outline: var(--outline);
+			box-shadow: var(--box-shadow);
 
 			&:hover {
-				--neon-mint: 0 0 .3rem var(--mint0);
-				border: 2px solid var(--mariana3);
-				box-shadow:
-					var(--neon-mint),
-					inset var(--neon-mint);
+				// box-shadow: 2px 4px 0px black;
+				// margin: calc(1rem + 2px) calc(1rem - 1px) calc(1rem - 2px) calc(1rem + 1px);
+				box-shadow: 1px 3px 0px 4px black;
 			}
+
+			// &:has(img) {
+			// 	flex: 2 1 25rem;
+			// }
+
+			// >img {
+			// 	border-radius: .5rem .5rem 0rem 0rem;
+			// 	outline: var(--outline);
+			// 	width: 100%;
+			// }
 
 			* {
 				max-width: calc(100vw - 6rem);
 			}
 
 			>div.title {
+				color: black;
 
 				>h3 {
 					margin: 0rem;
-					color: var(--mint);
 					font-weight: normal;
 					overflow-x: hidden;
 					text-overflow: ellipsis;
@@ -116,7 +120,7 @@ section.Home {
 				>div.description {
 					margin: .25rem 0rem 0rem 0rem;
 					font-size: .8rem;
-					opacity: 75%;
+					opacity: 90%;
 				}
 			}
 
@@ -125,6 +129,10 @@ section.Home {
 
 				>img {
 					margin: .5rem .5rem 0rem 0rem;
+				}
+
+				>img:last-child {
+					margin: .5rem 0rem 0rem 0rem;
 				}
 			}
 
@@ -136,7 +144,12 @@ section.Home {
 					padding: .25rem .5rem;
 					border-radius: .5rem;
 					vertical-align: middle;
-					background: var(--main);
+					background: var(--purple);
+					color: var(--mariana0)
+				}
+
+				>div:last-child {
+					margin: 0;
 				}
 			}
 		}

@@ -4,6 +4,7 @@ section.FlagsPage {
 	>div {
 		display: flex;
 		justify-content: center;
+		flex-wrap: wrap;
 
 		>div.flag {
 			margin: 1.5rem;

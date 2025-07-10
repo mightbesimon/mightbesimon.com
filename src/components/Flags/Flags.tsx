@@ -61,6 +61,7 @@ export function SwissFlag(): JSX.Element
 		<div className='swiss flag'>
 			<div />
 			<div />
+			<div />
 		</div>
 	);
 }

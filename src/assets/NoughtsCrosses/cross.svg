@@ -1,6 +1,22 @@
 <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
 	<g id="cross">
 		<line
+			x1="28"
+			y1="28"
+			x2="72"
+			y2="72"
+			stroke-width="14"
+			stroke="black"
+		/>
+		<line
+			x1="28"
+			y1="72"
+			x2="72"
+			y2="28"
+			stroke-width="14"
+			stroke="black"
+		/>
+		<line
 			x1="30"
 			y1="30"
 			x2="70"

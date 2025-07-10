@@ -2,22 +2,24 @@
  *****                 FOOTER STARTS HERE                 *****
  **************************************************************/
 footer {
-	margin: auto 1rem 1rem 1rem;
-	border-radius: .5rem;
-	background: var(--body);
+	margin-top: auto;
+	padding-top: .5rem;
+	border-radius: 0rem 0rem 1rem 1rem;
 	align-items: center;
 	justify-content: space-evenly;
+	background: var(--footer);
+	color: black;
 
 	>div.deployment {
-		margin: .25rem 0rem;
+		margin: -.25rem .25rem .25rem .25rem;
 
 		>a.image.link {
-			margin: .25rem .5rem;
+			margin: .25rem calc(.25rem + 1px);
 		}
 	}
 
 	>div.copyright {
-		margin: .5rem 0rem;
+		margin: .0rem .75rem .5rem .75rem;
 		font: .8rem monospace;
 	}
 }

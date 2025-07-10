@@ -9,17 +9,19 @@ type GlassCoverProps = {
 	width?: string,
 	height?: string,
 	borderRadius?: string,
+	plain?: boolean,
 };
 
 function GlassCover({ children,
 	topChildren, locked, isOpen, setIsOpen,
-	width, height, borderRadius,
+	width, height, borderRadius, plain,
 }: GlassCoverProps): JSX.Element
 {
 	return (
-		<div className={'covered button'
-			+ (locked ? '' : ' unlocked')
-			+ (isOpen ? ' open' : '')}
+		<div className={'covered button '
+			+ (locked ? '' : ' unlocked ')
+			+ (isOpen ? ' open ' : '')
+			+ (plain ? '' : 'outline ')}
 			style={{ width, height }}
 		>
 			<div className='base' style={{ borderRadius }}>

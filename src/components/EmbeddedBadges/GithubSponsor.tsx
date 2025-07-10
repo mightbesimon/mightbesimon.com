@@ -1,4 +1,4 @@
-import url from 'data/other.json';
+import url from 'data/links.json';
 
 /* issue with white background behind the elements */
 

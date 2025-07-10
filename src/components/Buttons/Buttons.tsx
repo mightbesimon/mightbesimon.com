@@ -1,7 +1,7 @@
 import { Link } from 'react-location';
 import DimensionalButton from 'components/Buttons/DimensionalButton';
 import ColourEnum from 'types/ColourEnums';
-import url from 'data/other.json';
+import url from 'data/links.json';
 
 export function AuthButton(): JSX.Element
 {
@@ -13,7 +13,6 @@ export function AuthButton(): JSX.Element
 		</Link>
 	);
 }
-
 
 export function SponsorButton(): JSX.Element
 {
@@ -40,7 +39,7 @@ export function CVButton(): JSX.Element
 		>
 			<DimensionalButton width='8rem' height='2rem' colour={ColourEnum.blue}>
 				<span className='stroke'>💼</span>
-				<span>&nbsp;Want my CV?</span>
+				<span>&nbsp;Need my CV?</span>
 			</DimensionalButton>
 		</a>
 	);

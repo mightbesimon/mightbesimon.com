@@ -21,23 +21,6 @@ const unauthenticatedContent: HidableRoute[] = [
 		path: '/auth',
 		element: <AuthPage />,
 	},
-	// {
-	// 	path: '/showcase',
-	// 	children: [
-	// 		{
-	// 			path: '/',
-	// 			element: <></>,
-	// 		},
-	// 		{
-	// 			path: '/loading',
-	// 			element: <LoadingPage />,
-	// 		},
-	// 		{
-	// 			path: '/neon',
-	// 			element: <NeonPage />,
-	// 		},
-	// 	],
-	// },
 	{
 		path: '/loading',
 		element: <LoadingPage />,
