@@ -13,6 +13,7 @@ div.covered.button {
 		align-items: center;
 		background: var(--body);
 		box-shadow: inset var(--shadow0);
+		transition: var(--transition5);
 	}
 
 	>div.cover {
@@ -47,6 +48,7 @@ div.covered.button {
 		}
 	}
 
+	&.unlocked:hover,
 	&.open {
 		>div.cover {
 			transform: translateY(-100%) rotateX(.5turn);
@@ -59,27 +61,31 @@ div.covered.button {
 
 				>div {
 					padding-top: 1rem;
-					background: var(--red0)
+					background: var(--red0);
 				}
 			}
 		}
 	}
+}
 
-	&.unlocked:hover {
-		>div.cover {
-			transform: translateY(-100%) rotateX(.5turn);
-			transform-style: preserve-3d;
-			background: var(--red3);
+div.covered.button.outline {
+	>div.base {
+		outline: var(--outline);
+		// box-shadow: inset 1px 3px 0px 2px black;
+	}
 
-			>div {
-				border: 2px solid hsla(357, 80%, 70%, 100%);
-				background: var(--red1);
+	>div.cover {
+		outline: var(--outline);
 
-				>div {
-					padding-top: 1rem;
-					background: var(--red0)
-				}
-			}
+		>div {
+			outline: var(--outline);
+		}
+	}
+
+	&.unlocked:hover,
+	&.open {
+		>div.base {
+			box-shadow: inset 1px 3px 0px 2px black;
 		}
 	}
 }
