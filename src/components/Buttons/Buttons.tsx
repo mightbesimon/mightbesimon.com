@@ -7,7 +7,9 @@ export function AuthButton(): JSX.Element
 {
 	return (
 		<Link className='auth button' to='/auth'>
-			<DimensionalButton width='8rem' height='2rem' colour={ColourEnum.dark}>
+			<DimensionalButton width='8rem' height='2rem'
+				colour={ColourEnum.dark}
+			>
 				<span className='auth'>Sign in ??</span>
 			</DimensionalButton>
 		</Link>
@@ -37,7 +39,9 @@ export function CVButton(): JSX.Element
 			href={url.cv}
 			target='_blank' rel='noopener noreferrer'
 		>
-			<DimensionalButton width='8rem' height='2rem' colour={ColourEnum.blue}>
+			<DimensionalButton width='8rem' height='2rem'
+				colour={ColourEnum.teal}
+			>
 				<span className='stroke'>💼</span>
 				<span>&nbsp;Need my CV?</span>
 			</DimensionalButton>
