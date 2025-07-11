@@ -33,7 +33,7 @@ function SocialButtons(): JSX.Element
 				borderRadius='0rem'
 				colour={ColourEnum.light}
 			>
-				<img alt='github' src={Github} width='90%' />
+				<img alt='github' src={Github} width='93%' />
 			</DimensionalButton>
 		</a>
 		<a className='linkedin button'
@@ -46,7 +46,7 @@ function SocialButtons(): JSX.Element
 				borderRadius='0rem .5rem .5rem 0rem'
 				colour={ColourEnum.blue}
 			>
-				<img alt='linkedin' src={LinkedIn} width='90%'
+				<img alt='linkedin' src={LinkedIn} width='88%'
 					style={{ marginRight: '.2rem' }}
 				/>
 			</DimensionalButton>
