@@ -96,10 +96,10 @@ body {
 	font-family: sans-serif;
 	color: var(--text);
 	background:
-		radial-gradient(circle, transparent 20%, var(--body) 20%, var(--body) 80%, transparent 80%, transparent),
-		radial-gradient(circle, transparent 20%, var(--body) 20%, var(--body) 80%, transparent 80%, transparent) 25px 25px,
-		linear-gradient(var(--body-symbol) 2px, transparent 2px) 0 -1px,
-		linear-gradient(90deg, var(--body-symbol) 2px, var(--body) 2px) -1px 0;
+		radial-gradient(circle, transparent 20%, var(--body) 20%, var(--body) 80%, transparent 80%, transparent) 10px 10px,
+		radial-gradient(circle, transparent 20%, var(--body) 20%, var(--body) 80%, transparent 80%, transparent) 35px 35px,
+		linear-gradient(var(--body-symbol) 2px, transparent 2px) 0 9px,
+		linear-gradient(90deg, var(--body-symbol) 2px, var(--body) 2px) 9px 0;
 	background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
 }
 
