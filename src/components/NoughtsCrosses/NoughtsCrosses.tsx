@@ -5,7 +5,6 @@ import Nought from 'assets/NoughtsCrosses/nought.svg';
 import Cross from 'assets/NoughtsCrosses/cross.svg';
 import DimensionalButton from 'components/Buttons/DimensionalButton';
 import ColourEnum from 'types/ColourEnums';
-import useRem from 'utils/hooks/useRem';
 
 enum Mark
 {
@@ -27,7 +26,7 @@ type Cell = {
 
 function NoughtsCrosses(): JSX.Element
 {
-	const rem = useRem();
+	const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
 	const [D] = useState({ rows: 3, cols: 3 });
 
 	const calcRing = (cell: Cell) => Math.min(
