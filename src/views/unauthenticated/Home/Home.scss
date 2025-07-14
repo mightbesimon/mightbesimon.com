@@ -3,39 +3,11 @@ section.Home {
 	>div.hello {
 		justify-content: center;
 
-		>div.left {
-			flex: 1;
+		>div {
 			margin: 1rem 2rem;
-			padding: .8rem;
-			border-radius: .8rem;
-			background: var(--purple);
-			color: black;
-			outline: var(--outline);
-			box-shadow: var(--box-shadow);
-
-			>div {
-				vertical-align: baseline;
-
-				>div.stroke {
-					margin: 0rem .25rem;
-					width: 1.5rem !important;
-				}
-
-				>div {
-					margin-top: .25rem;
-					max-width: calc(100% - 2rem);
-
-					>div {
-						display: inline-block;
-						margin-right: .25rem;
-					}
-				}
-			}
 		}
 
-		>div.right {
-			flex: 1;
-			margin: 1rem 2rem;
+		>div.info {
 			min-width: 16rem;
 
 			>p {
