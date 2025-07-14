@@ -2,6 +2,7 @@ import './GithubStats.scss';
 import EllipsisSpinner from 'components/Spinner/EllipsisSpinner';
 import getRepos from 'utils/api/github/getRepos';
 import { useQuery } from 'react-query';
+import { formatCount } from 'utils/extension/Functions';
 
 function GithubStats(): JSX.Element
 {
@@ -17,9 +18,6 @@ function GithubStats(): JSX.Element
 		forks: response.data?.reduce((sum, item) => sum + item.forks_count, 0),
 	};
 
-	const format = (downloads: number | undefined) =>
-		downloads ? downloads.toLocaleString('en-NZ') : '-';
-
 	return (
 		<div className='github stats'>
 			{data ?
@@ -30,17 +28,17 @@ function GithubStats(): JSX.Element
 							<tr key='stars'>
 								<td>Stars</td>
 								<td className='stroke'>⭐️</td>
-								<td className='value'>{format(data.stars)}</td>
+								<td className='value'>{formatCount(data.stars)}</td>
 							</tr>
 							<tr key='repos'>
 								<td>Repos</td>
 								<td className='stroke'>💾</td>
-								<td className='value'>{format(data.repos)}</td>
+								<td className='value'>{formatCount(data.repos)}</td>
 							</tr>
 							<tr key='forks'>
 								<td>Forks</td>
 								<td className='stroke'>🍴</td>
-								<td className='value'>{format(data.forks)}</td>
+								<td className='value'>{formatCount(data.forks)}</td>
 							</tr>
 						</tbody>
 					</table></div>

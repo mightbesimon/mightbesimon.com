@@ -3,15 +3,18 @@ div.github.stats {
 
 	>div.table {
 		border-radius: .5rem;
-		border: 2px solid var(--mariana0);
+		outline: var(--outline);
+		// box-shadow: var(--box-shadow1);
 
 		>div {
 			display: flex;
 			height: 2rem;
-			padding: auto .5rem;
+			padding: 0rem .5rem;
+			margin-bottom: -2px;
 			justify-content: space-evenly;
 			align-items: center;
 			text-align: center;
+			border-radius: .5rem .5rem 0rem 0rem;
 			background: var(--mariana0);
 			color: var(--mariana3);
 		}
@@ -20,17 +23,21 @@ div.github.stats {
 			width: 100%;
 			height: calc(100% - 1.9rem);
 			font-size: .8rem;
-
-			tr:first-child {
-				border: none;
-			}
+			border-radius: 0rem 0rem .5rem .5rem;
+			background: var(--orange);
+			color: var(--mariana0);
 
 			tr {
-				border-top: 2px solid var(--mariana0);
+				border-top: var(--outline);
 				line-height: 1rem;
+				text-align: right;
 
 				>td {
 					padding: .375rem .5rem;
+				}
+
+				>td.stroke {
+					padding: .375rem .25rem;
 				}
 
 				>td.value {
