@@ -60,7 +60,9 @@ function VscodeStats(): JSX.Element
 							)}
 						</tbody>
 					</table>
-				</div> : <EllipsisSpinner text='📊' />
+				</div>
+				:
+				<EllipsisSpinner text='📊' />
 			}
 		</div>
 	);

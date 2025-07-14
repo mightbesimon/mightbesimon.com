@@ -129,7 +129,9 @@ function PypiStats(): JSX.Element
 							/>
 						</svg>
 					</div>
-				</div> : <EllipsisSpinner text='📊' />
+				</div>
+				:
+				<EllipsisSpinner text='📊' />
 			}
 		</div>
 	);

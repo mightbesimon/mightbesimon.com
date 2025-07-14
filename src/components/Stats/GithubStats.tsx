@@ -43,7 +43,9 @@ function GithubStats(): JSX.Element
 								<td className='value'>{format(data.forks)}</td>
 							</tr>
 						</tbody>
-					</table></div> : <EllipsisSpinner text='📊' />
+					</table></div>
+				:
+				<EllipsisSpinner text='📊' />
 			}
 		</div>
 	);
