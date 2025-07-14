@@ -154,9 +154,9 @@ pre {
 	flex-wrap: wrap;
 }
 
-.stroke // , h2
-
-	{
+// h2, h3,
+.stroke {
+	font-weight: bold;
 	color: var(--mariana3);
 	text-shadow:
 		-1px -1px 1px black,

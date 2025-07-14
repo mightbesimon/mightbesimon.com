@@ -148,6 +148,13 @@ function NoughtsCrosses(): JSX.Element
 		game.over = false;
 	};
 
+	const displayTile = ({ row, col }: Cell) =>
+		tiles[row][col].mark === Mark.Nought ?
+			<img alt='nought' src={Nought} /> :
+			tiles[row][col].mark === Mark.Cross
+				? <img alt='cross' src={Cross} />
+				: <img alt='cross' src={Cross} className='empty' />;
+
 	return (
 		<div className='game flex column'>
 			<table className='hashtag'>
@@ -155,16 +162,11 @@ function NoughtsCrosses(): JSX.Element
 					{range(D.rows).map(row =>
 						<tr key={row}>
 							{range(D.cols).map(col =>
-								<td key={col} onClick={cross(row, col)} style={tileSize}>
-									<div>
-										{
-											tiles[row][col].mark === Mark.Nought ?
-												<img alt='nought' src={Nought} /> :
-												tiles[row][col].mark === Mark.Cross
-													? <img alt='cross' src={Cross} />
-													: <img alt='cross' src={Cross} className='empty' />
-										}
-									</div>
+								<td key={col}
+									onClick={cross(row, col)}
+									style={tileSize}
+								>
+									{displayTile({ row, col })}
 								</td>
 							)}
 						</tr>
@@ -200,7 +202,7 @@ function NoughtsCrosses(): JSX.Element
 				</div>
 			)}
 			{(D.rows * D.cols > 0) || (
-				<p>you got too curious and now the game is gone ☹️</p>
+				<p>what did you expect? <span className='stroke'>😭</span></p>
 			)}
 		</div>
 	);
