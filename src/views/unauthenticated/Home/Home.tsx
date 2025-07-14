@@ -55,7 +55,8 @@ function Home(): JSX.Element
 			<h2>
 				<span className='stroke'>🍴</span>&nbsp;
 				Popular Repos&nbsp;
-				<span className='stroke'>🍴</span></h2>
+				<span className='stroke'>🍴</span>
+			</h2>
 			<ReposList />
 
 			<h2>

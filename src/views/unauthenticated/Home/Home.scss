@@ -145,9 +145,14 @@ section.Home {
 					margin: 0rem 1rem 0rem 0rem;
 					padding: .2rem .4rem;
 					border-radius: .4rem;
+					font: bold .9rem monospace;
 					vertical-align: middle;
-					background: var(--purple);
-					color: var(--mariana0)
+					background: var(--pink);
+					color: var(--mariana0);
+
+					>span.stroke {
+						margin-right: .25rem;
+					}
 				}
 
 				>div:last-child {
