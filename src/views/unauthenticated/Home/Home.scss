@@ -82,17 +82,17 @@ section.Home {
 			align-items: flex-start;
 			justify-content: space-between;
 			text-overflow: ellipsis;
-			transition: var(--transition);
 			background: var(--teal);
 			outline: var(--outline);
 			box-shadow: var(--box-shadow);
+			transition: var(--transition3);
 
 			&:hover {
-				transform: scale(1.05);
+				transform: scale(1.025);
 			}
 
 			&:active {
-				transform: scale(.95);
+				transform: scale(.975);
 			}
 
 			// &:has(img) {

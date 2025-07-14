@@ -69,8 +69,8 @@
 	--neon-yellow: 0 0 .5rem yellow;
 
 	/* transition */
-	--transition1: all 50ms ease;
-	--transition: all 200ms ease;
+	--transition1: all 175ms ease;
+	--transition3: all 300ms ease;
 	--transition5: all 500ms ease;
 
 	/* themes */
@@ -90,7 +90,9 @@
 * {
 	box-sizing: border-box;
 	border-collapse: collapse;
-	transition: var(--transition1);
+	transition:
+		var(--transition3),
+		color 0ms;
 }
 
 body {
