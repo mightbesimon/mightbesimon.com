@@ -52,7 +52,7 @@ div.game {
 			color: var(--mariana0);
 			font-weight: bold;
 			outline: var(--outline);
-			box-shadow: 2px 4px 0px 1px black;
+			box-shadow: var(--box-shadow1);
 		}
 
 		>div.buttons {
