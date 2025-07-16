@@ -21,21 +21,21 @@ function GithubStats(): JSX.Element
 	return data ?
 		<div className='github stats flex'>
 			<div key='repos'>
-				<div>
+				<div className='flex'>
 					<span className='stroke'>💾</span>
 					{format(data.repos)}
 				</div>
 				<div>Repos</div>
 			</div>
 			<div key='stars'>
-				<div>
+				<div className='flex'>
 					<span className='stroke'>⭐️</span>
 					{format(data.stars)}
 				</div>
 				<div>Stars</div>
 			</div>
 			<div key='forks'>
-				<div>
+				<div className='flex'>
 					<span className='stroke'>🍴</span>
 					{format(data.forks)}
 				</div>

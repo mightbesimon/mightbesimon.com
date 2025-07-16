@@ -7,16 +7,14 @@ div.greetings {
 	box-shadow: var(--box-shadow);
 
 	>div {
-		vertical-align: baseline;
-
 		>div.stroke {
 			margin: 0rem .25rem;
 			width: 1.5rem !important;
 		}
 
 		>div {
-			margin-top: .25rem;
 			max-width: calc(100% - 2rem);
+			line-height: 1.67rem;
 
 			>div {
 				display: inline-block;

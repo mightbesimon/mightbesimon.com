@@ -32,22 +32,22 @@ function Home(): JSX.Element
 			</div>
 
 			<h2>
-				<span className='stroke'>✨</span>&nbsp;
-				Featured&nbsp;
+				<span className='stroke'>✨</span>
+				&nbsp;Featured&nbsp;
 				<span className='stroke'>✨</span>
 			</h2>
 			<Featured />
 
 			<h2>
-				<span className='stroke'>🍴</span>&nbsp;
-				Popular Repos&nbsp;
+				<span className='stroke'>🍴</span>
+				&nbsp;Popular Repos&nbsp;
 				<span className='stroke'>🍴</span>
 			</h2>
 			<ReposList />
 
 			<h2>
-				<span className='stroke'>🌍</span>&nbsp;
-				Fun Pages&nbsp;
+				<span className='stroke'>🌍</span>
+				&nbsp;Fun Pages&nbsp;
 				<span className='stroke'>🌍</span>
 			</h2>
 			<PagesList />
