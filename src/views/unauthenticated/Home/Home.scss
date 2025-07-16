@@ -84,19 +84,17 @@ section.Home {
 			}
 
 			>div.title {
-				color: black;
+				color: var(--mariana0);
 
 				>h3 {
 					margin: 0rem;
-					font-weight: normal;
 					overflow-x: hidden;
 					text-overflow: ellipsis;
 				}
 
 				>div.description {
 					margin: .25rem 0rem 0rem 0rem;
-					font-size: .8rem;
-					opacity: 90%;
+					font-size: .9rem;
 				}
 			}
 
