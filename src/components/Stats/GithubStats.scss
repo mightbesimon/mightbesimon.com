@@ -1,49 +1,36 @@
 div.github.stats {
-	margin: 1rem 2rem;
+	margin: .75rem;
+	width: 20rem;
+	border-radius: .66rem;
+	background: var(--orange);
+	color: var(--mariana0);
+	outline: var(--outline);
+	box-shadow: var(--box-shadow1);
 
-	>div.table {
-		border-radius: .5rem;
-		outline: var(--outline);
-		// box-shadow: var(--box-shadow1);
+	>div {
+		flex: 1;
+		padding: .5rem 1.5rem;
+		cursor: default;
 
-		>div {
-			display: flex;
-			height: 2rem;
-			padding: 0rem .5rem;
-			margin-bottom: -2px;
-			justify-content: space-evenly;
-			align-items: center;
-			text-align: center;
-			border-radius: .5rem .5rem 0rem 0rem;
-			background: var(--mariana0);
-			color: var(--mariana3);
+		&:nth-child(2) {
+			outline: var(--outline);
 		}
 
-		>table {
-			width: 100%;
-			height: calc(100% - 1.9rem);
-			font-size: .8rem;
-			border-radius: 0rem 0rem .5rem .5rem;
-			background: var(--orange);
-			color: var(--mariana0);
+		>div {
+			text-align: center;
 
-			tr {
-				border-top: var(--outline);
-				line-height: 1rem;
-				text-align: right;
+			&:first-child {
+				font: bold 1.1rem monospace;
+				// line-height: 2rem;
 
-				>td {
-					padding: .375rem .5rem;
+				>span.stroke {
+					margin-right: .5rem;
+					// font-size: 0.9rem;
 				}
+			}
 
-				>td.stroke {
-					padding: .375rem .25rem;
-				}
-
-				>td.value {
-					font: normal 1rem monospace;
-					text-align: right;
-				}
+			&:last-child {
+				margin-top: .2rem;
 			}
 		}
 	}

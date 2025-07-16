@@ -29,9 +29,6 @@ function Home(): JSX.Element
 			<div className='stats flex wrap'>
 				<VscodeStats />
 				<GithubStats />
-				<div className='buttons flex column'>
-					<CVButton />
-				</div>
 			</div>
 
 			<h2>
