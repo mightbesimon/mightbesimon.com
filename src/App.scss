@@ -72,6 +72,8 @@ main {
 	// }
 }
 
+/* default */
+body,
 body.light {
 	--body: var(--blue5);
 	--body-symbol: var(--mariana0);
@@ -86,6 +88,6 @@ body.dark {
 	--body-symbol: var(--mariana1);
 	--main: var(--mariana1);
 	--footer: var(--purple);
-	--text: var(--mariana3);
+	--text: white;
 	--light: var(--yellow);
 }

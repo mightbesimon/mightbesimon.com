@@ -59,19 +59,19 @@ div.button.dimensional.outline {
 }
 
 div.button.dimensional.dark {
-	background: black;
+	background: color-mix(in hsl, var(--mariana0), black 33%);
 
 	>div {
-		color: var(--mariana3);
+		color: var(--mariana5);
 		background: var(--mariana1);
 	}
 }
 
 div.button.dimensional.light {
-	background: hsla(219, 10%, 50%, 100%);
+	background: var(--mariana2);
 
 	>div {
-		background: var(--mariana3);
+		background: var(--mariana5);
 	}
 }
 
