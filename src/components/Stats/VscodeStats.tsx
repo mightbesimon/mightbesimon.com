@@ -1,9 +1,8 @@
 import './VscodeStats.scss';
 import EllipsisSpinner from 'components/Spinner/EllipsisSpinner';
 import getPublisher from 'utils/api/vscode/getPublisher';
-import { formatCount } from 'utils/extension/Functions';
+import { format } from 'utils/extension/Functions';
 import { useQuery } from 'react-query';
-import React from 'react';
 
 function VscodeStats(): JSX.Element
 {
@@ -34,38 +33,32 @@ function VscodeStats(): JSX.Element
 			),
 		}} />;
 
-	return (
+	return data ?
 		<div className='vscode stats'>
-			<h3>My VSCode Extensions</h3>
-			{data ?
-				<div className='table'>
-					<div className='total flex'>
-						<div>total installs</div>
-						<div>{formatCount(totalInstalls)}</div>
-					</div>
-					<table>
-						<tbody>
-							{data?.map(item =>
-								<tr key={item.extensionId}>
-									<td className='name'>{wrapEmoji(item.name)}</td>
-									<td className='version'>
-										<img
-											className='badge'
-											alt='version'
-											src={`https://img.shields.io/badge/v${item.version}-blue`}
-										/>
-									</td>
-									<td className='installs'>{formatCount(item.installs)}</td>
-								</tr>
-							)}
-						</tbody>
-					</table>
-				</div>
-				:
-				<EllipsisSpinner text='📊' />
-			}
+			<div className='total flex'>
+				<span>Total VSCode Extension Installs</span>
+				<span>{format(totalInstalls)}</span>
+			</div>
+			<table>
+				<tbody>
+					{data?.map(item =>
+						<tr key={item.extensionId}>
+							<td className='name'>{wrapEmoji(item.name)}</td>
+							<td className='version'>
+								<img
+									className='badge'
+									alt='version'
+									src={`https://img.shields.io/badge/v${item.version}-blue`}
+								/>
+							</td>
+							<td className='installs'>{format(item.installs)}</td>
+						</tr>
+					)}
+				</tbody>
+			</table>
 		</div>
-	);
+		:
+		<EllipsisSpinner text='📊' />;
 }
 
 export default VscodeStats;
