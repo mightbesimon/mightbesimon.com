@@ -49,18 +49,6 @@ main {
 		outline: var(--outline);
 	}
 
-	&:has(header.neon) {
-		outline: none;
-
-		header {
-			outline: none;
-		}
-
-		footer {
-			outline: none;
-		}
-	}
-
 	footer {
 		outline: var(--outline);
 	}
@@ -71,6 +59,16 @@ main {
 	// 	border-radius: .5rem;
 	// 	outline: var(--outline);
 	// }
+}
+
+body:has(header.neon) {
+	--outline: none;
+	--box-shadow: var(--shadow3);
+	--box-shadow1: var(--shadow3);
+
+	.dimensional.button {
+		margin: .25rem 0 0 0;
+	}
 }
 
 /* default */
