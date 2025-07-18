@@ -8,13 +8,14 @@ type DimensionalButtonProps = {
 	isPressed?: boolean,
 	width?: string,
 	height?: string,
+	padding?: string,
 	borderRadius?: string,
 	colour?: ColourEnum,
 	plain?: boolean,
 };
 
-function DimensionalButton({ className, children, onClick,
-	isPressed, width, height, borderRadius, plain, colour,
+function DimensionalButton({ className, children, onClick, isPressed,
+	width, height, padding, borderRadius, plain, colour,
 }: DimensionalButtonProps): JSX.Element
 {
 	return (
@@ -28,7 +29,7 @@ function DimensionalButton({ className, children, onClick,
 			<div
 				className={isPressed ? 'pressed' : ''}
 				onClick={isPressed ? undefined : onClick}
-				style={{ borderRadius }}
+				style={{ borderRadius, padding }}
 			>
 				{children}
 			</div>

@@ -5,7 +5,7 @@ function NotFound()
 {
 	return (
 		<SectionWrapper view='NotFound' title='404' neon game>
-			<h1>PAGE NOT FOUND ☹️</h1>
+			<h1>PAGE NOT FOUND <span className='stroke'>😩</span></h1>
 		</SectionWrapper>
 	);
 }

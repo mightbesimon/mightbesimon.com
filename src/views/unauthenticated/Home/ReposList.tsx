@@ -1,7 +1,8 @@
-import repositories from 'data/repositories.json';
 import EllipsisSpinner from 'components/Spinner/EllipsisSpinner';
 import getRepos, { RepositoryResponse } from 'utils/api/github/getRepos';
 import { useQuery } from 'react-query';
+
+const THRESHOLD = 3;
 
 function ReposList(): JSX.Element
 {
@@ -18,7 +19,7 @@ function ReposList(): JSX.Element
 	return (
 		<div className='showcase repos flex wrap'>
 			{response.data ? response.data
-				.filter(repo => repositories.map(x => x.repo).includes(repo.name) || engagement(repo) > 2)
+				.filter(repo => engagement(repo) >= THRESHOLD)
 				.sort((a, b) => engagement(b) - engagement(a))
 				.map(repo => (
 					<a key={repo.full_name} className='flex column' href={repo.html_url}>
@@ -28,11 +29,11 @@ function ReposList(): JSX.Element
 						</div>
 						<div className='engagement flex wrap'>
 							<div className='badge'>
-								<span className='stroke'>⭐️</span>&nbsp;
+								<span className='stroke'>⭐️</span>
 								{repo.stargazers_count}
 							</div>
 							<div className='badge'>
-								<span className='stroke'>🍴</span>&nbsp;
+								<span className='stroke'>🍴</span>
 								{repo.forks_count}
 							</div>
 						</div>

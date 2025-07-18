@@ -9,11 +9,9 @@
 	/* colour palette */
 	--mariana0: hsla(215, 15%, 16%, 100%);
 	--mariana1: hsla(210, 15%, 22%, 100%); // sublime blue1
-	--mariana2: hsla(210, 15%, 36%, 100%);
-	--mariana3: hsla(219, 28%, 88%, 100%); // sublime white3
-	// --blue2: hsla(210, 13%, 40%, .7); // sublime
-	// --blue4: hsla(210, 13%, 45%, 1); // sublime
-	// --blue6: hsla(221, 12%, 69%, 1); // sublime
+	--mariana2: hsla(210, 13%, 45%, 100%); // sublime blue4
+	--mariana3: hsla(221, 12%, 69%, 100%); // sublime blue6
+	--mariana5: hsla(219, 28%, 88%, 100%); // sublime white3
 	--red: hsla(357, 79%, 65%, 100%); // sublime red
 	--coral: hsla(13, 93%, 66%, 100%); // sublime red2
 	--orange: hsla(32, 93%, 66%, 100%); // sublime orange
@@ -57,7 +55,9 @@
 	--outline: 2px solid black;
 	--outline1: 1px solid black;
 	--outline3: 3px solid black;
-	--box-shadow: 3px 6px 0px 0px black;
+	// --box-shadow: 3px 6px 0px 0px black;
+	--box-shadow: 2px 4px 0px 1px black;
+	--box-shadow1: 2px 4px 0px 1px black;
 
 	/* shadow */
 	--shadow0: 0rem .3rem .8rem 0rem hsla(0, 0%, 0%, 67%);
@@ -67,8 +67,8 @@
 	--neon-yellow: 0 0 .5rem yellow;
 
 	/* transition */
-	--transition1: all 50ms ease;
-	--transition: all 200ms ease;
+	--transition1: all 175ms ease;
+	--transition3: all 300ms ease;
 	--transition5: all 500ms ease;
 
 	/* themes */
@@ -88,7 +88,9 @@
 * {
 	box-sizing: border-box;
 	border-collapse: collapse;
-	transition: var(--transition1);
+	transition:
+		var(--transition3),
+		color 0ms;
 }
 
 body {
@@ -96,10 +98,10 @@ body {
 	font-family: sans-serif;
 	color: var(--text);
 	background:
-		radial-gradient(circle, transparent 20%, var(--body) 20%, var(--body) 80%, transparent 80%, transparent),
-		radial-gradient(circle, transparent 20%, var(--body) 20%, var(--body) 80%, transparent 80%, transparent) 25px 25px,
-		linear-gradient(var(--body-symbol) 2px, transparent 2px) 0 -1px,
-		linear-gradient(90deg, var(--body-symbol) 2px, var(--body) 2px) -1px 0;
+		radial-gradient(circle, transparent 20%, var(--body) 20%, var(--body) 80%, transparent 80%, transparent) 10px 10px,
+		radial-gradient(circle, transparent 20%, var(--body) 20%, var(--body) 80%, transparent 80%, transparent) 35px 35px,
+		linear-gradient(var(--body-symbol) 2px, transparent 2px) 0 9px,
+		linear-gradient(90deg, var(--body-symbol) 2px, var(--body) 2px) 9px 0;
 	background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
 }
 
@@ -134,10 +136,9 @@ table.hashtag {
 	}
 }
 
-pre {
-	padding: .8rem;
-	border-radius: .8rem;
-	background: var(--body);
+p {
+	margin: .5rem 0rem;
+	text-align: center;
 }
 
 .flex {
@@ -152,9 +153,9 @@ pre {
 	flex-wrap: wrap;
 }
 
-.stroke // , h2
-
-	{
+// h2, h3,
+.stroke {
+	font-weight: bold;
 	color: var(--mariana3);
 	text-shadow:
 		-1px -1px 1px black,

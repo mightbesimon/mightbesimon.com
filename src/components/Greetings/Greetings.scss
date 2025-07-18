@@ -1,0 +1,25 @@
+div.greetings {
+	padding: .8rem;
+	border-radius: .8rem;
+	background: var(--purple);
+	color: black;
+	outline: var(--outline);
+	box-shadow: var(--box-shadow);
+
+	>div {
+		>div.stroke {
+			margin: 0rem .25rem;
+			width: 1.5rem !important;
+		}
+
+		>div {
+			max-width: calc(100% - 2rem);
+			line-height: 1.67rem;
+
+			>div {
+				display: inline-block;
+				margin-right: .25rem;
+			}
+		}
+	}
+}

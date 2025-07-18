@@ -1,104 +1,37 @@
 section.NeonPage {
 	>div.neon {
-		// position: fixed;
-		// top: 50vh;
-		// left: 50vw;
-		// transform: translate(-50%, -50%);
-		margin: 5rem auto 2.5rem auto;
-		padding: 5rem;
-		width: max-content;
-		height: max-content;
-		border-radius: 1rem;
-		border: .2rem solid var(--mariana2);
-		transition: var(--transition5);
+		margin: 10rem auto;
+		width: 15rem;
+		height: 15rem;
+		justify-content: center;
+		align-items: center;
+		border-radius: 2rem;
+		outline: .3rem solid var(--mariana0);
+		transition:
+			outline 500ms ease,
+			box-shadow 500ms ease,
+			transform 500ms ease;
+
+		>div {
+			font: normal 3.5rem sans-serif;
+			color: var(--mariana0);
+			transition:
+				color 500ms ease,
+				text-shadow 500ms ease,
+				transform 500ms ease;
+		}
 
 		&:hover {
-			border: .2rem solid white;
+			outline: .3rem solid white;
 			box-shadow:
 				0 0 1rem yellow,
-				inset 0 0 1rem yellow;
+				inset 0 0 .5rem yellow;
+			transform: rotate(45deg);
 
-			>p {
-				text-shadow: 0 0 1rem yellow;
+			>div {
 				color: white;
-			}
-		}
-
-		>p {
-			margin: .2rem 0;
-			font: 1.2rem 'Cantata One';
-			font-weight: normal;
-			text-align: center;
-			transition: text-shadow .3s, color .3s;
-			color: #4f5b69;
-
-			&.large {
-				font: 3rem sans-serif;
-			}
-
-			>span {
-				font-size: .8rem;
-			}
-		}
-	}
-
-	>div.BagOfCans {
-		margin: 0rem auto;
-
-		>svg {
-			display: inline;
-			width: 25rem;
-			transition: var(--transition5);
-
-
-			* {
-				transition: var(--transition5);
-			}
-
-			&:hover {
-				filter: drop-shadow(0 0 .5rem yellow);
-
-				polygon.outline {
-					stroke: white;
-					stroke-width: 16;
-				}
-
-				line {
-					stroke: white;
-					stroke-width: 7.5;
-				}
-
-				circle {
-					fill: white;
-				}
-			}
-
-			&.two:hover {
-
-				line,
-				circle {
-					transform: translate(0, 90px);
-				}
-
-				text {
-					display: none;
-				}
-			}
-
-			&.three:hover {
-
-				line,
-				circle {
-					transform: translate(0, 90px);
-				}
-
-				polygon.outline {
-					transform: rotate(30deg);
-				}
-
-				text {
-					display: none;
-				}
+				text-shadow: 0 0 1rem yellow;
+				transform: rotate(-90deg);
 			}
 		}
 	}

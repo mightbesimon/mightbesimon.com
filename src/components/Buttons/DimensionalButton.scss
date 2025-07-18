@@ -23,6 +23,9 @@ div.button.dimensional {
 		color: var(--mariana0);
 		background: var(--red3);
 		font-family: monospace;
+		font-weight: bold;
+		line-height: 1rem;
+		transition: var(--transition1);
 
 		&:hover {
 			bottom: min(.8rem, 20%);
@@ -32,10 +35,6 @@ div.button.dimensional {
 		&:active {
 			bottom: min(.8rem, 10%);
 			filter: brightness(.9);
-		}
-
-		>span.stroke {
-			margin-top: -.15rem;
 		}
 	}
 }
@@ -58,19 +57,19 @@ div.button.dimensional.outline {
 }
 
 div.button.dimensional.dark {
-	background: black;
+	background: color-mix(in hsl, var(--mariana0), black 33%);
 
 	>div {
-		color: var(--mariana3);
+		color: var(--mariana5);
 		background: var(--mariana1);
 	}
 }
 
 div.button.dimensional.light {
-	background: hsla(219, 10%, 50%, 100%);
+	background: var(--mariana2);
 
 	>div {
-		background: var(--mariana3);
+		background: var(--mariana5);
 	}
 }
 

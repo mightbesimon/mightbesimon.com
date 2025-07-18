@@ -15,10 +15,11 @@ function SocialButtons(): JSX.Element
 			<DimensionalButton
 				width='calc(8rem / 3 - 1px)'
 				height='2rem'
+				padding='.275rem'
 				borderRadius='.5rem 0rem 0rem .5rem'
 				colour={ColourEnum.purple}
 			>
-				<img alt='instagram' src={Instagram} width='90%'
+				<img alt='instagram' src={Instagram} height='100%'
 					style={{ marginLeft: '.2rem' }}
 				/>
 			</DimensionalButton>
@@ -30,10 +31,11 @@ function SocialButtons(): JSX.Element
 			<DimensionalButton
 				width='calc(8rem / 3 - 2px)'
 				height='2rem'
+				padding='.275rem'
 				borderRadius='0rem'
 				colour={ColourEnum.light}
 			>
-				<img alt='github' src={Github} width='93%' />
+				<img alt='github' src={Github} height='100%' />
 			</DimensionalButton>
 		</a>
 		<a className='linkedin button'
@@ -43,10 +45,11 @@ function SocialButtons(): JSX.Element
 			<DimensionalButton
 				width='calc(8rem / 3 - 1px)'
 				height='2rem'
+				padding='.275rem'
 				borderRadius='0rem .5rem .5rem 0rem'
 				colour={ColourEnum.blue}
 			>
-				<img alt='linkedin' src={LinkedIn} width='88%'
+				<img alt='linkedin' src={LinkedIn} height='100%'
 					style={{ marginRight: '.2rem' }}
 				/>
 			</DimensionalButton>

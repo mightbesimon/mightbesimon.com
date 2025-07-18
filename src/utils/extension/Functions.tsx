@@ -4,7 +4,7 @@ export function range(size: number)
 }
 
 
-export function formatCount(downloads: number | undefined)
+export function format(downloads: number | undefined)
 {
 	return downloads ? downloads.toLocaleString('en-NZ') : '-';
 }
