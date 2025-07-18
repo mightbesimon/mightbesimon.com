@@ -6,7 +6,7 @@ import SectionWrapper from 'components/SectionWrapper/SectionWrapper';
 import VscodeStats from 'components/Stats/VscodeStats';
 import GithubStats from 'components/Stats/GithubStats';
 import SocialButtons from 'components/Buttons/SocialButtons';
-import { SponsorButton, CVButton } from 'components/Buttons/Buttons';
+import { CVButton } from 'components/Buttons/Buttons';
 import Greetings from 'components/Greetings/Greetings';
 
 function Home(): JSX.Element
@@ -21,7 +21,7 @@ function Home(): JSX.Element
 					<p>Auckland, New Zealand ∙ Darmstadt, Germany</p>
 					<div className='flex wrap'>
 						<SocialButtons />
-						<SponsorButton />
+						<CVButton />
 					</div>
 				</div>
 			</div>
