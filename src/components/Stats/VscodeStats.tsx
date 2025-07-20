@@ -14,17 +14,16 @@ function VscodeStats(): JSX.Element
 
 	const data = reponse.data
 		?.map(item =>
-		{
-			return {
-				extensionId: item.publisher.publisherName + '.' + item.extensionName,
-				name: item.displayName,
-				version: item.versions[0]?.version,
-				installs: item.statistics.filter(x => x.statisticName === 'install')[0].value,
-			};
-		})
+		({
+			extensionId: item.publisher.publisherName + '.' + item.extensionName,
+			name: item.displayName,
+			version: item.versions[0]?.version,
+			installs: item.statistics.filter(x => x.statisticName === 'install')[0].value,
+		}))
 		.sort((a, b) => b.installs - a.installs);
 
-	const totalInstalls = data?.reduce((sum, item) => sum + item.installs, 0);
+	const totalInstalls = data
+		?.reduce((sum, item) => sum + item.installs, 0);
 
 	return data ?
 		<div className='vscode stats'>
