@@ -12,4 +12,14 @@ div.toolbar.fixed {
 		margin: 8px;
 		font-size: 24px;
 	}
+
+	>div.button.floating.scroll.top {
+		opacity: 1%;
+		transform: scale(.5);
+	}
+
+	>div.button.floating.scroll.top.show {
+		opacity: 100%;
+		transform: scale(1);
+	}
 }

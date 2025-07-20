@@ -5,9 +5,9 @@ header {
 	width: 100%;
 	padding: 1rem 1rem 0rem 1rem;
 	border-radius: 1rem 1rem 0rem 0rem;
-	background: var(--mint3);
 	align-items: flex-end;
-	justify-content: center !important;
+	justify-content: center;
+	background: var(--mint3);
 	transition: var(--transition5);
 
 	&.neon {

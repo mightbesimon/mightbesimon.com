@@ -4,7 +4,7 @@ import Footer from 'components/Footer/Footer';
 import Header from 'components/Header/Header';
 import NoughtsCrosses from 'components/NoughtsCrosses/NoughtsCrosses';
 import SimonSvg from 'components/SimonSvg/SimonSvg';
-import GotoTop from 'components/ToolBar/GotoTop';
+import ScrollTop from 'components/ToolBar/ScrollTop';
 import ThemeToggle from 'components/ToolBar/ThemeToggle';
 import ToolBar from 'components/ToolBar/ToolBar';
 
@@ -33,7 +33,7 @@ function SectionWrapper({ children, view, title, height,
 			<Footer />
 
 			<ToolBar>
-				<GotoTop />
+				<ScrollTop />
 				<ThemeToggle />
 			</ToolBar>
 		</>

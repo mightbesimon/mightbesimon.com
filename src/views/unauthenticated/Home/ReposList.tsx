@@ -2,7 +2,7 @@ import EllipsisSpinner from 'components/Spinner/EllipsisSpinner';
 import getRepos, { RepositoryResponse } from 'utils/api/github/getRepos';
 import { useQuery } from 'react-query';
 
-const THRESHOLD = 3;
+const THRESHOLD = 10;
 
 function ReposList(): JSX.Element
 {

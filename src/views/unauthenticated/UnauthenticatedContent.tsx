@@ -1,12 +1,13 @@
 import { Route } from 'react-location';
 import Home from './Home/Home';
 import AuthPage from './AuthPage/AuthPage';
+import Contact from './Contact/Contact';
+import ButtonsPage from './Showcase/ButtonsPage/ButtonsPage';
+import FlagsPage from './Showcase/FlagsPage/FlagsPage';
 import LoadingPage from './Showcase/LoadingPage/LoadingPage';
 import NeonPage from './Showcase/NeonPage/NeonPage';
-import FlagsPage from './Showcase/FlagsPage/FlagsPage';
-import NotFound from './StatusCodes/NotFound/NotFound';
 import Teapot from './StatusCodes/Teapot/Teapot';
-import ButtonsPage from './Showcase/ButtonsPage/ButtonsPage';
+import NotFound from './StatusCodes/NotFound/NotFound';
 
 type HidableRoute = Route & {
 	hide?: boolean,
@@ -22,24 +23,25 @@ const unauthenticatedContent: HidableRoute[] = [
 		element: <AuthPage />,
 	},
 	{
-		path: '/loading',
-		element: <LoadingPage />,
+		path: '/buttons',
+		element: <ButtonsPage />,
 	},
 	{
-		path: '/neon',
-		element: <NeonPage />,
+		path: '/contact',
+		element: <Contact />,
 	},
 	{
 		path: '/flags',
 		element: <FlagsPage />,
 	},
 	{
-		path: '/buttons',
-		element: <ButtonsPage />,
+		path: '/loading',
+		element: <LoadingPage />,
 	},
 	{
-		path: '/coffee',
-		element: <Teapot />,
+		path: '/neon',
+		element: <NeonPage />,
+		hide: true,
 	},
 	{
 		path: '/teapot',

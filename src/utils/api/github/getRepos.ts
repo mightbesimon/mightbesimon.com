@@ -1,4 +1,4 @@
-import api from "../API";
+import api from 'data/api.json';
 
 export type RepositoryRequest = {
 	owner: string,
@@ -23,14 +23,14 @@ async function getRepos(
 	const response = await fetch(
 		`${api.github}/users/${owner}/repos`,
 		{
-			method: "GET",
+			method: 'GET',
 		}
 	);
 
-	console.log(
-		'github ratelimit remaning',
-		response.headers.get('x-ratelimit-remaining'),
-	);
+	// console.log(
+	// 	'github ratelimit remaning',
+	// 	response.headers.get('x-ratelimit-remaining'),
+	// );
 
 	if (response.status !== 200)
 	{

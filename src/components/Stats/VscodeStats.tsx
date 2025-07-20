@@ -1,7 +1,7 @@
 import './VscodeStats.scss';
 import EllipsisSpinner from 'components/Spinner/EllipsisSpinner';
 import getPublisher from 'utils/api/vscode/getPublisher';
-import { format } from 'utils/extension/Functions';
+import { format, wrapEmoji } from 'utils/extensions/Functions';
 import { useQuery } from 'react-query';
 
 function VscodeStats(): JSX.Element
@@ -14,24 +14,16 @@ function VscodeStats(): JSX.Element
 
 	const data = reponse.data
 		?.map(item =>
-		{
-			return {
-				extensionId: item.publisher.publisherName + '.' + item.extensionName,
-				name: item.displayName,
-				version: item.versions[0]?.version,
-				installs: item.statistics.filter(x => x.statisticName === 'install')[0].value,
-			};
-		})
+		({
+			extensionId: item.publisher.publisherName + '.' + item.extensionName,
+			name: item.displayName,
+			version: item.versions[0]?.version,
+			installs: item.statistics.filter(x => x.statisticName === 'install')[0].value,
+		}))
 		.sort((a, b) => b.installs - a.installs);
 
-	const totalInstalls = data?.reduce((sum, item) => sum + item.installs, 0);
-	const wrapEmoji = (text: string) =>
-		<span dangerouslySetInnerHTML={{
-			__html: text.replace(
-				/(\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/g,
-				(match) => `<span class='stroke'>${match}</span>`,
-			),
-		}} />;
+	const totalInstalls = data
+		?.reduce((sum, item) => sum + item.installs, 0);
 
 	return data ?
 		<div className='vscode stats'>
