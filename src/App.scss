@@ -61,16 +61,6 @@ main {
 	// }
 }
 
-body:has(header.neon) {
-	--outline: none;
-	--box-shadow: var(--shadow3);
-	--box-shadow1: var(--shadow3);
-
-	.dimensional.button {
-		margin: .25rem 0 0 0;
-	}
-}
-
 /* default */
 body,
 body.light {
