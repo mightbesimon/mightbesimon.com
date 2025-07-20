@@ -10,12 +10,12 @@ div.button.floating {
 	box-shadow: var(--shadow2);
 
 	&:hover {
-		transform: scale(1.1);
+		transform: scale(1.1) !important;
 		box-shadow: var(--shadow3);
 	}
 
 	&:active {
-		transform: translateY(2px);
+		transform: translateY(2px) !important;
 		box-shadow: var(--shadow1);
 	}
 }
