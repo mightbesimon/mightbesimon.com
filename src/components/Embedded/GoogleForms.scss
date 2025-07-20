@@ -18,13 +18,13 @@ div.contact {
 			padding: 10px 0px;
 			width: fit-content;
 			border-radius: 20px;
-			// background: var(--purple5);
-			// outline: var(--outline);
-			// box-shadow: var(--box-shadow);
-			background: hsla(300, 35%, 82%, 50%);
-			backdrop-filter: blur(24px);
-			outline: 1px solid hsla(219, 28%, 88%, 25%);
-			box-shadow: var(--shadow3);
+			background: var(--purple5);
+			outline: var(--outline);
+			box-shadow: var(--box-shadow);
+			// background: hsla(300, 35%, 82%, 50%);
+			// backdrop-filter: blur(24px);
+			// outline: 1px solid hsla(219, 28%, 88%, 25%);
+			// box-shadow: var(--shadow3);
 
 			>div {
 				position: absolute;
@@ -34,10 +34,10 @@ div.contact {
 				height: 40px;
 				text-align: center;
 				border-radius: 50%;
-				// background: var(--coral);
-				background: hsla(357, 79%, 65%, 75%);
-				backdrop-filter: blur(4px);
-				outline: 1px solid hsla(357, 79%, 75%, 30%) !important;
+				background: var(--coral);
+				// background: hsla(357, 79%, 65%, 75%);
+				// backdrop-filter: blur(4px);
+				// outline: 1px solid hsla(357, 79%, 75%, 30%) !important;
 
 				>svg {
 					position: absolute;
@@ -56,6 +56,6 @@ div.contact {
 		height: 100vh;
 		opacity: 100%;
 		background: hsla(215, 15%, 16%, 50%);
-		backdrop-filter: blur(4px);
+		// backdrop-filter: blur(4px);
 	}
 }

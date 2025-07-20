@@ -1,10 +1,10 @@
-import DimensionalButton from 'components/Buttons/DimensionalButton';
 import './GoogleForms.scss';
-import { ReactComponent as Cross } from 'assets/NoughtsCrosses/cross.svg';
-import EllipsisSpinner from 'components/Spinner/EllipsisSpinner';
 import url from 'data/links.json';
 import ColourEnum from 'types/ColourEnums';
+import { ReactComponent as Cross } from 'assets/NoughtsCrosses/cross.svg';
+import DimensionalButton from 'components/Buttons/DimensionalButton';
 import FloatingButton from 'components/Buttons/FloatingButton';
+import EllipsisSpinner from 'components/Spinner/EllipsisSpinner';
 import { useState } from 'react';
 
 export function ContactForm(): JSX.Element
