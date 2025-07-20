@@ -1,33 +1,22 @@
 [
 	{
-		"language": "Maori",
-		"flag": "🥝",
-		"greeting": [
-			"Kia ora,"
-		]
+		"emoji": "🥝",
+		"text": "Kia ora, how are ya?"
 	},
 	{
-		"language": "German",
-		"flag": "🍻",
-		"greeting": [
-			"Hallo, ich heiße Simon.",
-			"Was geht?"
-		]
+		"emoji": "🍻",
+		"text": "Hallo, ich heiße Simon. Was geht?"
 	},
 	{
-		"language": "French",
-		"flag": "😙",
-		"greeting": [
-			"Salut, moi c'est Simon.",
-			"Ça dit quoi l'équipe ?"
-		]
+		"emoji": "😙",
+		"text": "Salut, moi c'est Simon. Ça dit quoi ?"
 	},
 	{
-		"language": "Irish",
-		"flag": "🍀",
-		"greeting": [
-			"Dia duit,",
-			"an bhfuil tú go maith?"
-		]
+		"emoji": "🍀",
+		"text": "Dia duit, an bhfuil tú go maith?"
+	},
+	{
+		"emoji": "😉",
+		"text": "Mar tá tú ag féachaint go maith"
 	}
 ]
