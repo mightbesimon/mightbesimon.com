@@ -30,6 +30,8 @@
 	--red1: hsla(357, 50%, 50%, 100%);
 	--red2: hsla(357, 70%, 60%, 100%);
 	--red3: hsla(357, 79%, 65%, 100%);
+	--coral0: hsla(13, 45%, 40%, 100%);
+	--coral3: hsla(13, 93%, 66%, 100%);
 	--orange0: hsla(32, 55%, 40%, 100%);
 	--orange1: hsla(32, 72%, 48%, 100%);
 	--orange2: hsla(32, 85%, 55%, 100%); // sublime orange2
@@ -59,6 +61,16 @@
 	--box-shadow: 2px 4px 0px 1px black;
 	--box-shadow1: 2px 4px 0px 1px black;
 
+	--stroke:
+		-1px -1px 0px var(--mariana5),
+		-1px 0px 0px var(--mariana5),
+		-1px 1px 0px var(--mariana5),
+		0px -1px 0px var(--mariana5),
+		0px 1px 0px var(--mariana5),
+		1px -1px 0px var(--mariana5),
+		1px 0px 0px var(--mariana5),
+		1px 1px 0px var(--mariana5);
+
 	/* shadow */
 	--shadow0: 0rem .3rem .8rem 0rem hsla(0, 0%, 0%, 67%);
 	--shadow1: 0rem .2rem .3rem 0rem hsla(0, 0%, 0%, 25%);
@@ -71,11 +83,10 @@
 	--transition3: all 300ms ease;
 	--transition5: all 500ms ease;
 
-	/* themes */
-	--body: var(--mariana0);
-	--main: var(--mariana1);
-	--text: var(--mariana3);
-	--card: var(--mariana2);
+	/* fonts */
+	--monospace: monospace;
+	--sans: sans-serif;
+	--serif: Georgia, Times, serif;
 }
 
 /**************************************************************
@@ -160,7 +171,7 @@ p {
 // h2, h3,
 .stroke {
 	font-weight: bold;
-	color: var(--mariana3);
+	color: var(--mariana5);
 	text-shadow:
 		-1px -1px 1px black,
 		-1px 0px 1px black,
@@ -170,6 +181,20 @@ p {
 		1px -1px 1px black,
 		1px 0px 1px black,
 		1px 1px 1px black;
+}
+
+.stroke.inverse {
+	font-weight: bold;
+	color: var(--mariana0);
+	text-shadow:
+		-1px -1px 0px var(--mariana5),
+		-1px 0px 0px var(--mariana5),
+		-1px 1px 0px var(--mariana5),
+		0px -1px 0px var(--mariana5),
+		0px 1px 0px var(--mariana5),
+		1px -1px 0px var(--mariana5),
+		1px 0px 0px var(--mariana5),
+		1px 1px 0px var(--mariana5);
 }
 
 .button {

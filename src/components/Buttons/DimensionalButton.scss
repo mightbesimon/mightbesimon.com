@@ -81,6 +81,14 @@ div.button.dimensional.red {
 	}
 }
 
+div.button.dimensional.coral {
+	background: var(--coral0);
+
+	>div {
+		background: var(--coral3);
+	}
+}
+
 div.button.dimensional.orange {
 	background: var(--orange0);
 
