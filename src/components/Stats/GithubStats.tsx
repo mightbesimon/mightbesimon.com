@@ -1,7 +1,7 @@
 import './GithubStats.scss';
 import EllipsisSpinner from 'components/Spinner/EllipsisSpinner';
 import getRepos from 'utils/api/github/getRepos';
-import { format } from 'utils/extension/Functions';
+import { format } from 'utils/extensions/Functions';
 import { useQuery } from 'react-query';
 
 function GithubStats(): JSX.Element

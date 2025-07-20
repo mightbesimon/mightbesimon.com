@@ -1,7 +1,7 @@
 import './VscodeStats.scss';
 import EllipsisSpinner from 'components/Spinner/EllipsisSpinner';
 import getPublisher from 'utils/api/vscode/getPublisher';
-import { format, wrapEmoji } from 'utils/extension/Functions';
+import { format, wrapEmoji } from 'utils/extensions/Functions';
 import { useQuery } from 'react-query';
 
 function VscodeStats(): JSX.Element
