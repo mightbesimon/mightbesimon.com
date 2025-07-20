@@ -19,6 +19,8 @@ div.contact {
 			width: fit-content;
 			border-radius: 20px;
 			background: var(--purple5);
+			// must match iframe color-scheme, or else no transparency
+			color-scheme: light;
 			outline: var(--outline);
 			box-shadow: var(--box-shadow);
 			// background: hsla(300, 35%, 82%, 50%);
