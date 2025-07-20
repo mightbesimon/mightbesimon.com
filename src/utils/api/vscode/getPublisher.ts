@@ -1,4 +1,4 @@
-import api from "../API";
+import api from 'data/api.json';
 
 export type PublisherRequest = {
 	publisherName: string,
@@ -51,7 +51,7 @@ async function getPublisher(
 	const response = await fetch(
 		`${api.vscode}`,
 		{
-			method: "POST",
+			method: 'POST',
 			headers: {
 				accept: 'application/json;api-version=3.0-preview.1',
 				'content-type': 'application/json',
@@ -62,7 +62,7 @@ async function getPublisher(
 						criteria: [
 							{
 								filterType: 10,
-								value: `publisher:"${publisherName}"`,
+								value: `publisher:'${publisherName}'`,
 							},
 						],
 					},

@@ -1,4 +1,4 @@
-import api from "../API";
+import api from 'data/api.json';
 
 export type ExtensionRequest = {
 	extensionId: string,
@@ -45,7 +45,7 @@ async function getExtension(
 	const response = await fetch(
 		`${api.vscode}`,
 		{
-			method: "POST",
+			method: 'POST',
 			headers: {
 				accept: 'application/json;api-version=3.0-preview.1',
 				'content-type': 'application/json',
