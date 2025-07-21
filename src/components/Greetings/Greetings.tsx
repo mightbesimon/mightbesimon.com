@@ -3,7 +3,7 @@ import greetings from 'data/greetings.json';
 
 function Greetings(): JSX.Element
 {
-	return <div className='greetings flex column'>
+	return <div className='greetings'>
 		{greetings.map(greeting =>
 			<div key={greeting.emoji}>
 				<div className='stroke'>{greeting.emoji}</div>
