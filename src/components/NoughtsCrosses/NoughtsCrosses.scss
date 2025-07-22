@@ -31,13 +31,31 @@ div.game {
 	}
 
 	>div.result {
+		height: 0;
 		width: 16rem;
 		margin: 1rem auto 0rem auto;
 		font-family: monospace;
 		font-size: 1.1rem;
 		text-align: center;
 
+		* {
+			height: 0;
+			transform: scaleY(0);
+			opacity: 1%;
+		}
+
+		&.show {
+			height: 5.75rem;
+
+			* {
+				height: fit-content;
+				transform: none;
+				opacity: 100%;
+			}
+		}
+
 		>div.title {
+			margin: 0px 1px;
 			padding: .5rem;
 			border-radius: .5rem;
 			background: var(--coral);

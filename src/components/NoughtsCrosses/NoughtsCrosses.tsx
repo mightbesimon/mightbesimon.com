@@ -173,34 +173,35 @@ function NoughtsCrosses(): JSX.Element
 					)}
 				</tbody>
 			</table>
-			{game.over && (
-				<div className='result'>
-					<div className='title'>{game.message}</div>
-					<div className='buttons flex'>
-						<DimensionalButton
-							className='minus'
-							colour={ColourEnum.teal}
-							onClick={deltaD({ rows: -1, cols: -1 })}
-						>
-							&ndash;
-						</DimensionalButton>
-						<DimensionalButton
-							className='restart'
-							colour={ColourEnum.light}
-							onClick={restart}
-						>
-							restart
-						</DimensionalButton>
-						<DimensionalButton
-							className='plus'
-							colour={ColourEnum.orange}
-							onClick={deltaD({ rows: +1, cols: +1 })}
-						>
-							+
-						</DimensionalButton>
-					</div>
+			<div className={game.over ? 'show result' : 'result'}>
+				<div className='title'>{game.message}</div>
+				<div className='buttons flex'>
+					<DimensionalButton
+						className='minus'
+						height='2.5rem'
+						colour={ColourEnum.teal}
+						onClick={deltaD({ rows: -1, cols: -1 })}
+					>
+						&ndash;
+					</DimensionalButton>
+					<DimensionalButton
+						className='restart'
+						height='2.5rem'
+						colour={ColourEnum.light}
+						onClick={restart}
+					>
+						restart
+					</DimensionalButton>
+					<DimensionalButton
+						className='plus'
+						height='2.5rem'
+						colour={ColourEnum.orange}
+						onClick={deltaD({ rows: +1, cols: +1 })}
+					>
+						+
+					</DimensionalButton>
 				</div>
-			)}
+			</div>
 			{(D.rows * D.cols > 0) || (
 				<p>what did you expect? <span className='stroke'>😭</span></p>
 			)}
