@@ -7,7 +7,7 @@ type EllipsisSpinnerProps = {
 function EllipsisSpinner({ text }: EllipsisSpinnerProps)
 {
 	return (
-		<div className="ellipsis loader">
+		<div className='ellipsis loader'>
 			<div>{text}</div>
 			<div>{text}</div>
 			<div>{text}</div>

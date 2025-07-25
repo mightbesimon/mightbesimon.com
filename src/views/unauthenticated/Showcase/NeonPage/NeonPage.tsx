@@ -1,5 +1,5 @@
 import './NeonPage.scss';
-import SectionWrapper from "components/SectionWrapper/SectionWrapper";
+import SectionWrapper from 'components/SectionWrapper/SectionWrapper';
 
 function NeonPage()
 {

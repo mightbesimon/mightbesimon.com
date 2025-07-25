@@ -1,6 +1,6 @@
 import FloatingButton from 'components/Buttons/FloatingButton';
-import { ThemeContext, ThemeEnum } from "utils/contexts/Theme";
-import { useContext } from "react";
+import { ThemeContext, ThemeEnum } from 'utils/contexts/Theme';
+import { useContext } from 'react';
 
 function ThemeToggle()
 {
@@ -14,7 +14,7 @@ function ThemeToggle()
 	};
 
 	return (
-		<FloatingButton className="theme"
+		<FloatingButton className='theme'
 			onClick={onClick}
 			colour={theme === ThemeEnum.dark ?
 				'var(--yellow)' : 'var(--blue1)'

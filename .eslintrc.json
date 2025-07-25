@@ -24,6 +24,10 @@
 		],
 		"eqeqeq": "error",
 		"semi-spacing": "warn",
-		"semi-style": "warn"
+		"semi-style": "warn",
+		"quotes": [
+			"warn",
+			"single"
+		]
 	}
 }

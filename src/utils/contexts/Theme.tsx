@@ -39,7 +39,7 @@ export function ThemeProvider(props: ThemeProviderProps)
 			.setAttribute('class', newTheme);
 
 		document.head
-			.querySelector(`meta[name='theme-color']`)
+			.querySelector('meta[name=\'theme-color\']')
 			?.setAttribute('content', colour);
 
 		localStorage.setItem('theme', newTheme);

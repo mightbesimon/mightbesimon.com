@@ -46,7 +46,7 @@ function ButtonsPage(): JSX.Element
 						locked isOpen={isOpen} setIsOpen={setIsOpen}
 						plain={noOutline}
 					>
-						{isOpen ? 'now shut the cover' : `unlock me`}
+						{isOpen ? 'now shut the cover' : 'unlock me please'}
 					</GlassCover>
 					<GlassCover topChildren='unlocked' plain={noOutline}>
 						nothing here

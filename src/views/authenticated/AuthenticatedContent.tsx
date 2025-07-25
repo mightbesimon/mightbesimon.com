@@ -1,4 +1,4 @@
-import { Route } from "react-location";
+import { Route } from 'react-location';
 
 const authenticatedContent: Route[] = [];
 
