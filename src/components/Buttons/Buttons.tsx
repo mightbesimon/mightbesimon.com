@@ -7,10 +7,11 @@ export function AuthButton(): JSX.Element
 {
 	return (
 		<Link className='auth button' to='/auth'>
-			<DimensionalButton width='8rem' height='2rem'
+			<DimensionalButton
+				width='8rem' height='2rem'
 				colour={ColourEnum.dark}
 			>
-				<span className='auth'>Sign in ??</span>
+				<span className='auth'>?? Sign in ??</span>
 			</DimensionalButton>
 		</Link>
 	);
@@ -28,7 +29,7 @@ export function SponsorButton(): JSX.Element
 				<span style={{ margin: '0 .5rem' }}>Sponsor</span>
 				<span className='stroke'>👈</span>
 			</DimensionalButton>
-		</a >
+		</a>
 	);
 }
 
@@ -39,10 +40,11 @@ export function CVButton(): JSX.Element
 			href={url.cv}
 			target='_blank' rel='noopener noreferrer'
 		>
-			<DimensionalButton width='8rem' height='2rem'
-				colour={ColourEnum.teal}
+			<DimensionalButton
+				width='8rem' height='2rem'
+				colour={ColourEnum.purple}
 			>
-				<span className='stroke'>💼</span>
+				<span className='stroke'>📄</span>
 				<span>&nbsp;Need my CV?</span>
 			</DimensionalButton>
 		</a>
